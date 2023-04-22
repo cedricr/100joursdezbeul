@@ -11,7 +11,7 @@
 	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
 </script>
 
-<svelte:head><title>100 jours de zbeul WIP</title></svelte:head>
+<svelte:head><title>100 jours de zbeul</title></svelte:head>
 
 <div class="zbeul mb-6 mt-8 text-center text-4xl">Jour {dayNumber}</div>
 
