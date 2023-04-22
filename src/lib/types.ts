@@ -1,25 +1,30 @@
-type ActionCode = 'non-accueil' | 'casserolade';
+export type ActionCode = 'non-accueil' | 'casserolade' | 'chahut' | 'sobriete' | 'action-creative';
 
-	type ActionTarget = 'ministre-regalien' | 'ministre' | 'plusieurs-ministres' | 'PR';
+export type ActionTarget =
+	| 'secretaire-detat'
+	| 'ministre-delegue-e'
+	| 'ministre'
+	| 'PAN'
+	| 'PM'
+	| 'PR';
 
-	interface Action {
-		code: ActionCode;
-		target: ActionTarget;
-	}
+export interface Action {
+	code: ActionCode;
+	target: ActionTarget;
+}
 
-	interface Event {
-		dept: string;
-		ville: string;
-		codeInsee: string;
-		description: string;
-		actions: Action[];
-	}
+export interface ActionEvent {
+	ville: string;
+	codeInsee: string;
+	description: string;
+	actions: Action[];
+}
 
-	interface DayData {
-		date: string;
-		evenements: Event[];
-	}
+export interface DayData {
+	date: string;
+	evenements: ActionEvent[];
+}
 
-	interface DepartmentResult {
-		[departmentCode: string]: number;
-	}
+export interface DepartmentResult {
+	[departmentCode: string]: number;
+}
