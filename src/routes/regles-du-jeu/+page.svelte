@@ -3,4 +3,4 @@
 
 <svelte:head><title>100 jours de zbeul WIP</title></svelte:head>
 
-règles
+<p class="zbeul my-32 text-center text-3xl">En cours de construction</p>

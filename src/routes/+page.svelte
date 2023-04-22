@@ -1,27 +1,40 @@
 <script lang="ts">
-	import parkingImg from '$lib/assets/annie-spratt-Y3te8rqlzyw-unsplash-small.jpg';
-	import { getDayNumber } from '$lib/utils';
+	import actions from '$lib/assets/data.json?raw';
+	import Thanks from '$lib/thanks.svelte';
+
+	import { generateLeaderboard, getDayNumber, getDepartmentName } from '$lib/utils';
 
 	const dayNumber = getDayNumber();
+
+	const resultLines = generateLeaderboard(actions);
+	const now = new Date();
+	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
 </script>
 
-<svelte:head><title>100 jours de zbeul</title></svelte:head>
+<svelte:head><title>100 jours de zbeul WIP</title></svelte:head>
 
 <div class="zbeul mb-6 mt-8 text-center text-4xl">Jour {dayNumber}</div>
 
 <p class="mb-6 text-center text-2xl">{100 - dayNumber} jours restants</p>
 
-<p class="mb-6 text-center">Très bientôt…</p>
+<p class="mb-12 text-center"><a href="/regles-du-jeu">Règles du jeu</a></p>
 
-<figure class="mx-auto w-fit">
-	<img
-		src={parkingImg}
-		alt="Batterie de vieilles casseroles et poêles en cuivre suspendues au mur."
-		width="320"
-		height="480"
-	/>
-	<figcaption>
-		Photo par <a href="https://unsplash.com/@anniespratt">Annie Spratt</a> on
-		<a href="https://unsplash.com/photos/Y3te8rqlzyw">Unsplash</a>
-	</figcaption>
-</figure>
+<h2 class="zbeul mb-6">Classement au {formattedDate}</h2>
+
+<div class="mx-auto mb-32 w-fit text-xl">
+	<ol>
+		{#each resultLines as result, i}
+			<li class="mb-3" class:winner={i === 0}>
+				{i + 1}. {getDepartmentName(result[0])} – {result[1]} pts
+			</li>
+		{/each}
+	</ol>
+</div>
+
+<Thanks />
+
+<style lang="postcss">
+	.winner {
+		@apply font-bold text-[#dd0220];
+	}
+</style>
