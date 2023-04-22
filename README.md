@@ -13,10 +13,12 @@ Immenses remerciements à :
 - [@Teddyruptif](https://nitter.net/Teddyruptif/) pour le [logo](https://nitter.net/Teddyruptif/status/1649460414676172803) 
 - Toustes les camarades qui ont contribué ou encouragé ce projet !
 
-S
 
 
 TODO:
+- auth logo
+- rank
+- valider fonte solidaire
 - ex-aequo
 - style
 - optimiser l'image du header

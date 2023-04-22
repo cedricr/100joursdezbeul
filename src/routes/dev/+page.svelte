@@ -15,7 +15,7 @@
 
 <div class="text-4xl text-center mb-6 mt-8 zbeul">Jour {dayNumber}</div>
 
-<p class="text-2xl text-center mb-6">{180 - dayNumber} jours restants</p>
+<p class="text-2xl text-center mb-6">{100 - dayNumber} jours restants</p>
 
 <p class="text-center mb-12"><a href="/regles-du-jeu">Règles du jeu</a></p>
 
