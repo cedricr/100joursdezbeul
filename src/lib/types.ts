@@ -1,4 +1,10 @@
-export type ActionCode = 'non-accueil' | 'casserolade' | 'chahut' | 'sobriete' | 'action-creative';
+export type ActionCode =
+	| 'manif'
+	| 'annulation'
+	| 'chahut'
+	| 'sobriete'
+	| 'action-creative'
+	| 'fuite';
 
 export type ActionTarget =
 	| 'secretaire-detat'

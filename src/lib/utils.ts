@@ -11,21 +11,25 @@ export function getDayNumber(): number {
 export function getScore(action: Action) {
 	let score: number;
 	switch (action.code) {
-		case 'non-accueil':
-			score = 10;
-			break;
-		case 'action-creative':
-			score = 7;
-			break;
-		case 'casserolade':
+		case 'annulation':
 			score = 5;
 			break;
-		case 'chahut':
-			score = 5;
+		case 'fuite':
+			score = 4;
 			break;
 		case 'sobriete':
-			score = 7;
+			score = 3;
 			break;
+		case 'action-creative':
+			score = 2;
+			break;
+		case 'manif':
+			score = 1;
+			break;
+		case 'chahut':
+			score = 1;
+			break;
+
 		default:
 			throw new Error(`type d'action ${action.code} inconnue`);
 	}
@@ -40,13 +44,13 @@ export function getScore(action: Action) {
 			score *= 3;
 			break;
 		case 'PAN':
-			score *= 5;
+			score *= 4;
 			break;
 		case 'PM':
-			score *= 6;
+			score *= 5;
 			break;
 		case 'PR':
-			score *= 7;
+			score *= 6;
 			break;
 		default:
 			throw new Error(`type de cible ${action.target} inconnue`);
@@ -57,8 +61,6 @@ export function getScore(action: Action) {
 
 export function generateLeaderboard(jsonData: string) {
 	const data = JSON.parse(jsonData) as DayData[];
-
-	console.log(data);
 	const departmentsResults: DepartmentResult = {};
 	data.forEach((dayData) => {
 		dayData.evenements.forEach((evenement: ActionEvent) => {
@@ -74,7 +76,6 @@ export function generateLeaderboard(jsonData: string) {
 }
 
 export function getDepartmentName(code: string): string {
-	console.log(code);
 	const dept = DEPARTMENTS.find((elt) => elt.code === code);
 	if (!dept) {
 		throw new Error(`le département ${code} est inconnu`);

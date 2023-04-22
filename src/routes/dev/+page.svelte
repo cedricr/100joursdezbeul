@@ -13,15 +13,15 @@
 
 <svelte:head><title>100 jours de zbeul WIP</title></svelte:head>
 
-<div class="text-4xl text-center mb-6 mt-8 zbeul">Jour {dayNumber}</div>
+<div class="zbeul mb-6 mt-8 text-center text-4xl">Jour {dayNumber}</div>
 
-<p class="text-2xl text-center mb-6">{100 - dayNumber} jours restants</p>
+<p class="mb-6 text-center text-2xl">{100 - dayNumber} jours restants</p>
 
-<p class="text-center mb-12"><a href="/regles-du-jeu">Règles du jeu</a></p>
+<p class="mb-12 text-center"><a href="/regles-du-jeu">Règles du jeu</a></p>
 
 <h2 class="zbeul mb-6">Classement au {formattedDate}</h2>
 
-<div class="mx-auto w-fit text-xl mb-32">
+<div class="mx-auto mb-32 w-fit text-xl">
 	<ol>
 		{#each resultLines as result, i}
 			<li class="mb-3" class:winner={i === 0}>
@@ -35,6 +35,6 @@
 
 <style lang="postcss">
 	.winner {
-		@apply text-[#dd0220] font-bold;
+		@apply font-bold text-[#dd0220];
 	}
 </style>

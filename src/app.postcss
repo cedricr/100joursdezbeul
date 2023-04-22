@@ -3,41 +3,38 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-
 	@font-face {
-    font-display: swap;
-    font-family: "SolidaireManif";
-    font-style: normal;
-    font-weight: normal;
-    src: url("$lib/assets/solidaire-manif.woff")
-        format("woff")
-  }
+		font-display: swap;
+		font-family: 'SolidaireManif';
+		font-style: normal;
+		font-weight: normal;
+		src: url('$lib/assets/solidaire-manif.woff') format('woff');
+	}
 
 	body {
 		font-family: Lato, Helvetica, Arial, sans-serif;
-		@apply m-2;
+		@apply m-4;
 	}
 
 	h1 {
-		@apply text-4xl md:text-8xl text-center;
+		@apply text-center text-4xl md:text-8xl;
 	}
 
 	h2 {
-		@apply text-4xl text-center;
+		@apply text-center text-4xl;
 	}
 
 	p {
-		@apply text-base text-center;
+		@apply text-center text-base;
 	}
 
 	figcaption {
-		@apply italic text-sm;
+		@apply text-sm italic;
 	}
 
 	a {
-		@apply underline
+		@apply underline;
 	}
 
 	.zbeul {

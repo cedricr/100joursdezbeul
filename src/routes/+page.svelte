@@ -7,11 +7,11 @@
 
 <svelte:head><title>100 jours de zbeul</title></svelte:head>
 
-<div class="text-4xl text-center mb-6 mt-8 zbeul">Jour {dayNumber}</div>
+<div class="zbeul mb-6 mt-8 text-center text-4xl">Jour {dayNumber}</div>
 
-<p class="text-2xl text-center mb-6">{100 - dayNumber} jours restants</p>
+<p class="mb-6 text-center text-2xl">{100 - dayNumber} jours restants</p>
 
-<p class="text-center mb-6">Très bientôt…</p>
+<p class="mb-6 text-center">Très bientôt…</p>
 
 <figure class="mx-auto w-fit">
 	<img

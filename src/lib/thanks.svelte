@@ -1,4 +1,4 @@
-<h2 class="text-xl font-bold mb-4">Remerciements</h2>
+<h2 class="mb-4 text-xl font-bold">Remerciements</h2>
 
 <ul class="text-center">
 	<li>

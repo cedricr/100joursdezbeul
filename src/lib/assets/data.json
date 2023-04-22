@@ -1,5 +1,64 @@
 [
 	{
+		"date": "2023-04-20",
+		"evenements": [
+			{
+				"ville": "Montpellier",
+				"codeInsee": "34172",
+				"description": "manifestation contre la venue d’Emmanuel Macron dans l’Hérault.",
+				"actions": [{ "code": "manif", "target": "PR" }]
+			},
+			{
+				"ville": "Lunel",
+				"codeInsee": "34145",
+				"description": "annulation du déplacement prévu d’Emmanuel Macron à Lunel.",
+				"actions": [{ "code": "annulation", "target": "PR" }]
+			},
+			{
+				"ville": "Ganges",
+				"codeInsee": "34111",
+				"description": "Comité d’accueil à Ganges pour la visite d’Emmanuel Macron et de Pap Ndiaye au collège Louise Michel qui a été mis en sobriété énergétique. Casseroles, vuvuzellas et plots en plastique, tous « dispositifs sonores portatifs » interdits ! Une banderole « Macron dégage » a été hissée sur une façade rocheuse.",
+				"actions": [
+					{ "code": "chahut", "target": "PR" },
+					{ "code": "chahut", "target": "ministre" },
+					{ "code": "sobriete", "target": "PR" },
+					{ "code": "sobriete", "target": "ministre" },
+					{ "code": "action-creative", "target": "PR" }
+				]
+			},
+			{
+				"ville": "Brignoles",
+				"codeInsee": "83023",
+				"description": "Visite d’Olivier Véran dans le Var. Un comité de non-accueil est présent !",
+				"actions": [{ "code": "chahut", "target": "ministre" }]
+			},
+			{
+				"ville": "Valence",
+				"codeInsee": "26362",
+				"description": "Annulation de la visite d’Eric Dupond Moretti.",
+				"actions": [{ "code": "annulation", "target": "ministre" }]
+			},
+			{
+				"ville": "Dijon",
+				"codeInsee": "21231",
+				"description": "Annulation de la venue d’Agnès Firmin Le Bodo à la conférence sur le thème de la fin de vie à Dijon à la salle Devosges.",
+				"actions": [{ "code": "annulation", "target": "ministre-delegue-e" }]
+			},
+			{
+				"ville": "Bourogne",
+				"codeInsee": "90017",
+				"description": "Comité de non-accueil pour Lecornu au 1er régiment d’artillerie à Bourogne, près de Belfort.",
+				"actions": [{ "code": "chahut", "target": "ministre" }]
+			},
+			{
+				"ville": "Nanterre",
+				"codeInsee": "92050",
+				"description": "Comité de non accueil pour la ministre des sports Amélie Oudéa-Castéra vers l’Arena de Nanterre.",
+				"actions": [{ "code": "chahut", "target": "ministre" }]
+			}
+		]
+	},
+	{
 		"date": "2023-04-19",
 		"evenements": [
 			{
@@ -7,7 +66,7 @@
 				"codeInsee": "47001",
 				"description": "casserolade et mise en sobriété énergétique du bar qui accueillait le ministre de la Transition Numérique Jean-Noël Barrot",
 				"actions": [
-					{ "code": "casserolade", "target": "ministre-delegue-e" },
+					{ "code": "chahut", "target": "ministre-delegue-e" },
 					{ "code": "sobriete", "target": "ministre-delegue-e" }
 				]
 			},
@@ -16,7 +75,7 @@
 				"codeInsee": "72181",
 				"description": "casserolades au Mans et en forêt de Bercé pour accueillir Christophe Béchu",
 				"actions": [
-					{ "code": "casserolade", "target": "ministre" },
+					{ "code": "chahut", "target": "ministre" },
 					{ "code": "action-creative", "target": "ministre" }
 				]
 			},
@@ -24,7 +83,7 @@
 				"ville": "Pantin",
 				"codeInsee": "93055",
 				"description": "casserolades lors de la visite de la ministre Carole Grandjean au CFA des métiers du luxe à Pantin, ainsi qu’à sa sortie",
-				"actions": [{ "code": "casserolade", "target": "ministre-delegue-e" }]
+				"actions": [{ "code": "chahut", "target": "ministre-delegue-e" }]
 			},
 			{
 				"ville": "Pontault-Combault",
@@ -37,7 +96,7 @@
 				"codeInsee": "67311",
 				"description": "casserolades et mise en sobriété de l’usine Mathis de Muttersholtz lors de la visite d’Emmanuel Macron.",
 				"actions": [
-					{ "code": "casserolade", "target": "PR" },
+					{ "code": "chahut", "target": "PR" },
 					{ "code": "sobriete", "target": "PR" }
 				]
 			},
@@ -46,7 +105,7 @@
 				"codeInsee": "44109",
 				"description": "le village du SNU plie bagage au bout d’1h et Sarah El Haïry renonce à venir faire un discours. ",
 				"actions": [
-					{ "code": "non-accueil", "target": "secretaire-detat" },
+					{ "code": "annulation", "target": "secretaire-detat" },
 					{ "code": "chahut", "target": "secretaire-detat" }
 				]
 			},
@@ -66,27 +125,30 @@
 				"codeInsee": "75113",
 				"description": "comité de non accueil pour Jean-Christophe Combe et Geneviève Darrieussecq en visite à la CAF de Paris",
 				"actions": [
-					{ "code": "non-accueil", "target": "ministre-delegue-e" },
-					{ "code": "non-accueil", "target": "ministre" }
+					{ "code": "chahut", "target": "ministre-delegue-e" },
+					{ "code": "chahut", "target": "ministre" }
 				]
 			},
 			{
 				"ville": "Saclay",
 				"codeInsee": "91534",
 				"description": "à 17h place Hubert Coudane à Orsay, comité de non-accueil pour Sylvie Retailleau à l’université Paris Saclay",
-				"actions": [{ "code": "non-accueil", "target": "ministre" }]
+				"actions": [
+					{ "code": "chahut", "target": "ministre" },
+					{ "code": "fuite", "target": "ministre" }
+				]
 			},
 			{
 				"ville": "Saint-Denis",
 				"codeInsee": "93066",
 				"description": "casserolade pour accueillir Emmanuel Macron.",
-				"actions": [{ "code": "casserolade", "target": "PR" }]
+				"actions": [{ "code": "chahut", "target": "PR" }]
 			},
 			{
 				"ville": "Chartres",
 				"codeInsee": "28085",
 				"description": "comité de non-accueil lors de la venue d’Olivier Dussopt pour la mise en œuvre de la réforme des retraites.",
-				"actions": [{ "code": "non-accueil", "target": "ministre" }]
+				"actions": [{ "code": "chahut", "target": "ministre" }]
 			}
 		]
 	}
