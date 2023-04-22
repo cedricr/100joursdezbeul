@@ -19,8 +19,8 @@
 
 <p class="mb-12 text-center"><a href="/regles-du-jeu">Règles du jeu</a></p>
 
-<h2 class="zbeul mb-6">Classement au {formattedDate}</h2>
-
+<h2 class="zbeul mb-6">Classement temporaire au {formattedDate}</h2>
+<p class="mb-12 text-center italic">tenant compte des données jusqu’au 20 avril inclu.</p>
 <div class="mx-auto mb-32 w-fit text-xl">
 	<ol>
 		{#each resultLines as result, i}
