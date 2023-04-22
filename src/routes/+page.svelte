@@ -1,11 +1,17 @@
 <script lang="ts">
 	import parkingImg from '$lib/assets/annie-spratt-Y3te8rqlzyw-unsplash-small.jpg';
+	import { getDayNumber } from '$lib/utils';
+
+	const dayNumber = getDayNumber();
 </script>
 
 <svelte:head><title>100 jours de zbeul</title></svelte:head>
 
-<h1>100 jours de zbeul</h1>
+<div class="text-3xl text-center mb-6 mt-8">Jour {dayNumber}</div>
+<p class="text-2xl text-center mb-6">{180 - dayNumber} jours restants</p>
+
 <p class="text-center mb-6">Très bientôt…</p>
+
 <figure class="mx-auto w-fit">
 	<img
 		src={parkingImg}

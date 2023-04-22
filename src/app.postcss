@@ -5,17 +5,34 @@
 
 
 @layer base {
+
+	@font-face {
+    font-display: swap;
+    font-family: "SolidaireManif";
+    font-style: normal;
+    font-weight: normal;
+    src: url("$lib/assets/solidaire-manif.woff")
+        format("woff")
+  }
+
 	body {
-		font-family: Lato, Helvetica, Arial, sans-serif;
+		/* font-family: Lato, Helvetica, Arial, sans-serif; */
+		font-family: SolidaireManif;
 		@apply m-2;
 	}
 
 	h1 {
-		@apply font-bold text-4xl text-center mb-8;
+		font-family: SolidaireManif;
+		@apply text-8xl text-center mb-8;
+	}
+
+	h2 {
+		font-family: SolidaireManif;
+		@apply text-4xl text-center mb-8;
 	}
 
 	p {
-		@apply text-base;
+		@apply text-base text-center;
 	}
 
 	figcaption {
@@ -24,5 +41,9 @@
 
 	a {
 		@apply underline
+	}
+
+	li {
+		@apply mb-4;
 	}
 }

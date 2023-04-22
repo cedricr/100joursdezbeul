@@ -1,13 +1,34 @@
 [
   {
-    "jour": 1,
     "date": "2023-04-18",
-    "actions": [
+    "evenements": [
       {
         "dept": "75",
         "ville": "Paris 13",
+        "codeInsee": "75113",
         "description": "comité de non accueil pour Jean-Christophe Combe et Geneviève Darrieussecq en visite à la CAF de Paris",
-        "actions": ["code":"non-accueil"]
+        "actions": [{"code":"non-accueil", "target": "plusieurs-ministres"}]
+      },
+      {
+        "dept": "91",
+        "ville": "Saclay",
+        "codeInsee": "91534",
+        "description": "à 17h place Hubert Coudane à Orsay, comité de non-accueil pour Sylvie Retailleau à l’université Paris Saclay",
+        "actions": [{"code":"non-accueil", "target": "ministre"}]
+      },
+      {
+        "dept": "93",
+        "ville": "Saint-Denis",
+        "codeInsee": "93066",
+        "description": "casserolade pour accueillir Emmanuel Macron.",
+        "actions": [{"code":"casserolade", "target": "PR"}]
+      },
+      {
+        "dept": "28",
+        "ville": "Chartres",
+        "codeInsee": "28085",
+        "description": "comité de non-accueil lors de la venue d’Olivier Dussopt pour la mise en œuvre de la réforme des retraites.",
+        "actions": [{"code":"non-accueil", "target": "ministre"}]
       }
     ]
   }
