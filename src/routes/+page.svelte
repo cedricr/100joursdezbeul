@@ -13,28 +13,35 @@
 
 <svelte:head><title>100 jours de zbeul</title></svelte:head>
 
-<div class="zbeul mb-6 mt-8 text-center text-4xl">Jour {dayNumber}</div>
+<p class="zbeul olympic-red mt-16 text-center text-8xl">
+	{100 - dayNumber}
+</p>
 
-<p class="mb-6 text-center text-2xl">{100 - dayNumber} jours restants</p>
+<p class=" mb-10 text-center text-xl">jours restants</p>
 
-<p class="mb-12 text-center"><a href="/regles-du-jeu">Règles du jeu</a></p>
+<h2 class="zbeul mb-2">Classement temporaire au {formattedDate}</h2>
+<p class="mb-6 text-center italic">tenant compte des données jusqu’au 20 avril inclus.</p>
 
-<h2 class="zbeul mb-6">Classement temporaire au {formattedDate}</h2>
-<p class="mb-12 text-center italic">tenant compte des données jusqu’au 20 avril inclus.</p>
-<div class="mx-auto mb-32 w-fit text-xl">
+<div class="mx-auto mb-6 max-w-sm text-xl">
 	<ol>
 		{#each resultLines as result, i}
-			<li class="mb-3" class:winner={i === 0}>
-				{i + 1}. {getDepartmentName(result[0])} – {result[1]} pts
+			<li class="mb-3 flex flex-row justify-between gap-3" class:winner={i === 0}>
+				<div>{i + 1}. {getDepartmentName(result[0])}</div>
+				<div>{result[1]} pts</div>
 			</li>
 		{/each}
 	</ol>
 </div>
 
+<p class="mb-12 text-center text-lg"><a href="/regles-du-jeu">Règles du jeu</a></p>
+
 <Thanks />
 
 <style lang="postcss">
+	.olympic-red {
+		@apply text-[#dd0220];
+	}
 	.winner {
-		@apply font-bold text-[#dd0220];
+		@apply text-4xl font-bold text-[#dd0220];
 	}
 </style>
