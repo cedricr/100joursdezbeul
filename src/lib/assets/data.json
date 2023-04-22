@@ -1,0 +1,14 @@
+[
+  {
+    "jour": 1,
+    "date": "2023-04-18",
+    "actions": [
+      {
+        "dept": "75",
+        "ville": "Paris 13",
+        "description": "comité de non accueil pour Jean-Christophe Combe et Geneviève Darrieussecq en visite à la CAF de Paris",
+        "actions": ["code":"non-accueil"]
+      }
+    ]
+  }
+]

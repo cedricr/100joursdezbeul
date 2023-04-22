@@ -1,0 +1,28 @@
+/* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+	body {
+		font-family: Lato, Helvetica, Arial, sans-serif;
+		@apply m-2;
+	}
+
+	h1 {
+		@apply font-bold text-4xl text-center mb-8;
+	}
+
+	p {
+		@apply text-base;
+	}
+
+	figcaption {
+		@apply italic text-sm;
+	}
+
+	a {
+		@apply underline
+	}
+}
