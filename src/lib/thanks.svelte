@@ -1,4 +1,4 @@
-<h2>Remerciements</h2>
+<h2 class="text-xl font-bold mb-4">Remerciements</h2>
 
 <ul class="text-center">
 	<li>
@@ -14,3 +14,9 @@
 	</li>
 	<li>Toustes les camarades qui ont contribué ou encouragé ce projet&nbsp;!</li>
 </ul>
+
+<style lang="postcss">
+	li {
+		@apply mb-1 text-base;
+	}
+</style>

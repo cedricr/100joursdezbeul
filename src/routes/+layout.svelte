@@ -13,7 +13,7 @@
 		height="178"
 	/>
 
-	<h1>100 jours de zbeul</h1>
-	<p class="text-center mb-6">Quels sont les départements qui zbeulent le plus&nbsp;?</p>
+	<h1 class="zbeul">100 jours de zbeul</h1>
+	<p class="text-center mb-6 zbeul">Quels sont les départements qui zbeulent le plus&nbsp;?</p>
 </header>
 <slot />
