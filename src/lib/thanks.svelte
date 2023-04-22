@@ -13,6 +13,7 @@
 		<a href="https://nitter.net/Teddyruptif/status/1649460414676172803">logo</a>
 	</li>
 	<li>Toustes les camarades qui ont contribué ou encouragé ce projet&nbsp;!</li>
+	<li><a href="https://solidairesinformatique.org">Syndiquez-vous !</a>
 </ul>
 
 <style lang="postcss">
