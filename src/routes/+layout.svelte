@@ -19,6 +19,7 @@
 	<p class="zbeul mb-6 text-center">Quels sont les départements qui zbeulent le plus&nbsp;?</p>
 </header>
 <slot />
-<footer class="mt-4">
+<footer class="mt-8">
+	<hr class="mb-2" />
 	<p><a href="https://github.com/cedricr/100joursdezbeul">Code source</a></p>
 </footer>
