@@ -3,12 +3,11 @@
 	import logoJO from '$lib/assets/logo-jo-small.jpg';
 </script>
 
-<header>
+<header role="banner">
 	<a href="/"
 		><img
 			src={logoJO}
-			alt="Parodie du logo des Jeux Olympiques (cinq anneaux bleu, jaune, noir, vert, et rouge entrecroisés) les anneaux ont un manche ce qui en fait des casseroles."
-			title="Source : https://nitter.net/Teddyruptif/status/1649460414676172803"
+			alt="100 jours de zbeul - Accueil"
 			class="mx-auto block text-center"
 			width="300"
 			height="178"
@@ -19,7 +18,7 @@
 	<p class="zbeul mb-6 text-center">Quels sont les départements qui zbeulent le plus&nbsp;?</p>
 </header>
 <slot />
-<footer class="mt-8">
+<footer class="mt-8" role="contentinfo">
 	<hr class="mb-2" />
 	<p><a href="https://github.com/cedricr/100joursdezbeul">Code source</a></p>
 </footer>

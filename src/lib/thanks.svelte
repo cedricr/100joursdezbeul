@@ -10,10 +10,12 @@
 	</li>
 	<li>
 		<a href="https://nitter.net/Teddyruptif/">@Teddyruptif</a> pour son superbe
-		<a href="https://nitter.net/Teddyruptif/status/1649460414676172803">logo</a>
+		<a href="https://nitter.net/Teddyruptif/status/1649460414676172803">logo</a>&nbsp;:<br /> Parodie
+		du logo des Jeux Olympiques (cinq anneaux bleu, jaune, noir, vert, et rouge entrecroisés) les anneaux
+		ont un manche qui en fait des casseroles.
 	</li>
 	<li>Toustes les camarades qui ont contribué ou encouragé ce projet&nbsp;!</li>
-	<li><a href="https://solidairesinformatique.org">Syndiquez-vous !</a>
+	<li><a href="https://solidairesinformatique.org">Syndiquez-vous&nbsp;!</a></li>
 </ul>
 
 <style lang="postcss">
