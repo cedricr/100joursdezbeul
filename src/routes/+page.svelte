@@ -22,7 +22,7 @@
 	</p>
 
 	<h2 class="zbeul mb-2">Classement temporaire au {formattedDate}</h2>
-	<p class="mb-6 text-center italic">tenant compte des données jusqu’au 20 avril inclus.</p>
+	<p class="mb-6 text-center italic">tenant compte des données jusqu’au 21 avril inclus.</p>
 
 	<div class="mx-auto mb-6 mt-10 max-w-sm text-xl">
 		<ol>

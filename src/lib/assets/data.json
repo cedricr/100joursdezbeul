@@ -1,5 +1,99 @@
 [
 	{
+		"date": "2023-04-21",
+		"evenements": [
+			{
+				"ville": "Bobigny",
+				"codeInsee": "93008",
+				"description": "Olivier Klein devait passer à la Bourse départementale du travail de Bobigny, il a finalement renoncé pour ne pas risquer la casserolade.",
+				"actions": [{ "code": "annulation", "target": "ministre-delegue-e" }]
+			},
+			{
+				"ville": "Toulouse",
+				"codeInsee": "31555",
+				"description": "La visite de Carole Grandjean à Toulouse a été annulée pour « raisons de sécurité »",
+				"actions": [{ "code": "annulation", "target": "ministre-delegue-e" }]
+			},
+			{
+				"ville": "Nesle",
+				"codeInsee": "80585",
+				"description": "Bruno Le Maire et Christophe Béchu en déplacement. Un comité de non-accueil est prévu !",
+				"actions": [
+					{ "code": "chahut", "target": "ministre" },
+					{ "code": "chahut", "target": "ministre" }
+				]
+			},
+			{
+				"ville": "Montreuil",
+				"codeInsee": "93048",
+				"description": "Venue du ministre de la Santé François Braun au centre médical Cap Horn 55.",
+				"actions": [
+					{ "code": "fuite", "target": "ministre" },
+					{ "code": "chahut", "target": "ministre" }
+				]
+			},
+			{
+				"ville": "La Baule",
+				"codeInsee": "44055",
+				"description": "Olivia Grégoire à la Baule et à Guérande. Un comité de non-accueil est aussi prévu !",
+				"actions": [
+					{ "code": "fuite", "target": "ministre-delegue-e" },
+					{ "code": "chahut", "target": "ministre-delegue-e" },
+					{ "code": "annulation", "target": "ministre-delegue-e" }
+				]
+			},
+			{
+				"ville": "Châteauroux",
+				"codeInsee": "36044",
+				"description": "Elisabeth Borne en déplacement dans l’Indre.",
+				"actions": [{ "code": "chahut", "target": "PM" }]
+			},
+
+			{
+				"ville": "Montceau-les-Mines",
+				"codeInsee": "71306",
+				"description": "Visite d’Olivier Dussopt à l’entreprise Novium à Montceau-les-Mines",
+				"actions": [{ "code": "chahut", "target": "ministre" }]
+			},
+			{
+				"ville": "Besançon",
+				"codeInsee": "25056",
+				"description": "Venue du ministre des armées Sébastien Lecornu. Un comité de non-accueil est prévu !",
+				"actions": [{ "code": "chahut", "target": "ministre" }]
+			},
+			{
+				"ville": "Belfort",
+				"codeInsee": "90010",
+				"description": "Visite d’Olivier Becht, le ministre du commerce extérieur et de l’attractivité, à l’usine d’Alstom en début d’après-midi.",
+				"actions": [{ "code": "chahut", "target": "ministre-delegue-e" }]
+			},
+			{
+				"ville": "Lons-le-Saunier",
+				"codeInsee": "39300",
+				"description": "Venue de la ministre à l’égalité homme femme dans le Jura. Comité de non-accueil organisé par l’intersyndicale !",
+				"actions": [{ "code": "chahut", "target": "ministre-delegue-e" }]
+			},
+			{
+				"ville": "Tricastin",
+				"codeInsee": "26324",
+				"description": "Venue du ministre chargé de l’industrie Roland Lescure et de la ministre de la transition énergétique Agnès Pannier-Runacher sur le site de la centrale nucléaire du Tricastin dans la Drôme.",
+				"actions": [
+					{ "code": "chahut", "target": "ministre-delegue-e" },
+					{ "code": "chahut", "target": "ministre" }
+				]
+			},
+			{
+				"ville": "Pau",
+				"codeInsee": "64445",
+				"description": "repas officiel avec Gabriel Attal à la villa St Basil’s dans le quartier Trespoey.",
+				"actions": [
+					{ "code": "chahut", "target": "ministre-delegue-e" },
+					{ "code": "action-creative", "target": "ministre-delegue-e" }
+				]
+			}
+		]
+	},
+	{
 		"date": "2023-04-20",
 		"evenements": [
 			{
