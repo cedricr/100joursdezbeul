@@ -7,7 +7,7 @@
 	<a href="/"
 		><img
 			src={logoJO}
-			alt="Parodie du logo des Jeux Olympiques (cinq anneaux bleu, jaune, noir, vert, et rouge entrecroisé) les anneaux ont un manche ce qui en fait des casseroles."
+			alt="Parodie du logo des Jeux Olympiques (cinq anneaux bleu, jaune, noir, vert, et rouge entrecroisés) les anneaux ont un manche ce qui en fait des casseroles."
 			title="Source : https://nitter.net/Teddyruptif/status/1649460414676172803"
 			class="mx-auto block text-center"
 			width="300"
