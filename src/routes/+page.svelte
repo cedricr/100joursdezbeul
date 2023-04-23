@@ -13,29 +13,32 @@
 
 <svelte:head><title>100 jours de zbeul</title></svelte:head>
 
-<p class="zbeul olympic-red mt-16 text-center text-8xl">
-	{100 - dayNumber}
-</p>
+<main role="main">
+	<p class="mb-10 mt-16 text-center">
+		<span class="zbeul olympic-red block text-8xl">
+			{100 - dayNumber}
+		</span>
+		<span class="block text-xl">jours restants</span>
+	</p>
 
-<p class=" mb-10 text-center text-xl">jours restants</p>
+	<h2 class="zbeul mb-2">Classement temporaire au {formattedDate}</h2>
+	<p class="mb-6 text-center italic">tenant compte des données jusqu’au 20 avril inclus.</p>
 
-<h2 class="zbeul mb-2">Classement temporaire au {formattedDate}</h2>
-<p class="mb-6 text-center italic">tenant compte des données jusqu’au 20 avril inclus.</p>
+	<div class="mx-auto mb-6 max-w-sm text-xl">
+		<ol>
+			{#each resultLines as result, i}
+				<li class="mb-3 flex flex-row justify-between gap-3" class:winner={i === 0}>
+					<div>{i + 1}. {getDepartmentName(result[0])}</div>
+					<div>{result[1]} pts</div>
+				</li>
+			{/each}
+		</ol>
+	</div>
 
-<div class="mx-auto mb-6 max-w-sm text-xl">
-	<ol>
-		{#each resultLines as result, i}
-			<li class="mb-3 flex flex-row justify-between gap-3" class:winner={i === 0}>
-				<div>{i + 1}. {getDepartmentName(result[0])}</div>
-				<div>{result[1]} pts</div>
-			</li>
-		{/each}
-	</ol>
-</div>
+	<p class="mb-12 text-center text-lg"><a href="/regles-du-jeu">Règles du jeu</a></p>
 
-<p class="mb-12 text-center text-lg"><a href="/regles-du-jeu">Règles du jeu</a></p>
-
-<Thanks />
+	<Thanks />
+</main>
 
 <style lang="postcss">
 	.olympic-red {
