@@ -14,17 +14,17 @@
 <svelte:head><title>100 jours de zbeul</title></svelte:head>
 
 <main role="main">
-	<p class="mb-10 mt-16 text-center">
-		<span class="zbeul olympic-red block text-8xl">
+	<p class="mb-16 mt-24 text-center">
+		<span class="zbeul olympic-red mb-0 block text-8xl leading-[5rem]">
 			{100 - dayNumber}
 		</span>
-		<span class="block text-xl">jours restants</span>
+		<span class="mt-0 block text-xl">jours restants</span>
 	</p>
 
 	<h2 class="zbeul mb-2">Classement temporaire au {formattedDate}</h2>
 	<p class="mb-6 text-center italic">tenant compte des données jusqu’au 20 avril inclus.</p>
 
-	<div class="mx-auto mb-6 max-w-sm text-xl">
+	<div class="mx-auto mb-6 mt-10 max-w-sm text-xl">
 		<ol>
 			{#each resultLines as result, i}
 				<li class="mb-3 flex flex-row justify-between gap-3" class:winner={i === 0}>
@@ -35,7 +35,7 @@
 		</ol>
 	</div>
 
-	<p class="mb-12 text-center text-lg"><a href="/regles-du-jeu">Règles du jeu</a></p>
+	<p class="mb-20 text-center text-lg"><a href="/regles-du-jeu">Règles du jeu</a></p>
 
 	<Thanks />
 </main>

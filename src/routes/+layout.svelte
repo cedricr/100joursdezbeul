@@ -20,5 +20,5 @@
 <slot />
 <footer class="mt-8" role="contentinfo">
 	<hr class="mb-2" />
-	<p><a href="https://github.com/cedricr/100joursdezbeul">Code source</a></p>
+	<p class="text-center"><a href="https://github.com/cedricr/100joursdezbeul">Code source</a></p>
 </footer>
