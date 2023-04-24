@@ -27,7 +27,7 @@
 		<p class="italic">
 			(Les règles suivantes vont sans doute évoluer rapidement dans les prochains jours en fonction
 			de vos retours. Détails dans le <a
-				href="https://github.com/cedricr/100joursdezbeul/blob/main/src/lib/utils.ts#L11"
+				href="https://github.com/cedricr/100joursdezbeul/blob/main/src/lib/constants.ts#L14"
 				>code source</a
 			>)
 		</p>
