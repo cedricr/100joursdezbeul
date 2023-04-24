@@ -1,249 +1,270 @@
 [
 	{
+		"ville": "Bobigny",
 		"date": "2023-04-21",
-		"evenements": [
-			{
-				"ville": "Bobigny",
-				"codeInsee": "93008",
-				"description": "Olivier Klein devait passer à la Bourse départementale du travail de Bobigny, il a finalement renoncé pour ne pas risquer la casserolade.",
-				"actions": [{ "code": "annulation", "target": "ministre-delegue-e" }]
-			},
-			{
-				"ville": "Toulouse",
-				"codeInsee": "31555",
-				"description": "La visite de Carole Grandjean à Toulouse a été annulée pour « raisons de sécurité »",
-				"actions": [{ "code": "annulation", "target": "ministre-delegue-e" }]
-			},
-			{
-				"ville": "Nesle",
-				"codeInsee": "80585",
-				"description": "Bruno Le Maire et Christophe Béchu en déplacement. Un comité de non-accueil est prévu !",
-				"actions": [
-					{ "code": "chahut", "target": "ministre" },
-					{ "code": "chahut", "target": "ministre" }
-				]
-			},
-			{
-				"ville": "Montreuil",
-				"codeInsee": "93048",
-				"description": "Venue du ministre de la Santé François Braun au centre médical Cap Horn 55.",
-				"actions": [
-					{ "code": "fuite", "target": "ministre" },
-					{ "code": "chahut", "target": "ministre" }
-				]
-			},
-			{
-				"ville": "La Baule",
-				"codeInsee": "44055",
-				"description": "Olivia Grégoire à la Baule et à Guérande. Un comité de non-accueil est aussi prévu !",
-				"actions": [
-					{ "code": "fuite", "target": "ministre-delegue-e" },
-					{ "code": "chahut", "target": "ministre-delegue-e" },
-					{ "code": "annulation", "target": "ministre-delegue-e" }
-				]
-			},
-			{
-				"ville": "Châteauroux",
-				"codeInsee": "36044",
-				"description": "Elisabeth Borne en déplacement dans l’Indre.",
-				"actions": [{ "code": "chahut", "target": "PM" }]
-			},
+		"codeInsee": "93008",
+		"description": "Olivier Klein devait passer à la Bourse départementale du travail de Bobigny, il a finalement renoncé pour ne pas risquer la casserolade.",
+		"cibles": ["ministre-del"],
+		"actions": ["annulation"]
+	},
+	{
+		"ville": "Toulouse",
+		"date": "2023-04-21",
+		"codeInsee": "31555",
+		"description": "La visite de Carole Grandjean à Toulouse a été annulée pour « raisons de sécurité »",
+		"cibles": ["ministre-del"],
+		"actions": ["annulation"]
+	},
+	{
+		"ville": "Nesle",
+		"date": "2023-04-21",
+		"codeInsee": "80585",
+		"description": "Bruno Le Maire et Christophe Béchu en déplacement. Un comité de non-accueil est prévu !",
+		"cibles": ["ministre", "ministre"],
+		"actions": ["chahut"]
+	},
+	{
+		"ville": "Montreuil",
+		"date": "2023-04-21",
+		"codeInsee": "93048",
+		"description": "Venue du ministre de la Santé François Braun au centre médical Cap Horn 55.",
+		"cibles": ["ministre"],
+		"actions": ["chahut", "fuite"]
+	},
+	{
+		"ville": "La Baule",
+		"date": "2023-04-21",
+		"codeInsee": "44055",
+		"description": "Olivia Grégoire à la Baule et à Guérande. Un comité de non-accueil est aussi prévu !",
+		"cibles": ["ministre-del"],
+		"actions": ["chahut", "fuite", "annulation"]
+	},
+	{
+		"ville": "Châteauroux",
+		"date": "2023-04-21",
+		"codeInsee": "36044",
+		"description": "Elisabeth Borne en déplacement dans l’Indre.",
+		"cibles": ["premiere-min"],
+		"actions": ["chahut"]
+	},
 
-			{
-				"ville": "Montceau-les-Mines",
-				"codeInsee": "71306",
-				"description": "Visite d’Olivier Dussopt à l’entreprise Novium à Montceau-les-Mines",
-				"actions": [{ "code": "chahut", "target": "ministre" }]
-			},
-			{
-				"ville": "Besançon",
-				"codeInsee": "25056",
-				"description": "Venue du ministre des armées Sébastien Lecornu. Un comité de non-accueil est prévu !",
-				"actions": [{ "code": "chahut", "target": "ministre" }]
-			},
-			{
-				"ville": "Belfort",
-				"codeInsee": "90010",
-				"description": "Visite d’Olivier Becht, le ministre du commerce extérieur et de l’attractivité, à l’usine d’Alstom en début d’après-midi.",
-				"actions": [{ "code": "chahut", "target": "ministre-delegue-e" }]
-			},
-			{
-				"ville": "Lons-le-Saunier",
-				"codeInsee": "39300",
-				"description": "Venue de la ministre à l’égalité homme femme dans le Jura. Comité de non-accueil organisé par l’intersyndicale !",
-				"actions": [{ "code": "chahut", "target": "ministre-delegue-e" }]
-			},
-			{
-				"ville": "Tricastin",
-				"codeInsee": "26324",
-				"description": "Venue du ministre chargé de l’industrie Roland Lescure et de la ministre de la transition énergétique Agnès Pannier-Runacher sur le site de la centrale nucléaire du Tricastin dans la Drôme.",
-				"actions": [
-					{ "code": "chahut", "target": "ministre-delegue-e" },
-					{ "code": "chahut", "target": "ministre" }
-				]
-			},
-			{
-				"ville": "Pau",
-				"codeInsee": "64445",
-				"description": "repas officiel avec Gabriel Attal à la villa St Basil’s dans le quartier Trespoey.",
-				"actions": [
-					{ "code": "chahut", "target": "ministre-delegue-e" },
-					{ "code": "action-creative", "target": "ministre-delegue-e" }
-				]
-			}
-		]
+	{
+		"ville": "Montceau-les-Mines",
+		"date": "2023-04-21",
+		"codeInsee": "71306",
+		"description": "Visite d’Olivier Dussopt à l’entreprise Novium à Montceau-les-Mines",
+		"cibles": ["ministre"],
+		"actions": ["chahut"]
 	},
 	{
+		"ville": "Besançon",
+		"date": "2023-04-21",
+		"codeInsee": "25056",
+		"description": "Venue du ministre des armées Sébastien Lecornu. Un comité de non-accueil est prévu !",
+		"cibles": ["ministre"],
+		"actions": ["chahut"]
+	},
+	{
+		"ville": "Belfort",
+		"date": "2023-04-21",
+		"codeInsee": "90010",
+		"description": "Visite d’Olivier Becht, le ministre du commerce extérieur et de l’attractivité, à l’usine d’Alstom en début d’après-midi.",
+		"cibles": ["ministre-del"],
+		"actions": ["chahut"]
+	},
+	{
+		"ville": "Lons-le-Saunier",
+		"date": "2023-04-21",
+		"codeInsee": "39300",
+		"description": "Venue de la ministre à l’égalité homme femme dans le Jura. Comité de non-accueil organisé par l’intersyndicale !",
+		"cibles": ["ministre-del"],
+		"actions": ["chahut"]
+	},
+	{
+		"ville": "Tricastin",
+		"date": "2023-04-21",
+		"codeInsee": "26324",
+		"description": "Venue du ministre chargé de l’industrie Roland Lescure et de la ministre de la transition énergétique Agnès Pannier-Runacher sur le site de la centrale nucléaire du Tricastin dans la Drôme.",
+		"cibles": ["ministre-del", "ministre"],
+		"actions": ["chahut"]
+	},
+	{
+		"ville": "Pau",
+		"date": "2023-04-21",
+		"codeInsee": "64445",
+		"description": "repas officiel avec Gabriel Attal à la villa St Basil’s dans le quartier Trespoey.",
+		"cibles": ["ministre-del"],
+		"actions": ["chahut", "creatif"]
+	},
+
+	{
+		"ville": "Montpellier",
 		"date": "2023-04-20",
-		"evenements": [
-			{
-				"ville": "Montpellier",
-				"codeInsee": "34172",
-				"description": "manifestation contre la venue d’Emmanuel Macron dans l’Hérault.",
-				"actions": [{ "code": "manif", "target": "PR" }]
-			},
-			{
-				"ville": "Lunel",
-				"codeInsee": "34145",
-				"description": "annulation du déplacement prévu d’Emmanuel Macron à Lunel.",
-				"actions": [{ "code": "annulation", "target": "PR" }]
-			},
-			{
-				"ville": "Ganges",
-				"codeInsee": "34111",
-				"description": "Comité d’accueil à Ganges pour la visite d’Emmanuel Macron et de Pap Ndiaye au collège Louise Michel qui a été mis en sobriété énergétique. Casseroles, vuvuzellas et plots en plastique, tous « dispositifs sonores portatifs » interdits ! Une banderole « Macron dégage » a été hissée sur une façade rocheuse.",
-				"actions": [
-					{ "code": "chahut", "target": "PR" },
-					{ "code": "chahut", "target": "ministre" },
-					{ "code": "sobriete", "target": "PR" },
-					{ "code": "sobriete", "target": "ministre" },
-					{ "code": "action-creative", "target": "PR" }
-				]
-			},
-			{
-				"ville": "Brignoles",
-				"codeInsee": "83023",
-				"description": "Visite d’Olivier Véran dans le Var. Un comité de non-accueil est présent !",
-				"actions": [{ "code": "chahut", "target": "ministre" }]
-			},
-			{
-				"ville": "Valence",
-				"codeInsee": "26362",
-				"description": "Annulation de la visite d’Eric Dupond Moretti.",
-				"actions": [{ "code": "annulation", "target": "ministre" }]
-			},
-			{
-				"ville": "Dijon",
-				"codeInsee": "21231",
-				"description": "Annulation de la venue d’Agnès Firmin Le Bodo à la conférence sur le thème de la fin de vie à Dijon à la salle Devosges.",
-				"actions": [{ "code": "annulation", "target": "ministre-delegue-e" }]
-			},
-			{
-				"ville": "Bourogne",
-				"codeInsee": "90017",
-				"description": "Comité de non-accueil pour Lecornu au 1er régiment d’artillerie à Bourogne, près de Belfort.",
-				"actions": [{ "code": "chahut", "target": "ministre" }]
-			},
-			{
-				"ville": "Nanterre",
-				"codeInsee": "92050",
-				"description": "Comité de non accueil pour la ministre des sports Amélie Oudéa-Castéra vers l’Arena de Nanterre.",
-				"actions": [{ "code": "chahut", "target": "ministre" }]
-			}
-		]
+		"codeInsee": "34172",
+		"description": "manifestation contre la venue d’Emmanuel Macron dans l’Hérault.",
+		"cibles": ["president-rep"],
+		"actions": ["manif"]
 	},
 	{
+		"ville": "Lunel",
+		"date": "2023-04-20",
+
+		"codeInsee": "34145",
+		"description": "annulation du déplacement prévu d’Emmanuel Macron à Lunel.",
+		"cibles": ["president-rep"],
+		"actions": ["annulation"]
+	},
+	{
+		"ville": "Ganges",
+		"date": "2023-04-20",
+
+		"codeInsee": "34111",
+		"description": "Comité d’accueil à Ganges pour la visite d’Emmanuel Macron et de Pap Ndiaye au collège Louise Michel qui a été mis en sobriété énergétique. Casseroles, vuvuzellas et plots en plastique, tous « dispositifs sonores portatifs » interdits ! Une banderole « Macron dégage » a été hissée sur une façade rocheuse.",
+		"cibles": ["president-rep", "ministre"],
+		"actions": ["chahut", "sobriete", "creatif"]
+	},
+	{
+		"ville": "Brignoles",
+		"date": "2023-04-20",
+
+		"codeInsee": "83023",
+		"description": "Visite d’Olivier Véran dans le Var. Un comité de non-accueil est présent !",
+		"cibles": ["ministre"],
+		"actions": ["chahut"]
+	},
+	{
+		"ville": "Valence",
+		"date": "2023-04-20",
+
+		"codeInsee": "26362",
+		"description": "Annulation de la visite d’Eric Dupond Moretti.",
+		"cibles": ["ministre"],
+		"actions": ["annulation"]
+	},
+	{
+		"ville": "Dijon",
+		"date": "2023-04-20",
+
+		"codeInsee": "21231",
+		"description": "Annulation de la venue d’Agnès Firmin Le Bodo à la conférence sur le thème de la fin de vie à Dijon à la salle Devosges.",
+		"cibles": ["ministre-del"],
+		"actions": ["annulation"]
+	},
+	{
+		"ville": "Bourogne",
+		"date": "2023-04-20",
+
+		"codeInsee": "90017",
+		"description": "Comité de non-accueil pour Lecornu au 1er régiment d’artillerie à Bourogne, près de Belfort.",
+		"cibles": ["ministre"],
+		"actions": ["chahut"]
+	},
+	{
+		"ville": "Nanterre",
+		"date": "2023-04-20",
+
+		"codeInsee": "92050",
+		"description": "Comité de non accueil pour la ministre des sports Amélie Oudéa-Castéra vers l’Arena de Nanterre.",
+		"cibles": ["ministre"],
+		"actions": ["chahut"]
+	},
+	{
+		"ville": "Agen",
 		"date": "2023-04-19",
-		"evenements": [
-			{
-				"ville": "Agen",
-				"codeInsee": "47001",
-				"description": "casserolade et mise en sobriété énergétique du bar qui accueillait le ministre de la Transition Numérique Jean-Noël Barrot",
-				"actions": [
-					{ "code": "chahut", "target": "ministre-delegue-e" },
-					{ "code": "sobriete", "target": "ministre-delegue-e" }
-				]
-			},
-			{
-				"ville": "Le Mans",
-				"codeInsee": "72181",
-				"description": "casserolades au Mans et en forêt de Bercé pour accueillir Christophe Béchu",
-				"actions": [
-					{ "code": "chahut", "target": "ministre" },
-					{ "code": "action-creative", "target": "ministre" }
-				]
-			},
-			{
-				"ville": "Pantin",
-				"codeInsee": "93055",
-				"description": "casserolades lors de la visite de la ministre Carole Grandjean au CFA des métiers du luxe à Pantin, ainsi qu’à sa sortie",
-				"actions": [{ "code": "chahut", "target": "ministre-delegue-e" }]
-			},
-			{
-				"ville": "Pontault-Combault",
-				"codeInsee": "77373",
-				"description": "comité de non accueil pour la visite de Yaël Braun-Pivet au Centre Social et Culturel de Pontault-Combault",
-				"actions": [{ "code": "chahut", "target": "PAN" }]
-			},
-			{
-				"ville": "Muttersholtz",
-				"codeInsee": "67311",
-				"description": "casserolades et mise en sobriété de l’usine Mathis de Muttersholtz lors de la visite d’Emmanuel Macron.",
-				"actions": [
-					{ "code": "chahut", "target": "PR" },
-					{ "code": "sobriete", "target": "PR" }
-				]
-			},
-			{
-				"ville": "Nantes",
-				"codeInsee": "44109",
-				"description": "le village du SNU plie bagage au bout d’1h et Sarah El Haïry renonce à venir faire un discours. ",
-				"actions": [
-					{ "code": "annulation", "target": "secretaire-detat" },
-					{ "code": "chahut", "target": "secretaire-detat" }
-				]
-			},
-			{
-				"ville": "Sélestat",
-				"codeInsee": "67462",
-				"description": "Emmanuel Macron hué lors de sa visite à Sélestat et interpellé par des habitants",
-				"actions": [{ "code": "chahut", "target": "PR" }]
-			}
-		]
+
+		"codeInsee": "47001",
+		"description": "casserolade et mise en sobriété énergétique du bar qui accueillait le ministre de la Transition Numérique Jean-Noël Barrot",
+		"cibles": ["ministre-del"],
+		"actions": ["chahut", "sobriete"]
 	},
 	{
+		"ville": "Le Mans",
+		"date": "2023-04-19",
+
+		"codeInsee": "72181",
+		"description": "casserolades au Mans et en forêt de Bercé pour accueillir Christophe Béchu",
+		"cibles": ["ministre"],
+		"actions": ["chahut", "creatif"]
+	},
+	{
+		"ville": "Pantin",
+		"date": "2023-04-19",
+
+		"codeInsee": "93055",
+		"description": "casserolades lors de la visite de la ministre Carole Grandjean au CFA des métiers du luxe à Pantin, ainsi qu’à sa sortie",
+		"cibles": ["ministre-del"],
+		"actions": ["chahut"]
+	},
+	{
+		"ville": "Pontault-Combault",
+		"date": "2023-04-19",
+
+		"codeInsee": "77373",
+		"description": "comité de non accueil pour la visite de Yaël Braun-Pivet au Centre Social et Culturel de Pontault-Combault",
+		"cibles": ["presidente-an"],
+		"actions": ["chahut"]
+	},
+	{
+		"ville": "Muttersholtz",
+		"date": "2023-04-19",
+
+		"codeInsee": "67311",
+		"description": "casserolades et mise en sobriété de l’usine Mathis de Muttersholtz lors de la visite d’Emmanuel Macron.",
+		"cibles": ["president-rep"],
+		"actions": ["chahut", "sobriete"]
+	},
+	{
+		"ville": "Nantes",
+		"date": "2023-04-19",
+
+		"codeInsee": "44109",
+		"description": "le village du SNU plie bagage au bout d’1h et Sarah El Haïry renonce à venir faire un discours. ",
+		"cibles": ["secretaire-etat"],
+		"actions": ["annulation", "chahut"]
+	},
+	{
+		"ville": "Sélestat",
+		"date": "2023-04-19",
+
+		"codeInsee": "67462",
+		"description": "Emmanuel Macron hué lors de sa visite à Sélestat et interpellé par des habitants",
+		"cibles": ["president-rep"],
+		"actions": ["chahut"]
+	},
+	{
+		"ville": "Paris 13",
 		"date": "2023-04-18",
-		"evenements": [
-			{
-				"ville": "Paris 13",
-				"codeInsee": "75113",
-				"description": "comité de non accueil pour Jean-Christophe Combe et Geneviève Darrieussecq en visite à la CAF de Paris",
-				"actions": [
-					{ "code": "chahut", "target": "ministre-delegue-e" },
-					{ "code": "chahut", "target": "ministre" }
-				]
-			},
-			{
-				"ville": "Saclay",
-				"codeInsee": "91534",
-				"description": "à 17h place Hubert Coudane à Orsay, comité de non-accueil pour Sylvie Retailleau à l’université Paris Saclay",
-				"actions": [
-					{ "code": "chahut", "target": "ministre" },
-					{ "code": "fuite", "target": "ministre" }
-				]
-			},
-			{
-				"ville": "Saint-Denis",
-				"codeInsee": "93066",
-				"description": "casserolade pour accueillir Emmanuel Macron.",
-				"actions": [{ "code": "chahut", "target": "PR" }]
-			},
-			{
-				"ville": "Chartres",
-				"codeInsee": "28085",
-				"description": "comité de non-accueil lors de la venue d’Olivier Dussopt pour la mise en œuvre de la réforme des retraites.",
-				"actions": [{ "code": "chahut", "target": "ministre" }]
-			}
-		]
+
+		"codeInsee": "75113",
+		"description": "comité de non accueil pour Jean-Christophe Combe et Geneviève Darrieussecq en visite à la CAF de Paris",
+		"cibles": ["ministre-del", "ministre"],
+		"actions": ["chahut"]
+	},
+	{
+		"ville": "Saclay",
+		"date": "2023-04-18",
+
+		"codeInsee": "91534",
+		"description": "à 17h place Hubert Coudane à Orsay, comité de non-accueil pour Sylvie Retailleau à l’université Paris Saclay",
+		"cibles": ["ministre"],
+		"actions": ["chahut", "fuite"]
+	},
+	{
+		"ville": "Saint-Denis",
+		"date": "2023-04-18",
+
+		"codeInsee": "93066",
+		"description": "casserolade pour accueillir Emmanuel Macron.",
+		"cibles": ["president-rep"],
+		"actions": ["chahut"]
+	},
+	{
+		"ville": "Chartres",
+		"date": "2023-04-18",
+
+		"codeInsee": "28085",
+		"description": "comité de non-accueil lors de la venue d’Olivier Dussopt pour la mise en œuvre de la réforme des retraites.",
+		"cibles": ["ministre"],
+		"actions": ["chahut"]
 	}
 ]

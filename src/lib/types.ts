@@ -1,34 +1,22 @@
-export type ActionCode =
-	| 'manif'
-	| 'annulation'
-	| 'chahut'
-	| 'sobriete'
-	| 'action-creative'
-	| 'fuite';
+export type ActionCode = 'manif' | 'annulation' | 'chahut' | 'sobriete' | 'creatif' | 'fuite';
 
 export type ActionTarget =
-	| 'secretaire-detat'
-	| 'ministre-delegue-e'
+	| 'secretaire-etat'
+	| 'ministre-del'
 	| 'ministre'
-	| 'PAN'
-	| 'PM'
-	| 'PR';
-
-export interface Action {
-	code: ActionCode;
-	target: ActionTarget;
-}
+	| 'ministre-int'
+	| 'presidente-an'
+	| 'premiere-min'
+	| 'president-rep';
 
 export interface ActionEvent {
+	date: string;
 	ville: string;
 	codeInsee: string;
 	description: string;
-	actions: Action[];
-}
-
-export interface DayData {
-	date: string;
-	evenements: ActionEvent[];
+	actions: ActionCode[];
+	cibles: ActionTarget[];
+	score: number;
 }
 
 export interface DepartmentResult {

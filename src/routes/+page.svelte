@@ -1,12 +1,11 @@
 <script lang="ts">
-	import actions from '$lib/assets/data.json?raw';
 	import Thanks from '$lib/thanks.svelte';
 
-	import { generateLeaderboard, getDayNumber, getDepartmentName } from '$lib/utils';
+	import { LEADERBOARD, getDayNumber, getDepartmentName } from '$lib/utils';
 
 	const dayNumber = getDayNumber();
 
-	const resultLines = generateLeaderboard(actions);
+	const resultLines = LEADERBOARD;
 	const now = new Date();
 	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
 </script>
@@ -22,13 +21,20 @@
 	</p>
 
 	<h2 class="zbeul mb-2">Classement temporaire au {formattedDate}</h2>
-	<p class="mb-6 text-center italic">tenant compte des données jusqu’au 21 avril inclus.</p>
-
+	<p class="mb-2 text-center italic">(tenant compte des données jusqu’au 21 avril inclus)</p>
+	<p class="mb-6 text-center italic">
+		Cliquez sur le nom du département pour avoir le détail du décompte.
+	</p>
 	<div class="mx-auto mb-6 mt-10 max-w-sm text-xl">
 		<ol>
 			{#each resultLines as result, i}
 				<li class="mb-3 flex flex-row justify-between gap-3" class:winner={i === 0}>
-					<div>{i + 1}. {getDepartmentName(result[0])}</div>
+					<div>
+						{i + 1}.
+						<a href="/departement/{result[0]}" class="no-underline hover:underline"
+							>{getDepartmentName(result[0])}</a
+						>
+					</div>
 					<div>{result[1]} pts</div>
 				</li>
 			{/each}

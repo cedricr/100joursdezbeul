@@ -1,6 +1,10 @@
 import dayjs from 'dayjs';
-import { DEPARTMENTS, startDay } from './constants';
-import type { Action, ActionEvent, DayData, DepartmentResult } from './types';
+import { ACTION_SCORE, DEPARTMENTS, TARGET_MULTIPLIER, startDay } from './constants';
+import type { ActionEvent, DepartmentResult } from './types';
+import rawData from '$lib/assets/data.json?raw';
+
+export const DATA = enrichData(JSON.parse(rawData)) as ActionEvent[];
+export const LEADERBOARD = generateLeaderboard();
 
 export function getDayNumber(): number {
 	const now = dayjs();
@@ -8,67 +12,22 @@ export function getDayNumber(): number {
 	return elapsedDays;
 }
 
-export function getScore(action: Action) {
-	let score: number;
-	switch (action.code) {
-		case 'annulation':
-			score = 5;
-			break;
-		case 'fuite':
-			score = 4;
-			break;
-		case 'sobriete':
-			score = 3;
-			break;
-		case 'action-creative':
-			score = 2;
-			break;
-		case 'manif':
-			score = 1;
-			break;
-		case 'chahut':
-			score = 1;
-			break;
-
-		default:
-			throw new Error(`type d'action ${action.code} inconnue`);
-	}
-
-	switch (action.target) {
-		case 'secretaire-detat':
-			break;
-		case 'ministre-delegue-e':
-			score *= 2;
-			break;
-		case 'ministre':
-			score *= 3;
-			break;
-		case 'PAN':
-			score *= 4;
-			break;
-		case 'PM':
-			score *= 5;
-			break;
-		case 'PR':
-			score *= 6;
-			break;
-		default:
-			throw new Error(`type de cible ${action.target} inconnue`);
-	}
-
-	return score;
+export function enrichData(data: ActionEvent[]) {
+	data.forEach((event) => {
+		const score = event.actions.map((action) => ACTION_SCORE[action]).reduce((a, b) => a + b);
+		const multiplier = event.cibles
+			.map((target) => TARGET_MULTIPLIER[target])
+			.reduce((a, b) => a + b);
+		event.score = score * multiplier;
+	});
+	return data;
 }
 
-export function generateLeaderboard(jsonData: string) {
-	const data = JSON.parse(jsonData) as DayData[];
+export function generateLeaderboard() {
 	const departmentsResults: DepartmentResult = {};
-	data.forEach((dayData) => {
-		dayData.evenements.forEach((evenement: ActionEvent) => {
-			evenement.actions.forEach((action) => {
-				const dept = evenement.codeInsee.slice(0, 2);
-				departmentsResults[dept] = (departmentsResults[dept] || 0) + getScore(action);
-			});
-		});
+	DATA.forEach((event) => {
+		const dept = event.codeInsee.slice(0, 2);
+		departmentsResults[dept] = (departmentsResults[dept] || 0) + event.score;
 	});
 	return Object.entries(departmentsResults).sort((d1, d2) => {
 		return d2[1] - d1[1];
@@ -81,4 +40,7 @@ export function getDepartmentName(code: string): string {
 		throw new Error(`le département ${code} est inconnu`);
 	}
 	return dept ? dept.nom : '(inconnu)';
+}
+export function getDepartmentScore(code: string): number {
+	return LEADERBOARD.find((line) => line[0] === code)[1];
 }
