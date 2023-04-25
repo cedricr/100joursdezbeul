@@ -12,7 +12,7 @@ export function getDayNumber(): number {
 	return elapsedDays;
 }
 
-export function sum<T>(array: T[]): T[] {
+export function sum(array: number[]): number {
 	return array.reduce((a, b) => a + b);
 }
 
