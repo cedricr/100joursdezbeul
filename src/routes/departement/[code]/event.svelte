@@ -11,6 +11,6 @@
 <li class="mb-2 flex flex-row">
 	<span class="block w-36 shrink-0"><strong>{getDateLabel(event.date)}&nbsp;:</strong></span>
 	<span class="block"
-		>{event.description} — <span class="text-[#dd0220]">{event.score} pts</span>
+		>{event.description} — <span class="text-[#dd0220]">{event.score}&nbsp;pts</span>
 	</span>
 </li>
