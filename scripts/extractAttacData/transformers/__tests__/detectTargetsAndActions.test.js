@@ -9,7 +9,7 @@ describe('detecting the targets', () => {
     }])).toEqual([
       {
         description: 'Macron demission!',
-        targets: ['PR'],
+        cibles: ['president-rep'],
       }
     ])
   });
@@ -20,7 +20,7 @@ describe('detecting the targets', () => {
     }])).toEqual([
       {
         description: 'Darmanin aimerait beaucoup devenir premier ministre!',
-        targets: ['ministre'],
+        cibles: ['ministre'],
       }
     ])
   });
@@ -31,7 +31,7 @@ describe('detecting the targets', () => {
     }])).toEqual([
       {
         description: 'Braun-Pivet est presidente des playmobils',
-        targets: ['PAN'],
+        cibles: ['presidente-an'],
       }
     ])
   });
@@ -42,7 +42,7 @@ describe('detecting the targets', () => {
     }])).toEqual([
       {
         description: 'El Haïry est secretaire (d\'état)',
-        targets: ['secretaire-detat'],
+        cibles: ['secretaire-etat'],
       }
     ])
   });
@@ -53,7 +53,7 @@ describe('detecting the targets', () => {
     }])).toEqual([
       {
         description: 'Klein est ministre delégué (de classe?)',
-        targets: ['ministre-delegue-e'],
+        cibles: ['ministre-del'],
       }
     ])
   });
@@ -64,7 +64,7 @@ describe('detecting the targets', () => {
     }])).toEqual([
       {
         description: 'Borne to be wild',
-        targets: ['PM'],
+        cibles: ['premiere-min'],
       }
     ])
   });
@@ -72,7 +72,7 @@ describe('detecting the targets', () => {
   it('should detect everybody together', () => {
     expect(detectTargets([{
       description: 'Borne to be wild with Macron and Darmanin and Klein and El Haïry and Braun-Pivet and a lot of casseroles!!!'
-    }])[0].targets).toEqual(['PR', 'ministre', 'PAN', 'secretaire-detat', 'ministre-delegue-e', 'PM']);
+    }])[0].cibles).toEqual(['president-rep', 'ministre', 'presidente-an', 'secretaire-etat', 'ministre-del', 'premiere-min']);
   });
 
   it('should not detect when a target is part of a word', () => {
@@ -80,7 +80,7 @@ describe('detecting the targets', () => {
       description: 'Borneo is a nice place to live'
     }])).toEqual([{
       description: 'Borneo is a nice place to live',
-      targets: [],
+      cibles: [],
     }]);
   });
 
@@ -89,7 +89,7 @@ describe('detecting the targets', () => {
       description: 'we really don\'t like Macron'
     }])).toEqual([{
       description: 'we really don\'t like Macron',
-      targets: ['PR'],
+      cibles: ['president-rep'],
     }]);
   });
 
@@ -98,7 +98,7 @@ describe('detecting the targets', () => {
       description: 'we really don\'t like maCron'
     }])).toEqual([{
       description: 'we really don\'t like maCron',
-      targets: ['PR'],
+      cibles: ['president-rep'],
     }]);
   });
 
@@ -107,7 +107,7 @@ describe('detecting the targets', () => {
       description: 'we really don\'t like Macrôn'
     }])).toEqual([{
       description: 'we really don\'t like Macrôn',
-      targets: ['PR'],
+      cibles: ['president-rep'],
     }]);
   });
 });

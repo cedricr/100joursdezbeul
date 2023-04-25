@@ -7,7 +7,7 @@ describe('extracting links', () => {
       description: 'some text with a link [[http://link.url]]'
     }])).toEqual([{
       description: 'some text with a link ',
-      links: ['http://link.url']
+      liens: ['http://link.url']
     }])
   });
 
@@ -16,7 +16,7 @@ describe('extracting links', () => {
       description: 'some text with a link [[http://link.url]] and another one [[https://link2.url]]'
     }])).toEqual([{
       description: 'some text with a link  and another one ',
-      links: ['http://link.url', 'https://link2.url']
+      liens: ['http://link.url', 'https://link2.url']
     }])
   });
 
@@ -25,7 +25,7 @@ describe('extracting links', () => {
       description: 'some text with a link http://link.url'
     }])).toEqual([{
       description: 'some text with a link ',
-      links: ['http://link.url']
+      liens: ['http://link.url']
     }])
   });
 
@@ -34,7 +34,7 @@ describe('extracting links', () => {
       description: 'some text with a link http://link.url and another one https://link2.url'
     }])).toEqual([{
       description: 'some text with a link  and another one ',
-      links: ['http://link.url','https://link2.url']
+      liens: ['http://link.url','https://link2.url']
     }])
   });
 });

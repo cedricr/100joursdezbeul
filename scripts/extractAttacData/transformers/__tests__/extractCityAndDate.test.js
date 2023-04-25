@@ -3,19 +3,19 @@ import extractCityAndDate from '../extractCityAndDate.js';
 describe('extract the city and the date of the event', () => {
   it('should extract the city properly', () => {
     expect(extractCityAndDate([{
-      name: 'City - 01/01',
+      name: 'City - 10/01',
     }])).toEqual([expect.objectContaining({
-      name: 'City - 01/01',
+      name: 'City - 10/01',
       ville: 'City',
     })])
   });
 
   it('should extract the city properly', () => {
     expect(extractCityAndDate([{
-      name: 'City - 01/01',
+      name: 'City - 10/01',
     }])).toEqual([expect.objectContaining({
-      name: 'City - 01/01',
-      date: '2022-12-31T23:00:00.000Z',
+      name: 'City - 10/01',
+      date: '2023-01-10',
     })])
   });
 

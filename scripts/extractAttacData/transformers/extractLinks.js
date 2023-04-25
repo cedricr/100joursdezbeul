@@ -4,18 +4,18 @@ const urlRegexp = new RegExp(/(?<!{{)(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]
 export default (previous) => previous.map(event => {
   const updatedEvent = {
     ...event,
-    links: event.links || [],
+    liens: event.liens || [],
   };
 
   let urls;
   while ((urls = markdownUrlRegexp.exec(event.description)) !== null) {
-    updatedEvent.links.push(urls[1]);
+    updatedEvent.liens.push(urls[1]);
     updatedEvent.description = updatedEvent.description.replace(urls[0], '');
   }
 
   urls = undefined;
   while ((urls = urlRegexp.exec(updatedEvent.description)) !== null) {
-    updatedEvent.links.push(urls[0]);
+    updatedEvent.liens.push(urls[0]);
     updatedEvent.description = updatedEvent.description.replace(urls[0], '');
   }
   return updatedEvent;
