@@ -18,9 +18,8 @@ export function sum(array: number[]): number {
 
 export function enrichData(data: ActionEvent[]) {
 	data.forEach((event) => {
-		const score = event.actions.map((action) => sum(ACTION_SCORE[action]));
-		const multiplier = sum(event.cibles
-			.map((target) => TARGET_MULTIPLIER[target]));
+		const score = sum(event.actions.map((action) => ACTION_SCORE[action]));
+		const multiplier = sum(event.cibles.map((target) => TARGET_MULTIPLIER[target]));
 		event.score = score * multiplier;
 	});
 	return data;
