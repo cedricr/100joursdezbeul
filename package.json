@@ -9,7 +9,9 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"extractData": "node ./scripts/extractAttacData/index.js > extract.json",
+		"test": "vitest"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-node": "^1.2.3",
@@ -35,5 +37,9 @@
 		"typescript": "^5.0.0",
 		"vite": "^4.2.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"node-fetch": "^3.3.1",
+		"vitest": "^0.30.1"
+	}
 }
