@@ -12,12 +12,15 @@ export function getDayNumber(): number {
 	return elapsedDays;
 }
 
+export function sum<T>(array: T[]): T[] {
+	return array.reduce((a, b) => a + b);
+}
+
 export function enrichData(data: ActionEvent[]) {
 	data.forEach((event) => {
-		const score = event.actions.map((action) => ACTION_SCORE[action]).reduce((a, b) => a + b);
-		const multiplier = event.cibles
-			.map((target) => TARGET_MULTIPLIER[target])
-			.reduce((a, b) => a + b);
+		const score = event.actions.map((action) => sum(ACTION_SCORE[action]));
+		const multiplier = sum(event.cibles
+			.map((target) => TARGET_MULTIPLIER[target]));
 		event.score = score * multiplier;
 	});
 	return data;
