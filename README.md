@@ -7,7 +7,7 @@ npm run dev -- --open
 ```
 
 Pour contribuer anonymement:
-1. faites un checkout du proket
+1. faites un checkout du projet
 2. allez dans le repertoire du projet
 3. lancez `git config --local user.name "anonymous"` pour changer vos noms dans tous les commits
 4. lancez  `git config --local user.email "anonymous@anonymous.com"` pour changer votre emain dans tous les commits
