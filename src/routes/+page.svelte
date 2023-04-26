@@ -30,7 +30,15 @@
 			{#each resultLines as result, i}
 				<li class="flex flex-row justify-between gap-3 relative">
 					<div>
-						{i + 1}.
+						{#if count === 1}
+							<span role="img" aria-label="1.">🥇</span>
+						{:else if i === 2}
+							<span role="img" aria-label="1.">🥈</span>
+						{:else if i === 3}
+							<span role="img" aria-label="1.">🥉</span>
+						{:else}
+							{i + 1}.
+						{/if}
 						<a href="/departement/{result[0]}" class="no-underline hover:underline"
 							>{getDepartmentName(result[0])}</a
 						>
@@ -55,29 +63,12 @@
 		@apply text-4xl font-bold text-[#dd0220];
 	}
 
-	ol > li:first-child::before {
-		content: '🥇';
-		position: absolute;
-		margin-left: -2.4em;
-	}
-
 	ol > li:nth-child(2) {
 		@apply text-2xl font-bold;
-	}
-	
-	ol > li:nth-child(2)::before {
-		content: '🥈';
-		position: absolute;
-		margin-left: -2rem;
 	}
 	
 	ol > li:nth-child(3) {
 		@apply text-2xl font-bold;
 	}
-	
-	ol > li:nth-child(3)::before {
-		content: '🥉';
-		position: absolute;
-		margin-left: -2rem;
-	}
+
 </style>
