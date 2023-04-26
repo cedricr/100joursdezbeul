@@ -22,6 +22,6 @@
 	<hr class="mb-2" />
 	<p class="text-center">
 		<a href="https://github.com/cedricr/100joursdezbeul">Code source</a> ·
-		<a href="mailto:100jours@terramater.net">Contact</a>
+		<a href="mailto:100joursdezbeul@solidairesinformatique.org">Contact</a>
 	</p>
 </footer>
