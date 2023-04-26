@@ -1,5 +1,5 @@
 import { expect, it, describe } from 'vitest';
-import extractLinks from '../extractLinks.js';
+import extractLinks from 'scripts/updateData/extractAttacData/transformers/extractLinks.js';
 
 describe('extracting links', () => {
   it('should extract one link in MD format', () => {

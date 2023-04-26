@@ -1,5 +1,5 @@
 import { expect, it, describe } from 'vitest'
-import filterFutureEvents from '../filterFutureEvents.js';
+import filterFutureEvents from 'scripts/updateData/extractAttacData/transformers/filterFutureEvents.js';
 
 describe('filter out the planned events not done yet', () => {
   it('should filter only planned events', () => {
