@@ -1,0 +1,302 @@
+[
+  {
+    "id": "14 - Caen - 2023-04-22",
+    "ville": "Caen",
+    "departement": "14",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-22",
+    "description": "Mobilisation à Caen place Bouchard contre la venue de la caravane SNU.",
+    "liens": [
+      "https://twitter.com/OuestFrance14/status/1649729192483848193?t=6rHOipYPXc7IjVxNDE5nCA&s=35"
+    ],
+    "codeInsee": 14118,
+    "actions": [
+      "manif"
+    ],
+    "cibles": [],
+    "source": "TO DELETE",
+    "remarques": "pas de gvt",
+    "erreurs": [
+      "pas de cible"
+    ]
+  },
+  {
+    "id": "un - Langon - 2023-04-17",
+    "ville": "Langon",
+    "departement": "33",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-17",
+    "description": "Déplacement de François Braun, ministre de la santé, au centre hospitalier Sud-Gironde",
+    "liens": [
+      "https://france3-regions.francetvinfo.fr/nouvelle-aquitaine/gironde/bordeaux/hue-par-des-manifestants-a-langon-le-ministre-de-la-sante-francois-braun-annonce-40-millions-d-euros-pour-l-hopital-du-sud-gironde-2755154.html"
+    ],
+    "codeInsee": 33227,
+    "actions": [],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "TO DELETE",
+    "remarques": "trop tôt",
+    "erreurs": [
+      "pas d'action",
+      "avant allocution"
+    ]
+  },
+  {
+    "id": "85 - Les Sables-d'Olonne - 2023-04-24",
+    "ville": "Les Sables-d'Olonne",
+    "departement": "85",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-24",
+    "description": "Comité de non accueil pour le déplacement de Bérangère Couillard, la secrétaire déléguée à l'écologie",
+    "liens": [
+      "https://www.ouest-france.fr/economie/retraites/video-les-casseroles-accueillent-la-secretaire-detat-a-lecologie-en-visite-aux-sables-dolonne-f57613be-e2b3-11ed-b514-8dd13d8be671"
+    ],
+    "codeInsee": 85194,
+    "actions": [
+      "manif"
+    ],
+    "cibles": [],
+    "source": "TO DELETE",
+    "remarques": "pas de gvt",
+    "erreurs": [
+      "pas de cible"
+    ]
+  },
+  {
+    "id": "un - Ostende - 2023-04-24",
+    "ville": "Ostende",
+    "departement": "",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-24",
+    "description": "Emmanuel Macron accueilli par des casseroles à Ostende",
+    "liens": [
+      "https://twitter.com/Alainklain2/status/1650520843644968960?s=20",
+      "https://twitter.com/Callystor/status/1650538708804816896?s=20",
+      "https://twitter.com/brouillonzero/status/1650491035716386816?s=20"
+    ],
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "president-rep"
+    ],
+    "source": "TO DELETE",
+    "remarques": "étranger",
+    "erreurs": [
+      "pas de code INSEE"
+    ]
+  },
+  {
+    "id": "13 - Salon-de-Provence - 2023-04-23",
+    "ville": "Salon-de-Provence",
+    "departement": "13",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-23",
+    "description": "Le député Zulesi moqué par une casserolade d'accueil à la fête de la Fraise à",
+    "liens": [
+      "https://twitter.com/Abeddock/status/1650201784613314562?s=20"
+    ],
+    "codeInsee": 13103,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [],
+    "source": "TO DELETE",
+    "remarques": "pas de gvt",
+    "erreurs": [
+      "pas de cible"
+    ]
+  },
+  {
+    "id": "41 - Vendôme - 2023-04-25",
+    "ville": "Vendôme",
+    "departement": "41",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-25",
+    "description": "Macron, qui se déplace désormais avec son propre groupe électrogène, accueilli par des casseroles à Vendôme",
+    "liens": [
+      "https://twitter.com/RemyBuisine/status/1650814506249998341?t=I4OquWCClASLhWDIiuVDqA&s=35",
+      "https://twitter.com/PaulLarrouturou/status/1650803333391609857?t=Y78avm5hFOo4EwAHJgTwPQ&s=35"
+    ],
+    "codeInsee": 41269,
+    "actions": [],
+    "cibles": [
+      "president-rep"
+    ],
+    "source": "attac - OK",
+    "remarques": "",
+    "erreurs": [
+      "pas d'action"
+    ]
+  },
+  {
+    "id": "60 - Chantilly - 2023-04-17",
+    "ville": "Chantilly",
+    "departement": "60",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-17",
+    "description": "17/04\nJean-Christophe Combe, le ministre des Solidarités, de l'Autonomie et des Personnes Handicapées, ne viendra dans l'Oise ce lundi 17 avril",
+    "liens": [
+      "https://www.oisehebdo.fr/2023/04/16/ministre-personnes-handicapees-annule-deplacement-oise/"
+    ],
+    "codeInsee": 60141,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "TO DELETE",
+    "remarques": "trop tôt",
+    "erreurs": [
+      "avant allocution"
+    ]
+  },
+  {
+    "id": "28 - Gasville-Oisème - 2023-04-20",
+    "ville": "Gasville-Oisème",
+    "departement": "28",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-20",
+    "description": "Annulation de la visite de la friche industrielle SAMREV par Guillaume KASBARIAN, Député de la 1ere circonscription d'Eure et Loir.",
+    "liens": [
+      "https://www.lechorepublicain.fr/chartres-28000/actualites/reforme-des-retraites-une-centaine-de-personnes-reunie-devant-la-prefecture-d-eure-et-loir-apres-l-interpellation-d-un-jeune-manifestant-mardi_14297566/"
+    ],
+    "codeInsee": 28173,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [],
+    "source": "TO DELETE",
+    "remarques": "pas de gvt",
+    "erreurs": [
+      "pas de cible"
+    ]
+  },
+  {
+    "id": "33 - La Teste-de-Buch - 2023-03-17",
+    "ville": "La Teste-de-Buch",
+    "departement": "33",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-03-17",
+    "description": "Déplacement annulé de Darmanin et Fesneau sur les moyens dédiés à la lutte contre les incendies",
+    "liens": [
+      "https://actu.fr/societe/incendies-en-gironde-gerald-darmanin-en-deplacement-a-la-teste-le-17-mars_58106507.html"
+    ],
+    "codeInsee": 33529,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "TO DELETE",
+    "remarques": "trop tôt",
+    "erreurs": [
+      "avant allocution"
+    ]
+  },
+  {
+    "id": "14 - Maltot - 2023-04-21",
+    "ville": "Maltot",
+    "departement": "14",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "Freddy Sertin et suppléant d'E. Borne a annulé son déplacement dans sa permanence à Maltot.",
+    "liens": [
+      "https://www.ouest-france.fr/economie/retraites/retraites-a-maltot-pres-de-caen-les-manifestants-rassembles-devant-la-permanence-le-depute-absent-92814c4e-e04f-11ed-926f-b54c0e75f85a"
+    ],
+    "codeInsee": 14396,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [],
+    "source": "TO DELETE",
+    "remarques": "pas de gvt",
+    "erreurs": [
+      "pas de cible"
+    ]
+  },
+  {
+    "id": "75 - Paris - 2023-05-02",
+    "ville": "Paris",
+    "departement": "75",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-05-02",
+    "description": "Annulation de la visite d'État du président algérien",
+    "liens": [
+      "https://www.jeuneafrique.com/1437244/politique/pourquoi-la-visite-dabdelmadjid-tebboune-en-france-est-reportee/"
+    ],
+    "codeInsee": 75056,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [],
+    "source": "attac - OK",
+    "remarques": "",
+    "erreurs": [
+      "pas de cible",
+      "date future"
+    ]
+  },
+  {
+    "id": "57 - Thionville - 2023-03-18",
+    "ville": "Thionville",
+    "departement": "57",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-03-18",
+    "description": "Annulation  de la participation de la ministre de la Culture Rima Abdul-Malak à Politéïa, le festival qu'elle avait décidé de marrainer",
+    "liens": [
+      "https://www.lasemaine.fr/info-la-semaine-apres-le-49-3-la-ministre-de-la-culture-annule-son-deplacement-a-thionville/"
+    ],
+    "codeInsee": 57672,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "TO DELETE",
+    "remarques": "trop tôt",
+    "erreurs": [
+      "avant allocution"
+    ]
+  },
+  {
+    "id": "83 - Toulon - 2023-03-27",
+    "ville": "Toulon",
+    "departement": "83",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-03-27",
+    "description": "Le président de la République devait participer à une réunion sur le thème du Service national universel (SNU). Il a finalement renoncé à ce projet en raison du contexte social.",
+    "liens": [
+      "https://www.bfmtv.com/var/reforme-des-retraites-emmanuel-macron-ajourne-son-deplacement-a-toulon_AN-202303270730.html"
+    ],
+    "codeInsee": 83137,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [
+      "president-rep"
+    ],
+    "source": "TO DELETE",
+    "remarques": "trop tôt",
+    "erreurs": [
+      "avant allocution"
+    ]
+  }
+]

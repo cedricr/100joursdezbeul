@@ -1,570 +1,945 @@
 [
-	{
-		"id": "93 - Bobigny - 2023-04-21",
-		"ville": "Bobigny",
-		"departement": "93",
-		"date": "2023-04-21",
-		"description": "Olivier Klein devait passer à la Bourse départementale du travail de Bobigny, il a finalement renoncé pour ne pas risquer la casserolade.",
-		"liens": ["https://twitter.com/Portes_Thomas/status/1649282379515666432/photo/1"],
-		"codeInsee": 93008,
-		"actions": ["annulation"],
-		"cibles": ["ministre-del"],
-		"source": "import JSON"
-	},
-	{
-		"id": "31 - Toulouse - 2023-04-21",
-		"ville": "Toulouse",
-		"departement": "31",
-		"date": "2023-04-21",
-		"description": "La visite de Carole Grandjean à Toulouse a été annulée pour « raisons de sécurité »",
-		"liens": [
-			"https://www.ladepeche.fr/2023/04/20/info-la-depeche-toulouse-la-ministre-annule-sa-visite-au-dernier-moment-11148034.php",
-			"https://twitter.com/rapportsdeforce/status/1649349664905347072?s=20"
-		],
-		"codeInsee": 31555,
-		"actions": ["annulation"],
-		"cibles": ["ministre-del"],
-		"source": "import JSON"
-	},
-	{
-		"id": "80 - Nesle - 2023-04-21",
-		"ville": "Nesle",
-		"departement": "80",
-		"date": "2023-04-21",
-		"description": "Bruno Le Maire et Christophe Béchu en déplacement. Un comité de non-accueil est prévu !",
-		"liens": ["https://twitter.com/Amienois_e/status/1649328536790921222?s=20"],
-		"codeInsee": 80585,
-		"actions": ["chahut"],
-		"cibles": ["ministre", "ministre"],
-		"source": "import JSON"
-	},
-	{
-		"id": "93 - Montreuil - 2023-04-21",
-		"ville": "Montreuil",
-		"departement": "93",
-		"date": "2023-04-21",
-		"description": "Venue du ministre de la Santé François Braun au centre médical Cap Horn 55.",
-		"liens": [],
-		"codeInsee": 93048,
-		"actions": ["chahut", "fuite"],
-		"cibles": ["ministre"],
-		"source": "import JSON"
-	},
-	{
-		"id": "44 - La Baule-Escoublac - 2023-04-21",
-		"ville": "La Baule-Escoublac",
-		"departement": "44",
-		"date": "2023-04-21",
-		"description": "Olivia Grégoire à la Baule et à Guérande. Un comité de non-accueil est aussi prévu !",
-		"liens": [],
-		"codeInsee": 44055,
-		"actions": ["chahut", "fuite", "annulation"],
-		"cibles": ["ministre-del"],
-		"source": "import JSON"
-	},
-	{
-		"id": "36 - Châteauroux - 2023-04-21",
-		"ville": "Châteauroux",
-		"departement": "36",
-		"date": "2023-04-21",
-		"description": "Elisabeth Borne en déplacement dans l'Indre.",
-		"liens": [
-			"https://twitter.com/nrchateauroux/status/1649360708285485058?s=20",
-			"https://twitter.com/NPA36/status/1649371802148192257?s=20",
-			"https://twitter.com/realmarcel1/status/1649373775442354177?s=20"
-		],
-		"codeInsee": 36044,
-		"actions": ["chahut"],
-		"cibles": ["premiere-min"],
-		"source": "import JSON"
-	},
-	{
-		"id": "71 - Montceau-les-Mines - 2023-04-21",
-		"ville": "Montceau-les-Mines",
-		"departement": "71",
-		"date": "2023-04-21",
-		"description": "Visite d'Olivier Dussopt à l'entreprise Novium à Montceau-les-Mines",
-		"liens": ["https://twitter.com/realmarcel1/status/1649392393177772033?s=20"],
-		"codeInsee": 71306,
-		"actions": ["chahut"],
-		"cibles": ["ministre"],
-		"source": "import JSON"
-	},
-	{
-		"id": "25 - Besançon - 2023-04-21",
-		"ville": "Besançon",
-		"departement": "25",
-		"date": "2023-04-21",
-		"description": "Venue du ministre des armées Sébastien Lecornu. Un comité de non-accueil est prévu !",
-		"liens": [
-			"https://twitter.com/Toufik2Planoise/status/1649468811953709069?t=7tnIoHFz1cieT2dV7eh0Ew&s=35",
-			"https://france3-regions.francetvinfo.fr/bourgogne-franche-comte/doubs/reforme-des-retraites-le-temps-est-venu-de-durcir-le-ton-trois-ministres-trois-comites-d-accueil-a-coup-de-casseroles-en-franche-comte-2758266.html"
-		],
-		"codeInsee": 25056,
-		"actions": ["chahut"],
-		"cibles": ["ministre"],
-		"source": "import JSON"
-	},
-	{
-		"id": "90 - Belfort - 2023-04-21",
-		"ville": "Belfort",
-		"departement": "90",
-		"date": "2023-04-21",
-		"description": "Visite d'Olivier Becht, le ministre du commerce extérieur et de l'attractivité, à l'usine d'Alstom en début d'après-midi.",
-		"liens": [
-			"https://france3-regions.francetvinfo.fr/bourgogne-franche-comte/doubs/reforme-des-retraites-le-temps-est-venu-de-durcir-le-ton-trois-ministres-trois-comites-d-accueil-a-coup-de-casseroles-en-franche-comte-2758266.html"
-		],
-		"codeInsee": 90010,
-		"actions": ["chahut"],
-		"cibles": ["ministre-del"],
-		"source": "import JSON"
-	},
-	{
-		"id": "39 - Lons-le-Saunier - 2023-04-21",
-		"ville": "Lons-le-Saunier",
-		"departement": "39",
-		"date": "2023-04-21",
-		"description": "Venue de la ministre à l'égalité homme femme dans le Jura. Comité de non-accueil organisé par l'intersyndicale !",
-		"liens": [
-			"https://www.leprogres.fr/social/2023/04/21/des-dizaines-de-manifestants-devant-la-prefecture-pour-la-venue-de-la-ministre-isabelle-lonvis-rome",
-			"https://twitter.com/__Eileen____/status/1649317304759459842?s=20"
-		],
-		"codeInsee": 39300,
-		"actions": ["chahut"],
-		"cibles": ["ministre-del"],
-		"source": "import JSON"
-	},
-	{
-		"id": "26 - Saint-Paul-Trois-Châteaux - 2023-04-21",
-		"ville": "Saint-Paul-Trois-Châteaux",
-		"departement": "26",
-		"date": "2023-04-21",
-		"description": "Venue du ministre chargé de l'industrie Roland Lescure et de la ministre de la transition énergétique Agnès Pannier-Runacher sur le site de la centrale nucléaire du Tricastin dans la Drôme.",
-		"liens": [],
-		"codeInsee": 26324,
-		"actions": ["chahut"],
-		"cibles": ["ministre-del", "ministre"],
-		"source": "import JSON"
-	},
-	{
-		"id": "64 - Pau - 2023-04-21",
-		"ville": "Pau",
-		"departement": "64",
-		"date": "2023-04-21",
-		"description": "repas officiel avec Gabriel Attal à la villa St Basil's dans le quartier Trespoey.",
-		"liens": ["https://twitter.com/Kabed70/status/1649357183958614016?s=20"],
-		"codeInsee": 64445,
-		"actions": ["chahut", "creatif"],
-		"cibles": ["ministre-del"],
-		"source": "import JSON"
-	},
-	{
-		"id": "34 - Montpellier - 2023-04-20",
-		"ville": "Montpellier",
-		"departement": "34",
-		"date": "2023-04-20",
-		"description": "manifestation contre la venue d'Emmanuel Macron dans l'Hérault.",
-		"liens": ["https://twitter.com/myMetropolitain/status/1648998671059435520?s=20"],
-		"codeInsee": 34172,
-		"actions": ["manif"],
-		"cibles": ["president-rep"],
-		"source": "import JSON"
-	},
-	{
-		"id": "34 - Lunel - 2023-04-20",
-		"ville": "Lunel",
-		"departement": "34",
-		"date": "2023-04-20",
-		"description": "annulation du déplacement prévu d'Emmanuel Macron à Lunel.",
-		"liens": [
-			"https://twitter.com/Pr_Logos/status/1648761962103201804?t=ecFayK-8AlvvH-tpmCw0AA&s=35"
-		],
-		"codeInsee": 34145,
-		"actions": ["annulation"],
-		"cibles": ["president-rep"],
-		"source": "import JSON"
-	},
-	{
-		"id": "34 - Ganges - 2023-04-20",
-		"ville": "Ganges",
-		"departement": "34",
-		"date": "2023-04-20",
-		"description": "Comité d'accueil à Ganges pour la visite d'Emmanuel Macron et de Pap Ndiaye au collège Louise Michel qui a été mis en sobriété énergétique. Casseroles, vuvuzellas et plots en plastique, tous « dispositifs sonores portatifs » interdits ! Une banderole « Macron dégage » a été hissée sur une façade rocheuse.",
-		"liens": [
-			"https://twitter.com/realmarcel1/status/1648988266404757507?s=20",
-			"https://twitter.com/bleuherault/status",
-			"https://twitter.com/CecHautefeuille/status/1648953830829178880?s=20",
-			"https://twitter.com/snesmontpellier/status/1648934965675978752?s=46&t=DTpI-3u5DjH9631xh_TF0Q",
-			"https://twitter.com/CamelusBlaah/status/1648960829344083975?s=20",
-			"https://twitter.com/PaulLarrouturou/status/1648971666163105792?t=CJbVOYGhAMkLWcSzQpvkKA&s=35"
-		],
-		"codeInsee": 34111,
-		"actions": ["chahut", "sobriete", "creatif"],
-		"cibles": ["president-rep", "ministre"],
-		"source": "import JSON"
-	},
-	{
-		"id": "83 - Brignoles - 2023-04-20",
-		"ville": "Brignoles",
-		"departement": "83",
-		"date": "2023-04-20",
-		"description": "Visite d'Olivier Véran dans le Var. Un comité de non-accueil est présent !",
-		"liens": [
-			"https://twitter.com/lamarsweb/status/1649057216765259778?s=20",
-			"https://twitter.com/MichaelZolto/status/1649050317546455042?s=20"
-		],
-		"codeInsee": 83023,
-		"actions": ["chahut"],
-		"cibles": ["ministre"],
-		"source": "import JSON"
-	},
-	{
-		"id": "26 - Valence - 2023-04-20",
-		"ville": "Valence",
-		"departement": "26",
-		"date": "2023-04-20",
-		"description": "Annulation de la visite d'Eric Dupond Moretti.",
-		"liens": [],
-		"codeInsee": 26362,
-		"actions": ["annulation"],
-		"cibles": ["ministre"],
-		"source": "import JSON"
-	},
-	{
-		"id": "21 - Dijon - 2023-04-20",
-		"ville": "Dijon",
-		"departement": "21",
-		"date": "2023-04-20",
-		"description": "Annulation de la venue d'Agnès Firmin Le Bodo à la conférence sur le thème de la fin de vie à Dijon à la salle Devosges.",
-		"liens": [
-			"https://www.bienpublic.com/politique/2023/04/18/une-conference-avec-une-ministre-annulee-pour-raison-de-securite"
-		],
-		"codeInsee": 21231,
-		"actions": ["annulation"],
-		"cibles": ["ministre-del"],
-		"source": "import JSON"
-	},
-	{
-		"id": "90 - Bourogne - 2023-04-20",
-		"ville": "Bourogne",
-		"departement": "90",
-		"date": "2023-04-20",
-		"description": "Comité de non-accueil pour Lecornu au 1er régiment d'artillerie à Bourogne, près de Belfort.",
-		"liens": ["https://twitter.com/bleubelfort/status/1649054626245906435?s=20"],
-		"codeInsee": 90017,
-		"actions": ["chahut"],
-		"cibles": ["ministre"],
-		"source": "import JSON"
-	},
-	{
-		"id": "92 - Nanterre - 2023-04-20",
-		"ville": "Nanterre",
-		"departement": "92",
-		"date": "2023-04-20",
-		"description": "Comité de non accueil pour la ministre des sports Amélie Oudéa-Castéra vers l'Arena de Nanterre.",
-		"liens": ["https://twitter.com/NanterreLFI/status/1648978754671132673?s=20"],
-		"codeInsee": 92050,
-		"actions": ["chahut"],
-		"cibles": ["ministre"],
-		"source": "import JSON"
-	},
-	{
-		"id": "47 - Agen - 2023-04-19",
-		"ville": "Agen",
-		"departement": "47",
-		"date": "2023-04-19",
-		"description": "casserolade et mise en sobriété énergétique du bar qui accueillait le ministre de la Transition Numérique Jean-Noël Barrot",
-		"liens": [
-			"https://twitter.com/Kabed70/status/1648770110939713587?t=mJiUpNRdvJ4lzTkfiRjWtg&s=35",
-			"https://twitter.com/AnonymeCitoyen/status/1648781678511378434?s=20"
-		],
-		"codeInsee": 47001,
-		"actions": ["chahut", "sobriete"],
-		"cibles": ["ministre-del"],
-		"source": "import JSON"
-	},
-	{
-		"id": "72 - Le Mans - 2023-04-19",
-		"ville": "Le Mans",
-		"departement": "72",
-		"date": "2023-04-19",
-		"description": "casserolades au Mans et en forêt de Bercé pour accueillir Christophe Béchu",
-		"liens": [
-			"https://twitter.com/RevPermanente/status/1648663527370944514?t=C6wmghK6EHYw0Rm8CMhwaQ&s=35",
-			"https://twitter.com/MickaCorreia/status/1648801968117170177?s=20"
-		],
-		"codeInsee": 72181,
-		"actions": ["chahut", "creatif"],
-		"cibles": ["ministre"],
-		"source": "import JSON"
-	},
-	{
-		"id": "93 - Pantin - 2023-04-19",
-		"ville": "Pantin",
-		"departement": "93",
-		"date": "2023-04-19",
-		"description": "casserolades lors de la visite de la ministre Carole Grandjean au CFA des métiers du luxe à Pantin, ainsi qu'à sa sortie",
-		"liens": [
-			"https://twitter.com/sudeducparis/status/1648603748304924672?s=20",
-			"https://twitter.com/Kabed70/status/1648610887840800768?s=20",
-			"https://twitter.com/AnonymeCitoyen/status/1648628924752986112?s=20"
-		],
-		"codeInsee": 93055,
-		"actions": ["chahut"],
-		"cibles": ["ministre-del"],
-		"source": "import JSON"
-	},
-	{
-		"id": "77 - Pontault-Combault - 2023-04-19",
-		"ville": "Pontault-Combault",
-		"departement": "77",
-		"date": "2023-04-19",
-		"description": "comité de non accueil pour la visite de Yaël Braun-Pivet au Centre Social et Culturel de Pontault-Combault",
-		"liens": ["https://twitter.com/CGTAirLiquideEC/status/1648357557516288003?s=20"],
-		"codeInsee": 77373,
-		"actions": ["chahut"],
-		"cibles": ["presidente-an"],
-		"source": "import JSON"
-	},
-	{
-		"id": "67 - Muttersholtz - 2023-04-19",
-		"ville": "Muttersholtz",
-		"departement": "67",
-		"date": "2023-04-19",
-		"description": "casserolades et mise en sobriété de l'usine Mathis de Muttersholtz lors de la visite d'Emmanuel Macron.",
-		"liens": [
-			"https://twitter.com/AlsaceRevoltee/status/1648615850637656066?s=20",
-			"https://twitter.com/Rue89Strasbourg/status/1648615706064302080?s=20",
-			"https://twitter.com/AnonymeCitoyen/status/1648664087964909568?s=20"
-		],
-		"codeInsee": 67311,
-		"actions": ["chahut", "sobriete"],
-		"cibles": ["president-rep"],
-		"source": "import JSON"
-	},
-	{
-		"id": "44 - Nantes - 2023-04-19",
-		"ville": "Nantes",
-		"departement": "44",
-		"date": "2023-04-19",
-		"description": "le village du SNU plie bagage au bout d'1h et Sarah El Haïry renonce à venir faire un discours.",
-		"liens": [
-			"https://twitter.com/popocmoi/status/1648619059854843907?t=7vFmzNBqqr7DJDi67n0kKA&s=35",
-			"https://www.ouest-france.fr/societe/service-national-universel/chahute-par-des-manifestants-le-village-du-snu-plie-bagage-une-heure-apres-louverture-a-nantes-9efd0052-dea2-11ed-8876-51122d90141b"
-		],
-		"codeInsee": 44109,
-		"actions": ["annulation", "chahut"],
-		"cibles": ["secretaire-etat"],
-		"source": "import JSON"
-	},
-	{
-		"id": "67 - Sélestat - 2023-04-19",
-		"ville": "Sélestat",
-		"departement": "67",
-		"date": "2023-04-19",
-		"description": "Emmanuel Macron hué lors de sa visite à Sélestat et interpellé par des habitants",
-		"liens": [
-			"https://twitter.com/realmarcel1/status/1648679810393145344?s=20",
-			"https://twitter.com/AnonymeCitoyen/status/1648687393149517824?s=20",
-			"https://twitter.com/antoinellorca/status/1648686940655349760?s=20"
-		],
-		"codeInsee": 67462,
-		"actions": ["chahut"],
-		"cibles": ["president-rep"],
-		"source": "import JSON"
-	},
-	{
-		"id": "75 - Paris 13e Arrondissement - 2023-04-18",
-		"ville": "Paris 13e Arrondissement",
-		"departement": "75",
-		"date": "2023-04-18",
-		"description": "comité de non accueil pour Jean-Christophe Combe et Geneviève Darrieussecq en visite à la CAF de Paris",
-		"liens": [],
-		"codeInsee": 75113,
-		"actions": ["chahut"],
-		"cibles": ["ministre-del", "ministre"],
-		"source": "import JSON"
-	},
-	{
-		"id": "91 - Saclay - 2023-04-18",
-		"ville": "Saclay",
-		"departement": "91",
-		"date": "2023-04-18",
-		"description": "à 17h place Hubert Coudane à Orsay, comité de non-accueil pour Sylvie Retailleau à l'université Paris Saclay",
-		"liens": [
-			"https://twitter.com/isa_dartagnan/status/1648357690299564033?t=RaRT9srw7CViu284kzyJ2A&s=19",
-			"https://twitter.com/AnonymeCitoyen/status/1648606341399805952?s=20"
-		],
-		"codeInsee": 91534,
-		"actions": ["chahut", "fuite"],
-		"cibles": ["ministre"],
-		"source": "import JSON"
-	},
-	{
-		"id": "93 - Saint-Denis - 2023-04-18",
-		"ville": "Saint-Denis",
-		"departement": "93",
-		"date": "2023-04-18",
-		"description": "casserolade pour accueillir Emmanuel Macron.",
-		"liens": [],
-		"codeInsee": 93066,
-		"actions": ["chahut"],
-		"cibles": ["president-rep"],
-		"source": "import JSON"
-	},
-	{
-		"id": "28 - Chartres - 2023-04-18",
-		"ville": "Chartres",
-		"departement": "28",
-		"date": "2023-04-18",
-		"description": "comité de non-accueil lors de la venue d'Olivier Dussopt pour la mise en œuvre de la réforme des retraites.",
-		"liens": [
-			"https://twitter.com/AnonymeCitoyen/status/1648402550125740035?t=UEvI4hOtTtvvgxv5ROL3-A&s=19"
-		],
-		"codeInsee": 28085,
-		"actions": ["chahut"],
-		"cibles": ["ministre"],
-		"source": "import JSON"
-	},
-	{
-		"id": "64 - Biriatou - 2023-04-21",
-		"ville": "Biriatou",
-		"departement": "64",
-		"date": "2023-04-21",
-		"description": "Opération escargot et casserolade pour accueillir Gabriel Attal",
-		"liens": [
-			"https://www.mediabask.eus/eu/info_mbsk/20230421/reforme-des-retraites-operation-escargot-sur-l-a63"
-		],
-		"codeInsee": 64130,
-		"actions": ["creatif", "chahut"],
-		"cibles": ["ministre"],
-		"source": "attac - OK"
-	},
-	{
-		"id": "18 - Bourges - 2023-04-21",
-		"ville": "Bourges",
-		"departement": "18",
-		"date": "2023-04-21",
-		"description": "La ministre Rima Abdul-Malak attendue dans les allées du Printemps de Bourges",
-		"liens": [
-			"https://twitter.com/STAA_CNTso/status/1649408702514884613?s=20",
-			"https://twitter.com/SarahHRakM/status/1649623565132615681?t=wjbxJEbR1_6i9US4iAc_RA&s=35"
-		],
-		"codeInsee": 18033,
-		"actions": ["chahut"],
-		"cibles": ["ministre"],
-		"source": "attac - OK"
-	},
-	{
-		"id": "72 - Coulaines - 2023-04-24",
-		"ville": "Coulaines",
-		"departement": "72",
-		"date": "2023-04-24",
-		"description": "Comité de non accueil pour le ministre de la justice Eric Dupond Moretti en visite dans la Sarthe.",
-		"liens": ["https://twitter.com/K_L_C_Politique/status/1650483074524667904?s=20"],
-		"codeInsee": 72095,
-		"actions": ["chahut"],
-		"cibles": ["ministre"],
-		"source": "attac - OK"
-	},
-	{
-		"id": "69 - Lyon - 2023-04-24",
-		"ville": "Lyon",
-		"departement": "69",
-		"date": "2023-04-24",
-		"description": "Le ministre de l'Éducation nationale Pap Ndiaye accueilli par des casseroles à Lyon",
-		"liens": ["https://twitter.com/recchito/status/1650478841612124160?s=20"],
-		"codeInsee": 69123,
-		"actions": ["chahut"],
-		"cibles": ["ministre"],
-		"source": "attac - OK"
-	},
-	{
-		"id": "71 - Massy - 2023-04-24",
-		"ville": "Massy",
-		"departement": "71",
-		"date": "2023-04-24",
-		"description": "Lundi 24/04 à 8h à la gare Massy-Palaiseau\nCasserolade d'accueil pour Olivier Klein à Massy en visite de l'ancien immeuble de General Electrics",
-		"liens": ["https://twitter.com/Solidaires_91/status/1650392337669935105?s=20"],
-		"codeInsee": 71288,
-		"actions": ["chahut"],
-		"cibles": ["ministre-del"],
-		"source": "attac - OK"
-	},
-	{
-		"id": "75 - Paris - 2023-04-24",
-		"ville": "Paris",
-		"departement": "75",
-		"date": "2023-04-24",
-		"description": "Casserolades au moment de la cérémonie des Molières, en présence de Rima Abdul-Malak, ministre de la Culture",
-		"liens": [
-			"https://actu.fr/ile-de-france/paris_75056/videos-reforme-des-retraites-la-nuit-des-molieres-a-paris-perturbee-par-un-concert-de-casserole_59184465.html"
-		],
-		"codeInsee": 75056,
-		"actions": ["chahut"],
-		"cibles": ["ministre"],
-		"source": "attac - OK"
-	},
-	{
-		"id": "75 - Paris 12e Arrondissement - 2023-04-24",
-		"ville": "Paris 12e Arrondissement",
-		"departement": "75",
-		"date": "2023-04-24",
-		"description": "Accueil en casseroles pour Pap Ndiaye à Gare de Lyon",
-		"liens": [],
-		"codeInsee": 75112,
-		"actions": ["chahut", "fuite"],
-		"cibles": ["ministre"],
-		"source": "attac - OK"
-	},
-	{
-		"id": "86 - Poitiers - 2023-04-24",
-		"ville": "Poitiers",
-		"departement": "86",
-		"date": "2023-04-24",
-		"description": "François Braun, ministre de la santé,  attendu au CHU de Poitiers",
-		"liens": ["https://twitter.com/LaurentGaudens/status/1650475205196673024?s=20"],
-		"codeInsee": 86194,
-		"actions": ["chahut"],
-		"cibles": ["ministre"],
-		"source": "attac - OK"
-	},
-	{
-		"id": "71 - Fontaines - 2023-04-21",
-		"ville": "Fontaines",
-		"departement": "71",
-		"date": "2023-04-21",
-		"description": "Visite d'Olivier Dussopt à l'entreprise Margaritelli annulée",
-		"liens": ["https://twitter.com/Rom2bout/status/1649355415111573506?s=20"],
-		"codeInsee": 71202,
-		"actions": ["annulation"],
-		"cibles": ["ministre"],
-		"source": "attac - OK"
-	},
-	{
-		"id": "93 - Neuilly-sur-Marne - 2023-04-21",
-		"ville": "Neuilly-sur-Marne",
-		"departement": "93",
-		"date": "2023-04-21",
-		"description": "Annulation de la venue du ministre de la santé F. Braun à Ville Evrard",
-		"liens": ["https://twitter.com/attac_fr/status/1649304123676807168?s=20"],
-		"codeInsee": 93050,
-		"actions": ["annulation"],
-		"cibles": ["ministre"],
-		"source": "attac - OK"
-	},
-	{
-		"id": "16 - Valence - 2023-04-20",
-		"ville": "Valence",
-		"departement": "16",
-		"date": "2023-04-20",
-		"description": "Annulation de la visite d'Eric Dupond Moretti",
-		"liens": [
-			"https://www.ledauphine.com/social/2023/04/18/valence-la-visite-du-garde-des-sceaux-eric-dupond-moretti-reportee"
-		],
-		"codeInsee": 16392,
-		"actions": ["annulation"],
-		"cibles": ["ministre"],
-		"source": "attac - OK"
-	}
+  {
+    "id": "93 - Bobigny - 2023-04-21",
+    "ville": "Bobigny",
+    "departement": "93",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "Olivier Klein devait passer à la Bourse départementale du travail de Bobigny, il a finalement renoncé pour ne pas risquer la casserolade.",
+    "liens": [
+      "https://twitter.com/Portes_Thomas/status/1649282379515666432/photo/1"
+    ],
+    "codeInsee": 93008,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [
+      "ministre-del"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "31 - Toulouse - 2023-04-21",
+    "ville": "Toulouse",
+    "departement": "31",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "La visite de Carole Grandjean à Toulouse a été annulée pour « raisons de sécurité »",
+    "liens": [
+      "https://www.ladepeche.fr/2023/04/20/info-la-depeche-toulouse-la-ministre-annule-sa-visite-au-dernier-moment-11148034.php",
+      "https://twitter.com/rapportsdeforce/status/1649349664905347072?s=20"
+    ],
+    "codeInsee": 31555,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [
+      "ministre-del"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "80 - Nesle - 2023-04-21",
+    "ville": "Nesle",
+    "departement": "80",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "Bruno Le Maire et Christophe Béchu en déplacement. Un comité de non-accueil est prévu !",
+    "liens": [
+      "https://twitter.com/Amienois_e/status/1649328536790921222?s=20"
+    ],
+    "codeInsee": 80585,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre",
+      "ministre"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "un - Montreuil - 2023-04-21",
+    "ville": "Montreuil",
+    "departement": "93",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "Venue du ministre de la Santé François Braun au centre médical Cap Horn 55.",
+    "liens": [
+      "https://twitter.com/LeMediaTV/status/1649377327929761792?s=20",
+      "https://twitter.com/MaudValegeas/status/1649382575251619846?s=20",
+      "https://twitter.com/LeMediaTV/status/1649399286344433664?s=20"
+    ],
+    "codeInsee": 93048,
+    "actions": [
+      "chahut",
+      "fuite"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "44 - La Baule-Escoublac - 2023-04-21",
+    "ville": "La Baule-Escoublac",
+    "departement": "44",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "Olivia Grégoire à la Baule et à Guérande. Un comité de non-accueil est aussi prévu !",
+    "liens": [
+      "https://twitter.com/AnonymeCitoyen/status/1649324998111162368?t=BvR3yfHdm7Ekhcaj1TG6Jg&s=35",
+      "https://twitter.com/Ilsensine/status/1649414163372945411?s=20"
+    ],
+    "codeInsee": 44055,
+    "actions": [
+      "chahut",
+      "fuite",
+      "annulation"
+    ],
+    "cibles": [
+      "ministre-del"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "36 - Châteauroux - 2023-04-21",
+    "ville": "Châteauroux",
+    "departement": "36",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "Elisabeth Borne en déplacement dans l'Indre.",
+    "liens": [
+      "https://twitter.com/nrchateauroux/status/1649360708285485058?s=20",
+      "https://twitter.com/NPA36/status/1649371802148192257?s=20",
+      "https://twitter.com/realmarcel1/status/1649373775442354177?s=20"
+    ],
+    "codeInsee": 36044,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "premiere-min"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "71 - Montceau-les-Mines - 2023-04-21",
+    "ville": "Montceau-les-Mines",
+    "departement": "71",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "Visite d'Olivier Dussopt à l'entreprise Novium à Montceau-les-Mines",
+    "liens": [
+      "https://twitter.com/realmarcel1/status/1649392393177772033?s=20"
+    ],
+    "codeInsee": 71306,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "25 - Besançon - 2023-04-21",
+    "ville": "Besançon",
+    "departement": "25",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "Venue du ministre des armées Sébastien Lecornu. Un comité de non-accueil est prévu !",
+    "liens": [
+      "https://twitter.com/Toufik2Planoise/status/1649468811953709069?t=7tnIoHFz1cieT2dV7eh0Ew&s=35",
+      "https://france3-regions.francetvinfo.fr/bourgogne-franche-comte/doubs/reforme-des-retraites-le-temps-est-venu-de-durcir-le-ton-trois-ministres-trois-comites-d-accueil-a-coup-de-casseroles-en-franche-comte-2758266.html"
+    ],
+    "codeInsee": 25056,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "90 - Belfort - 2023-04-21",
+    "ville": "Belfort",
+    "departement": "90",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "Visite d'Olivier Becht, le ministre du commerce extérieur et de l'attractivité, à l'usine d'Alstom en début d'après-midi.",
+    "liens": [
+      "https://france3-regions.francetvinfo.fr/bourgogne-franche-comte/doubs/reforme-des-retraites-le-temps-est-venu-de-durcir-le-ton-trois-ministres-trois-comites-d-accueil-a-coup-de-casseroles-en-franche-comte-2758266.html"
+    ],
+    "codeInsee": 90010,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre-del"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "39 - Lons-le-Saunier - 2023-04-21",
+    "ville": "Lons-le-Saunier",
+    "departement": "39",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "Venue de la ministre à l'égalité homme femme dans le Jura. Comité de non-accueil organisé par l'intersyndicale !",
+    "liens": [
+      "https://www.leprogres.fr/social/2023/04/21/des-dizaines-de-manifestants-devant-la-prefecture-pour-la-venue-de-la-ministre-isabelle-lonvis-rome",
+      "https://twitter.com/__Eileen____/status/1649317304759459842?s=20"
+    ],
+    "codeInsee": 39300,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre-del"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "26 - Saint-Paul-Trois-Châteaux - 2023-04-21",
+    "ville": "Saint-Paul-Trois-Châteaux",
+    "departement": "26",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "Venue du ministre chargé de l'industrie Roland Lescure et de la ministre de la transition énergétique Agnès Pannier-Runacher sur le site de la centrale nucléaire du Tricastin dans la Drôme.",
+    "liens": [
+      "https://twitter.com/lamarsweb/status/1649339693580910592?s=20"
+    ],
+    "codeInsee": 26324,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre-del",
+      "ministre"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "64 - Pau - 2023-04-21",
+    "ville": "Pau",
+    "departement": "64",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "repas officiel avec Gabriel Attal à la villa St Basil's dans le quartier Trespoey.",
+    "liens": [
+      "https://twitter.com/Kabed70/status/1649357183958614016?s=20"
+    ],
+    "codeInsee": 64445,
+    "actions": [
+      "chahut",
+      "creatif"
+    ],
+    "cibles": [
+      "ministre-del"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "34 - Montpellier - 2023-04-20",
+    "ville": "Montpellier",
+    "departement": "34",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-20",
+    "description": "manifestation contre la venue d'Emmanuel Macron dans l'Hérault.",
+    "liens": [
+      "https://twitter.com/myMetropolitain/status/1648998671059435520?s=20"
+    ],
+    "codeInsee": 34172,
+    "actions": [
+      "manif"
+    ],
+    "cibles": [
+      "president-rep"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "34 - Lunel - 2023-04-20",
+    "ville": "Lunel",
+    "departement": "34",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-20",
+    "description": "annulation du déplacement prévu d'Emmanuel Macron à Lunel.",
+    "liens": [
+      "https://twitter.com/Pr_Logos/status/1648761962103201804?t=ecFayK-8AlvvH-tpmCw0AA&s=35"
+    ],
+    "codeInsee": 34145,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [
+      "president-rep"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "34 - Ganges - 2023-04-20",
+    "ville": "Ganges",
+    "departement": "34",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-20",
+    "description": "Comité d'accueil à Ganges pour la visite d'Emmanuel Macron et de Pap Ndiaye au collège Louise Michel qui a été mis en sobriété énergétique. Casseroles, vuvuzellas et plots en plastique, tous « dispositifs sonores portatifs » interdits ! Une banderole « Macron dégage » a été hissée sur une façade rocheuse.",
+    "liens": [
+      "https://twitter.com/realmarcel1/status/1648988266404757507?s=20",
+      "https://twitter.com/bleuherault/status",
+      "https://twitter.com/CecHautefeuille/status/1648953830829178880?s=20",
+      "https://twitter.com/snesmontpellier/status/1648934965675978752?s=46&t=DTpI-3u5DjH9631xh_TF0Q",
+      "https://twitter.com/CamelusBlaah/status/1648960829344083975?s=20",
+      "https://twitter.com/PaulLarrouturou/status/1648971666163105792?t=CJbVOYGhAMkLWcSzQpvkKA&s=35"
+    ],
+    "codeInsee": 34111,
+    "actions": [
+      "chahut",
+      "sobriete",
+      "creatif"
+    ],
+    "cibles": [
+      "president-rep",
+      "ministre"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "83 - Brignoles - 2023-04-20",
+    "ville": "Brignoles",
+    "departement": "83",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-20",
+    "description": "Visite d'Olivier Véran dans le Var. Un comité de non-accueil est présent !",
+    "liens": [
+      "https://twitter.com/lamarsweb/status/1649057216765259778?s=20",
+      "https://twitter.com/MichaelZolto/status/1649050317546455042?s=20"
+    ],
+    "codeInsee": 83023,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "26 - Valence - 2023-04-20",
+    "ville": "Valence",
+    "departement": "26",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-20",
+    "description": "Annulation de la visite d'Eric Dupond Moretti.",
+    "liens": [],
+    "codeInsee": 26362,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "21 - Dijon - 2023-04-20",
+    "ville": "Dijon",
+    "departement": "21",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-20",
+    "description": "Annulation de la venue d'Agnès Firmin Le Bodo à la conférence sur le thème de la fin de vie à Dijon à la salle Devosges.",
+    "liens": [
+      "https://www.bienpublic.com/politique/2023/04/18/une-conference-avec-une-ministre-annulee-pour-raison-de-securite"
+    ],
+    "codeInsee": 21231,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [
+      "ministre-del"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "90 - Bourogne - 2023-04-20",
+    "ville": "Bourogne",
+    "departement": "90",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-20",
+    "description": "Comité de non-accueil pour Lecornu au 1er régiment d'artillerie à Bourogne, près de Belfort.",
+    "liens": [
+      "https://twitter.com/bleubelfort/status/1649054626245906435?s=20"
+    ],
+    "codeInsee": 90017,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "92 - Nanterre - 2023-04-20",
+    "ville": "Nanterre",
+    "departement": "92",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-20",
+    "description": "Comité de non accueil pour la ministre des sports Amélie Oudéa-Castéra vers l'Arena de Nanterre.",
+    "liens": [
+      "https://twitter.com/NanterreLFI/status/1648978754671132673?s=20"
+    ],
+    "codeInsee": 92050,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "47 - Agen - 2023-04-19",
+    "ville": "Agen",
+    "departement": "47",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-19",
+    "description": "casserolade et mise en sobriété énergétique du bar qui accueillait le ministre de la Transition Numérique Jean-Noël Barrot",
+    "liens": [
+      "https://twitter.com/Kabed70/status/1648770110939713587?t=mJiUpNRdvJ4lzTkfiRjWtg&s=35",
+      "https://twitter.com/AnonymeCitoyen/status/1648781678511378434?s=20"
+    ],
+    "codeInsee": 47001,
+    "actions": [
+      "chahut",
+      "sobriete"
+    ],
+    "cibles": [
+      "ministre-del"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "72 - Le Mans - 2023-04-19",
+    "ville": "Le Mans",
+    "departement": "72",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-19",
+    "description": "casserolades au Mans et en forêt de Bercé pour accueillir Christophe Béchu",
+    "liens": [
+      "https://twitter.com/RevPermanente/status/1648663527370944514?t=C6wmghK6EHYw0Rm8CMhwaQ&s=35",
+      "https://twitter.com/MickaCorreia/status/1648801968117170177?s=20"
+    ],
+    "codeInsee": 72181,
+    "actions": [
+      "chahut",
+      "creatif"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "93 - Pantin - 2023-04-19",
+    "ville": "Pantin",
+    "departement": "93",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-19",
+    "description": "casserolades lors de la visite de la ministre Carole Grandjean au CFA des métiers du luxe à Pantin, ainsi qu'à sa sortie",
+    "liens": [
+      "https://twitter.com/sudeducparis/status/1648603748304924672?s=20",
+      "https://twitter.com/Kabed70/status/1648610887840800768?s=20",
+      "https://twitter.com/AnonymeCitoyen/status/1648628924752986112?s=20"
+    ],
+    "codeInsee": 93055,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre-del"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "77 - Pontault-Combault - 2023-04-19",
+    "ville": "Pontault-Combault",
+    "departement": "77",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-19",
+    "description": "comité de non accueil pour la visite de Yaël Braun-Pivet au Centre Social et Culturel de Pontault-Combault",
+    "liens": [
+      "https://twitter.com/CGTAirLiquideEC/status/1648357557516288003?s=20"
+    ],
+    "codeInsee": 77373,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "presidente-an"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "67 - Muttersholtz - 2023-04-19",
+    "ville": "Muttersholtz",
+    "departement": "67",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-19",
+    "description": "casserolades et mise en sobriété de l'usine Mathis de Muttersholtz lors de la visite d'Emmanuel Macron.",
+    "liens": [
+      "https://twitter.com/AlsaceRevoltee/status/1648615850637656066?s=20",
+      "https://twitter.com/Rue89Strasbourg/status/1648615706064302080?s=20",
+      "https://twitter.com/AnonymeCitoyen/status/1648664087964909568?s=20"
+    ],
+    "codeInsee": 67311,
+    "actions": [
+      "chahut",
+      "sobriete"
+    ],
+    "cibles": [
+      "president-rep"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "44 - Nantes - 2023-04-19",
+    "ville": "Nantes",
+    "departement": "44",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-19",
+    "description": "le village du SNU plie bagage au bout d'1h et Sarah El Haïry renonce à venir faire un discours.",
+    "liens": [
+      "https://twitter.com/popocmoi/status/1648619059854843907?t=7vFmzNBqqr7DJDi67n0kKA&s=35",
+      "https://www.ouest-france.fr/societe/service-national-universel/chahute-par-des-manifestants-le-village-du-snu-plie-bagage-une-heure-apres-louverture-a-nantes-9efd0052-dea2-11ed-8876-51122d90141b"
+    ],
+    "codeInsee": 44109,
+    "actions": [
+      "annulation",
+      "chahut"
+    ],
+    "cibles": [
+      "secretaire-etat"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "67 - Sélestat - 2023-04-19",
+    "ville": "Sélestat",
+    "departement": "67",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-19",
+    "description": "Emmanuel Macron hué lors de sa visite à Sélestat et interpellé par des habitants",
+    "liens": [
+      "https://twitter.com/realmarcel1/status/1648679810393145344?s=20",
+      "https://twitter.com/AnonymeCitoyen/status/1648687393149517824?s=20",
+      "https://twitter.com/antoinellorca/status/1648686940655349760?s=20"
+    ],
+    "codeInsee": 67462,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "president-rep"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "75 - Paris 13e Arrondissement - 2023-04-18",
+    "ville": "Paris 13e Arrondissement",
+    "departement": "75",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-18",
+    "description": "comité de non accueil pour Jean-Christophe Combe et Geneviève Darrieussecq en visite à la CAF de Paris",
+    "liens": [
+      "https://twitter.com/ClementLanot/status/1648315495475474435"
+    ],
+    "codeInsee": 75113,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre-del",
+      "ministre"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "91 - Saclay - 2023-04-18",
+    "ville": "Saclay",
+    "departement": "91",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-18",
+    "description": "à 17h place Hubert Coudane à Orsay, comité de non-accueil pour Sylvie Retailleau à l'université Paris Saclay",
+    "liens": [
+      "https://twitter.com/isa_dartagnan/status/1648357690299564033?t=RaRT9srw7CViu284kzyJ2A&s=19",
+      "https://twitter.com/AnonymeCitoyen/status/1648606341399805952?s=20"
+    ],
+    "codeInsee": 91534,
+    "actions": [
+      "chahut",
+      "fuite"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "un - Saint-Denis - 2023-04-18",
+    "ville": "Saint-Denis",
+    "departement": "93",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-18",
+    "description": "casserolade pour accueillir Emmanuel Macron.",
+    "liens": [
+      "https://twitter.com/Ilyesramdani1/status/1648360121901170690?t=ck8zEM-MN1-w6YpKIIPPmQ&s=19",
+      "https://www.youtube.com/watch?v=FwQntNh9N7s",
+      "https://www.huffingtonpost.fr/france/video/a-saint-denis-emmanuel-macron-accueilli-par-des-centaines-de-manifestants-combattant-sa-surdite_216786.html"
+    ],
+    "codeInsee": 93066,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "president-rep"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "28 - Chartres - 2023-04-18",
+    "ville": "Chartres",
+    "departement": "28",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-18",
+    "description": "comité de non-accueil lors de la venue d'Olivier Dussopt pour la mise en ?uvre de la réforme des retraites.",
+    "liens": [
+      "https://twitter.com/AnonymeCitoyen/status/1648402550125740035?t=UEvI4hOtTtvvgxv5ROL3-A&s=19"
+    ],
+    "codeInsee": 28085,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "import JSON",
+    "remarques": ""
+  },
+  {
+    "id": "64 - Biriatou - 2023-04-21",
+    "ville": "Biriatou",
+    "departement": "64",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "Opération escargot et casserolade pour accueillir Gabriel Attal",
+    "liens": [
+      "https://www.mediabask.eus/eu/info_mbsk/20230421/reforme-des-retraites-operation-escargot-sur-l-a63"
+    ],
+    "codeInsee": 64130,
+    "actions": [
+      "creatif",
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "attac - OK",
+    "remarques": ""
+  },
+  {
+    "id": "18 - Bourges - 2023-04-21",
+    "ville": "Bourges",
+    "departement": "18",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "La ministre Rima Abdul-Malak attendue dans les allées du Printemps de Bourges",
+    "liens": [
+      "https://twitter.com/STAA_CNTso/status/1649408702514884613?s=20",
+      "https://twitter.com/SarahHRakM/status/1649623565132615681?t=wjbxJEbR1_6i9US4iAc_RA&s=35"
+    ],
+    "codeInsee": 18033,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "attac - OK",
+    "remarques": ""
+  },
+  {
+    "id": "72 - Coulaines - 2023-04-24",
+    "ville": "Coulaines",
+    "departement": "72",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-24",
+    "description": "Comité de non accueil pour le ministre de la justice Eric Dupond Moretti en visite dans la Sarthe.",
+    "liens": [
+      "https://twitter.com/K_L_C_Politique/status/1650483074524667904?s=20"
+    ],
+    "codeInsee": 72095,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "attac - OK",
+    "remarques": ""
+  },
+  {
+    "id": "69 - Lyon - 2023-04-24",
+    "ville": "Lyon",
+    "departement": "69",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-24",
+    "description": "Le ministre de l'Éducation nationale Pap Ndiaye accueilli par des casseroles à Lyon",
+    "liens": [
+      "https://twitter.com/recchito/status/1650478841612124160?s=20"
+    ],
+    "codeInsee": 69123,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "attac - OK",
+    "remarques": ""
+  },
+  {
+    "id": "un - Massy - 2023-04-24",
+    "ville": "Massy",
+    "departement": "71",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-24",
+    "description": "Lundi 24/04 à 8h à la gare Massy-Palaiseau\nCasserolade d'accueil pour Olivier Klein à Massy en visite de l'ancien immeuble de General Electrics",
+    "liens": [
+      "https://twitter.com/Solidaires_91/status/1650392337669935105?s=20"
+    ],
+    "codeInsee": 71288,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre-del"
+    ],
+    "source": "attac - OK",
+    "remarques": ""
+  },
+  {
+    "id": "75 - Paris - 2023-04-24",
+    "ville": "Paris",
+    "departement": "75",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-24",
+    "description": "Casserolades au moment de la cérémonie des Molières, en présence de Rima Abdul-Malak, ministre de la Culture",
+    "liens": [
+      "https://actu.fr/ile-de-france/paris_75056/videos-reforme-des-retraites-la-nuit-des-molieres-a-paris-perturbee-par-un-concert-de-casserole_59184465.html"
+    ],
+    "codeInsee": 75056,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "attac - OK",
+    "remarques": ""
+  },
+  {
+    "id": "75 - Paris 12e Arrondissement - 2023-04-24",
+    "ville": "Paris 12e Arrondissement",
+    "departement": "75",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-24",
+    "description": "Accueil en casseroles pour Pap Ndiaye à Gare de Lyon\n[[[daily]-20230425]]",
+    "liens": [],
+    "codeInsee": 75112,
+    "actions": [
+      "chahut",
+      "fuite"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "attac - OK",
+    "remarques": ""
+  },
+  {
+    "id": "86 - Poitiers - 2023-04-24",
+    "ville": "Poitiers",
+    "departement": "86",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-24",
+    "description": "François Braun, ministre de la santé,  attendu au CHU de Poitiers",
+    "liens": [
+      "https://twitter.com/LaurentGaudens/status/1650475205196673024?s=20"
+    ],
+    "codeInsee": 86194,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "attac - OK",
+    "remarques": ""
+  },
+  {
+    "id": "un - Rochefort - 2023-04-25",
+    "ville": "Rochefort",
+    "departement": "17",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-25",
+    "description": "Bérangère Couillard, secrétaire d'état chargé de l'écologie, annule son déplacement à Rochefort",
+    "liens": [
+      "https://twitter.com/realmarcel1/status/1650814058193354752?s=20"
+    ],
+    "codeInsee": 17299,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [
+      "secretaire-etat"
+    ],
+    "source": "attac - OK",
+    "remarques": ""
+  },
+  {
+    "id": "un - Fontaines - 2023-04-21",
+    "ville": "Fontaines",
+    "departement": "71",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "Visite d'Olivier Dussopt à l'entreprise Margaritelli annulée",
+    "liens": [
+      "https://twitter.com/Rom2bout/status/1649355415111573506?s=20"
+    ],
+    "codeInsee": 71202,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "attac - OK",
+    "remarques": ""
+  },
+  {
+    "id": "93 - Neuilly-sur-Marne - 2023-04-21",
+    "ville": "Neuilly-sur-Marne",
+    "departement": "93",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-21",
+    "description": "Annulation de la venue du ministre de la santé F. Braun à Ville Evrard",
+    "liens": [
+      "https://twitter.com/attac_fr/status/1649304123676807168?s=20"
+    ],
+    "codeInsee": 93050,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "attac - OK",
+    "remarques": ""
+  },
+  {
+    "id": "un - Valence - 2023-04-20",
+    "ville": "Valence",
+    "departement": "16",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-20",
+    "description": "Annulation de la visite d'Eric Dupond Moretti",
+    "liens": [
+      "https://www.ledauphine.com/social/2023/04/18/valence-la-visite-du-garde-des-sceaux-eric-dupond-moretti-reportee"
+    ],
+    "codeInsee": 16392,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "attac - OK",
+    "remarques": ""
+  }
 ]
