@@ -1,8 +1,10 @@
 import dayjs from 'dayjs';
 import { ACTION_SCORE, DEPARTMENTS, TARGET_MULTIPLIER, startDay } from './constants';
-import type { ActionEvent, DepartmentResult } from './types';
+import type { ActionEvent, DepartmentResult, PresseLink } from './types';
 import rawData from '$lib/assets/data.json?raw';
+import rawPresse from '$lib/assets/presse.json?raw';
 
+export const PRESSE = (JSON.parse(rawPresse)) as PresseLink[];
 export const DATA = enrichData(JSON.parse(rawData)) as ActionEvent[];
 export const LEADERBOARD = generateLeaderboard();
 

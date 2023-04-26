@@ -22,3 +22,9 @@ export interface ActionEvent {
 export interface DepartmentResult {
 	[departmentCode: string]: number;
 }
+
+export interface PresseLink {
+	content: string;
+	source: string;
+	image: string;
+}
