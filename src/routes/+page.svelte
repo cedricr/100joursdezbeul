@@ -30,11 +30,11 @@
 			{#each resultLines as result, i}
 				<li class="flex flex-row justify-between gap-3 relative">
 					<div>
-						{#if i === 1}
+						{#if i === 0}
 							<span role="img" aria-label="1.">🥇</span>
-						{:else if i === 2}
+						{:else if i === 1}
 							<span role="img" aria-label="1.">🥈</span>
-						{:else if i === 3}
+						{:else if i === 2}
 							<span role="img" aria-label="1.">🥉</span>
 						{:else}
 							{i + 1}.
