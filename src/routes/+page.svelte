@@ -60,7 +60,7 @@
 	}
 
 	ol > li:first-child {
-		@apply text-4xl font-bold text-[#dd0220];
+		@apply text-2xl font-bold text-[#dd0220];
 	}
 
 	ol > li:nth-child(2) {
