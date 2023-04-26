@@ -1,5 +1,5 @@
 <script lang="ts">
-	import links from 'links.json';
+   const linksPromise = import(/* @vite-ignore */ './links.json');
 </script>
 
 <svelte:head><title>Presse | 100 jours de zbeul</title></svelte:head>
@@ -11,6 +11,7 @@
 		<h2>Revue de presse</h2>
     
 		<ul>
+			{#await linksPromise then links}
 			{#each links as link}
 			<li class="flex items-center gap-2 mb-3">
 				<img class="image w-12 h-12 rounded-full" src="{link.img}" alt="" width="384" height="512">
@@ -19,6 +20,7 @@
 				</a>
 			</li>
 			{/each}
+			{/await}
 		</ul>
 	</div>
 </main>
