@@ -21,7 +21,7 @@
 	</p>
 
 	<h2 class="zbeul mb-2">Classement temporaire au {formattedDate}</h2>
-	<p class="mb-2 text-center italic">(tenant compte des données jusqu’au 21 avril inclus)</p>
+	<p class="mb-2 text-center italic">(tenant compte des données jusqu’au 24 avril inclus)</p>
 	<p class="mb-6 text-center italic">
 		Cliquez sur le nom du département pour avoir le détail du décompte.
 	</p>

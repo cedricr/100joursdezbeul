@@ -18,7 +18,7 @@ export const detectTargets = (previous, original) => previous.map(event => {
 
   return {
     ...event,
-    targets,
+    cibles: targets,
   }
 });
 

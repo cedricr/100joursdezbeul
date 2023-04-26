@@ -5,7 +5,7 @@
 	export let data;
 
 	function getEvents(department: string) {
-		const events = DATA.filter((event) => event.codeInsee.slice(0, 2) === department).sort(
+		const events = DATA.filter((event) => event.departement === department).sort(
 			(evt1, evt2) => Date.parse(evt2.date) - Date.parse(evt1.date)
 		);
 		return events;

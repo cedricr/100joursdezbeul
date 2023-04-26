@@ -1,8 +1,8 @@
 {
-  "PR": ["Macron", "le president de la republique", "jupiter"],
+  "president-rep": ["Macron", "le president de la republique", "jupiter"],
   "ministre": ["Ndiaye", "Combe", "Barrot", "Becht","Lecornu", "Attal", "Abdul-Malak", "Véran", "Lecronu", "Dussopt", "Braun", "Béchu", "Lonvis-Rome", "Oudéa-Castéra", "Le Maire", "Grandjean", "Lescure", "Pannier-Runacher", "Retailleau", "Abdul-Malak", "Dupond Moretti", "Darmanin"],
-  "PAN": ["Braun-Pivet"],
-  "secretaire-detat": ["El Haïry"],
-  "ministre-delegue-e": ["Darrieussecq", "Klein", "Firmin Le Bodo", "Grégoire"],
-  "PM": ["Borne"]
+  "presidente-an": ["Braun-Pivet"],
+  "secretaire-etat": ["El Haïry"],
+  "ministre-del": ["Darrieussecq", "Klein", "Firmin Le Bodo", "Grégoire"],
+  "premiere-min": ["Borne"]
 }

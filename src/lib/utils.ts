@@ -26,7 +26,7 @@ export function enrichData(data: ActionEvent[]) {
 export function generateLeaderboard() {
 	const departmentsResults: DepartmentResult = {};
 	DATA.forEach((event) => {
-		const dept = event.codeInsee.slice(0, 2);
+		const dept = event.departement;
 		departmentsResults[dept] = (departmentsResults[dept] || 0) + event.score;
 	});
 	return Object.entries(departmentsResults).sort((d1, d2) => {
