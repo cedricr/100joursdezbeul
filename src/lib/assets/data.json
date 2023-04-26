@@ -566,5 +566,25 @@
 		"actions": ["annulation"],
 		"cibles": ["ministre"],
 		"source": "attac - OK"
+	},
+	{
+		"id": "41 - Vendôme - 2023-04-25",
+		"ville": "Vendôme",
+		"departement": "41",
+		"date": "2023-04-25",
+		"description": "Passage éclair de Macron à Vendôme",
+		"liens": [
+			"https://www.liberation.fr/politique/a-vendome-emmanuel-macron-fait-du-sans-contact-20230425_RTP3YCDRKJE6XOLGMUDJDQIYQM/",
+			"https://fr.news.yahoo.com/à-vendôme-visite-d-emmanuel-144552134.html",
+			"https://twitter.com/hfh72j4wb8/status/1650825050080026628",
+			"https://twitter.com/AnthonyLebbos/status/1650822186326802432?t=StbI8fVGCdUu6TsYeb8msA",
+			"https://twitter.com/realmarcel1/status/1650867288168439810?t=yrOhOBt8chXIMViaYWRIwA",
+			"https://twitter.com/PaulLarrouturou/status/1650803333391609857?t=Y78avm5hFOo4EwAHJgTwPQ",
+			"https://twitter.com/EmilioMeslet/status/1650851995220099075?t=8SwqvOBNLTz9bjMZc6W3ig"
+		],
+		"codeInsee": 41269,
+		"actions": ["manif", "fuite", "chahut"],
+		"cibles": ["president-rep"],
+		"source": "import JSON"
 	}
 ]
