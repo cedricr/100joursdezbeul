@@ -8,15 +8,17 @@
 		<p>Vous souhaitez participer à l’action&nbsp;? Voici comment&nbsp;!</p>
 
 		<p>
-			Chacune des actions suivantes contribue à la mise en place d’une stratégie de résistance à la
-			politique du gouvernement.
+			Chacune des actions suivantes contribue à l'apaisement voulu par notre président de la
+			République, en incitant le gouvernement à retirer la réforme des retraites dans une ambiance
+			festive et conviviale.
 		</p>
+		<p>Les actions sont prises en compte à partir du 18/04.</p>
 
 		<h2>Actions participants au classement</h2>
 		<ul>
 			<li id="chahut">
 				<h3>Chahut</h3>
-				<p>Lors d'une visite, organiser casserolades ou huées</p>
+				<p>Lors d'une visite, organiser casserolades, charivari, cacophonie ou huées.</p>
 			</li>
 
 			<li id="manifestation">
@@ -27,8 +29,8 @@
 			<li id="action-creative">
 				<h3>Action créative</h3>
 				<p>
-					Faire preuve d'originalité dans l'expression des revendications. l'on pourait cité en
-					exemple poursuite en forêt, etc…
+					Faire preuve d'originalité dans l'expression des revendications. Par exemple les
+					opérations escargot, banderoles originales citées dans des articles, venir déguisé, etc.
 				</p>
 			</li>
 
@@ -36,7 +38,8 @@
 				<h3>Mise en sobriété énergétique</h3>
 				<p>
 					Intervention de camarades afin de limiter la consommation énergétique et préserver
-					l'environnement par une transition énergétique accélérée.
+					l'environnement par une transition énergétique accélérée et locale des membres du
+					gouvernement.
 				</p>
 			</li>
 
@@ -56,6 +59,24 @@
 
 		<h2>Actions non prises en compte</h2>
 		<p>Certaines actions ne sont pas prises en compte dans le classement.</p>
+		<p>
+			Les violences physiques ne sont pas prises en compte dans le classement et ne donnent pas de
+			point bonus. Notre objectif est de soutenir la mobilisation contre la réforme des retraites et
+			d'obtenir son retrait.
+		</p>
+		<p>
+			Pour le moment les actions internationales ne sont pas prises en compte mais le sujet est en
+			cours de discussion.
+		</p>
+		<p>
+			Pour le moment les actions sur les personnes non membre du gouvernement (députés de la
+			majorité, caravane du SNU...) ne sont pas prises en compte mais le sujet est en cours de
+			discussion.
+		</p>
+		<p>
+			Nous mettons à jour les données une fois par jour, le soir. Les actions du jour sont en
+			général prises en compte le lendemain.
+		</p>
 	</div>
 </main>
 
@@ -74,6 +95,6 @@
 		@apply mx-auto mb-6 max-w-lg list-none;
 	}
 	li {
-		@apply mb-3;
+		@apply mb-3 text-lg;
 	}
 </style>
