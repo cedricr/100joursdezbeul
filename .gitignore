@@ -10,7 +10,9 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 
 yarn.lock
-extract.json
+*.bck.json
+*.csv
+*.patch
 
 # IDEs and editors
 /.idea
@@ -20,6 +22,7 @@ extract.json
 *.launch
 .settings/
 *.sublime-workspace
+*.iml
 
 # IDE - VSCode
 .vscode/*

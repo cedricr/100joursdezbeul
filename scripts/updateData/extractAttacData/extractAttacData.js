@@ -5,23 +5,23 @@ import {fetchData} from './fetchData.js';
 import extractCityAndDate from './transformers/extractCityAndDate.js';
 import extractLinks from './transformers/extractLinks.js';
 import cleanup from './transformers/cleanup.js';
-import mergeWithExistingData from './transformers/mergeWithExistingData.js'
+import removeExistingEvents from './transformers/removeExistingEvents.js'
 
-// import data from './mockData.js';
-async function run(){
+import validEvents from '../../../src/lib/assets/data.json' assert { type: 'json' };
+import ignoredEvents from '../../../src/lib/assets/data-ignored.json' assert { type: 'json' };
+import targets from '../data/targets.json' assert { type: 'json' };
+import actions from '../data/actions.json' assert { type: 'json' };
+
+export async function extractAttacData(){
   const data = await fetchData();
-  const processedData = [
+  return [
     filterFutureEvents,
     extractCityAndDate,
+    removeExistingEvents.bind(this, validEvents,ignoredEvents),
     extractLinks,
     extractImages,
-    detectTargets,
-    detectActions,
+    detectTargets.bind(this, targets),
+    detectActions.bind(this, actions),
     cleanup,
-    mergeWithExistingData,
   ].reduce((previousData, transformer) => transformer(previousData, data), data);
-
-  console.log(JSON.stringify(processedData, null, 2));
 }
-
-run();

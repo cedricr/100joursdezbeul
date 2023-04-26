@@ -6,22 +6,20 @@ npm install
 npm run dev -- --open
 ```
 
-Pour mettre à jour les données uniquement depuis le spreadsheet:
+Pour mettre à jour les données depuis le spreadsheet:
 1. on met à jour le spreadsheet à la main
 2. on l'export en CSV
-3. on lance node ./scripts/csvToJSON/index.js fichier.csv en local
-4. on copie export.json dans util/data.json
-5. on commit/push
+3. on lance `npm run updateData -- <fichier.csv>` en local
+4. Créer votre MR/Patch
+5. Mettre à jour le spreadsheet avec le contenu de `attac-new-events.csv`
+ 
+Le script va générer 5 fichiers:
+- `src/lib/assets/data.json` : contient les données valides qui seront affichées sur le site. A commit apres revérification
+- `src/lib/assets/data-ignored.json` : contient les données invalides qui ne seront pas affichées sur le site. A commit apres revérification
+- `src/lib/assets/metadata.json` : contient les meta données de l'import. A commit apres revérification
+- `attac-new-events.csv` : contient les nouveaux events créé par Attac, a copier dans le spreadsheet à la main. NE PAS COMMIT
+- `data-<timestamp>.bck.json` : contient les données avant l'import au cas où il y a un soucis. NE PAS COMMIT
 
-Pour mettre à jour les données ATTAC:
-1. on met à jour le spreadsheet à la main
-2. on l'export en CSV
-3. on lance node ./scripts/csvToJSON/index.js fichier.csv en local
-4. on lance npm extractData
-5. on copie export.json dans util/data.json
-6. on lance node scripts/jsonToCSV/index.js
-7. on commit/push
-8. on update le spreadsheet avec les données du CSV export.csv
 
 Pour contribuer anonymement:
 1. faites un checkout du projet

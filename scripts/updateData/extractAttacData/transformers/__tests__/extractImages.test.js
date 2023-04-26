@@ -1,5 +1,5 @@
 import { expect, it, describe } from 'vitest';
-import extractImages from '../extractImages.js';
+import extractImages from 'scripts/updateData/extractAttacData/transformers/extractImages.js';
 
 describe('extracting images', () => {
   it('should extract one image in MD format', () => {

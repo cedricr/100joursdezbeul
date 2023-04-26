@@ -1,5 +1,5 @@
 import { expect, it, describe } from 'vitest'
-import cleanup from '../cleanup.js';
+import cleanup from 'scripts/updateData/extractAttacData/transformers/cleanup.js';
 
 describe('cleanup the data', () => {
   it('should remove doubled line returns', () => {
