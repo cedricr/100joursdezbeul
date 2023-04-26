@@ -58,7 +58,7 @@
 	ol > li:first-child::before {
 		content: '🥇';
 		position: absolute;
-		margin-left: -1em;
+		margin-left: -2.4em;
 	}
 
 	ol > li:nth-child(2) {
@@ -68,7 +68,7 @@
 	ol > li:nth-child(2)::before {
 		content: '🥈';
 		position: absolute;
-		margin-left: -1em;
+		margin-left: -2rem;
 	}
 	
 	ol > li:nth-child(3) {
@@ -78,6 +78,6 @@
 	ol > li:nth-child(3)::before {
 		content: '🥉';
 		position: absolute;
-		margin-left: -1em;
+		margin-left: -2rem;
 	}
 </style>
