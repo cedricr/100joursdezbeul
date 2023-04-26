@@ -41,7 +41,11 @@
 		</ol>
 	</div>
 
-	<p class="mb-20 text-center text-lg"><a href="/regles-du-jeu">Règles du jeu</a></p>
+	<p class="mb-20 text-center text-lg">
+		<a href="/regles-du-jeu">Règles du jeu</a>
+		<br />
+		<a href="/comment-participer">Comment participer</a>
+	</p>
 
 	<Thanks />
 </main>
