@@ -31,14 +31,37 @@
 				>code source</a
 			>)
 		</p>
-		<h3>Types d’action</h3>
+		<h3>Types d’actions</h3>
 		<ul>
-			<li>Chahut (casserolade, huée…) — 1 point</li>
-			<li>Manifestation — 1 point</li>
-			<li>Action créative (poursuite en forêt, etc…) — 2 points</li>
-			<li>Mise en sobriété énergétique — 3 points</li>
-			<li>Action conduisant au départ précipité d’une personnalité — 4 points</li>
-			<li>Annulation d’une visite 🎉 — 5 points</li>
+			<li>
+				<a href="/comment-participer/#chahut" class="no-underline hover:underline">Chahut</a> (casserolade,
+				huée…) — 1 point
+			</li>
+			<li>
+				<a href="/comment-participer/#manifestation" class="no-underline hover:underline"
+					>Manifestation</a
+				> — 1 point
+			</li>
+			<li>
+				<a href="/comment-participer/#action-creative" class="no-underline hover:underline"
+					>Action créative</a
+				> (poursuite en forêt, etc…) — 2 points
+			</li>
+			<li>
+				<a href="/comment-participer/#sobirete-energetique" class="no-underline hover:underline"
+					>Mise en sobriété énergétique</a
+				> — 3 points
+			</li>
+			<li>
+				<a href="/comment-participer/#fuite" class="no-underline hover:underline"
+					>Action conduisant au départ précipité d’une personnalité</a
+				> — 4 points
+			</li>
+			<li>
+				<a href="/comment-participer/#annulation" class="no-underline hover:underline"
+					>Annulation d’une visite 🎉</a
+				> — 5 points
+			</li>
 		</ul>
 		<h3>Personnalités</h3>
 		<ul>
