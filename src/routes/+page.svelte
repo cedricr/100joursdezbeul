@@ -56,7 +56,7 @@
 	}
 
 	ol > li:nth-child(2) {
-		@apply text-3xl font-bold;
+		@apply text-2xl font-bold;
 	}
 	
 	ol > li:nth-child(3) {
