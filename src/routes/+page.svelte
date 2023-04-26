@@ -26,9 +26,9 @@
 		Cliquez sur le nom du département pour avoir le détail du décompte.
 	</p>
 	<div class="mx-auto mb-6 mt-10 max-w-sm text-xl">
-		<ol>
+		<ol class="flex flex-col gap-3">
 			{#each resultLines as result, i}
-				<li class="mb-3 flex flex-row justify-between gap-3" class:winner={i === 0}>
+				<li class="flex flex-row justify-between gap-3" class:winner={i === 0}>
 					<div>
 						{i + 1}.
 						<a href="/departement/{result[0]}" class="no-underline hover:underline"
@@ -50,7 +50,16 @@
 	.olympic-red {
 		@apply text-[#dd0220];
 	}
-	.winner {
+
+	ol > li:first-child {
 		@apply text-4xl font-bold text-[#dd0220];
+	}
+
+	ol > li:nth-child(2) {
+		@apply text-3xl font-bold;
+	}
+	
+	ol > li:nth-child(3) {
+		@apply text-2xl font-bold;
 	}
 </style>
