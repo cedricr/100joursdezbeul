@@ -60,15 +60,15 @@
 	}
 
 	ol > li:first-child {
-		@apply text-2xl font-bold text-[#dd0220];
+		@apply text-3xl font-bold text-[#dd0220];
 	}
 
 	ol > li:nth-child(2) {
-		@apply text-2xl font-bold;
+		@apply text-3xl font-bold;
 	}
 	
 	ol > li:nth-child(3) {
-		@apply text-2xl font-bold;
+		@apply text-3xl font-bold;
 	}
 
 </style>
