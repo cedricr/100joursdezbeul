@@ -1,5 +1,5 @@
 <script lang="ts">
-   import { PRESSE } from '$lib/utils';
+	import { PRESSE } from '$lib/utils';
 
 	const links = PRESSE;
 </script>
