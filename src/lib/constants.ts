@@ -23,7 +23,7 @@ export const ACTION_SCORE = {
 export const TARGET_MULTIPLIER = {
 	'secretaire-etat': 1,
 	'ministre-del': 2,
-	ministre: 3,
+	'ministre': 3,
 	'ministre-int': 4,
 	'presidente-an': 4,
 	'premiere-min': 5,
