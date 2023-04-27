@@ -2,7 +2,7 @@
   {
     "id": "14 - Caen - 2023-04-22",
     "ville": "Caen",
-    "departement": 14,
+    "departement": "14",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-22",
@@ -24,7 +24,7 @@
   {
     "id": "un - Langon - 2023-04-17",
     "ville": "Langon",
-    "departement": 33,
+    "departement": "33",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-17",
@@ -47,7 +47,7 @@
   {
     "id": "85 - Les Sables-d'Olonne - 2023-04-24",
     "ville": "Les Sables-d'Olonne",
-    "departement": 85,
+    "departement": "85",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-24",
@@ -94,7 +94,7 @@
   {
     "id": "13 - Salon-de-Provence - 2023-04-23",
     "ville": "Salon-de-Provence",
-    "departement": 13,
+    "departement": "13",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-23",
@@ -116,7 +116,7 @@
   {
     "id": "60 - Chantilly - 2023-04-17",
     "ville": "Chantilly",
-    "departement": 60,
+    "departement": "60",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-17",
@@ -140,7 +140,7 @@
   {
     "id": "28 - Gasville-Oisème - 2023-04-20",
     "ville": "Gasville-Oisème",
-    "departement": 28,
+    "departement": "28",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-20",
@@ -162,7 +162,7 @@
   {
     "id": "33 - La Teste-de-Buch - 2023-03-17",
     "ville": "La Teste-de-Buch",
-    "departement": 33,
+    "departement": "33",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-03-17",
@@ -186,7 +186,7 @@
   {
     "id": "14 - Maltot - 2023-04-21",
     "ville": "Maltot",
-    "departement": 14,
+    "departement": "14",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -208,7 +208,7 @@
   {
     "id": "75 - Paris - 2023-05-02",
     "ville": "Paris",
-    "departement": 75,
+    "departement": "75",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-05-02",
@@ -231,7 +231,7 @@
   {
     "id": "57 - Thionville - 2023-03-18",
     "ville": "Thionville",
-    "departement": 57,
+    "departement": "57",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-03-18",
@@ -255,7 +255,7 @@
   {
     "id": "83 - Toulon - 2023-03-27",
     "ville": "Toulon",
-    "departement": 83,
+    "departement": "83",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-03-27",
@@ -279,7 +279,7 @@
   {
     "id": "92 - Chaville - 2023-04-25",
     "ville": "Chaville",
-    "departement": 92,
+    "departement": "92",
     "ajout": "2023-04-25",
     "modif": "2023-04-25",
     "date": "2023-04-25",
@@ -300,7 +300,7 @@
   {
     "id": "un - La Montagne - 2023-04-27",
     "ville": "La Montagne",
-    "departement": 44,
+    "departement": "44",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
@@ -322,7 +322,7 @@
   {
     "id": "71 - Privas - 2023-04-27",
     "ville": "Privas",
-    "departement": 71,
+    "departement": "71",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
@@ -342,9 +342,9 @@
     ]
   },
   {
-    "id": "un - Annecy - 2023-04-27",
+    "id": "74 - Annecy - 2023-04-27",
     "ville": "Annecy",
-    "departement": null,
+    "departement": "74",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
@@ -356,19 +356,20 @@
     "actions": [
       "manif"
     ],
-    "cibles": [],
+    "cibles": [
+      "ministre"
+    ],
     "source": "attac - TO CHECK",
     "remarques": "",
     "erreurs": [
-      "pas de cible",
       "date future",
       "pas de code INSEE"
     ]
   },
   {
-    "id": "un - Château de Joux - 2023-04-27",
+    "id": "25 - Château de Joux - 2023-04-27",
     "ville": "Château de Joux",
-    "departement": null,
+    "departement": "25",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
@@ -389,9 +390,9 @@
     ]
   },
   {
-    "id": "un - Hennebont et Pluneret - 2023-04-27",
+    "id": "56 - Hennebont et Pluneret - 2023-04-27",
     "ville": "Hennebont et Pluneret",
-    "departement": null,
+    "departement": "56",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
@@ -402,11 +403,12 @@
     "actions": [
       "manif"
     ],
-    "cibles": [],
+    "cibles": [
+      "secretaire-etat"
+    ],
     "source": "attac - TO CHECK",
     "remarques": "",
     "erreurs": [
-      "pas de cible",
       "date future",
       "pas de code INSEE"
     ]
@@ -414,7 +416,7 @@
   {
     "id": "83 - La Seyne-sur-Mer - 2023-04-27",
     "ville": "La Seyne-sur-Mer",
-    "departement": 83,
+    "departement": "83",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
@@ -438,7 +440,7 @@
   {
     "id": "58 - Luzy - 2023-04-27",
     "ville": "Luzy",
-    "departement": 58,
+    "departement": "58",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
@@ -450,18 +452,19 @@
     "actions": [
       "chahut"
     ],
-    "cibles": [],
+    "cibles": [
+      "ministre-del"
+    ],
     "source": "attac - TO CHECK",
     "remarques": "",
     "erreurs": [
-      "pas de cible",
       "date future"
     ]
   },
   {
     "id": "69 - Lyon - 2023-04-27",
     "ville": "Lyon",
-    "departement": 69,
+    "departement": "69",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
@@ -483,7 +486,7 @@
   {
     "id": "un - Perpignan Pyrénées-Orientales - 2023-04-27",
     "ville": "Perpignan Pyrénées-Orientales",
-    "departement": null,
+    "departement": "null",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
@@ -506,7 +509,7 @@
   {
     "id": "76 - Rouen - 2023-04-27",
     "ville": "Rouen",
-    "departement": 76,
+    "departement": "76",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
@@ -519,18 +522,19 @@
     "actions": [
       "chahut"
     ],
-    "cibles": [],
+    "cibles": [
+      "ministre"
+    ],
     "source": "attac - TO CHECK",
     "remarques": "",
     "erreurs": [
-      "pas de cible",
       "date future"
     ]
   },
   {
     "id": "67 - Sélestat - 2023-04-27",
     "ville": "Sélestat",
-    "departement": 67,
+    "departement": "67",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
@@ -540,11 +544,12 @@
     ],
     "codeInsee": 67462,
     "actions": [],
-    "cibles": [],
+    "cibles": [
+      "ministre"
+    ],
     "source": "attac - TO CHECK",
     "remarques": "",
     "erreurs": [
-      "pas de cible",
       "pas d'action",
       "date future"
     ]
@@ -552,7 +557,7 @@
   {
     "id": "83 - Toulon - 2023-04-27",
     "ville": "Toulon",
-    "departement": 83,
+    "departement": "83",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
@@ -574,15 +579,15 @@
     ]
   },
   {
-    "id": "un - Saint-Etienne - 2023-04-27",
+    "id": "42 - Saint-Etienne - 2023-04-27",
     "ville": "Saint-Etienne",
-    "departement": null,
+    "departement": "42",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
     "description": "Le député Renaissance Thomas Gasilloud accueilli par des fumigènes",
     "liens": [
-      "https://twitter.com/Interville2023/status/1651517069966340096?s=35"
+      "https://twitter.com/Interville2023/status/1651517069966340096?s=35 https://www.ouest-france.fr/politique/sebastien-lecornu/le-ministre-des-armees-annule-sa-visite-chez-naval-group-indret-en-loire-atlantique-d614f34e-e4c2-11ed-9757-e35473d4e313"
     ],
     "actions": [],
     "cibles": [],
@@ -596,24 +601,27 @@
     ]
   },
   {
-    "id": "75 - Paris 12e Arrondissement - 2023-04-24 - 1",
-    "ville": "Paris 12e Arrondissement",
-    "departement": 75,
-    "ajout": "2023-04-24",
-    "modif": "2023-04-24",
-    "date": "2023-04-24",
-    "description": "Annulation de la venue de Charlotte Caubel, secrétaire d'État chargée de l'Enfance à Santé publique France. Un comité d'accueil était présent.",
-    "liens": [],
-    "codeInsee": 75112,
-    "actions": [
-      "annulation",
-      "manif"
+    "id": "44 - Indre - 2023-04-27",
+    "ville": "Indre",
+    "departement": "44",
+    "ajout": "2023-04-27",
+    "modif": "2023-04-27",
+    "date": "2023-04-27",
+    "description": "Annulaion de la visite du site de NAVAL GROUP par  Sébastien LECORNU ministre des Armées",
+    "liens": [
+      "https://twitter.com/ulcgtnantes/status/1651201440885489664?t=3zGY8Q7cPN8g5eVYNfELZA&s=19"
     ],
-    "cibles": [],
+    "codeInsee": 44074,
+    "actions": [
+      "annulation"
+    ],
+    "cibles": [
+      "ministre"
+    ],
     "source": "attac - TO CHECK",
     "remarques": "",
     "erreurs": [
-      "pas de cible"
+      "date future"
     ]
   }
 ]

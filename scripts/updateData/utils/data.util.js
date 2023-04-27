@@ -61,6 +61,7 @@ export function convertRowToEvent(row) {
     liens: event.liens.split(';').filter(isEmpty),
     description: event.description.replaceAll('’','\''),
     id: event.id.replaceAll('–','-'),
+    departement: `${event.departement}`,
   }
 }
 

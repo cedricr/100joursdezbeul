@@ -2,7 +2,7 @@
   {
     "id": "93 - Bobigny - 2023-04-21",
     "ville": "Bobigny",
-    "departement": 93,
+    "departement": "93",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -23,7 +23,7 @@
   {
     "id": "31 - Toulouse - 2023-04-21",
     "ville": "Toulouse",
-    "departement": 31,
+    "departement": "31",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -45,7 +45,7 @@
   {
     "id": "80 - Nesle - 2023-04-21",
     "ville": "Nesle",
-    "departement": 80,
+    "departement": "80",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -67,7 +67,7 @@
   {
     "id": "un - Montreuil - 2023-04-21",
     "ville": "Montreuil",
-    "departement": 93,
+    "departement": "93",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -91,7 +91,7 @@
   {
     "id": "44 - La Baule-Escoublac - 2023-04-21",
     "ville": "La Baule-Escoublac",
-    "departement": 44,
+    "departement": "44",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -115,7 +115,7 @@
   {
     "id": "36 - Châteauroux - 2023-04-21",
     "ville": "Châteauroux",
-    "departement": 36,
+    "departement": "36",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -138,7 +138,7 @@
   {
     "id": "71 - Montceau-les-Mines - 2023-04-21",
     "ville": "Montceau-les-Mines",
-    "departement": 71,
+    "departement": "71",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -159,7 +159,7 @@
   {
     "id": "25 - Besançon - 2023-04-21",
     "ville": "Besançon",
-    "departement": 25,
+    "departement": "25",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -181,7 +181,7 @@
   {
     "id": "90 - Belfort - 2023-04-21",
     "ville": "Belfort",
-    "departement": 90,
+    "departement": "90",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -202,7 +202,7 @@
   {
     "id": "39 - Lons-le-Saunier - 2023-04-21",
     "ville": "Lons-le-Saunier",
-    "departement": 39,
+    "departement": "39",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -224,7 +224,7 @@
   {
     "id": "26 - Saint-Paul-Trois-Châteaux - 2023-04-21",
     "ville": "Saint-Paul-Trois-Châteaux",
-    "departement": 26,
+    "departement": "26",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -246,7 +246,7 @@
   {
     "id": "64 - Pau - 2023-04-21",
     "ville": "Pau",
-    "departement": 64,
+    "departement": "64",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -268,7 +268,7 @@
   {
     "id": "34 - Montpellier - 2023-04-20",
     "ville": "Montpellier",
-    "departement": 34,
+    "departement": "34",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-20",
@@ -289,7 +289,7 @@
   {
     "id": "34 - Lunel - 2023-04-20",
     "ville": "Lunel",
-    "departement": 34,
+    "departement": "34",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-20",
@@ -310,7 +310,7 @@
   {
     "id": "34 - Ganges - 2023-04-20",
     "ville": "Ganges",
-    "departement": 34,
+    "departement": "34",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-20",
@@ -339,7 +339,7 @@
   {
     "id": "83 - Brignoles - 2023-04-20",
     "ville": "Brignoles",
-    "departement": 83,
+    "departement": "83",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-20",
@@ -361,7 +361,7 @@
   {
     "id": "un - Valence - 2023-04-20",
     "ville": "Valence",
-    "departement": 26,
+    "departement": "26",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-20",
@@ -382,7 +382,7 @@
   {
     "id": "21 - Dijon - 2023-04-20",
     "ville": "Dijon",
-    "departement": 21,
+    "departement": "21",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-20",
@@ -403,7 +403,7 @@
   {
     "id": "90 - Bourogne - 2023-04-20",
     "ville": "Bourogne",
-    "departement": 90,
+    "departement": "90",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-20",
@@ -424,7 +424,7 @@
   {
     "id": "92 - Nanterre - 2023-04-20",
     "ville": "Nanterre",
-    "departement": 92,
+    "departement": "92",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-20",
@@ -445,7 +445,7 @@
   {
     "id": "47 - Agen - 2023-04-19",
     "ville": "Agen",
-    "departement": 47,
+    "departement": "47",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-19",
@@ -468,7 +468,7 @@
   {
     "id": "72 - Le Mans - 2023-04-19",
     "ville": "Le Mans",
-    "departement": 72,
+    "departement": "72",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-19",
@@ -491,7 +491,7 @@
   {
     "id": "93 - Pantin - 2023-04-19",
     "ville": "Pantin",
-    "departement": 93,
+    "departement": "93",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-19",
@@ -514,7 +514,7 @@
   {
     "id": "77 - Pontault-Combault - 2023-04-19",
     "ville": "Pontault-Combault",
-    "departement": 77,
+    "departement": "77",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-19",
@@ -535,7 +535,7 @@
   {
     "id": "67 - Muttersholtz - 2023-04-19",
     "ville": "Muttersholtz",
-    "departement": 67,
+    "departement": "67",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-19",
@@ -559,7 +559,7 @@
   {
     "id": "44 - Nantes - 2023-04-19",
     "ville": "Nantes",
-    "departement": 44,
+    "departement": "44",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-19",
@@ -582,7 +582,7 @@
   {
     "id": "67 - Sélestat - 2023-04-19",
     "ville": "Sélestat",
-    "departement": 67,
+    "departement": "67",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-19",
@@ -605,7 +605,7 @@
   {
     "id": "75 - Paris 13e Arrondissement - 2023-04-18",
     "ville": "Paris 13e Arrondissement",
-    "departement": 75,
+    "departement": "75",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-18",
@@ -627,7 +627,7 @@
   {
     "id": "91 - Saclay - 2023-04-18",
     "ville": "Saclay",
-    "departement": 91,
+    "departement": "91",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-18",
@@ -650,7 +650,7 @@
   {
     "id": "un - Saint-Denis - 2023-04-18",
     "ville": "Saint-Denis",
-    "departement": 93,
+    "departement": "93",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-18",
@@ -673,7 +673,7 @@
   {
     "id": "28 - Chartres - 2023-04-18",
     "ville": "Chartres",
-    "departement": 28,
+    "departement": "28",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-18",
@@ -694,7 +694,7 @@
   {
     "id": "64 - Biriatou - 2023-04-21",
     "ville": "Biriatou",
-    "departement": 64,
+    "departement": "64",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -716,7 +716,7 @@
   {
     "id": "18 - Bourges - 2023-04-21",
     "ville": "Bourges",
-    "departement": 18,
+    "departement": "18",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -738,7 +738,7 @@
   {
     "id": "72 - Coulaines - 2023-04-24",
     "ville": "Coulaines",
-    "departement": 72,
+    "departement": "72",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-24",
@@ -759,7 +759,7 @@
   {
     "id": "69 - Lyon - 2023-04-24",
     "ville": "Lyon",
-    "departement": 69,
+    "departement": "69",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-24",
@@ -782,7 +782,7 @@
   {
     "id": "un - Massy - 2023-04-24",
     "ville": "Massy",
-    "departement": 71,
+    "departement": "71",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-24",
@@ -803,7 +803,7 @@
   {
     "id": "75 - Paris - 2023-04-24",
     "ville": "Paris",
-    "departement": 75,
+    "departement": "75",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-24",
@@ -825,7 +825,7 @@
   {
     "id": "75 - Paris 12e Arrondissement - 2023-04-24 - 0",
     "ville": "Paris 12e Arrondissement",
-    "departement": 75,
+    "departement": "75",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-24",
@@ -847,7 +847,7 @@
   {
     "id": "86 - Poitiers - 2023-04-24",
     "ville": "Poitiers",
-    "departement": 86,
+    "departement": "86",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-24",
@@ -868,7 +868,7 @@
   {
     "id": "41 - Vendôme - 2023-04-25",
     "ville": "Vendôme",
-    "departement": 41,
+    "departement": "41",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-25",
@@ -891,7 +891,7 @@
   {
     "id": "un - Rochefort - 2023-04-25",
     "ville": "Rochefort",
-    "departement": 17,
+    "departement": "17",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-25",
@@ -912,7 +912,7 @@
   {
     "id": "un - Fontaines - 2023-04-21",
     "ville": "Fontaines",
-    "departement": 71,
+    "departement": "71",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -933,7 +933,7 @@
   {
     "id": "93 - Neuilly-sur-Marne - 2023-04-21",
     "ville": "Neuilly-sur-Marne",
-    "departement": 93,
+    "departement": "93",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-21",
@@ -954,7 +954,7 @@
   {
     "id": "78 - Versailles - 2023-04-26",
     "ville": "Versailles",
-    "departement": 78,
+    "departement": "78",
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-26",
@@ -976,7 +976,7 @@
   {
     "id": "34 - Castelnau-le-Lez - 2023-04-25",
     "ville": "Castelnau-le-Lez",
-    "departement": 34,
+    "departement": "34",
     "ajout": "2023-04-25",
     "modif": "2023-04-25",
     "date": "2023-04-25",
@@ -993,6 +993,26 @@
       "ministre"
     ],
     "source": "attac - OK",
+    "remarques": ""
+  },
+  {
+    "id": "75 - Paris 12e Arrondissement - 2023-04-24 - 1",
+    "ville": "Paris 12e Arrondissement",
+    "departement": "75",
+    "ajout": "2023-04-24",
+    "modif": "2023-04-24",
+    "date": "2023-04-24",
+    "description": "Annulation de la venue de Charlotte Caubel, secrétaire d'État chargée de l'Enfance à Santé publique France. Un comité d'accueil était présent.",
+    "liens": [],
+    "codeInsee": 75112,
+    "actions": [
+      "annulation",
+      "manif"
+    ],
+    "cibles": [
+      "secretaire-etat"
+    ],
+    "source": "attac - TO CHECK",
     "remarques": ""
   }
 ]
