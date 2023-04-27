@@ -1,6 +1,7 @@
-import {parse} from 'csv-parse';
 import {stringify} from 'csv-stringify';
 import fs from 'fs';
+import {Client, Server} from 'nextcloud-node-client';
+import XLSX from 'xlsx';
 import {convertRowToEvent, checkEventValidity, convertEventToCsvRow} from './data.util.js';
 
 export const backupFile = async (src, dest) => new Promise((resolve, reject) => {
@@ -19,38 +20,23 @@ export const saveData = async (dest, data) => new Promise((resolve, reject) => {
   });
 })
 
-export const extractCSVData = async (dest) => new Promise((resolve, reject) => {
-  const readerStream = fs.createReadStream(dest);
-// Set the encoding to be utf8
-  readerStream.setEncoding('latin1');
-
-  const addedEvents = [];
-  const ignoredEvents = [];
-
-  readerStream
-    .pipe(parse({ delimiter: ",", from_line: 2 }))
-    .on("data", function (row) {
-      const event = convertRowToEvent(row);
-      const validity = checkEventValidity(event);
-      if(validity.valid) {
-        addedEvents.push(event);
-      } else {
-        ignoredEvents.push({
-          ...event,
-          erreurs: validity.errors,
-        });
-      }
-    })
-    .on("end", function () {
-      resolve({
-        addedEvents,
-        ignoredEvents,
-      })
-    })
-    .on("error", function (error) {
-      reject(error);
-    });
-})
+export const filterData = (data) => {
+  return data.reduce((result, event) => {
+    const validity = checkEventValidity(event);
+    if(validity.valid) {
+      result.addedEvents.push(event);
+    } else {
+      result.ignoredEvents.push({
+        ...event,
+        erreurs: validity.errors,
+      });
+    }
+    return result;
+  }, {
+    addedEvents: [],
+    ignoredEvents: [],
+  })
+}
 
 export function saveJSONAsCSV(dest, data) {
   const writableStream = fs.createWriteStream(dest);
@@ -83,4 +69,25 @@ export function saveJSONAsCSV(dest, data) {
     stringifier.write(convertEventToCsvRow(event));
   });
   stringifier.pipe(writableStream);
+}
+
+export async function readDataFromNextcloud(username, password) {
+  const server = new Server(
+    { basicAuth:
+        {
+          username,
+          password,
+        },
+      url: "https://cloud.solidairesinformatique.org/",
+    });
+
+  const client = new Client(server);
+  const file = await client.getFile("/100jours de zbeul.ods");
+  return await file.getContent();
+}
+
+export function parseODSFile(buffer) {
+  const workbook = XLSX.read(buffer, {cellDates: true});
+  const worksheet = workbook.Sheets['data'];
+  return XLSX.utils.sheet_to_json(worksheet).map(convertRowToEvent);
 }

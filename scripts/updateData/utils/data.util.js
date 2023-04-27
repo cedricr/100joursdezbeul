@@ -22,25 +22,44 @@ export const formatDate = (date) => {
 }
 
 export function convertRowToEvent(row) {
-  const actions = row.slice(8, 13).filter(isEmpty);
-  const cibles = row.slice(13, 18).filter(isEmpty);
-  const {ville, departement, codeInsee} = extractLocation(row[1], row[2]);
+  const {codeInsee} = extractLocation(row.ville, row.departement);
   const now = formatDate(new Date());
 
+  const event = Object.keys(row).reduce((properEvent, key) => {
+    if(key.toLowerCase().startsWith('action')) {
+      properEvent.actions.push(row[key]);
+    } else if(key.toLowerCase().startsWith('cible')) {
+      properEvent.cibles.push(row[key]);
+    } else if(['modif', 'date', 'ajout'].includes(key)) {
+      // looks like some dates stay at string...
+      properEvent[key] = formatDate(new Date(row[key]));
+    } else {
+        properEvent[key] = row[key];
+    }
+    return properEvent;
+  }, /* needed to maintain order */ {
+    id: null,
+    ville: null,
+    departement: null,
+    ajout: null,
+    modif: null,
+    date: null,
+    description: null,
+    liens: '',
+    codeInsee: null,
+    actions: [],
+    cibles: [],
+    source: null,
+    remarques: '',
+  })
+
   return {
-    id: row[0],
-    ville,
-    departement,
-    ajout:row[3] || now,
-    modif:row[4] || now,
-    date: row[5],
-    description: row[6].replaceAll('', '\''),
-    liens: row[7].split(';').filter(isEmpty),
+    ...event,
     codeInsee,
-    actions,
-    cibles,
-    source: row[18],
-    remarques: row[19],
+    ajout: event.ajout || now,
+    modif: event.modif || now,
+    liens: event.liens.split(';').filter(isEmpty),
+    description: event.description.replaceAll('’','\''),
   }
 }
 
