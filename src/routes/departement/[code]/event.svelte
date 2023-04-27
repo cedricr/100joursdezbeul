@@ -10,7 +10,7 @@
 	}
 </script>
 
-<li class="mb-2 flex flex-row">
+<li class="mb-8 flex flex-row">
 	<div class="w-20 shrink-0">
 		<strong>{getDateLabel(event.date)}&nbsp;:</strong>
 		<span class="text-[#dd0220]">{@html getPointsDisplay(event.score)}</span><br />
