@@ -41,7 +41,7 @@
 				{/if}
 			</div>
 			<div>
-  				<a href="/departement/{result[0]}" class="no-underline hover:underline>
+  				<a href="/departement/{result[0]}" class="no-underline hover:underline">
       					{getDepartmentName(result[0])}
   				</a>
 			</div>
