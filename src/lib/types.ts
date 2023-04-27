@@ -16,6 +16,7 @@ export interface ActionEvent {
 	description: string;
 	actions: ActionCode[];
 	cibles: ActionTarget[];
+	liens: string;
 	score: number;
 }
 

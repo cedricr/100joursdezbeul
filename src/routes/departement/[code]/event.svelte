@@ -25,9 +25,16 @@
 			{/each}
 		</div>
 		<div class="mt-1 flex flex-wrap gap-1">
-			{#each event.cibles as cible}
+			{#each event.cibles as target}
 				<div class="tag target">
-					{TARGET_LABEL[cible]}&nbsp;: x{TARGET_MULTIPLIER[cible]}
+					{TARGET_LABEL[target]}&nbsp;: x{TARGET_MULTIPLIER[target]}
+				</div>
+			{/each}
+		</div>
+		<div class="mt-1 flex flex-wrap gap-1">
+			{#each event.liens as link, i}
+				<div class="tag target">
+					<a href={link}>lien {i + 1}</a>
 				</div>
 			{/each}
 		</div>
