@@ -8,10 +8,9 @@ npm run dev -- --open
 
 Pour mettre à jour les données depuis le spreadsheet:
 1. on met à jour le spreadsheet à la main
-2. on l'export en CSV
-3. on lance `npm run updateData -- <fichier.csv>` en local
-4. Créer votre MR/Patch
-5. Mettre à jour le spreadsheet avec le contenu de `attac-new-events.csv`
+2. on lance `npm run updateData -- '<username nextcloud>' '<password nextcloud'` en local
+3. Créer votre MR/Patch
+4. Mettre à jour le spreadsheet avec le contenu de `attac-new-events.csv`
  
 Le script va générer 5 fichiers:
 - `src/lib/assets/data.json` : contient les données valides qui seront affichées sur le site. A commit apres revérification

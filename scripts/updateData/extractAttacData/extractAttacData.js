@@ -6,17 +6,17 @@ import extractCityAndDate from './transformers/extractCityAndDate.js';
 import extractLinks from './transformers/extractLinks.js';
 import cleanup from './transformers/cleanup.js';
 import removeExistingEvents from './transformers/removeExistingEvents.js'
+import processMultiEvents from './transformers/processMultiEvents.js'
 
-import validEvents from '../../../src/lib/assets/data.json' assert { type: 'json' };
-import ignoredEvents from '../../../src/lib/assets/data-ignored.json' assert { type: 'json' };
 import targets from '../data/targets.json' assert { type: 'json' };
 import actions from '../data/actions.json' assert { type: 'json' };
 
-export async function extractAttacData(){
+export async function extractAttacData(validEvents,ignoredEvents){
   const data = await fetchData();
   return [
     filterFutureEvents,
     extractCityAndDate,
+    processMultiEvents,
     removeExistingEvents.bind(this, validEvents,ignoredEvents),
     extractLinks,
     extractImages,
