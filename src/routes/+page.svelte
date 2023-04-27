@@ -26,27 +26,19 @@
 		Cliquez sur le nom du département pour avoir le détail du décompte.
 	</p>
 	<div class="mx-auto mb-6 mt-10 max-w-sm text-xl">
-		<ol class="flex flex-col gap-3">
+		<div class="ranking grid grid-auto-1-auto gap-y-3 gap-x-2">
+
 			{#each resultLines as result, i}
-				<li class="flex flex-row justify-between gap-3 relative">
-					<div>
-						{#if i === 0}
-							<span role="img" aria-label="1.">🥇</span>
-						{:else if i === 1}
-							<span role="img" aria-label="1.">🥈</span>
-						{:else if i === 2}
-							<span role="img" aria-label="1.">🥉</span>
-						{:else}
-							{i + 1}.
-						{/if}
-						<a href="/departement/{result[0]}" class="no-underline hover:underline"
-							>{getDepartmentName(result[0])}</a
-						>
-					</div>
-					<div>{result[1]} pts</div>
-				</li>
+			<span class="inline-flex items-center justify-end px-2 py-1 font-bold leading-none rounded">
+				{i + 1}.
+			</span>
+  			<a href="/departement/{result[0]}" class="no-underline hover:underline">
+    			<span class="inline-flex items-center justify-center px-2 py-1 font-bold leading-none rounded">
+      				{getDepartmentName(result[0])}</span>
+  			</a>
+  			<div class="text-right">{result[1]} pts</div>
 			{/each}
-		</ol>
+		</div>
 	</div>
 
 	<p class="mb-20 text-center text-lg"><a href="/regles-du-jeu">Règles du jeu</a></p>
@@ -59,16 +51,19 @@
 		@apply text-[#dd0220];
 	}
 
-	ol > li:first-child {
-		@apply text-2xl font-bold text-[#dd0220];
+	.ranking > span:nth-of-type(1),
+	.ranking > a:nth-child(1) > span {
+		@apply text-yellow-100 bg-yellow-700;
 	}
 
-	ol > li:nth-child(2) {
-		@apply text-2xl font-bold;
+	.ranking > span:nth-of-type(2),
+	.ranking > a:nth-child(2) > span {
+		@apply text-gray-100 bg-gray-700;
 	}
-	
-	ol > li:nth-child(3) {
-		@apply text-2xl font-bold;
+
+	.ranking > span:nth-of-type(3),
+	.ranking > a:nth-child(3) > span {
+		@apply text-orange-100 bg-orange-700;
 	}
 
 </style>
