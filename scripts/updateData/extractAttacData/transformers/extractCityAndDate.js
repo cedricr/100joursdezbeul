@@ -7,7 +7,7 @@ export default (previous, original) => previous.map(event => {
  const city = result[1].replaceAll(' -', '');
  const date = result[2];
   const [day, month] = date.split('/');
- const {ville: realCityName, codeInsee, departement} = extractLocation(city);
+ const {ville: realCityName, codeInsee, departement} = extractLocation(city, undefined, event.coordinates);
   const realDate = new Date(2023, month - 1, parseInt(day, 10));
   const formatedDate = formatDate(realDate);
   return {
