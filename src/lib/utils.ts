@@ -46,3 +46,14 @@ export function getDepartmentName(code: string): string {
 export function getDepartmentScore(code: string): number {
 	return LEADERBOARD.find((line) => line[0] === code)[1];
 }
+
+export function getNationalStats() {
+	var stats: { [id: string]: number; } = {};
+	DATA.forEach((event) => {
+		event.actions.forEach((action) => {
+			stats[action] = (stats[action] || 0) + 1;
+		});
+		stats["total"] = (stats["total"] || 0) + event.score;
+	});
+	return stats;
+}

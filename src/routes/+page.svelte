@@ -1,13 +1,14 @@
 <script lang="ts">
 	import Thanks from '$lib/thanks.svelte';
 
-	import { LEADERBOARD, getDayNumber, getDepartmentName } from '$lib/utils';
+	import { LEADERBOARD, getDayNumber, getDepartmentName, getNationalStats } from '$lib/utils';
 
 	const dayNumber = getDayNumber();
 
 	const resultLines = LEADERBOARD;
 	const now = new Date();
 	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
+	const nationalStats = getNationalStats();
 </script>
 
 <svelte:head><title>100 jours de zbeul</title></svelte:head>
@@ -19,6 +20,20 @@
 		</span>
 		<span class="mt-0 block text-xl">jours restants</span>
 	</p>
+
+	<!-- TODO
+		<p>
+			Toustes ensembles, nous sommes fort-es de {nationalStats.total} points.
+			Nous comptabilisons :
+			{nationalStats.manif} manifs
+			{nationalStats.annulation} annulations de venues
+			{nationalStats.chahut} chahuts
+			{nationalStats.sobriete} mises en sobriété
+			{nationalStats.creatif} actions créatives
+			{nationalStats.fuite} fuites
+		</p>
+	-->
+
 
 	<h2 class="zbeul mb-2">Classement temporaire au {formattedDate}</h2>
 	<p class="mb-2 text-center italic">(tenant compte des données jusqu’au 26 avril inclus)</p>
@@ -64,7 +79,7 @@
 	.grid-auto-1-auto {
   		grid-template-columns: auto 1fr auto;
 	}
-	
+
 	.ranking > :nth-child(-n+9) {
 		@apply font-bold;
 	}
