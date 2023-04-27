@@ -57,17 +57,17 @@
 
 
 	.ranking > span:nth-of-type(1),
-	.ranking > a:nth-child(1) > span {
+	.ranking > a:nth-of-type(1) > span {
 		@apply text-yellow-100 bg-yellow-700;
 	}
 
 	.ranking > span:nth-of-type(2),
-	.ranking > a:nth-child(2) > span {
+	.ranking > a:nth-of-type(2) > span {
 		@apply text-gray-100 bg-gray-700;
 	}
 
 	.ranking > span:nth-of-type(3),
-	.ranking > a:nth-child(3) > span {
+	.ranking > a:nth-of-type(3) > span {
 		@apply text-orange-100 bg-orange-700;
 	}
 
