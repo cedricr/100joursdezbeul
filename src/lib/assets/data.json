@@ -677,7 +677,7 @@
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-18",
-    "description": "comité de non-accueil lors de la venue d'Olivier Dussopt pour la mise en ?uvre de la réforme des retraites.",
+    "description": "comité de non-accueil lors de la venue d'Olivier Dussopt pour la mise en uvre de la réforme des retraites.",
     "liens": [
       "https://twitter.com/AnonymeCitoyen/status/1648402550125740035?t=UEvI4hOtTtvvgxv5ROL3-A&s=19"
     ],
@@ -823,7 +823,7 @@
     "remarques": ""
   },
   {
-    "id": "75 - Paris 12e Arrondissement - 2023-04-24",
+    "id": "75 - Paris 12e Arrondissement - 2023-04-24 - 0",
     "ville": "Paris 12e Arrondissement",
     "departement": "75",
     "ajout": "2023-04-26",
@@ -872,14 +872,15 @@
     "ajout": "2023-04-26",
     "modif": "2023-04-26",
     "date": "2023-04-25",
-    "description": "Macron, qui se déplace désormais avec son propre groupe électrogène, accueilli par des casseroles à Vendôme",
+    "description": "Macron, qui se déplace désormais avec son propre groupe électrogène, accueilli par des casseroles à Vendôme. Peu après la levée de l'interdiction de manifester, il repart en hélicoptère.",
     "liens": [
       "https://twitter.com/RemyBuisine/status/1650814506249998341?t=I4OquWCClASLhWDIiuVDqA&s=35",
       "https://twitter.com/PaulLarrouturou/status/1650803333391609857?t=Y78avm5hFOo4EwAHJgTwPQ&s=35"
     ],
     "codeInsee": 41269,
     "actions": [
-      "chahut"
+      "chahut",
+      "fuite"
     ],
     "cibles": [
       "president-rep"
@@ -951,13 +952,35 @@
     "remarques": ""
   },
   {
+    "id": "78 - Versailles - 2023-04-26",
+    "ville": "Versailles",
+    "departement": "78",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-26",
+    "description": "Sarah El Haïry Caravane du SNU : départ au bout de 15 minutes.",
+    "liens": [
+      "https://twitter.com/ClementLanot/status/1651187900074057728?t=TZCKHGv86B61SvTRjwwrIA&s=35"
+    ],
+    "codeInsee": 78646,
+    "actions": [
+      "chahut",
+      "fuite"
+    ],
+    "cibles": [
+      "secretaire-etat"
+    ],
+    "source": "attac - OK",
+    "remarques": ""
+  },
+  {
     "id": "34 - Castelnau-le-Lez - 2023-04-25",
     "ville": "Castelnau-le-Lez",
     "departement": "34",
     "ajout": "2023-04-25",
     "modif": "2023-04-25",
     "date": "2023-04-25",
-    "description": "Le ministre de la transformation et de la fonction publique Stanislas Guerini devait se rendre à la maison France service de Castelnau-le-Lez. \nUn comité de non-accueil a été organisé avec casseroles et sifflets. La chaleur de l'accueil à base de dispositifs sonores portatifs l'a fait bifurquer vers Lunel.",
+    "description": "Le ministre de la transformation et de la fonction publique Stanislas Guerini devait se rendre à la maison France service de Castelnau-le-Lez.\nUn comité de non-accueil a été organisé avec casseroles et sifflets. La chaleur de l'accueil à base de dispositifs sonores portatifs l'a fait bifurquer vers Lunel.",
     "liens": [
       "https://twitter.com/sudeducation34/status/1650858959165857792?t=1t8lkIpcJ4LvE62JPZc4EQ&s=35",
       "https://twitter.com/AnonymeCitoyen/status/1650857922870779904?t=ZgrRECjVqGKxMchq-YgJfA&s=35"
@@ -970,6 +993,26 @@
       "ministre"
     ],
     "source": "attac - OK",
+    "remarques": ""
+  },
+  {
+    "id": "75 - Paris 12e Arrondissement - 2023-04-24 - 1",
+    "ville": "Paris 12e Arrondissement",
+    "departement": "75",
+    "ajout": "2023-04-24",
+    "modif": "2023-04-24",
+    "date": "2023-04-24",
+    "description": "Annulation de la venue de Charlotte Caubel, secrétaire d'État chargée de l'Enfance à Santé publique France. Un comité d'accueil était présent.",
+    "liens": [],
+    "codeInsee": 75112,
+    "actions": [
+      "annulation",
+      "manif"
+    ],
+    "cibles": [
+      "secretaire-etat"
+    ],
+    "source": "attac - TO CHECK",
     "remarques": ""
   }
 ]
