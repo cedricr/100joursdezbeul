@@ -42,5 +42,9 @@ export function getDepartmentName(code: string): string {
 	return dept ? dept.nom : '(inconnu)';
 }
 export function getDepartmentScore(code: string): number {
-	return LEADERBOARD.find((line) => line[0] === code)[1];
+	const line = LEADERBOARD.find((line) => line[0] === code)
+	if(line){
+		return line[1];
+	}
+	return 0;
 }
