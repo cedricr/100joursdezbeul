@@ -594,5 +594,26 @@
       "date future",
       "pas de code INSEE"
     ]
+  },
+  {
+    "id": "75 - Paris 12e Arrondissement - 2023-04-24 - 1",
+    "ville": "Paris 12e Arrondissement",
+    "departement": 75,
+    "ajout": "2023-04-24",
+    "modif": "2023-04-24",
+    "date": "2023-04-24",
+    "description": "Annulation de la venue de Charlotte Caubel, secrétaire d'État chargée de l'Enfance à Santé publique France. Un comité d'accueil était présent.",
+    "liens": [],
+    "codeInsee": 75112,
+    "actions": [
+      "annulation",
+      "manif"
+    ],
+    "cibles": [],
+    "source": "attac - TO CHECK",
+    "remarques": "",
+    "erreurs": [
+      "pas de cible"
+    ]
   }
 ]

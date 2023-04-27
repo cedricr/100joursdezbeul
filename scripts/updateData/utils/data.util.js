@@ -60,6 +60,7 @@ export function convertRowToEvent(row) {
     modif: event.modif || now,
     liens: event.liens.split(';').filter(isEmpty),
     description: event.description.replaceAll('’','\''),
+    id: event.id.replaceAll('–','-'),
   }
 }
 
