@@ -29,12 +29,19 @@
 		<div class="ranking grid grid-auto-1-auto gap-y-3 gap-x-2">
 
 			{#each resultLines as result, i}
-			<span class="inline-flex items-center justify-end px-2 py-1 font-bold leading-none rounded">
-				{i + 1}.
-			</span>
-  			<a href="/departement/{result[0]}" class="no-underline hover:underline">
-    			<span class="inline-flex items-center justify-center px-2 py-1 font-bold leading-none rounded">
-      				{getDepartmentName(result[0])}</span>
+			<div class="text-right font-bold">
+				{#if i === 0}
+					<span role="img" aria-label="1">🥇</span>
+				{:else if i === 1}
+					<span role="img" aria-label="2">🥈</span>
+				{:else if i === 2}
+					<span role="img" aria-label="3">🥉</span>
+				{:else}
+					{i + 1}
+				{/if}
+			</div>
+  			<a href="/departement/{result[0]}" class="no-underline hover:underline font-bold">
+      			{getDepartmentName(result[0])}
   			</a>
   			<div class="text-right">{result[1]} pts</div>
 			{/each}
@@ -54,21 +61,4 @@
 	.grid-auto-1-auto {
   		grid-template-columns: auto 1fr auto;
 	}
-
-
-	.ranking > span:nth-of-type(1),
-	.ranking > a:nth-of-type(1) > span {
-		@apply text-yellow-100 bg-yellow-700;
-	}
-
-	.ranking > span:nth-of-type(2),
-	.ranking > a:nth-of-type(2) > span {
-		@apply text-gray-100 bg-gray-700;
-	}
-
-	.ranking > span:nth-of-type(3),
-	.ranking > a:nth-of-type(3) > span {
-		@apply text-orange-100 bg-orange-700;
-	}
-
 </style>
