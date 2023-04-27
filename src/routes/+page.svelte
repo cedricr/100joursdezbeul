@@ -51,6 +51,11 @@
 		@apply text-[#dd0220];
 	}
 
+	.grid-auto-1-auto {
+  		grid-template-columns: auto 1fr auto;
+	}
+
+
 	.ranking > span:nth-of-type(1),
 	.ranking > a:nth-child(1) > span {
 		@apply text-yellow-100 bg-yellow-700;
