@@ -27,8 +27,7 @@
 	</p>
 	<div class="mx-auto mb-6 mt-10 max-w-sm text-xl">
 		<div class="ranking grid grid-auto-1-auto gap-y-3 gap-x-2">
-
-			{#each resultLines as result, i}
+			{#each resultLines as [code, score], i}
 			<div class="text-right">
 				{#if i === 0}
 					<span role="img" aria-label="1">🥇</span>
@@ -40,12 +39,10 @@
 					{i + 1}
 				{/if}
 			</div>
-			<div>
-  				<a href="/departement/{result[0]}" class="no-underline hover:underline">
-      					{getDepartmentName(result[0])}
-  				</a>
-			</div>
-  			<div class="text-right">{result[1]} pts</div>
+			<a href="/departement/{code}" class="no-underline hover:underline">
+      				{getDepartmentName(code)}
+  			</a>
+  			<div class="text-right">{score} pts</div>
 			{/each}
 		</div>
 	</div>
@@ -64,7 +61,7 @@
   		grid-template-columns: auto 1fr auto;
 	}
 	
-	.ranking > *:nth-child(-n+9) > {
+	.ranking > :nth-child(-n+9) {
 		@apply font-bold;
 	}
 </style>
