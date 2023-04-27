@@ -43,6 +43,11 @@ export function getDepartmentName(code: string): string {
 	}
 	return dept ? dept.nom : '(inconnu)';
 }
+
 export function getDepartmentScore(code: string): number {
 	return LEADERBOARD.find((line) => line[0] === code)[1];
+}
+
+export function getPointsDisplay(nPoints: number) {
+	return nPoints <= 1 ? `${nPoints}&nbsp;pt` : `${nPoints}&nbsp;pts`;
 }
