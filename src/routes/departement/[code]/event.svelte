@@ -34,7 +34,7 @@
 		<div class="mt-1 flex flex-wrap gap-1">
 			{#each event.liens as link, i}
 				<div class="tag target">
-					<a href={link}>lien {i + 1}</a>
+					<a href={link}>lien{event.liens.length > 1 ? ` ${i + 1}` : ''}</a>
 				</div>
 			{/each}
 		</div>
