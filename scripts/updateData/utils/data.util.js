@@ -2,27 +2,35 @@ import inseeCodes from '../data/insee.json' assert { type: 'json' };;
 import inseeRemapping from '../data/inseeRemapping.json' assert { type: 'json' };;
 
 const isEmpty = value => value;
+const normalizeCity = (city) => city.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replaceAll('-', ' ')
 
-export const extractLocation = (city, dep, coord) => {
-  const realCityName = inseeRemapping[city] || city;
-  const matchingInseeCodes = inseeCodes.filter((code) => code.LIBELLE === realCityName && (!dep || `${code.COM}`.startsWith(dep)) );
-  let codeInsee = undefined;
-  if (matchingInseeCodes.length === 1) codeInsee = matchingInseeCodes[0].COM;
-  else if (matchingInseeCodes.length > 1) {
-    const closeInseeCodes = matchingInseeCodes
+export const getInseeInfo = (city, dep, coords) => {
+  const matchingCodes = inseeCodes.filter((code) => normalizeCity(code.LIBELLE) === normalizeCity(city) && (!dep || `${code.COM}`.startsWith(dep)) );
+  if (matchingCodes.length === 1) return matchingCodes[0];
+  else if (coords && matchingCodes.length > 1) {
+    const matchingCodesByProximity = matchingCodes
       .filter((code) => 'COORD' in code)
       .map((code) => ({
-        com: code.COM,
-        dist: Math.pow(code.COORD[0] - coord[0], 2) + Math.pow(code.COORD[1] - coord[1], 2)
+        data: code,
+        dist: Math.pow(code.COORD[0] - coords[0], 2) + Math.pow(code.COORD[1] - coords[1], 2)
       }))
       .sort((a, b) => a.dist - b.dist);
-    if (closeInseeCodes.length > 0 && closeInseeCodes[0].dist < 1)
-      codeInsee = closeInseeCodes[0].com;
+    if (matchingCodesByProximity.length > 0 && matchingCodesByProximity[0].dist < 1)
+      return matchingCodesByProximity[0].data;
   }
-  const departement = codeInsee ? `${codeInsee}`.slice(0,2) : '';
   return {
-    ville: realCityName,
-    codeInsee,
+    LIBELLE: city,
+    COM: undefined,
+  };
+}
+
+export const extractLocation = (city, dep, coords) => {
+  const realCityName = inseeRemapping[city] || city;
+  const inseeInfo = getInseeInfo(realCityName, dep, coords);
+  const departement = inseeInfo.COM ? `${inseeInfo.COM}`.slice(0,2) : '';
+  return {
+    ville: inseeInfo.LIBELLE,
+    codeInsee: inseeInfo.COM,
     departement,
   };
 }
