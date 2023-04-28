@@ -26,25 +26,38 @@
 		Cliquez sur le nom du département pour avoir le détail du décompte.
 	</p>
 	<div class="mx-auto mb-6 mt-10 max-w-sm text-xl">
-		<div class="ranking grid-auto-1-auto grid gap-x-2 gap-y-3">
+		<ul class="ranking">
 			{#each resultLines as [code, score], i}
-				<div class="text-right">
-					{#if i === 0}
-						<span role="img" aria-label="1">🥇</span>
-					{:else if i === 1}
-						<span role="img" aria-label="2">🥈</span>
-					{:else if i === 2}
-						<span role="img" aria-label="3">🥉</span>
-					{:else}
-						{i + 1}
-					{/if}
-				</div>
-				<a href="/departement/{code}" class="no-underline hover:underline">
-					{getDepartmentName(code)}
-				</a>
-				<div class="text-right">{score} pts</div>
+				<li class="ranking-item grid-auto-1-auto grid gap-x-2">
+					<div class="text-right">
+						{#if i === 0}
+							<span role="img" aria-label="1">🥇</span>
+						{:else if i === 1}
+							<span role="img" aria-label="2">🥈</span>
+						{:else if i === 2}
+							<span role="img" aria-label="3">🥉</span>
+						{:else}
+							{i + 1}
+						{/if}
+					</div>
+					<a href="/departement/{code}" class="no-underline hover:underline">
+						{getDepartmentName(code)}
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							class="icon-link"
+							aria-hidden="true"
+							><path
+								d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"
+							/></svg
+						>
+					</a>
+					<div class="text-right">{score} pts</div>
+				</li>
 			{/each}
-		</div>
+		</ul>
 	</div>
 
 	<p class="mb-20 text-center text-lg">
@@ -70,7 +83,11 @@
 		grid-template-columns: auto 1fr auto;
 	}
 
-	.ranking > :nth-child(-n + 9) {
+	.ranking > :nth-child(-n + 3) {
 		@apply font-bold;
+	}
+
+	.ranking-item {
+		padding: 0.5rem 0;
 	}
 </style>
