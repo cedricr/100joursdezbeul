@@ -35,6 +35,11 @@
 		"image": "https://www.mediapart.fr/assets/build/default/front/favicon/journal/apple-touch-icon.png"
 	},
 	{
+		"content": "Article de l'Humanité",
+		"source": "https://www.humanite.fr/social-eco/1er-mai/un-1er-mai-deja-historique-793108",
+		"image": "https://www.humanite.fr/sites/all/themes/jaures/logo_humanite_partage.jpg"
+	},
+	{
 		"content": "Tweet de Nathalie Oziol, députée de Montpellier",
 		"source": "https://nitter.net/NathalieOziol/status/1651105199958683648",
 		"image": "https://nitter.net/pic/profile_images%2F1622999707218845696%2FX0c3RksC_bigger.jpg"
