@@ -5,7 +5,16 @@
 
 	const dayNumber = getDayNumber();
 
-	const resultLines = LEADERBOARD;
+	const append = (a, x) => a.concat([x]);
+
+	const resultLines = LEADERBOARD
+		.map(([code, score]) => ({code, score}))
+		.reduce((acc, x, i) => append(acc,
+		{
+			...x,
+			rank: i > 0 && x.score === acc[i - 1].score ? acc[i - 1].rank : i + 1
+		}), []);
+
 	const now = new Date();
 	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
 </script>
@@ -27,16 +36,16 @@
 	</p>
 	<div class="mx-auto mb-6 mt-10 max-w-sm text-xl">
 		<div class="ranking grid-auto-1-auto grid gap-x-2 gap-y-3">
-			{#each resultLines as [code, score], i}
+			{#each resultLines as {code, score, rank}}
 				<div class="text-right">
-					{#if i === 0}
+					{#if rank === 1}
 						<span role="img" aria-label="1">🥇</span>
-					{:else if i === 1}
+					{:else if rank === 2}
 						<span role="img" aria-label="2">🥈</span>
-					{:else if i === 2}
+					{:else if rank === 3}
 						<span role="img" aria-label="3">🥉</span>
 					{:else}
-						{i + 1}
+						{rank}
 					{/if}
 				</div>
 				<a href="/departement/{code}" class="no-underline hover:underline">
