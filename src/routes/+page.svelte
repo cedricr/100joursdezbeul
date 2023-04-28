@@ -59,7 +59,8 @@
 	<p class="mb-20 text-center text-lg">
 		<a href="/regles-du-jeu">Règles du jeu</a>
 		<br />
-		<a href="/comment-participer">Comment participer</a>
+		<a href="/comment-participer">Comment participer</a> <br />
+		<a href="/presse">Revue de presse</a>
 		<br />
 		<a
 			href="https://framaforms.org/100-jours-de-zbeul-proposer-un-evenement-1682372493"
