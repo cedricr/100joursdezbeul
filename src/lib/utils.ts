@@ -43,12 +43,17 @@ export function getDepartmentName(code: string): string {
 	}
 	return dept ? dept.nom : '(inconnu)';
 }
+
 export function getDepartmentScore(code: string): number {
 	return LEADERBOARD.find((line) => line[0] === code)[1];
 }
 
+export function getPointsDisplay(nPoints: number) {
+	return nPoints <= 1 ? `${nPoints}&nbsp;pt` : `${nPoints}&nbsp;pts`;
+}
+
 export function getNationalStats() {
-	var stats: { [id: string]: number; } = {};
+	const stats: { [id: string]: number; } = {};
 	DATA.forEach((event) => {
 		event.actions.forEach((action) => {
 			stats[action] = (stats[action] || 0) + 1;

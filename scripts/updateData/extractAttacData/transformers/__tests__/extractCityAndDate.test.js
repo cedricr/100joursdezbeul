@@ -1,4 +1,4 @@
-import { expect, it, describe } from 'vitest'
+import { expect, it, describe, vi } from 'vitest'
 import extractCityAndDate from 'scripts/updateData/extractAttacData/transformers/extractCityAndDate.js';
 describe('extract the city and the date of the event', () => {
   it('should extract the city properly', () => {
@@ -57,6 +57,44 @@ describe('extract the city and the date of the event', () => {
       name: 'Saint-Denis - 01/01',
       ville: 'Saint-Denis',
       codeInsee: undefined,
+    })])
+  });
+
+  it('should extract the name as city and set the date as today if the name is not at the right format', () => {
+    vi
+      .useFakeTimers()
+      .setSystemTime(new Date('2023-04-17'));
+    expect(extractCityAndDate([{
+      name: 'Saint-Denis',
+    }])).toEqual([expect.objectContaining({
+      id: 'un - Saint-Denis - 2023-04-17',
+      name: 'Saint-Denis',
+      date: '2023-04-17',
+      ville: 'Saint-Denis',
+    })])
+  });
+
+  it('should take the closest codeInsee in case of homonyms', () => {
+    expect(extractCityAndDate([{
+      name: 'Saint-Denis - 01/01',
+      coordinates: [ 2.358276, 48.935954 ],
+    }])).toEqual([expect.objectContaining({
+      id: '93 - Saint-Denis - 2023-01-01',
+      ville: 'Saint-Denis',
+      codeInsee: 93066,
+      departement: '93',
+    })])
+  });
+
+  it('should match normalized city names', () => {
+    expect(extractCityAndDate([{
+      name: 'saînt denis - 01/01',
+      coordinates: [ 2.358276, 48.935954 ],
+    }])).toEqual([expect.objectContaining({
+      id: '93 - Saint-Denis - 2023-01-01',
+      ville: 'Saint-Denis',
+      codeInsee: 93066,
+      departement: '93',
     })])
   });
 });

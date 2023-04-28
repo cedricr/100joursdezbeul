@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DATA, getDepartmentName, getDepartmentScore } from '$lib/utils';
+	import { DATA, getDepartmentName, getDepartmentScore, getPointsDisplay } from '$lib/utils';
 	import Event from './event.svelte';
 
 	export let data;
@@ -14,8 +14,12 @@
 	const events = getEvents(data.department);
 </script>
 
+<svelte:head><title>{getDepartmentName(data.department)} | 100 jours de zbeul</title></svelte:head>
+
 <h2 class="zbeul mb-12 mt-16 text-4xl">
-	{getDepartmentName(data.department)} — {getDepartmentScore(data.department)} pts
+	{getDepartmentName(data.department)} — {@html getPointsDisplay(
+		getDepartmentScore(data.department)
+	)}
 </h2>
 
 <div class="mx-auto mb-24 mt-10 max-w-2xl text-xl">

@@ -1,3 +1,23 @@
+<br />
+
+<p align="center">
+    <img src="https://raw.githubusercontent.com/cedricr/100joursdezbeul/main/static/ogimg-v2.png" alt="100joursdezbeul logo" height="280">
+</p>
+
+<p align="center">
+    <img src="https://img.shields.io/badge/license-MIT-green" alt="license" />
+    <img alt="flat" src="https://img.shields.io/badge/mastodon-@SolInfoNat-lightgrey?logo=mastodon&style=social">
+    <img alt="flat" src="https://img.shields.io/badge/twitter-@SolInfoNat-lightgrey?logo=twitter&style=social">
+</p>
+
+<br />
+
+## Proposer un événement
+
+Utiliser le framaforms: https://framaforms.org/100-jours-de-zbeul-proposer-un-evenement-1682372493
+
+## Contribuer au code
+
 Lancer le projet localement:
 
 ```
@@ -30,6 +50,8 @@ Pour contribuer anonymement:
 7. faites vos modifications
 8. créez un patch avec `git format-patch origin/main`
 9. envoyez le à un contributeur public du projet via leur page de profile > contact
+
+## Remerciements
 
 Immenses remerciements à :
 
