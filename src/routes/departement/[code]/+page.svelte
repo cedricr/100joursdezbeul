@@ -14,6 +14,8 @@
 	const events = getEvents(data.department);
 </script>
 
+<svelte:head><title>{getDepartmentName(data.department)} | 100 jours de zbeul</title></svelte:head>
+
 <h2 class="zbeul mb-12 mt-16 text-4xl">
 	{getDepartmentName(data.department)} — {@html getPointsDisplay(
 		getDepartmentScore(data.department)
