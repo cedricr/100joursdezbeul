@@ -1,5 +1,5 @@
 import { expect, it, describe } from 'vitest'
-import extractCityAndDate from '../extractCityAndDate.js';
+import extractCityAndDate from 'scripts/updateData/extractAttacData/transformers/extractCityAndDate.js';
 describe('extract the city and the date of the event', () => {
   it('should extract the city properly', () => {
     expect(extractCityAndDate([{
@@ -42,8 +42,20 @@ describe('extract the city and the date of the event', () => {
     expect(extractCityAndDate([{
       name: 'RandomCity - 01/01',
     }])).toEqual([expect.objectContaining({
+      id: 'un - RandomCity - 2023-01-01',
       name: 'RandomCity - 01/01',
       ville: 'RandomCity',
+      codeInsee: undefined,
+    })])
+  });
+
+  it('should not extract the insee code if there are several matches', () => {
+    expect(extractCityAndDate([{
+      name: 'Saint-Denis - 01/01',
+    }])).toEqual([expect.objectContaining({
+      id: 'un - Saint-Denis - 2023-01-01',
+      name: 'Saint-Denis - 01/01',
+      ville: 'Saint-Denis',
       codeInsee: undefined,
     })])
   });

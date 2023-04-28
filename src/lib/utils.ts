@@ -14,12 +14,14 @@ export function getDayNumber(): number {
 	return elapsedDays;
 }
 
+export function sum(array: number[]): number {
+	return array.reduce((a, b) => a + b);
+}
+
 export function enrichData(data: ActionEvent[]) {
 	data.forEach((event) => {
-		const score = event.actions.map((action) => ACTION_SCORE[action]).reduce((a, b) => a + b);
-		const multiplier = event.cibles
-			.map((target) => TARGET_MULTIPLIER[target])
-			.reduce((a, b) => a + b);
+		const score = sum(event.actions.map((action) => ACTION_SCORE[action]));
+		const multiplier = sum(event.cibles.map((target) => TARGET_MULTIPLIER[target]));
 		event.score = score * multiplier;
 	});
 	return data;
@@ -43,6 +45,11 @@ export function getDepartmentName(code: string): string {
 	}
 	return dept ? dept.nom : '(inconnu)';
 }
+
 export function getDepartmentScore(code: string): number {
 	return LEADERBOARD.find((line) => line[0] === code)[1];
+}
+
+export function getPointsDisplay(nPoints: number) {
+	return nPoints <= 1 ? `${nPoints}&nbsp;pt` : `${nPoints}&nbsp;pts`;
 }

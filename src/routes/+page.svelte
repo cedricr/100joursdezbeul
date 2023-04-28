@@ -21,27 +21,42 @@
 	</p>
 
 	<h2 class="zbeul mb-2">Classement temporaire au {formattedDate}</h2>
-	<p class="mb-2 text-center italic">(tenant compte des données jusqu’au 24 avril inclus)</p>
+	<p class="mb-2 text-center italic">(tenant compte des données jusqu’au 26 avril inclus)</p>
 	<p class="mb-6 text-center italic">
 		Cliquez sur le nom du département pour avoir le détail du décompte.
 	</p>
 	<div class="mx-auto mb-6 mt-10 max-w-sm text-xl">
-		<ol>
-			{#each resultLines as result, i}
-				<li class="mb-3 flex flex-row justify-between gap-3" class:winner={i === 0}>
-					<div>
-						{i + 1}.
-						<a href="/departement/{result[0]}" class="no-underline hover:underline"
-							>{getDepartmentName(result[0])}</a
-						>
-					</div>
-					<div>{result[1]} pts</div>
-				</li>
+		<div class="ranking grid-auto-1-auto grid gap-x-2 gap-y-3">
+			{#each resultLines as [code, score], i}
+				<div class="text-right">
+					{#if i === 0}
+						<span role="img" aria-label="1">🥇</span>
+					{:else if i === 1}
+						<span role="img" aria-label="2">🥈</span>
+					{:else if i === 2}
+						<span role="img" aria-label="3">🥉</span>
+					{:else}
+						{i + 1}
+					{/if}
+				</div>
+				<a href="/departement/{code}" class="no-underline hover:underline">
+					{getDepartmentName(code)}
+				</a>
+				<div class="text-right">{score} pts</div>
 			{/each}
-		</ol>
+		</div>
 	</div>
 
-	<p class="mb-20 text-center text-lg"><a href="/regles-du-jeu">Règles du jeu</a></p>
+	<p class="mb-20 text-center text-lg">
+		<a href="/regles-du-jeu">Règles du jeu</a>
+		<br />
+		<a href="/comment-participer">Comment participer</a>
+		<br />
+		<a
+			href="https://framaforms.org/100-jours-de-zbeul-proposer-un-evenement-1682372493"
+			class="font-bold">Signaler une action</a
+		>
+	</p>
 
 	<Thanks />
 </main>
@@ -50,7 +65,12 @@
 	.olympic-red {
 		@apply text-[#dd0220];
 	}
-	.winner {
-		@apply text-4xl font-bold text-[#dd0220];
+
+	.grid-auto-1-auto {
+		grid-template-columns: auto 1fr auto;
+	}
+
+	.ranking > :nth-child(-n + 9) {
+		@apply font-bold;
 	}
 </style>

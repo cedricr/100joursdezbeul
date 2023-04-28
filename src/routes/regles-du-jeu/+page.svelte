@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { ACTION_LABEL, ACTION_SCORE, TARGET_LABEL, TARGET_MULTIPLIER } from '$lib/constants';
+	import { getPointsDisplay } from '$lib/utils';
 </script>
 
 <svelte:head><title>Règles du jeu | 100 jours de zbeul</title></svelte:head>
@@ -14,7 +16,7 @@
 			type d’action. Les données finales sont accessibles dans le
 			<a href="https://github.com/cedricr/100joursdezbeul/blob/main/src/lib/assets/data.json"
 				>code source</a
-			>. Vérifications sont les bienvenues&nbsp;!
+			>. Les vérifications sont les bienvenues&nbsp;!
 		</p>
 
 		<p>
@@ -24,30 +26,24 @@
 		</p>
 
 		<h2>Barème</h2>
-		<p class="italic">
-			(Les règles suivantes vont sans doute évoluer rapidement dans les prochains jours en fonction
-			de vos retours. Détails dans le <a
-				href="https://github.com/cedricr/100joursdezbeul/blob/main/src/lib/utils.ts#L11"
-				>code source</a
-			>)
-		</p>
-		<h3>Types d’action</h3>
+
+		<h3>Types d’actions</h3>
 		<ul>
-			<li>Chahut (casserolade, huée…) — 1 point</li>
-			<li>Manifestation — 1 point</li>
-			<li>Action créative (poursuite en forêt, etc…) — 2 points</li>
-			<li>Mise en sobriété énergétique — 3 points</li>
-			<li>Action conduisant au départ précipité d’une personnalité — 4 points</li>
-			<li>Annulation d’une visite 🎉 — 5 points</li>
+			{#each Object.keys(ACTION_SCORE) as action}
+				<li>
+					<span id={action}>{ACTION_LABEL[action]}</span>
+					— {@html getPointsDisplay(ACTION_SCORE[action])}
+				</li>
+			{/each}
 		</ul>
 		<h3>Personnalités</h3>
 		<ul>
-			<li>Secrétaire d’État — pas de changement</li>
-			<li>Ministre délégué·e — x2</li>
-			<li>Ministre — x3</li>
-			<li>Présidente de l’Assemblée Nationale — x4</li>
-			<li>Première ministre — x5</li>
-			<li>Président de la République — x6</li>
+			{#each Object.keys(TARGET_MULTIPLIER) as target}
+				<li>
+					<span id={target}>{TARGET_LABEL[target]}</span>
+					— x{TARGET_MULTIPLIER[target]}
+				</li>
+			{/each}
 		</ul>
 	</div>
 </main>

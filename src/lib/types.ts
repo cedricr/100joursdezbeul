@@ -12,10 +12,11 @@ export type ActionTarget =
 export interface ActionEvent {
 	date: string;
 	ville: string;
-	codeInsee: string;
+	departement: string;
 	description: string;
 	actions: ActionCode[];
 	cibles: ActionTarget[];
+	liens: string;
 	score: number;
 }
 
