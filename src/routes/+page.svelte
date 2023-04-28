@@ -26,23 +26,23 @@
 		Cliquez sur le nom du département pour avoir le détail du décompte.
 	</p>
 	<div class="mx-auto mb-6 mt-10 max-w-sm text-xl">
-		<div class="ranking grid grid-auto-1-auto gap-y-3 gap-x-2">
+		<div class="ranking grid-auto-1-auto grid gap-x-2 gap-y-3">
 			{#each resultLines as [code, score], i}
-			<div class="text-right">
-				{#if i === 0}
-					<span role="img" aria-label="1">🥇</span>
-				{:else if i === 1}
-					<span role="img" aria-label="2">🥈</span>
-				{:else if i === 2}
-					<span role="img" aria-label="3">🥉</span>
-				{:else}
-					{i + 1}
-				{/if}
-			</div>
-			<a href="/departement/{code}" class="no-underline hover:underline">
-      				{getDepartmentName(code)}
-  			</a>
-  			<div class="text-right">{score} pts</div>
+				<div class="text-right">
+					{#if i === 0}
+						<span role="img" aria-label="1">🥇</span>
+					{:else if i === 1}
+						<span role="img" aria-label="2">🥈</span>
+					{:else if i === 2}
+						<span role="img" aria-label="3">🥉</span>
+					{:else}
+						{i + 1}
+					{/if}
+				</div>
+				<a href="/departement/{code}" class="no-underline hover:underline">
+					{getDepartmentName(code)}
+				</a>
+				<div class="text-right">{score} pts</div>
 			{/each}
 		</div>
 	</div>
@@ -51,6 +51,11 @@
 		<a href="/regles-du-jeu">Règles du jeu</a>
 		<br />
 		<a href="/comment-participer">Comment participer</a>
+		<br />
+		<a
+			href="https://framaforms.org/100-jours-de-zbeul-proposer-un-evenement-1682372493"
+			class="font-bold">Signaler une action</a
+		>
 	</p>
 
 	<Thanks />
@@ -62,10 +67,10 @@
 	}
 
 	.grid-auto-1-auto {
-  		grid-template-columns: auto 1fr auto;
+		grid-template-columns: auto 1fr auto;
 	}
-	
-	.ranking > :nth-child(-n+9) {
+
+	.ranking > :nth-child(-n + 9) {
 		@apply font-bold;
 	}
 </style>
