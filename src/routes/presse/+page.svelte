@@ -18,7 +18,7 @@
 
 		<ul>
 			{#each mediaRefs as link}
-				<li class="mb-3 flex items-center gap-8 text-xl">
+				<li class="mb-3 flex items-center gap-3 text-xl">
 					<img class="image h-10 w-10 rounded-full" src={link.image} alt="" />
 					<a
 						class="link text-xl no-underline hover:underline"
