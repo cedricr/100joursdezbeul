@@ -13,12 +13,12 @@ export const DEPARTMENTS = JSON.parse(departements) as {
 
 // prettier-ignore
 export const ACTION_SCORE = {
-	'annulation': 5,
-	'fuite': 4,
-	'sobriete': 3,
-	'creatif': 2,
+	'chahut': 1,
 	'manif': 1,
-	'chahut': 1
+	'creatif': 2,
+	'sobriete': 3,
+	'fuite': 4,
+	'annulation': 5,
 };
 
 // prettier-ignore
@@ -28,7 +28,7 @@ export const ACTION_LABEL = {
 	'sobriete': 'Mise en sobriété énergétique',
 	'creatif': 'Action créative',
 	'manif': 'Manifestation',
-	'chahut': 'Chahut'
+	'chahut': 'Chahut (casserolade, huée…)'
 };
 
 // prettier-ignore
