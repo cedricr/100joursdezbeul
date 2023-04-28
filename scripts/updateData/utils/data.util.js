@@ -1,5 +1,5 @@
-import inseeCodes from '../data/insee.json' assert { type: 'json' };;
-import inseeRemapping from '../data/inseeRemapping.json' assert { type: 'json' };;
+import inseeCodes from '../data/insee.json' assert { type: 'json' };
+import inseeRemapping from '../data/inseeRemapping.json' assert { type: 'json' };
 
 const isEmpty = value => value;
 
