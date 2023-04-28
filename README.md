@@ -1,3 +1,5 @@
+![zbeul](https://100joursdezbeul.fr/badge.svg)
+
 Lancer le projet localement:
 
 ```
