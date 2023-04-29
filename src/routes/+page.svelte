@@ -58,8 +58,8 @@
 		</div>
 	</div>
 
-	<h2 class="zbeul mb-2">Météo</h2>
-	<div class="mx-auto mb-6 mt-10 max-w-lg">
+	<h2 class="zbeul mb-2 mt-10">Niveau d'Apaisement</h2>
+	<div class="mx-auto mb-6 max-w-lg">
 		<Heatmap />
 	</div>
 	<p class="mb-20 text-center text-lg">
