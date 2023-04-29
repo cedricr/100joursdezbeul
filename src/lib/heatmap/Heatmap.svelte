@@ -5,7 +5,14 @@
 
 	let canvasElement: HTMLCanvasElement;
 
-	onMount(draw);
+	onMount(() => {
+		// Load client libraries then chart.js plugin then draw
+		Promise.all([
+			import('../../../node_modules/chart.js/dist/chart.umd.js'),
+			import('https://cdn.jsdelivr.net/npm/d3@v6'),
+			import('https://cdn.jsdelivr.net/npm/d3-composite-projections')
+		]).then(() => import('../../../node_modules/chartjs-chart-geo/build/index.umd.js').then(draw));
+	});
 
 	function draw() {
 		const index = Object.fromEntries(
@@ -68,12 +75,5 @@
 		});
 	}
 </script>
-
-<svelte:head>
-	<script src="https://cdn.jsdelivr.net/npm/d3@v6"></script>
-	<script src="https://cdn.jsdelivr.net/npm/d3-composite-projections"></script>
-	<script src="../../../node_modules/chart.js/dist/chart.umd.js"></script>
-	<script src="../../../node_modules/chartjs-chart-geo/build/index.umd.js"></script>
-</svelte:head>
 
 <canvas bind:this={canvasElement} width="100%" height="100%" />
