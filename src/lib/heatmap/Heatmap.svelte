@@ -5,13 +5,13 @@
 
 	let canvasElement: HTMLCanvasElement;
 
-	onMount(() => {
+	onMount(async () => {
 		// Load client libraries then chart.js plugin then draw
-		Promise.all([
-			import('../../../node_modules/chart.js/dist/chart.umd.js'),
-			import('https://cdn.jsdelivr.net/npm/d3@v6'),
-			import('https://cdn.jsdelivr.net/npm/d3-composite-projections')
-		]).then(() => import('../../../node_modules/chartjs-chart-geo/build/index.umd.js').then(draw));
+		await import('../../../node_modules/chart.js/dist/chart.umd.js');
+		await import('https://cdn.jsdelivr.net/npm/d3@v6');
+		await import('https://cdn.jsdelivr.net/npm/d3-composite-projections');
+		await import('../../../node_modules/chartjs-chart-geo/build/index.umd.js');
+		draw();
 	});
 
 	function draw() {
