@@ -25,39 +25,52 @@
 	<p class="mb-6 text-center italic">
 		Cliquez sur le nom du département pour avoir le détail du décompte.
 	</p>
-	<div class="mx-auto mb-6 mt-10 max-w-sm text-xl">
-		<ul class="ranking">
-			{#each resultLines as [code, score], i}
-				<li class="ranking-item grid-auto-1-auto grid gap-x-2">
-					<div class="text-right">
-						{#if i === 0}
-							<span role="img" aria-label="1">🥇</span>
-						{:else if i === 1}
-							<span role="img" aria-label="2">🥈</span>
-						{:else if i === 2}
-							<span role="img" aria-label="3">🥉</span>
-						{:else}
-							{i + 1}
-						{/if}
-					</div>
-					<a href="/departement/{code}" class="no-underline hover:underline">
-						{getDepartmentName(code)}
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							class="icon-link"
-							aria-hidden="true"
-							><path
-								d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"
-							/></svg
-						>
-					</a>
-					<div class="text-right">{score} pts</div>
-				</li>
-			{/each}
-		</ul>
+	<div class="mx-auto mb-6 mt-10 max-w-md text-xl">
+		<table class="ranking">
+			<thead>
+				<tr>
+					<th scope="col">Département</th>
+					<th scope="col">Rang</th>
+					<th scope="col">Points</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#each resultLines as [code, score], i}
+					<tr class="ranking-line">
+						<th scope="row">
+							<a href="/departement/{code}" class="ranking-link no-underline hover:underline">
+								{getDepartmentName(code)}
+							</a>
+						</th>
+						<td class="text-right">
+							{#if i === 0}
+								<span role="img" aria-label="1">🥇</span>
+							{:else if i === 1}
+								<span role="img" aria-label="2">🥈</span>
+							{:else if i === 2}
+								<span role="img" aria-label="3">🥉</span>
+							{:else}
+								{i + 1}
+							{/if}
+						</td>
+						<td class="text-right">
+							{score} pts
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								class="icon-link"
+								aria-hidden="true"
+								><path
+									d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"
+								/></svg
+							>
+						</td>
+					</tr>
+				{/each}
+			</tbody>
+		</table>
 	</div>
 
 	<p class="mb-20 text-center text-lg">
@@ -79,15 +92,58 @@
 		@apply text-[#dd0220];
 	}
 
-	.grid-auto-1-auto {
-		grid-template-columns: auto 1fr auto;
+	.ranking {
+		width: 100%;
+		text-align: left;
 	}
 
-	.ranking > :nth-child(-n + 3) {
+	.ranking thead {
+		background-color: #e5e7eb;
+	}
+
+	.ranking tr {
+		position: relative;
+	}
+
+	.ranking th,
+	.ranking td {
+		border-width: 1px 0;
+		border-style: solid;
+		border-color: #e5e7eb;
+		padding: 0.5rem;
+	}
+
+	.ranking th:nth-child(2),
+	.ranking td:nth-child(2) {
+		text-align: center;
+	}
+
+	.ranking th:last-child {
+		text-align: center;
+	}
+	.ranking td:last-child {
+		text-align: right;
+	}
+
+	.ranking-line th {
+		@apply font-normal;
+	}
+
+	.ranking .ranking-line:nth-child(-n + 3),
+	.ranking .ranking-line:nth-child(-n + 3) th {
 		@apply font-bold;
 	}
 
-	.ranking-item {
-		padding: 0.5rem 0;
+	.ranking .ranking-line:nth-child(-n + 3) > :nth-child(2) {
+		font-size: 125%;
+	}
+
+	.ranking-link::before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		content: '';
 	}
 </style>
