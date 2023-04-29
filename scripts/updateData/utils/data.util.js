@@ -69,6 +69,7 @@ export function convertRowToEvent(row) {
     codeInsee: null,
     actions: [],
     cibles: [],
+    statut: null,
     source: null,
     remarques: '',
   })
@@ -118,6 +119,11 @@ export function checkEventValidity(event) {
     result.errors.push('pas de code INSEE');
   }
 
+  if(!event.statut || event.statut.toLowerCase() !== 'ok') {
+    result.valid = false;
+    result.errors.push('status not OK');
+  }
+
   return result;
 }
 
@@ -131,6 +137,7 @@ export const convertEventToCsvRow = (event) => {
     if(i < event.cibles.length) csvRow.push(event.cibles[i]);
     else csvRow.push('');
   }
+  csvRow.push(event.statut);
   csvRow.push(event.source);
   return csvRow;
 }

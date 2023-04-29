@@ -17,6 +17,7 @@
     "cibles": [
       "ministre-del"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -39,6 +40,7 @@
     "cibles": [
       "ministre-del"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -61,6 +63,7 @@
       "ministre",
       "ministre"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -85,6 +88,7 @@
     "cibles": [
       "ministre"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -109,6 +113,7 @@
     "cibles": [
       "ministre-del"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -132,6 +137,7 @@
     "cibles": [
       "premiere-min"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -153,6 +159,7 @@
     "cibles": [
       "ministre"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -175,6 +182,7 @@
     "cibles": [
       "ministre"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -196,6 +204,7 @@
     "cibles": [
       "ministre-del"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -218,6 +227,7 @@
     "cibles": [
       "ministre-del"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -240,6 +250,7 @@
       "ministre-del",
       "ministre"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -262,6 +273,7 @@
     "cibles": [
       "ministre-del"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -283,6 +295,7 @@
     "cibles": [
       "president-rep"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -304,6 +317,7 @@
     "cibles": [
       "president-rep"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -333,6 +347,7 @@
       "president-rep",
       "ministre"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -355,6 +370,7 @@
     "cibles": [
       "ministre"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -376,6 +392,7 @@
     "cibles": [
       "ministre"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -397,6 +414,7 @@
     "cibles": [
       "ministre-del"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -418,6 +436,7 @@
     "cibles": [
       "ministre"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -439,6 +458,7 @@
     "cibles": [
       "ministre"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -462,6 +482,7 @@
     "cibles": [
       "ministre-del"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -485,6 +506,7 @@
     "cibles": [
       "ministre"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -508,6 +530,7 @@
     "cibles": [
       "ministre-del"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -529,6 +552,7 @@
     "cibles": [
       "presidente-an"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -553,6 +577,7 @@
     "cibles": [
       "president-rep"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -576,6 +601,7 @@
     "cibles": [
       "secretaire-etat"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -599,6 +625,7 @@
     "cibles": [
       "president-rep"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -621,6 +648,7 @@
       "ministre-del",
       "ministre"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -644,6 +672,7 @@
     "cibles": [
       "ministre"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -667,6 +696,7 @@
     "cibles": [
       "president-rep"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -688,6 +718,7 @@
     "cibles": [
       "ministre"
     ],
+    "statut": "OK",
     "source": "import JSON",
     "remarques": ""
   },
@@ -710,7 +741,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -732,7 +764,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -753,7 +786,30 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
+    "remarques": ""
+  },
+  {
+    "id": "85 - Les Sables-d'Olonne - 2023-04-24",
+    "ville": "Les Sables-d'Olonne",
+    "departement": "85",
+    "ajout": "2023-04-26",
+    "modif": "2023-04-26",
+    "date": "2023-04-24",
+    "description": "Comité de non accueil pour le déplacement de Bérangère Couillard, la secrétaire déléguée à l'écologie",
+    "liens": [
+      "https://www.ouest-france.fr/economie/retraites/video-les-casseroles-accueillent-la-secretaire-detat-a-lecologie-en-visite-aux-sables-dolonne-f57613be-e2b3-11ed-b514-8dd13d8be671"
+    ],
+    "codeInsee": 85194,
+    "actions": [
+      "manif"
+    ],
+    "cibles": [
+      "secretaire-etat"
+    ],
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -777,7 +833,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -798,7 +855,8 @@
     "cibles": [
       "ministre-del"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -820,7 +878,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -842,7 +901,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -863,7 +923,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -887,7 +948,8 @@
     "cibles": [
       "president-rep"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -908,7 +970,8 @@
     "cibles": [
       "secretaire-etat"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -929,7 +992,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -950,7 +1014,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -972,7 +1037,8 @@
     "cibles": [
       "secretaire-etat"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -994,7 +1060,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -1013,7 +1080,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -1032,7 +1100,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -1053,7 +1122,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -1074,7 +1144,8 @@
     "cibles": [
       "ministre-del"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -1095,7 +1166,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -1117,7 +1189,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -1138,28 +1211,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac - OK",
-    "remarques": ""
-  },
-  {
-    "id": "83 - Toulon - 2023-04-27",
-    "ville": "Toulon",
-    "departement": "83",
-    "ajout": "2023-04-27",
-    "modif": "2023-04-27",
-    "date": "2023-04-27",
-    "description": "Casserolade pour Olivier Dussopt à Toulon.",
-    "liens": [
-      "https://twitter.com/FsuPaca/status/1651573219789291522?s=20"
-    ],
-    "codeInsee": 83137,
-    "actions": [
-      "chahut"
-    ],
-    "cibles": [
-      "ministre"
-    ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -1179,27 +1232,119 @@
     "cibles": [
       "secretaire-etat"
     ],
-    "source": "attac - OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
-    "id": "75 - Paris - 2023-04-27",
-    "ville": "Paris",
-    "departement": "75",
-    "ajout": "2023-04-27",
-    "modif": "2023-04-27",
-    "date": "2023-04-27",
-    "description": "Annuluation de la visite de  Marlène Schiappa qui n'est finalement pas venue à la soirée Playboy",
-    "liens": [],
-    "codeInsee": 75056,
+    "id": "76 - Gonfreville-l'Orcher - 2023-04-28",
+    "ville": "Gonfreville-l'Orcher",
+    "departement": "76",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-28",
+    "description": "Casseroles pour le ministre de l'industrie Roland Lescure",
+    "liens": [
+      "https://twitter.com/RevPermanente/status/1651851077266952192?s=20"
+    ],
+    "codeInsee": 76305,
     "actions": [
-      "manif",
-      "annulation"
+      "chahut"
     ],
     "cibles": [
       "ministre"
     ],
-    "source": "attac - PENDING",
+    "statut": "OK",
+    "source": "attac",
+    "remarques": ""
+  },
+  {
+    "id": "51 - Montmirail - 2023-04-28",
+    "ville": "Montmirail",
+    "departement": "51",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-28",
+    "description": "Casseroles pour François Braun, ministre de la Santé et de la Prévention  à Montmirail",
+    "liens": [
+      "https://twitter.com/RevPermanente/status/1651896797369860101?s=20"
+    ],
+    "codeInsee": 51380,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "statut": "OK",
+    "source": "attac",
+    "remarques": ""
+  },
+  {
+    "id": "50 - Gap - 2023-04-28",
+    "ville": "Gap",
+    "departement": "50",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-28",
+    "description": "Casseroles pour accueillier Marc Fesneau à Gap au salon de l'élevage.",
+    "liens": [
+      "https://twitter.com/Chris_LEG17/status/1651899228338233347?s=20",
+      "https://twitter.com/LaProvenceAlpes/status/1651926772273803264?s=20"
+    ],
+    "codeInsee": 5061,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "minitre"
+    ],
+    "statut": "OK",
+    "source": "attac",
+    "remarques": ""
+  },
+  {
+    "id": "25 - Montbéliard - 2023-04-28",
+    "ville": "Montbéliard",
+    "departement": "25",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-28",
+    "description": "Caseroles pour Aurore Bergé, ministre déléguée, et Nicolas Pacquot député Renaissance",
+    "liens": [
+      "https://twitter.com/F3FrancheComte/status/1651912520817418240?s=20"
+    ],
+    "codeInsee": 25388,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre-del"
+    ],
+    "statut": "OK",
+    "source": "attac",
+    "remarques": ""
+  },
+  {
+    "id": "40 - Morcenx-la-Nouvelle - 2023-04-28",
+    "ville": "Morcenx-la-Nouvelle",
+    "departement": "40",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-28",
+    "description": "Casseroles pour Geneviève Darrieussecq, Ministre déléguée auprès du ministre des Solidarités, de l'Autonomie et des Personnes handicapées.",
+    "liens": [
+      "https://twitter.com/fsu40/status/1651923601065402368?s=20"
+    ],
+    "codeInsee": 40197,
+    "actions": [
+      "manif"
+    ],
+    "cibles": [
+      "ministre-del"
+    ],
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -1221,28 +1366,8 @@
     "cibles": [
       "ministre-del"
     ],
-    "source": "attac – OK",
-    "remarques": ""
-  },
-  {
-    "id": "69 - Joux - 2023-04-27",
-    "ville": "Joux",
-    "departement": "69",
-    "ajout": "2023-04-28",
-    "modif": "2023-04-28",
-    "date": "2023-04-27",
-    "description": "CasserolES en bas du château de Joux pour accueillir Emmanuel Macron. Bloqué par les CRS à 1 km du château et fuite du député Eric Alauzet",
-    "liens": [
-      "https://www.lemonde.fr/politique/article/2023/04/27/dans-le-doubs-emmanuel-macron-celebre-l-abolition-de-l-esclavage-et-l-ordre-"
-    ],
-    "codeInsee": 69102,
-    "actions": [
-      "chahut"
-    ],
-    "cibles": [
-      "president-rep"
-    ],
-    "source": "attac – OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -1264,7 +1389,8 @@
     "cibles": [
       "ministre"
     ],
-    "source": "attac – OK",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   },
   {
@@ -1285,28 +1411,8 @@
     "cibles": [
       "secretaire-etat"
     ],
-    "source": "attac – OK",
-    "remarques": ""
-  },
-  {
-    "id": "87 - Limoges - 2023-04-23",
-    "ville": "Limoges",
-    "departement": "87",
-    "ajout": "2023-04-28",
-    "modif": "2023-04-28",
-    "date": "2023-04-23",
-    "description": "Action créative sur le principal pont du boulevard de Limoges avec écris \" DARMANIN ASSASSIN\"",
-    "liens": [
-      "https://www.facebook.com/photo/?fbid=3465326433697414&set=a.1396487283914683"
-    ],
-    "codeInsee": 87085,
-    "actions": [
-      "creatif"
-    ],
-    "cibles": [
-      "ministre"
-    ],
-    "source": "attac - PENDING",
+    "statut": "OK",
+    "source": "attac",
     "remarques": ""
   }
 ]

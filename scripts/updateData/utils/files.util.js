@@ -60,6 +60,7 @@ export function saveJSONAsCSV(dest, data) {
     "cible 3",
     "cible 4",
     "cible 5",
+    "statut",
     "source",
   ];
 

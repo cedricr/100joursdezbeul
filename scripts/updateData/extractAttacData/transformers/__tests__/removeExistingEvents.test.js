@@ -12,7 +12,8 @@ describe('remove existing events', () => {
         id: 'new',
       }])).toEqual([{
       id: 'new',
-      source: 'attac - TO CHECK',
+      source: 'attac',
+      statut: 'TO CHECK',
     }])
   });
 
@@ -27,7 +28,8 @@ describe('remove existing events', () => {
         id: 'new',
       }])).toEqual([{
       id: 'new',
-      source: 'attac - TO CHECK',
+      source: 'attac',
+      statut: 'TO CHECK',
     }])
   });
 
@@ -39,10 +41,12 @@ describe('remove existing events', () => {
         id: 'new',
       }])).toEqual([{
       id: 'existing',
-      source: 'attac - TO CHECK',
+      source: 'attac',
+      statut: 'TO CHECK',
     },{
       id: 'new',
-      source: 'attac - TO CHECK',
+      source: 'attac',
+      statut: 'TO CHECK',
     }])
   });
 });

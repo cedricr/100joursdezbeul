@@ -10,7 +10,8 @@ export default (validEvents, ignoredEvents, previous) => {
     if(!existingEvents[event.id]) {
       const newEvent = {
         ...event,
-        source: `attac - TO CHECK`,
+        source: 'attac',
+        statut: 'TO CHECK',
       };
       newEvents.push(newEvent);
       existingEvents[newEvent.id] = newEvent;
