@@ -5,7 +5,17 @@
 
 	const dayNumber = getDayNumber();
 
-	const resultLines = LEADERBOARD;
+	const append = (a, x) => a.concat([x]);
+
+	const resultLines = LEADERBOARD.map(([code, score]) => ({ code, score })).reduce(
+		(acc, x, i) =>
+			append(acc, {
+				...x,
+				rank: i > 0 && x.score === acc[i - 1].score ? acc[i - 1].rank : i + 1
+			}),
+		[]
+	);
+
 	const now = new Date();
 	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
 </script>
@@ -21,7 +31,7 @@
 	</p>
 
 	<h2 class="zbeul mb-2">Classement temporaire au {formattedDate}</h2>
-	<p class="mb-2 text-center italic">(tenant compte des données jusqu’au 26 avril inclus)</p>
+	<p class="mb-2 text-center italic">(tenant compte des données jusqu’au 27 avril inclus)</p>
 	<p class="mb-6 text-center italic">
 		Cliquez sur le nom du département pour avoir le détail du décompte.
 	</p>
@@ -35,7 +45,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				{#each resultLines as [code, score], i}
+				{#each resultLines as { code, score, rank }}
 					<tr class="ranking-line">
 						<th scope="row" class="p-1 sm:p-2">
 							<a href="/departement/{code}" class="ranking-link no-underline hover:underline">
@@ -43,14 +53,14 @@
 							</a>
 						</th>
 						<td class="p-1 text-center sm:p-2">
-							{#if i === 0}
+							{#if rank === 1}
 								<span role="img" aria-label="1">🥇</span>
-							{:else if i === 1}
+							{:else if rank === 2}
 								<span role="img" aria-label="2">🥈</span>
-							{:else if i === 2}
+							{:else if rank === 3}
 								<span role="img" aria-label="3">🥉</span>
 							{:else}
-								{i + 1}
+								{rank}
 							{/if}
 						</td>
 						<td class="p-1 text-right sm:p-2">

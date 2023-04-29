@@ -15,14 +15,14 @@
       "manif"
     ],
     "cibles": [],
-    "source": "TO DELETE",
+    "source": "attac - PENDING",
     "remarques": "pas de gvt",
     "erreurs": [
       "pas de cible"
     ]
   },
   {
-    "id": "un - Langon - 2023-04-17",
+    "id": "33 - Langon - 2023-04-17",
     "ville": "Langon",
     "departement": "33",
     "ajout": "2023-04-26",
@@ -37,7 +37,7 @@
     "cibles": [
       "ministre"
     ],
-    "source": "TO DELETE",
+    "source": "attac - PENDING",
     "remarques": "trop tôt",
     "erreurs": [
       "pas d'action",
@@ -60,7 +60,7 @@
       "manif"
     ],
     "cibles": [],
-    "source": "TO DELETE",
+    "source": "attac - PENDING",
     "remarques": "pas de gvt",
     "erreurs": [
       "pas de cible"
@@ -85,7 +85,7 @@
     "cibles": [
       "president-rep"
     ],
-    "source": "TO DELETE",
+    "source": "attac - PENDING",
     "remarques": "étranger",
     "erreurs": [
       "pas de code INSEE"
@@ -107,7 +107,7 @@
       "chahut"
     ],
     "cibles": [],
-    "source": "TO DELETE",
+    "source": "attac - PENDING",
     "remarques": "pas de gvt",
     "erreurs": [
       "pas de cible"
@@ -131,7 +131,7 @@
     "cibles": [
       "ministre"
     ],
-    "source": "TO DELETE",
+    "source": "attac - PENDING",
     "remarques": "trop tôt",
     "erreurs": [
       "avant allocution"
@@ -153,7 +153,7 @@
       "annulation"
     ],
     "cibles": [],
-    "source": "TO DELETE",
+    "source": "attac - PENDING",
     "remarques": "pas de gvt",
     "erreurs": [
       "pas de cible"
@@ -177,7 +177,7 @@
     "cibles": [
       "ministre"
     ],
-    "source": "TO DELETE",
+    "source": "attac - PENDING",
     "remarques": "trop tôt",
     "erreurs": [
       "avant allocution"
@@ -199,7 +199,7 @@
       "annulation"
     ],
     "cibles": [],
-    "source": "TO DELETE",
+    "source": "attac - PENDING",
     "remarques": "pas de gvt",
     "erreurs": [
       "pas de cible"
@@ -221,7 +221,7 @@
       "annulation"
     ],
     "cibles": [],
-    "source": "TO DELETE",
+    "source": "attac - PENDING",
     "remarques": "pas de gvt",
     "erreurs": [
       "pas de cible",
@@ -246,7 +246,7 @@
     "cibles": [
       "ministre"
     ],
-    "source": "TO DELETE",
+    "source": "attac - PENDING",
     "remarques": "trop tôt",
     "erreurs": [
       "avant allocution"
@@ -270,7 +270,7 @@
     "cibles": [
       "president-rep"
     ],
-    "source": "TO DELETE",
+    "source": "attac - PENDING",
     "remarques": "trop tôt",
     "erreurs": [
       "avant allocution"
@@ -290,55 +290,11 @@
     "codeInsee": 92022,
     "actions": [],
     "cibles": [],
-    "source": "TO DELETE",
+    "source": "attac - PENDING",
     "remarques": "pas de gvt",
     "erreurs": [
       "pas de cible",
       "pas d'action"
-    ]
-  },
-  {
-    "id": "un - La Montagne - 2023-04-27",
-    "ville": "La Montagne",
-    "departement": "44",
-    "ajout": "2023-04-27",
-    "modif": "2023-04-27",
-    "date": "2023-04-27",
-    "description": "Sébastien Lecornu, ministre des Armées, sera en visite à partir de 14h sur le site de NavalGroup Indret à La Montagne. Le comité de non-accueil s'était organisé pour offrir un accueil chaleureux...\nLe déplacement du ministre a été annulé.",
-    "liens": [],
-    "codeInsee": 44101,
-    "actions": [
-      "annulation"
-    ],
-    "cibles": [
-      "ministre"
-    ],
-    "source": "attac - OK",
-    "remarques": "",
-    "erreurs": [
-      "date future"
-    ]
-  },
-  {
-    "id": "71 - Privas - 2023-04-27",
-    "ville": "Privas",
-    "departement": "71",
-    "ajout": "2023-04-27",
-    "modif": "2023-04-27",
-    "date": "2023-04-27",
-    "description": "Olivier Dussopt devait se rendre jeudi 27 avril au gymnase à côté du collège de Privas, au Salon des Métiers de l'Artisanat.\nDevant le pique-nique collectif et revendicatif prévu par l'intersyndicale, avec gamelles et couverts, le ministre a préféré changer d'itinéraire et se rendre à Toulon !",
-    "liens": [],
-    "codeInsee": 7186,
-    "actions": [
-      "annulation"
-    ],
-    "cibles": [
-      "ministre"
-    ],
-    "source": "attac - OK",
-    "remarques": "",
-    "erreurs": [
-      "date future"
     ]
   },
   {
@@ -348,44 +304,45 @@
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
-    "description": "Comité de non accueil pour Isabelle Rome, ministre déléguée chargée de l'égalité entre les femmes et les hommes, de la diversité et de l'égalité des chances\n**11h** : Préfecture\n**14h** : Rencontre avec l'association « Drôles de Rames »\nBase nautique des Marquisats - 33 Avenue des Marquisats, 74000 Annecy\nUne opération casseroles est prévue.",
+    "description": "Comité de non accueil pour Isabelle Rome, ministre déléguée chargée de l'égalité entre les femmes et les hommes, de la diversité et de l'égalité des chances.\n**11h** : Préfecture\n**14h** : Rencontre avec l'association « Drôles de Rames »\nUne opération casseroles est prévue.",
     "liens": [
       "https://twitter.com/AnonymeCitoyen/status/1651556029145010177?s=20",
       "https://twitter.com/74Nupes/status/1651520184853622784?s=20"
     ],
     "actions": [
-      "manif"
+      "chahut",
+      "chahut",
+      "annulation"
     ],
     "cibles": [
-      "ministre"
+      "ministre-del"
     ],
-    "source": "attac - TO CHECK",
+    "source": "attac - OK",
     "remarques": "",
     "erreurs": [
-      "date future",
       "pas de code INSEE"
     ]
   },
   {
-    "id": "25 - Château de Joux - 2023-04-27",
+    "id": "un - Château de Joux - 2023-04-27",
     "ville": "Château de Joux",
     "departement": "25",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
-    "description": "Casseroles pour Emmanuel Macron au château de Joux, dans le Doubs",
+    "description": "Casseroles pour Emmanuel Macron au château de Joux, dans le Doubs.",
     "liens": [
       "https://twitter.com/AnonymeCitoyen/status/1651531489887023105?s=20"
     ],
-    "actions": [],
+    "actions": [
+      "chahut"
+    ],
     "cibles": [
       "president-rep"
     ],
-    "source": "attac - TO CHECK",
+    "source": "attac - OK",
     "remarques": "",
     "erreurs": [
-      "pas d'action",
-      "date future",
       "pas de code INSEE"
     ]
   },
@@ -396,69 +353,21 @@
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
-    "description": "Comité de non accueil pour Patricia Miralles, la secrétaire d'Etat chargée des anciens combattants",
+    "description": "Comité de non accueil devant le haras national d'Hennebont puis à la maison Athos de Pluneret pour Patricia Miralles, la secrétaire d'Etat chargée des anciens combattants",
     "liens": [
       "https://twitter.com/CaptainRomulus1/status/1651567298837135361?s=20"
     ],
     "actions": [
-      "manif"
+      "chahut",
+      "chahut"
     ],
     "cibles": [
       "secretaire-etat"
     ],
-    "source": "attac - TO CHECK",
+    "source": "attac - OK",
     "remarques": "",
     "erreurs": [
-      "date future",
       "pas de code INSEE"
-    ]
-  },
-  {
-    "id": "83 - La Seyne-sur-Mer - 2023-04-27",
-    "ville": "La Seyne-sur-Mer",
-    "departement": "83",
-    "ajout": "2023-04-27",
-    "modif": "2023-04-27",
-    "date": "2023-04-27",
-    "description": "Casserolade pour acceuillir Olivier Dussopt en visite à l'entreprise PAPREC malgré un changement de programme de dernière minute",
-    "liens": [
-      "https://twitter.com/raphpradeau/status/1651562141386780672?s=20"
-    ],
-    "codeInsee": 83126,
-    "actions": [
-      "chahut"
-    ],
-    "cibles": [
-      "ministre"
-    ],
-    "source": "attac - TO CHECK",
-    "remarques": "",
-    "erreurs": [
-      "date future"
-    ]
-  },
-  {
-    "id": "58 - Luzy - 2023-04-27",
-    "ville": "Luzy",
-    "departement": "58",
-    "ajout": "2023-04-27",
-    "modif": "2023-04-27",
-    "date": "2023-04-27",
-    "description": "Casserolade d'accueil pour Dominique Faure, Ministre déléguée auprès du ministre de l'intérieur et des outre-mer et du ministre de la transition écologique.",
-    "liens": [
-      "https://twitter.com/fabienagrain/status/1651495000490881025?s=20"
-    ],
-    "codeInsee": 58149,
-    "actions": [
-      "chahut"
-    ],
-    "cibles": [
-      "ministre-del"
-    ],
-    "source": "attac - TO CHECK",
-    "remarques": "",
-    "erreurs": [
-      "date future"
     ]
   },
   {
@@ -473,152 +382,248 @@
       "https://twitter.com/attac_rhone/status/1651488576280879106?t=wy9Jp7nxLsvOXZjyJ9S-9g&s=35"
     ],
     "codeInsee": 69123,
-    "actions": [],
+    "actions": [
+      "chahut"
+    ],
     "cibles": [],
-    "source": "attac - TO CHECK",
-    "remarques": "",
+    "source": "attac - PENDING",
+    "remarques": "pas de gvt",
     "erreurs": [
-      "pas de cible",
-      "pas d'action",
-      "date future"
+      "pas de cible"
     ]
   },
   {
-    "id": "un - Perpignan Pyrénées-Orientales - 2023-04-27",
-    "ville": "Perpignan Pyrénées-Orientales",
-    "departement": "null",
-    "ajout": "2023-04-27",
-    "modif": "2023-04-27",
-    "date": "2023-04-27",
-    "description": "Des casseroles pour acceuillir le ministre de la Transition écologique Christophe Béchu",
-    "liens": [
-      "https://twitter.com/F3OccitanieLR/status/1651482602581131266?s=20"
-    ],
-    "actions": [],
-    "cibles": [
-      "ministre"
-    ],
-    "source": "attac - TO CHECK",
-    "remarques": "",
-    "erreurs": [
-      "pas d'action",
-      "date future",
-      "pas de code INSEE"
-    ]
-  },
-  {
-    "id": "76 - Rouen - 2023-04-27",
-    "ville": "Rouen",
-    "departement": "76",
-    "ajout": "2023-04-27",
-    "modif": "2023-04-27",
-    "date": "2023-04-27",
-    "description": "Casserolade d'accueil pour Marc Fesneau",
-    "liens": [
-      "https://twitter.com/alma_dufour/status/1651566920758448128?s=20",
-      "https://twitter.com/RevPermanente/status/1651569766891487232?s=20"
-    ],
-    "codeInsee": 76540,
-    "actions": [
-      "chahut"
-    ],
-    "cibles": [
-      "ministre"
-    ],
-    "source": "attac - TO CHECK",
-    "remarques": "",
-    "erreurs": [
-      "date future"
-    ]
-  },
-  {
-    "id": "67 - Sélestat - 2023-04-27",
-    "ville": "Sélestat",
-    "departement": "67",
-    "ajout": "2023-04-27",
-    "modif": "2023-04-27",
-    "date": "2023-04-27",
-    "description": "Envahissement des voie de la agre de Sélestat pour fêter l'arrivée de Bruno Lemaire",
-    "liens": [
-      "https://twitter.com/LaPresseLibre_/status/1651454870505897985?s=20"
-    ],
-    "codeInsee": 67462,
-    "actions": [],
-    "cibles": [
-      "ministre"
-    ],
-    "source": "attac - TO CHECK",
-    "remarques": "",
-    "erreurs": [
-      "pas d'action",
-      "date future"
-    ]
-  },
-  {
-    "id": "83 - Toulon - 2023-04-27",
-    "ville": "Toulon",
-    "departement": "83",
-    "ajout": "2023-04-27",
-    "modif": "2023-04-27",
-    "date": "2023-04-27",
-    "description": "Casserolade pour Olivier Dussopt  à Toulon.",
-    "liens": [
-      "https://twitter.com/FsuPaca/status/1651573219789291522?s=20"
-    ],
-    "codeInsee": 83137,
-    "actions": [
-      "chahut"
-    ],
-    "cibles": [
-      "ministre"
-    ],
-    "source": "attac - TO CHECK",
-    "remarques": "",
-    "erreurs": [
-      "date future"
-    ]
-  },
-  {
-    "id": "42 - Saint-Etienne - 2023-04-27",
+    "id": "42 - Saint-Étienne - 2023-04-27",
     "ville": "Saint-Etienne",
     "departement": "42",
     "ajout": "2023-04-27",
     "modif": "2023-04-27",
     "date": "2023-04-27",
-    "description": "Le député Renaissance Thomas Gasilloud accueilli par des fumigènes",
+    "description": "Le député Renaissance Thomas Gassilloud accueilli par des fumigènes et un concert de casseroles au barrage de Grangent (Chambles)",
     "liens": [
-      "https://twitter.com/Interville2023/status/1651517069966340096?s=35 https://www.ouest-france.fr/politique/sebastien-lecornu/le-ministre-des-armees-annule-sa-visite-chez-naval-group-indret-en-loire-atlantique-d614f34e-e4c2-11ed-9757-e35473d4e313"
+      "https://twitter.com/Interville2023/status/1651517069966340096?s=35 https://actu.fr/auvergne-rhone-alpes/saint-etienne_42218/manifestation-du-1er-mai-a-saint-etienne-et-roanne-voici-les-parcours_59261467.html"
     ],
-    "actions": [],
+    "codeInsee": 42218,
+    "actions": [
+      "chahut"
+    ],
     "cibles": [],
-    "source": "attac - TO CHECK",
-    "remarques": "",
+    "source": "attac - PENDING",
+    "remarques": "pas de gvt",
     "erreurs": [
-      "pas de cible",
-      "pas d'action",
-      "date future",
-      "pas de code INSEE"
+      "pas de cible"
     ]
   },
   {
-    "id": "44 - Indre - 2023-04-27",
-    "ville": "Indre",
-    "departement": "44",
-    "ajout": "2023-04-27",
-    "modif": "2023-04-27",
-    "date": "2023-04-27",
-    "description": "Annulaion de la visite du site de NAVAL GROUP par  Sébastien LECORNU ministre des Armées",
+    "id": "76 - Gonfreville-l'Orcher - 2023-04-28",
+    "ville": "Gonfreville-l'Orcher",
+    "departement": "76",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-28",
+    "description": "Casseroles pour le ministre de l'industrie Roland Lescure",
     "liens": [
-      "https://twitter.com/ulcgtnantes/status/1651201440885489664?t=3zGY8Q7cPN8g5eVYNfELZA&s=19"
+      "https://twitter.com/RevPermanente/status/1651851077266952192?s=20"
     ],
-    "codeInsee": 44074,
+    "codeInsee": 76305,
     "actions": [
-      "annulation"
+      "chahut"
     ],
     "cibles": [
       "ministre"
     ],
-    "source": "attac - TO CHECK",
+    "source": "attac – OK",
+    "remarques": "",
+    "erreurs": [
+      "date future"
+    ]
+  },
+  {
+    "id": "un - Hennebont et Pluneret - 2023-04-27",
+    "ville": "Hennebont et Pluneret",
+    "departement": "44",
+    "ajout": "2023-04-27",
+    "modif": "2023-04-27",
+    "date": "2023-04-27",
+    "description": "Casseroles pour Patricia Miralles, la secrétaire d'Etat chargée des anciens combattants",
+    "liens": [
+      "https://twitter.com/CaptainRomulus1/status/1651567298837135361?s=20",
+      "https://twitter.com/MuscaHelene/status/1651560938959515650?s=20"
+    ],
+    "actions": [
+      "manif"
+    ],
+    "cibles": [
+      "secretaire-etat"
+    ],
+    "source": "attac – OK",
+    "remarques": "",
+    "erreurs": [
+      "pas de code INSEE"
+    ]
+  },
+  {
+    "id": "51 - Montmirail - 2023-04-28",
+    "ville": "Montmirail",
+    "departement": "51",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-28",
+    "description": "Casseroles pour François Braun, ministre de la Santé et de la Prévention  à Montmirail",
+    "liens": [
+      "https://twitter.com/RevPermanente/status/1651896797369860101?s=20"
+    ],
+    "codeInsee": 51380,
+    "actions": [],
+    "cibles": [
+      "ministre"
+    ],
+    "source": "attac – OK",
+    "remarques": "",
+    "erreurs": [
+      "pas d'action",
+      "date future"
+    ]
+  },
+  {
+    "id": "69 - Yzeron - 2023-04-27",
+    "ville": "Yzeron",
+    "departement": "69",
+    "ajout": "2023-04-27",
+    "modif": "2023-04-27",
+    "date": "2023-04-27",
+    "description": "Casseroles pour le député Thomas Gassiloud à gap",
+    "liens": [
+      "https://twitter.com/BFMLyon/status/1651825658501242880?s=20"
+    ],
+    "codeInsee": 69269,
+    "actions": [],
+    "cibles": [
+      "deputé"
+    ],
+    "source": "attac - PENDING",
+    "remarques": "députéb",
+    "erreurs": [
+      "pas d'action"
+    ]
+  },
+  {
+    "id": "50 - Gap - 2023-04-28",
+    "ville": "Gap",
+    "departement": "50",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-28",
+    "description": "Casseroles pour accueillier Marc Fesneau à Gap au salon de l'élevage.",
+    "liens": [
+      "https://twitter.com/Chris_LEG17/status/1651899228338233347?s=20",
+      "https://twitter.com/LaProvenceAlpes/status/1651926772273803264?s=20"
+    ],
+    "codeInsee": 5061,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "minitre"
+    ],
+    "source": "attac – OK",
+    "remarques": "",
+    "erreurs": [
+      "date future"
+    ]
+  },
+  {
+    "id": "25 - Montbéliard - 2023-04-28",
+    "ville": "Montbéliard",
+    "departement": "25",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-28",
+    "description": "Caseroles pour Aurore Bergé, ministre déléguée, et Nicolas Pacquot député Renaissance",
+    "liens": [
+      "https://twitter.com/F3FrancheComte/status/1651912520817418240?s=20"
+    ],
+    "codeInsee": 25388,
+    "actions": [],
+    "cibles": [
+      "ministre-del"
+    ],
+    "source": "attac – OK",
+    "remarques": "",
+    "erreurs": [
+      "pas d'action",
+      "date future"
+    ]
+  },
+  {
+    "id": "40 - Morcenx-la-Nouvelle - 2023-04-28",
+    "ville": "Morcenx-la-Nouvelle",
+    "departement": "40",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-28",
+    "description": "Casseroles pour Geneviève Darrieussecq, Ministre déléguée auprès du ministre des Solidarités, de l'Autonomie et des Personnes handicapées.",
+    "liens": [
+      "https://twitter.com/fsu40/status/1651923601065402368?s=20"
+    ],
+    "codeInsee": 40197,
+    "actions": [
+      "manif"
+    ],
+    "cibles": [
+      "ministre-del"
+    ],
+    "source": "attac – OK",
+    "remarques": "",
+    "erreurs": [
+      "date future"
+    ]
+  },
+  {
+    "id": "un - Bonillet - 2023-04-26",
+    "ville": "Bonillet",
+    "departement": "86",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-26",
+    "description": "Annulation  de la visite de Jean-Pierre RAFFARIN, ancien ministre",
+    "liens": [
+      "https://www.lanouvellerepublique.fr/vienne/commune/chasseneuil-du-poitou/chasseneuil-du-poitou-concert-de-casseroles-a-l-inaugur"
+    ],
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "Ministre-retraité"
+    ],
+    "source": "attac - PENDING",
+    "remarques": "",
+    "erreurs": [
+      "pas de code INSEE"
+    ]
+  },
+  {
+    "id": "93 - Saint-Denis - 2023-04-28",
+    "ville": "Saint-Denis",
+    "departement": "93",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-28",
+    "description": "Blocage du chantier de la piscine olympique",
+    "liens": [
+      "https://www.lefigaro.fr/politique/retraites-blocage-en-cours-du-chantier-de-la-piscine-olympique-des-jo-2024-a-saint-denis-20230"
+    ],
+    "codeInsee": 93066,
+    "actions": [
+      "creatif",
+      "creatif"
+    ],
+    "cibles": [
+      "president-rep",
+      "ministre",
+      "premiere-min"
+    ],
+    "source": "TODO – DEAD SOURCE",
     "remarques": "",
     "erreurs": [
       "date future"
