@@ -48,11 +48,11 @@
 				{#each resultLines as { code, score, rank }}
 					<tr class="ranking-line">
 						<th scope="row" class="p-1 sm:p-2">
-							<a href="/departement/{code}" class="ranking-link no-underline hover:underline">
+							<a href="/departement/{code}" class="ranking-link no-underline hover:underline" class:font-bold={rank < 4}>
 								{getDepartmentName(code)}
 							</a>
 						</th>
-						<td class="p-1 text-center sm:p-2">
+						<td class="p-1 text-center sm:p-2" class:text-125={rank < 4}">
 							{#if rank === 1}
 								<span role="img" aria-label="1">🥇</span>
 							{:else if rank === 2}
@@ -63,7 +63,7 @@
 								{rank}
 							{/if}
 						</td>
-						<td class="p-1 text-right sm:p-2">
+						<td class="p-1 text-right sm:p-2" class:font-bold={rank < 4}>
 							{score} pts<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -131,14 +131,8 @@
 		@apply font-normal;
 	}
 
-	/* Le podium */
-	.ranking .ranking-line:nth-child(-n + 3),
-	.ranking .ranking-line:nth-child(-n + 3) th {
-		@apply font-bold;
-	}
-
 	/* Agrandi les médailles */
-	.ranking .ranking-line:nth-child(-n + 3) > :nth-child(2) {
+	.text-125 {
 		font-size: 125%;
 	}
 
