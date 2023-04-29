@@ -29,20 +29,20 @@
 		<table class="ranking">
 			<thead>
 				<tr>
-					<th scope="col">Département</th>
-					<th scope="col">Rang</th>
-					<th scope="col">Points</th>
+					<th scope="col" class="p-1 sm:p-2">Département</th>
+					<th scope="col" class="p-1 text-center sm:p-2">Rang</th>
+					<th scope="col" class="p-1 text-center sm:p-2">Points</th>
 				</tr>
 			</thead>
 			<tbody>
 				{#each resultLines as [code, score], i}
 					<tr class="ranking-line">
-						<th scope="row">
+						<th scope="row" class="p-1 sm:p-2">
 							<a href="/departement/{code}" class="ranking-link no-underline hover:underline">
 								{getDepartmentName(code)}
 							</a>
 						</th>
-						<td class="text-right">
+						<td class="p-1 text-center sm:p-2">
 							{#if i === 0}
 								<span role="img" aria-label="1">🥇</span>
 							{:else if i === 1}
@@ -53,9 +53,8 @@
 								{i + 1}
 							{/if}
 						</td>
-						<td class="text-right">
-							{score} pts
-							<svg
+						<td class="p-1 text-right sm:p-2">
+							{score} pts<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
 								height="24"
@@ -73,16 +72,16 @@
 		</table>
 	</div>
 
-	<p class="mb-20 text-center text-lg">
-		<a href="/regles-du-jeu">Règles du jeu</a>
-		<br />
-		<a href="/comment-participer">Comment participer</a>
-		<br />
-		<a
-			href="https://framaforms.org/100-jours-de-zbeul-proposer-un-evenement-1682372493"
-			class="font-bold">Signaler une action</a
-		>
-	</p>
+	<ul class="mb-20 text-center text-lg">
+		<li><a href="/regles-du-jeu">Règles du jeu</a></li>
+		<li><a href="/comment-participer">Comment participer</a></li>
+		<li>
+			<a
+				href="https://framaforms.org/100-jours-de-zbeul-proposer-un-evenement-1682372493"
+				class="font-bold">Signaler une action</a
+			>
+		</li>
+	</ul>
 
 	<Thanks />
 </main>
@@ -110,34 +109,29 @@
 		border-width: 1px 0;
 		border-style: solid;
 		border-color: #e5e7eb;
-		padding: 0.5rem;
 	}
 
-	.ranking th:nth-child(2),
-	.ranking td:nth-child(2) {
-		text-align: center;
-	}
-
-	.ranking th:last-child {
-		text-align: center;
-	}
+	.ranking th:last-child,
 	.ranking td:last-child {
-		text-align: right;
+		min-width: 7rem;
 	}
 
 	.ranking-line th {
 		@apply font-normal;
 	}
 
+	/* Le podium */
 	.ranking .ranking-line:nth-child(-n + 3),
 	.ranking .ranking-line:nth-child(-n + 3) th {
 		@apply font-bold;
 	}
 
+	/* Agrandi les médailles */
 	.ranking .ranking-line:nth-child(-n + 3) > :nth-child(2) {
 		font-size: 125%;
 	}
 
+	/* Étend la zone cliquable du lien à toute la ligne */
 	.ranking-link::before {
 		position: absolute;
 		top: 0;
