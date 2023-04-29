@@ -6,7 +6,6 @@ import filterDupeFlaggedSubmissions from './transformers/filterDupeFlaggedSubmis
 
 export async function extractFramaformData(username, password, validEvents,ignoredEvents){
   const data = await fetchData(username, password);
-  console.log(data);
   return [
     filterDupeFlaggedSubmissions,
     processMultiEvents,
