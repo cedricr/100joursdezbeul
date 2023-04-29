@@ -15,47 +15,34 @@
 		<p>Les actions sont prises en compte à partir du 18/04.</p>
 
 		<h2>Actions participants au classement</h2>
-		<ul>
-			<li id="chahut">
-				<h3>Chahut</h3>
-				<p>Lors d'une visite, organiser casserolades, charivari, cacophonie ou huées.</p>
-			</li>
 
-			<li id="manifestation">
-				<h3>Manifestation</h3>
-				<p>Tenue d'une manifestation sur le lieu de visite d'une personnalité.</p>
-			</li>
+		<h3 id="chahut">Chahut</h3>
+		<p>Lors d'une visite, organiser casserolades, charivari, cacophonie ou huées.</p>
 
-			<li id="action-creative">
-				<h3>Action créative</h3>
-				<p>
-					Faire preuve d'originalité dans l'expression des revendications. Par exemple les
-					opérations escargot, banderoles originales citées dans des articles, venir déguisé, etc.
-				</p>
-			</li>
+		<h3 id="manifestation">Manifestation</h3>
+		<p>Tenue d'une manifestation sur le lieu de visite d'une personnalité.</p>
 
-			<li id="sobirete-energetique">
-				<h3>Mise en sobriété énergétique</h3>
-				<p>
-					Intervention de camarades afin de limiter la consommation énergétique et préserver
-					l'environnement par une transition énergétique accélérée et locale des membres du
-					gouvernement.
-				</p>
-			</li>
+		<h3 id="action-creative">Action créative</h3>
+		<p>
+			Faire preuve d'originalité dans l'expression des revendications. Par exemple les opérations
+			escargot, banderoles originales citées dans des articles, venir déguisé, etc.
+		</p>
 
-			<li id="fuite">
-				<h3>Action conduisant au départ précipité d’une personnalité</h3>
-				<p>
-					Lors de la visite d'une personnalité, celle-ci décide d'accélérer le pas et de rentrer
-					plus tôt que prévu.
-				</p>
-			</li>
+		<h3 id="sobirete-energetique">Mise en sobriété énergétique</h3>
+		<p>
+			Intervention de camarades afin de limiter la consommation énergétique et préserver
+			l'environnement par une transition énergétique accélérée et locale des membres du
+			gouvernement.
+		</p>
 
-			<li id="annulation">
-				<h3>Annulation d’une visite 🎉</h3>
-				<p>Lorsqu'une personnalité renonce à une partie ou la totalité de la visite prévue.</p>
-			</li>
-		</ul>
+		<h3 id="fuite">Action conduisant au départ précipité d’une personnalité</h3>
+		<p>
+			Lors de la visite d'une personnalité, celle-ci décide d'accélérer le pas et de rentrer plus
+			tôt que prévu.
+		</p>
+
+		<h3 id="annulation">Annulation d’une visite 🎉</h3>
+		<p>Lorsqu'une personnalité renonce à une partie ou la totalité de la visite prévue.</p>
 
 		<h2>Actions non prises en compte</h2>
 		<p>Certaines actions ne sont pas prises en compte dans le classement.</p>
@@ -70,7 +57,7 @@
 		</p>
 		<p>
 			Pour le moment les actions sur les personnes non membre du gouvernement (députés de la
-			majorité, caravane du SNU...) ne sont pas prises en compte mais le sujet est en cours de
+			majorité, caravane du SNU…) ne sont pas prises en compte mais le sujet est en cours de
 			discussion.
 		</p>
 		<p>
