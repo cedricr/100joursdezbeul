@@ -28,7 +28,7 @@
 			escargot, banderoles originales citées dans des articles, venir déguisé, etc.
 		</p>
 
-		<h3 id="sobirete-energetique">Mise en sobriété énergétique</h3>
+		<h3 id="sobriete-energetique">Mise en sobriété énergétique</h3>
 		<p>
 			Intervention de camarades afin de limiter la consommation énergétique et préserver
 			l'environnement par une transition énergétique accélérée et locale des membres du
