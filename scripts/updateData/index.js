@@ -51,6 +51,12 @@ async function run() {
   console.log('extracting Framaform data...');
   const framaformData = await extractFramaformData(username, password,data.addedEvents,data.ignoredEvents);
   saveJSONAsCSV(newEventsCSV, [...attacData, ...framaformData]);
+  const newEvents = attacData.length + framaformData.length;
+  if(newEvents) {
+    console.log(`${newEvents} new events added to new-events.csv. Don't forget to add them in the spreadhseet!`);
+  } else {
+    console.log('no new events to add to the spreadsheet.');
+  }
 }
 
 await run();
