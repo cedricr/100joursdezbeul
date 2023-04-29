@@ -1105,6 +1105,31 @@
     "remarques": ""
   },
   {
+    "id": "74 - Annecy - 2023-04-27",
+    "ville": "Annecy",
+    "departement": "74",
+    "ajout": "2023-04-27",
+    "modif": "2023-04-27",
+    "date": "2023-04-27",
+    "description": "Comité de non accueil pour Isabelle Rome, ministre déléguée chargée de l'égalité entre les femmes et les hommes, de la diversité et de l'égalité des chances.\n**11h** : Préfecture\n**14h** : Rencontre avec l'association « Drôles de Rames »\nUne opération casseroles est prévue.",
+    "liens": [
+      "https://twitter.com/AnonymeCitoyen/status/1651556029145010177?s=20",
+      "https://twitter.com/74Nupes/status/1651520184853622784?s=20"
+    ],
+    "codeInsee": 74010,
+    "actions": [
+      "chahut",
+      "chahut",
+      "annulation"
+    ],
+    "cibles": [
+      "ministre-del"
+    ],
+    "statut": "OK",
+    "source": "attac",
+    "remarques": ""
+  },
+  {
     "id": "83 - La Seyne-sur-Mer - 2023-04-27",
     "ville": "La Seyne-sur-Mer",
     "departement": "83",
@@ -1277,7 +1302,7 @@
       "ministre"
     ],
     "statut": "OK",
-    "source": "attac",
+    "source": "framaform",
     "remarques": ""
   },
   {
@@ -1297,10 +1322,10 @@
       "chahut"
     ],
     "cibles": [
-      "minitre"
+      "ministre"
     ],
     "statut": "OK",
-    "source": "attac",
+    "source": "framaform",
     "remarques": ""
   },
   {
@@ -1322,7 +1347,7 @@
       "ministre-del"
     ],
     "statut": "OK",
-    "source": "attac",
+    "source": "framaform",
     "remarques": ""
   },
   {
@@ -1344,7 +1369,7 @@
       "ministre-del"
     ],
     "statut": "OK",
-    "source": "attac",
+    "source": "framaform",
     "remarques": ""
   },
   {
@@ -1367,7 +1392,7 @@
       "ministre-del"
     ],
     "statut": "OK",
-    "source": "attac",
+    "source": "framaform",
     "remarques": ""
   },
   {
@@ -1390,23 +1415,134 @@
       "ministre"
     ],
     "statut": "OK",
+    "source": "framaform",
+    "remarques": ""
+  },
+  {
+    "id": "13 - Istres - 2023-04-28",
+    "ville": "Istres",
+    "departement": "13",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-28",
+    "description": "Comité de non accueil pour Sébastien Lecornu, Ministre des Armées, à Istres.",
+    "liens": [
+      "https://twitter.com/Solidaires13/status/1652192329896165377?s=20"
+    ],
+    "codeInsee": 13047,
+    "actions": [
+      "manif"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "statut": "OK",
     "source": "attac",
     "remarques": ""
   },
   {
-    "id": "56 - Hennebont - 2023-04-27",
-    "ville": "Hennebont",
-    "departement": "56",
+    "id": "57 - Metz - 2023-04-28",
+    "ville": "Metz",
+    "departement": "57",
     "ajout": "2023-04-28",
     "modif": "2023-04-28",
-    "date": "2023-04-27",
-    "description": "Casseroles contre la venue de la secrétaire d'État Patricia Mirallès à Hennebont.",
+    "date": "2023-04-28",
+    "description": "François Braun attendu par des casseroles à la préfecture de Metz en Moselle.",
     "liens": [
-      "https://www.ouest-france.fr/bretagne/hennebont-56700/morbihan-au-son-des-casseroles-la-ministre-patricia-miralles-rencontre-danc"
+      "https://twitter.com/ninon_oget/status/1651966787393576962?s=20"
     ],
-    "codeInsee": 56083,
+    "codeInsee": 57463,
     "actions": [
       "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "statut": "OK",
+    "source": "attac",
+    "remarques": ""
+  },
+  {
+    "id": "66 - Perpignan - 2023-04-27",
+    "ville": "Perpignan",
+    "departement": "66",
+    "ajout": "2023-04-27",
+    "modif": "2023-04-27",
+    "date": "2023-04-27",
+    "description": "Des casseroles pour accueillir le ministre de la Transition écologique Christophe Béchu à Perpignan",
+    "liens": [
+      "https://twitter.com/F3OccitanieLR/status/1651482602581131266?s=20"
+    ],
+    "codeInsee": 66136,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "statut": "OK",
+    "source": "attac",
+    "remarques": ""
+  },
+  {
+    "id": "70 - Vesoul - 2023-04-28",
+    "ville": "Vesoul",
+    "departement": "70",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-28",
+    "description": "Christophe Béchu, ministre de la transition écologique, attendu par une casserolade pour l'assemblée générale de l'association des maires de France du département.",
+    "liens": [
+      "https://twitter.com/bleubesancon/status/1651981257801072642?s=20"
+    ],
+    "codeInsee": 70550,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "ministre"
+    ],
+    "statut": "OK",
+    "source": "attac",
+    "remarques": ""
+  },
+  {
+    "id": "31 - Moulins - 2023-04-28",
+    "ville": "Moulins",
+    "departement": "31",
+    "ajout": "2023-04-28",
+    "modif": "2023-04-28",
+    "date": "2023-04-28",
+    "description": "Casserolade pour Charlotte Caubel à Moulins",
+    "liens": [
+      "https://twitter.com/JulietteGrand1/status/1651992960630763522?s=20"
+    ],
+    "codeInsee": 3190,
+    "actions": [
+      "chahut"
+    ],
+    "cibles": [
+      "secretaire-etat"
+    ],
+    "statut": "OK",
+    "source": "attac",
+    "remarques": ""
+  },
+  {
+    "id": "75 - Paris 6e Arrondissement - 2023-04-27",
+    "ville": "Paris 6e Arrondissement",
+    "departement": "75",
+    "ajout": "2023-04-27",
+    "modif": "2023-04-27",
+    "date": "2023-04-27",
+    "description": "Comité de non accueil pour Marlène Schiappa qui n'est finalement pas venue à la soirée Playboy",
+    "liens": [
+      "https://twitter.com/ClementLanot/status/1651669811405942792?s=20"
+    ],
+    "codeInsee": 75106,
+    "actions": [
+      "chahut",
+      "annulation"
     ],
     "cibles": [
       "secretaire-etat"

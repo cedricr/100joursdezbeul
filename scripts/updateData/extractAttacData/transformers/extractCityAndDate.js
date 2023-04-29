@@ -24,5 +24,7 @@ export default (previous, original) => previous.map(event => {
     modif: formatedDate,
     codeInsee,
     departement,
+    source: 'attac',
+    statut: 'TO CHECK'
   }
 });

@@ -26,17 +26,25 @@ npm install
 npm run dev -- --open
 ```
 
+Pour pouvoir traiter les données de Framaform:
+1. exporter les résultats du framaform en CSV
+2. Copier/coller les resultats dans https://cloud.solidairesinformatique.org/f/546961 à partir de la colonne B
+3. Revérifier les soumissions en ajoutant 'x' dans la colonne A pour ceux qui sont des soumissions multiples et ne doivent pas être traités
+4. Lancer le script d'update
+
+/!\ ne modifier que la colonne A dans ce fichier, les autres seront ecrasées à chaque mise à jour.
+
 Pour mettre à jour les données depuis le spreadsheet:
-1. on met à jour le spreadsheet à la main
-2. on lance `npm run updateData -- '<username nextcloud>' '<password nextcloud'` en local
-3. Créer votre MR/Patch
-4. Mettre à jour le spreadsheet avec le contenu de `attac-new-events.csv`
+1. on lance `npm run updateData -- '<username nextcloud>' '<password nextcloud>'` en local
+2. Créer votre MR/Patch
+3. Mettre à jour le spreadsheet avec le contenu de `new-events.csv`
+4. Mettre à jour le spreadsheet https://cloud.solidairesinformatique.org/f/544151 pour requalifier les events manuellement
  
 Le script va générer 5 fichiers:
 - `src/lib/assets/data.json` : contient les données valides qui seront affichées sur le site. A commit apres revérification
 - `src/lib/assets/data-ignored.json` : contient les données invalides qui ne seront pas affichées sur le site. A commit apres revérification
 - `src/lib/assets/metadata.json` : contient les meta données de l'import. A commit apres revérification
-- `attac-new-events.csv` : contient les nouveaux events créé par Attac, a copier dans le spreadsheet à la main. NE PAS COMMIT
+- `new-events.csv` : contient les nouveaux events créé par Attac et ceux venant du framaform, a copier dans le spreadsheet à la main. NE PAS COMMIT
 - `data-<timestamp>.bck.json` : contient les données avant l'import au cas où il y a un soucis. NE PAS COMMIT
 
 

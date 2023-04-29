@@ -26,7 +26,8 @@ export const getInseeInfo = (city, dep, coords) => {
 
 export const extractLocation = (city, dep, coords) => {
   const realCityName = inseeRemapping[city] || city;
-  const inseeInfo = getInseeInfo(realCityName, dep, coords);
+  let inseeInfo = getInseeInfo(realCityName, dep, coords);
+  if(dep && !inseeInfo.COM) inseeInfo = getInseeInfo(realCityName); // retry with only the city name in case the department is wrong
   const departement = inseeInfo.COM ? `${inseeInfo.COM}`.slice(0,2) : '';
   return {
     ville: inseeInfo.LIBELLE,
@@ -73,7 +74,7 @@ export function convertRowToEvent(row) {
     source: null,
     remarques: '',
   })
-
+if(!event.id) console.log(event);
   return {
     ...event,
     codeInsee,
