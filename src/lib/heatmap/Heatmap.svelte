@@ -2,15 +2,16 @@
 	import { LEADERBOARD, getDepartmentName } from '$lib/utils';
 	import { onMount } from 'svelte';
 	import { france } from './france';
+	//import { Chart } from 'chart.js';
 
 	let canvasElement: HTMLCanvasElement;
 
 	onMount(async () => {
 		// Load client libraries then chart.js plugin then draw
-		await import('../../../node_modules/chart.js/dist/chart.umd.js');
 		await import('https://cdn.jsdelivr.net/npm/d3@v6');
 		await import('https://cdn.jsdelivr.net/npm/d3-composite-projections');
-		await import('../../../node_modules/chartjs-chart-geo/build/index.umd.js');
+		await import('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.umd.js');
+		await import('./index.umd.js');
 		draw();
 	});
 
@@ -23,9 +24,9 @@
 		const projection = window.d3.geoConicConformalFrance();
 		projection.fitWidth = (size: number, object: any) => projection.fitSize([size, 1000], object);
 
-		const departments = window.ChartGeo.topojson.feature(france, france.objects.fra).features;
+		const departments = ChartGeo.topojson.feature(france, france.objects.fra).features;
 
-		const chart = new window.Chart(canvasElement, {
+		const chart = new Chart(canvasElement, {
 			type: 'choropleth',
 			data: {
 				labels: france.objects.fra.geometries.map((d, i) => d.properties.name || i),
