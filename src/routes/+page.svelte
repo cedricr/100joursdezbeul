@@ -52,7 +52,7 @@
 								{getDepartmentName(code)}
 							</a>
 						</th>
-						<td class="p-1 text-center sm:p-2" class:text-125={rank < 4}">
+						<td class="p-1 text-center sm:p-2" class:text-bigger={rank < 4}">
 							{#if rank === 1}
 								<span role="img" aria-label="1">🥇</span>
 							{:else if rank === 2}
@@ -132,7 +132,7 @@
 	}
 
 	/* Agrandi les médailles */
-	.text-125 {
+	.text-bigger {
 		font-size: 125%;
 	}
 
