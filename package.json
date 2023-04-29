@@ -39,6 +39,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"chart.js": "^4.3.0",
+		"chartjs-chart-geo": "^4.1.2",
 		"csv": "^6.2.10",
 		"nextcloud-node-client": "^1.8.1",
 		"node-fetch": "^3.3.1",

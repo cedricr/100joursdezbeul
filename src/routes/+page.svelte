@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Thanks from '$lib/thanks.svelte';
+	import Heatmap from '$lib/heatmap/Heatmap.svelte';
 
 	import { LEADERBOARD, getDayNumber, getDepartmentName } from '$lib/utils';
 
@@ -7,13 +8,14 @@
 
 	const append = (a, x) => a.concat([x]);
 
-	const resultLines = LEADERBOARD
-		.map(([code, score]) => ({code, score}))
-		.reduce((acc, x, i) => append(acc,
-		{
-			...x,
-			rank: i > 0 && x.score === acc[i - 1].score ? acc[i - 1].rank : i + 1
-		}), []);
+	const resultLines = LEADERBOARD.map(([code, score]) => ({ code, score })).reduce(
+		(acc, x, i) =>
+			append(acc, {
+				...x,
+				rank: i > 0 && x.score === acc[i - 1].score ? acc[i - 1].rank : i + 1
+			}),
+		[]
+	);
 
 	const now = new Date();
 	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
@@ -36,7 +38,7 @@
 	</p>
 	<div class="mx-auto mb-6 mt-10 max-w-sm text-xl">
 		<div class="ranking grid-auto-1-auto grid gap-x-2 gap-y-3">
-			{#each resultLines as {code, score, rank}}
+			{#each resultLines as { code, score, rank }}
 				<div class="text-right">
 					{#if rank === 1}
 						<span role="img" aria-label="1">🥇</span>
@@ -56,6 +58,10 @@
 		</div>
 	</div>
 
+	<h2 class="zbeul mb-2">Météo</h2>
+	<div class="mx-auto mb-6 mt-10 max-w-lg">
+		<Heatmap />
+	</div>
 	<p class="mb-20 text-center text-lg">
 		<a href="/regles-du-jeu">Règles du jeu</a>
 		<br />
