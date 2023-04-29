@@ -60,6 +60,7 @@ export function saveJSONAsCSV(dest, data) {
     "cible 3",
     "cible 4",
     "cible 5",
+    "statut",
     "source",
   ];
 
@@ -71,7 +72,7 @@ export function saveJSONAsCSV(dest, data) {
   stringifier.pipe(writableStream);
 }
 
-export async function readDataFromNextcloud(username, password) {
+export async function readDataFromNextcloud(username, password, filename) {
   const server = new Server(
     { basicAuth:
         {
@@ -82,7 +83,7 @@ export async function readDataFromNextcloud(username, password) {
     });
 
   const client = new Client(server);
-  const file = await client.getFile("/100jours de zbeul.ods");
+  const file = await client.getFile(filename);
   return await file.getContent();
 }
 

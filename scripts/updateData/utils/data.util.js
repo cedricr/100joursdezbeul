@@ -26,7 +26,8 @@ export const getInseeInfo = (city, dep, coords) => {
 
 export const extractLocation = (city, dep, coords) => {
   const realCityName = inseeRemapping[city] || city;
-  const inseeInfo = getInseeInfo(realCityName, dep, coords);
+  let inseeInfo = getInseeInfo(realCityName, dep, coords);
+  if(dep && !inseeInfo.COM) inseeInfo = getInseeInfo(realCityName); // retry with only the city name in case the department is wrong
   const departement = inseeInfo.COM ? `${inseeInfo.COM}`.slice(0,2) : '';
   return {
     ville: inseeInfo.LIBELLE,
@@ -69,10 +70,11 @@ export function convertRowToEvent(row) {
     codeInsee: null,
     actions: [],
     cibles: [],
+    statut: null,
     source: null,
     remarques: '',
   })
-
+if(!event.id) console.log(event);
   return {
     ...event,
     codeInsee,
@@ -118,6 +120,11 @@ export function checkEventValidity(event) {
     result.errors.push('pas de code INSEE');
   }
 
+  if(!event.statut || event.statut.toLowerCase() !== 'ok') {
+    result.valid = false;
+    result.errors.push('status not OK');
+  }
+
   return result;
 }
 
@@ -131,6 +138,7 @@ export const convertEventToCsvRow = (event) => {
     if(i < event.cibles.length) csvRow.push(event.cibles[i]);
     else csvRow.push('');
   }
+  csvRow.push(event.statut);
   csvRow.push(event.source);
   return csvRow;
 }

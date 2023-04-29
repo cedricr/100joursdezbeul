@@ -8,12 +8,8 @@ export default (validEvents, ignoredEvents, previous) => {
 
   previous.forEach(event => {
     if(!existingEvents[event.id]) {
-      const newEvent = {
-        ...event,
-        source: `attac - TO CHECK`,
-      };
-      newEvents.push(newEvent);
-      existingEvents[newEvent.id] = newEvent;
+      newEvents.push(event);
+      existingEvents[event.id] = event;
     }
   })
 
