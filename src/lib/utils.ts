@@ -4,6 +4,7 @@ import type { ActionEvent, DepartmentResult } from './types';
 import rawData from '$lib/assets/data.json?raw';
 
 export const DATA = enrichData(JSON.parse(rawData)) as ActionEvent[];
+
 export const LEADERBOARD = generateLeaderboard();
 
 export function getDayNumber(): number {

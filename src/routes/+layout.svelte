@@ -1,17 +1,17 @@
 <script lang="ts">
 	import '../app.postcss';
-	import logoJO from '$lib/assets/logo-jo-small.jpg';
+	import logoJO from '$lib/assets/logo-jo.svg';
 	import logoSI from '$lib/assets/logo-si.png';
 </script>
 
 <header role="banner">
-	<a href="/"
-		><img
+	<a href="/">
+		<img
 			src={logoJO}
 			alt="100 jours de zbeul - Accueil"
 			class="mx-auto block text-center"
 			width="300"
-			height="178"
+			height="168"
 		/></a
 	>
 
