@@ -20,6 +20,13 @@
 	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
 </script>
 
+<style>
+/* Agrandi les médailles */
+.text-bigger {
+	font-size: 125%;
+}
+</style>
+
 <svelte:head><title>100 jours de zbeul</title></svelte:head>
 
 <main role="main">
@@ -129,11 +136,6 @@
 
 	.ranking-line th {
 		@apply font-normal;
-	}
-
-	/* Agrandi les médailles */
-	.text-bigger {
-		font-size: 125%;
 	}
 
 	/* Étend la zone cliquable du lien à toute la ligne */
