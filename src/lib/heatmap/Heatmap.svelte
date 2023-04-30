@@ -25,14 +25,15 @@
 	});
 
 	function draw() {
-		const index = Object.fromEntries(
-			LEADERBOARD.map(([dpt, score]) => [getDepartmentName(dpt), score])
+		// Indexe le zbeul par département : {nomDuDepartement:{code,score}}
+		const zbeulIndex = Object.fromEntries(
+			LEADERBOARD.map(([code, score]) => [getDepartmentName(code), { score, code }])
 		);
 		const maxValue = LEADERBOARD.reduce((max, [, score]) => Math.max(max, score), 0);
 
 		const projection = window.d3.geoConicConformalFrance();
 		projection.fitWidth = (size: number, object: any) => projection.fitSize([size, 1000], object);
-		console.log(window.ChartGeo);
+
 		const departments = ChartGeo.topojson.feature(france, france.objects.fra).features;
 
 		const chart = new Chart(canvasElement, {
@@ -41,14 +42,16 @@
 				labels: france.objects.fra.geometries.map((d, i) => d.properties.name || i),
 				datasets: [
 					{
-						label: 'Regions',
+						label: 'Départements',
 						outline: departments,
 						data: departments.map((department: any) => {
 							const name = department.properties.name;
-							/* if (!index[name]) {
-								console.warn('Département inconnu', name);
-							} */
-							return { feature: department, value: index[name] ?? 0 };
+							const zbeul = zbeulIndex[name];
+							return {
+								feature: department,
+								value: zbeul ? zbeul.score : 0,
+								code: zbeul ? zbeul.code : -1
+							};
 						})
 					}
 				]
