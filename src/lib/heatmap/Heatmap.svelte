@@ -4,6 +4,7 @@
 	import { france } from './france';
 
 	let canvasElement: HTMLCanvasElement;
+	let isClickable = false;
 
 	onMount(async () => {
 		/*
@@ -84,18 +85,32 @@
 				},
 
 				onClick: (e: Event, clickedDepartments: any) => {
-					if (clickedDepartments.length === 0) {
-						return;
-					}
-					const { index } = clickedDepartments[0];
-					const code = dataSet.data[index].code;
+					const code = getCLickableDepartment(clickedDepartments);
 					if (code > 0) {
-						window.open(encodeURI(`departement/${code}`), '_blank');
+						window.open(encodeURI(`departement/${code}`), '_self');
 					}
+				},
+				onHover: function (e: Event, clickedDepartments: any) {
+					const code = getCLickableDepartment(clickedDepartments);
+					isClickable = code > 0;
 				}
 			}
 		});
+
+		function getCLickableDepartment(clickedDepartments: any) {
+			if (clickedDepartments.length === 0) {
+				return -1;
+			}
+			const { index } = clickedDepartments[0];
+			const code = dataSet.data[index].code;
+			return code > 0 ? dataSet.data[index].code : -1;
+		}
 	}
 </script>
 
-<canvas bind:this={canvasElement} width="100%" height="100%" />
+<canvas
+	bind:this={canvasElement}
+	width="100%"
+	height="100%"
+	style="cursor:{isClickable ? 'pointer' : ''}"
+/>
