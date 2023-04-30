@@ -23,3 +23,9 @@ export interface ActionEvent {
 export interface DepartmentResult {
 	[departmentCode: string]: number;
 }
+
+export interface MetaData {
+	lastImport: string;
+	validEvents: number;
+	invalidEvents: number;
+}

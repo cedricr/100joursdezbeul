@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Thanks from '$lib/thanks.svelte';
 
-	import { LEADERBOARD, getDayNumber, getDepartmentName } from '$lib/utils';
+	import { LEADERBOARD, METADATA, getDayNumber, getDepartmentName } from '$lib/utils';
 
 	const dayNumber = getDayNumber();
 
@@ -18,6 +18,10 @@
 
 	const now = new Date();
 	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
+
+	const lastUpdateDate = new Date(METADATA.lastImport);
+	lastUpdateDate.setDate(lastUpdateDate.getDate() - 1);
+	const formattedLastUpdateDate = lastUpdateDate.toLocaleDateString('fr', { dateStyle: 'medium' });
 </script>
 
 <svelte:head><title>100 jours de zbeul</title></svelte:head>
@@ -31,7 +35,9 @@
 	</p>
 
 	<h2 class="zbeul mb-2">Classement temporaire au {formattedDate}</h2>
-	<p class="mb-2 text-center italic">(tenant compte des données jusqu’au 28 avril inclus)</p>
+	<p class="mb-2 text-center italic">
+		(tenant compte des données jusqu’au {formattedLastUpdateDate} inclus)
+	</p>
 	<p class="mb-6 text-center italic">
 		Cliquez sur le nom du département pour avoir le détail du décompte.
 	</p>
@@ -48,7 +54,11 @@
 				{#each resultLines as { code, score, rank }}
 					<tr class="ranking-line">
 						<th scope="row" class="p-1 sm:p-2">
-							<a href="/departement/{code}" class="ranking-link no-underline hover:underline" class:font-bold={rank < 4}>
+							<a
+								href="/departement/{code}"
+								class="ranking-link no-underline hover:underline"
+								class:font-bold={rank < 4}
+							>
 								{getDepartmentName(code)}
 							</a>
 						</th>
@@ -130,7 +140,7 @@
 	.ranking-line th {
 		@apply font-normal;
 	}
-	
+
 	/* Agrandi les médailles */
 	.text-125 {
 		font-size: 125%;
