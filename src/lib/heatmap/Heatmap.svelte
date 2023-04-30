@@ -3,8 +3,8 @@
 	import { onMount } from 'svelte';
 	import { franceTopology } from './france';
 
-	let canvasElement: HTMLCanvasElement;
-	let canvasElementIDF: HTMLCanvasElement;
+	let canvasFrance: HTMLCanvasElement;
+	let canvasIDF: HTMLCanvasElement;
 	let isClickable = false;
 	let pointEvent = true;
 
@@ -34,15 +34,16 @@
 		);
 		const maxValue = LEADERBOARD.reduce((max, [, score]) => Math.max(max, score), 0);
 
-		const projection = window.d3.geoConicConformalFrance();
-		projection.fitWidth = (size: number, object: any) => projection.fitSize([size, 1000], object);
-
+		// Construction des données pour le chart
 		const departments = ChartGeo.topojson.feature(
 			franceTopology,
 			franceTopology.objects.fra
 		).features;
-
-		const idf = {
+		// On veut afficher l'Ile de France à la manière des DOMs pour des raisons de visibilité
+		// Impossible de trouver des données topojson avec l'ile de France séparée
+		// Donc on extrait les départements d'ile de France et on construit un nouveau topojson ...
+		// ... qu'on affichera dans un autre chart (qu'on ne peut pas afficher dans le même à cause de la projection)
+		const idfTopology = {
 			...franceTopology,
 			objects: {
 				fra: {
@@ -63,41 +64,31 @@
 			}
 		};
 
-		const IDF = ChartGeo.topojson.feature(idf, idf.objects.fra).features;
+		const idf = ChartGeo.topojson.feature(idfTopology, idfTopology.objects.fra).features;
 
-		const dataSet = {
+		// Construction des datasets
+		const franceDataset = {
 			label: 'Départements',
 			outline: departments,
-			data: departments.map((department: any) => {
-				const name = department.properties.name;
-				const zbeul = zbeulIndex[name];
-				return {
-					feature: department,
-					value: zbeul ? zbeul.score : 0,
-					code: zbeul ? zbeul.code : -1
-				};
-			})
+			data: departments.map(toData)
 		};
 
-		const dataSetIDF = {
+		const idfDataset = {
 			label: 'IDF',
-			outline: IDF,
-			data: IDF.map((department: any) => {
-				const name = department.properties.name;
-				const zbeul = zbeulIndex[name];
-				return {
-					feature: department,
-					value: zbeul ? zbeul.score : 0,
-					code: zbeul ? zbeul.code : -1
-				};
-			})
+			outline: idf,
+			data: idf.map(toData)
 		};
 
-		new Chart(canvasElement, {
+		// La projection
+		const projection = window.d3.geoConicConformalFrance();
+		projection.fitWidth = (size: number, object: any) => projection.fitSize([size, 1000], object);
+
+		// Construction des charts
+		new Chart(canvasFrance, {
 			type: 'choropleth',
 			data: {
 				labels: franceTopology.objects.fra.geometries.map((d, i) => d.properties.name || i),
-				datasets: [dataSet]
+				datasets: [franceDataset]
 			},
 			options: {
 				plugins: {
@@ -127,16 +118,16 @@
 					}
 				},
 
-				onClick: onClick(dataSet),
-				onHover: onHover(dataSet)
+				onClick: onClick(franceDataset),
+				onHover: onHover(franceDataset)
 			}
 		});
 
-		new Chart(canvasElementIDF, {
+		new Chart(canvasIDF, {
 			type: 'choropleth',
 			data: {
-				labels: idf.objects.fra.geometries.map((d, i) => d.properties.name || i),
-				datasets: [dataSetIDF]
+				labels: idfTopology.objects.fra.geometries.map((d, i) => d.properties.name || i),
+				datasets: [idfDataset]
 			},
 			options: {
 				plugins: {
@@ -164,8 +155,8 @@
 						max: maxValue
 					}
 				},
-				onClick: onClick(dataSetIDF),
-				onHover: onHover(dataSetIDF)
+				onClick: onClick(idfDataset),
+				onHover: onHover(idfDataset)
 			}
 		});
 
@@ -179,12 +170,12 @@
 		}
 		function onHover(dataset: any) {
 			return (e: any, clickedDepartments: any) => {
+				if (dataset === idfDataset && clickedDepartments.length === 0) {
+					// Propage l'événement à l'autre Canvas qui peut être recourvert
+					canvasFrance.dispatchEvent(e.native);
+				}
 				const code = getCLickableDepartment(dataset, clickedDepartments);
 				isClickable = code > 0;
-				if (dataset === dataSetIDF && clickedDepartments.length === 0) {
-					// Propagate event to other canvas
-					canvasElement.dispatchEvent(e.native);
-				}
 			};
 		}
 
@@ -196,6 +187,16 @@
 			const code = dataset.data[index].code;
 			return code > 0 ? code : -1;
 		}
+
+		function toData(department: any) {
+			const name = department.properties.name;
+			const zbeul = zbeulIndex[name];
+			return {
+				feature: department,
+				value: zbeul ? zbeul.score : 0,
+				code: zbeul ? zbeul.code : -1
+			};
+		}
 	}
 </script>
 
@@ -204,11 +205,11 @@
 		style="cursor:{isClickable ? 'pointer' : ''}"
 		width="100%"
 		height="100%"
-		bind:this={canvasElement}
+		bind:this={canvasFrance}
 	/>
 	<canvas
 		style="cursor:{isClickable ? 'pointer' : ''};position: absolute;top: 40%;left: 40%;"
-		bind:this={canvasElementIDF}
+		bind:this={canvasIDF}
 		height="50px"
 	/>
 </div>
