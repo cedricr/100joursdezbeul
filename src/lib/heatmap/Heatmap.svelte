@@ -36,25 +36,24 @@
 
 		const departments = ChartGeo.topojson.feature(france, france.objects.fra).features;
 
+		const dataSet = {
+			label: 'Départements',
+			outline: departments,
+			data: departments.map((department: any) => {
+				const name = department.properties.name;
+				const zbeul = zbeulIndex[name];
+				return {
+					feature: department,
+					value: zbeul ? zbeul.score : 0,
+					code: zbeul ? zbeul.code : -1
+				};
+			})
+		};
 		const chart = new Chart(canvasElement, {
 			type: 'choropleth',
 			data: {
 				labels: france.objects.fra.geometries.map((d, i) => d.properties.name || i),
-				datasets: [
-					{
-						label: 'Départements',
-						outline: departments,
-						data: departments.map((department: any) => {
-							const name = department.properties.name;
-							const zbeul = zbeulIndex[name];
-							return {
-								feature: department,
-								value: zbeul ? zbeul.score : 0,
-								code: zbeul ? zbeul.code : -1
-							};
-						})
-					}
-				]
+				datasets: [dataSet]
 			},
 			options: {
 				plugins: {
@@ -63,7 +62,6 @@
 					}
 				},
 				showOutline: true,
-				//outlineBorderColor: '#ff00ff',
 
 				responsive: true,
 				scales: {
@@ -82,6 +80,17 @@
 						},
 						min: 0,
 						max: maxValue
+					}
+				},
+
+				onClick: (e: Event, clickedDepartments: any) => {
+					if (clickedDepartments.length === 0) {
+						return;
+					}
+					const { index } = clickedDepartments[0];
+					const code = dataSet.data[index].code;
+					if (code > 0) {
+						window.open(encodeURI(`departement/${code}`), '_blank');
 					}
 				}
 			}
