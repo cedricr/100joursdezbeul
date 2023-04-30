@@ -9,7 +9,6 @@
 	factory((window.ChartGeo = {}), window.Chart, window.Chart.helpers);
 })(this, function (exports, chart_js, helpers) {
 	'use strict';
-	console.log('chart geo', exports, chart_js, helpers);
 	// https://github.com/python/cpython/blob/a74eea238f5baba15797e2e8b570d153bc8690a7/Modules/mathmodule.c#L1423
 	class Adder {
 		constructor() {
