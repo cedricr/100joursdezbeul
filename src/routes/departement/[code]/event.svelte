@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { ACTION_LABEL, ACTION_SCORE, TARGET_LABEL, TARGET_MULTIPLIER } from '$lib/constants';
 	import type { ActionEvent } from '$lib/types';
-	import { getPointsDisplay } from '$lib/utils';
+	import { getPointsDisplay, humanizeLink } from '$lib/utils';
 
 	export let event: ActionEvent;
+
+	const liens = event.liens.map(lien => humanizeLink(lien))
 
 	function getDateLabel(datestring: string) {
 		return new Date(datestring).toLocaleDateString('fr-FR', { dateStyle: 'short' }).slice(0, 5);
@@ -32,9 +34,9 @@
 			{/each}
 		</div>
 		<div class="mt-1 flex flex-wrap gap-1">
-			{#each event.liens as link, i}
+			{#each liens as link}
 				<div class="tag target">
-					<a href={link}>lien{event.liens.length > 1 ? ` ${i + 1}` : ''}</a>
+					<a href={link.url}>{link.text}</a>
 				</div>
 			{/each}
 		</div>
