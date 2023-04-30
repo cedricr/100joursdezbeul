@@ -1,10 +1,12 @@
 <script lang="ts">
 	import { LEADERBOARD, getDepartmentName } from '$lib/utils';
 	import { onMount } from 'svelte';
-	import { france } from './france';
+	import { franceTopology } from './france';
 
 	let canvasElement: HTMLCanvasElement;
+	let canvasElementIDF: HTMLCanvasElement;
 	let isClickable = false;
+	let pointEvent = true;
 
 	onMount(async () => {
 		/*
@@ -35,7 +37,33 @@
 		const projection = window.d3.geoConicConformalFrance();
 		projection.fitWidth = (size: number, object: any) => projection.fitSize([size, 1000], object);
 
-		const departments = ChartGeo.topojson.feature(france, france.objects.fra).features;
+		const departments = ChartGeo.topojson.feature(
+			franceTopology,
+			franceTopology.objects.fra
+		).features;
+
+		const idf = {
+			...franceTopology,
+			objects: {
+				fra: {
+					...franceTopology.objects.fra,
+					geometries: franceTopology.objects.fra.geometries.filter((geo) =>
+						[
+							'Yvelines',
+							'Paris',
+							'Hauts-de-Seine',
+							"Val-d'Oise",
+							'Val-de-Marne',
+							'Seine-Saint-Denis',
+							'Seine-et-Marne',
+							'Essonne'
+						].includes(geo.properties.name)
+					)
+				}
+			}
+		};
+
+		const IDF = ChartGeo.topojson.feature(idf, idf.objects.fra).features;
 
 		const dataSet = {
 			label: 'Départements',
@@ -50,10 +78,25 @@
 				};
 			})
 		};
-		const chart = new Chart(canvasElement, {
+
+		const dataSetIDF = {
+			label: 'IDF',
+			outline: IDF,
+			data: IDF.map((department: any) => {
+				const name = department.properties.name;
+				const zbeul = zbeulIndex[name];
+				return {
+					feature: department,
+					value: zbeul ? zbeul.score : 0,
+					code: zbeul ? zbeul.code : -1
+				};
+			})
+		};
+
+		new Chart(canvasElement, {
 			type: 'choropleth',
 			data: {
-				labels: france.objects.fra.geometries.map((d, i) => d.properties.name || i),
+				labels: franceTopology.objects.fra.geometries.map((d, i) => d.properties.name || i),
 				datasets: [dataSet]
 			},
 			options: {
@@ -84,33 +127,88 @@
 					}
 				},
 
-				onClick: (e: Event, clickedDepartments: any) => {
-					const code = getCLickableDepartment(clickedDepartments);
-					if (code > 0) {
-						window.open(encodeURI(`departement/${code}`), '_self');
-					}
-				},
-				onHover: function (e: Event, clickedDepartments: any) {
-					const code = getCLickableDepartment(clickedDepartments);
-					isClickable = code > 0;
-				}
+				onClick: onClick(dataSet),
+				onHover: onHover(dataSet)
 			}
 		});
 
-		function getCLickableDepartment(clickedDepartments: any) {
+		new Chart(canvasElementIDF, {
+			type: 'choropleth',
+			data: {
+				labels: idf.objects.fra.geometries.map((d, i) => d.properties.name || i),
+				datasets: [dataSetIDF]
+			},
+			options: {
+				plugins: {
+					legend: {
+						display: false
+					}
+				},
+				showOutline: true,
+
+				responsive: true,
+				scales: {
+					projection: {
+						axis: 'x',
+						projection: 'equalEarth'
+					},
+					color: {
+						axis: 'x',
+						quantize: 0,
+						interpolate: 'oranges',
+						display: false,
+						legend: {
+							display: false
+						},
+						min: 0,
+						max: maxValue
+					}
+				},
+				onClick: onClick(dataSetIDF),
+				onHover: onHover(dataSetIDF)
+			}
+		});
+
+		function onClick(dataset: any) {
+			return (e: Event, clickedDepartments: any) => {
+				const code = getCLickableDepartment(dataset, clickedDepartments);
+				if (code > 0) {
+					window.open(encodeURI(`departement/${code}`), '_self');
+				}
+			};
+		}
+		function onHover(dataset: any) {
+			return (e: any, clickedDepartments: any) => {
+				const code = getCLickableDepartment(dataset, clickedDepartments);
+				isClickable = code > 0;
+				if (dataset === dataSetIDF && clickedDepartments.length === 0) {
+					// Propagate event to other canvas
+					canvasElement.dispatchEvent(e.native);
+				}
+			};
+		}
+
+		function getCLickableDepartment(dataset: any, clickedDepartments: any) {
 			if (clickedDepartments.length === 0) {
 				return -1;
 			}
 			const { index } = clickedDepartments[0];
-			const code = dataSet.data[index].code;
-			return code > 0 ? dataSet.data[index].code : -1;
+			const code = dataset.data[index].code;
+			return code > 0 ? code : -1;
 		}
 	}
 </script>
 
-<canvas
-	bind:this={canvasElement}
-	width="100%"
-	height="100%"
-	style="cursor:{isClickable ? 'pointer' : ''}"
-/>
+<div style="width:100%;height:100%;position:relative;">
+	<canvas
+		style="cursor:{isClickable ? 'pointer' : ''}"
+		width="100%"
+		height="100%"
+		bind:this={canvasElement}
+	/>
+	<canvas
+		style="cursor:{isClickable ? 'pointer' : ''};position: absolute;top: 40%;left: 40%;"
+		bind:this={canvasElementIDF}
+		height="50px"
+	/>
+</div>

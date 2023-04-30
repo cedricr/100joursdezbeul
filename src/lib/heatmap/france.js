@@ -1,4 +1,4 @@
-export const france = {
+export const franceTopology = {
     "type": "Topology",
     "objects": {
       "fra": {
@@ -516,7 +516,7 @@ export const france = {
           },
           {
             "type": "Polygon",
-            "properties": { "name": "Seien-et-Marne" },
+            "properties": { "name": "Seine-et-Marne" },
             "id": "FR.SE",
             "arcs": [[-261, -60, 292, -246, -146, 293, 294, 295, -279, -24]]
           },
