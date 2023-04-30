@@ -1,4 +1,8 @@
 <script lang="ts">
+	import medailleOr from '$lib/assets/icons/medaille-or.svg';
+	import medailleArgent from '$lib/assets/icons/medaille-argent.svg';
+	import medailleBronze from '$lib/assets/icons/medaille-bronze.svg';
+
 	import Thanks from '$lib/thanks.svelte';
 
 	import { LEADERBOARD, METADATA, getDayNumber, getDepartmentName } from '$lib/utils';
@@ -62,13 +66,13 @@
 								{getDepartmentName(code)}
 							</a>
 						</th>
-						<td class="p-1 text-center sm:p-2" class:text-125={rank < 4}>
+						<td class="p-1 text-center sm:p-2">
 							{#if rank === 1}
-								<span role="img" aria-label="1">🥇</span>
+								<img role="img" src={medailleOr} alt="1 (médaille d’or)" class="m-auto" />
 							{:else if rank === 2}
-								<span role="img" aria-label="2">🥈</span>
+								<img role="img" src={medailleArgent} alt="2 (médaille d’argent)" class="m-auto" />
 							{:else if rank === 3}
-								<span role="img" aria-label="3">🥉</span>
+								<img role="img" src={medailleBronze} alt="3 (médaille de bronze)" class="m-auto" />
 							{:else}
 								{rank}
 							{/if}
@@ -139,11 +143,6 @@
 
 	.ranking-line th {
 		@apply font-normal;
-	}
-
-	/* Agrandi les médailles */
-	.text-125 {
-		font-size: 125%;
 	}
 
 	/* Étend la zone cliquable du lien à toute la ligne */
