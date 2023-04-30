@@ -11,6 +11,7 @@
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"updateData": "node scripts/updateData/index.js",
+		"prepare": "husky install",
 		"test": "vitest"
 	},
 	"devDependencies": {
@@ -24,6 +25,8 @@
 		"eslint": "^8.28.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-svelte3": "^4.0.0",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.2.2",
 		"postcss": "^8.4.14",
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^2.8.7",
@@ -44,5 +47,14 @@
 		"node-fetch": "^3.3.1",
 		"vitest": "^0.30.1",
 		"xlsx": "https://cdn.sheetjs.com/xlsx-0.19.3/xlsx-0.19.3.tgz"
+	},
+	"lint-staged": {
+		"*.{js,ts,svelte}": [
+			"prettier --write",
+			"eslint --fix"
+		],
+		"*.{json,css,postcss,html,md}": [
+			"prettier --write"
+		]
 	}
 }
