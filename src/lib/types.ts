@@ -9,6 +9,11 @@ export type ActionTarget =
 	| 'premiere-min'
 	| 'president-rep';
 
+export interface HumanizedLink {
+	url: string;
+	text: string;
+}
+
 export interface ActionEvent {
 	date: string;
 	ville: string;

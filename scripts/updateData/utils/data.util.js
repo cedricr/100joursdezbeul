@@ -92,8 +92,8 @@ export function convertRowToEvent(row) {
 		ajout: event.ajout || now,
 		modif: event.modif || now,
 		liens: event.liens.split(';').filter(isEmpty),
-		description: event.description.replaceAll('’', "'"),
-		id: event.id.replaceAll('–', '-'),
+		description: event.description.replaceAll('\u2019', "'").replaceAll('\u009C', 'œ'),
+		id: event.id.replaceAll('\u2013', '-'),
 		departement: `${event.departement}`
 	};
 }
