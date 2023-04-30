@@ -23,7 +23,7 @@
 
 		const projection = window.d3.geoConicConformalFrance();
 		projection.fitWidth = (size: number, object: any) => projection.fitSize([size, 1000], object);
-
+		console.log(window.ChartGeo);
 		const departments = ChartGeo.topojson.feature(france, france.objects.fra).features;
 
 		const chart = new Chart(canvasElement, {
