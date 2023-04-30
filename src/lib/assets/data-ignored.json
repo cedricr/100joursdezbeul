@@ -278,23 +278,6 @@
 		"erreurs": ["status not OK"]
 	},
 	{
-		"id": "83 - Toulon - 2023-04-27",
-		"ville": "Toulon",
-		"departement": "83",
-		"ajout": "2023-04-27",
-		"modif": "2023-04-27",
-		"date": "2023-04-27",
-		"description": "Casserolade pour Olivier Dussopt à Toulon.",
-		"liens": ["https://twitter.com/FsuPaca/status/1651573219789291522?s=20"],
-		"codeInsee": 83137,
-		"actions": ["chahut"],
-		"cibles": ["ministre"],
-		"statut": "IGNORE",
-		"source": "attac",
-		"remarques": "doublon",
-		"erreurs": ["status not OK"]
-	},
-	{
 		"id": "42 - Saint-Étienne - 2023-04-27",
 		"ville": "Saint-Etienne",
 		"departement": "42",
@@ -378,7 +361,7 @@
 			"https://www.ouest-france.fr/bretagne/hennebont-56700/morbihan-au-son-des-casseroles-la-ministre-patricia-miralles-rencontre-danc"
 		],
 		"codeInsee": 56083,
-		"actions": ["chahut"],
+		"actions": ["chahut", "annulation"],
 		"cibles": ["secretaire-etat"],
 		"statut": "IGNORE",
 		"source": "framaform",
@@ -440,23 +423,6 @@
 		"erreurs": ["status not OK"]
 	},
 	{
-		"id": "76 - Gonfreville-l'Orcher - 2023-04-29",
-		"ville": "Gonfreville-l'Orcher",
-		"departement": "76",
-		"ajout": "2023-04-29",
-		"modif": "2023-04-29",
-		"date": "2023-04-29",
-		"description": "Casserolade pour le ministre de l'industrie Roland Lescure à Goinfreville l'Orcher.",
-		"liens": ["https://twitter.com/RevPermanente/status/1651851077266952192?s=20"],
-		"codeInsee": 76305,
-		"actions": ["chahut"],
-		"cibles": ["ministre"],
-		"statut": "OK",
-		"source": "attac",
-		"remarques": "",
-		"erreurs": ["date future"]
-	},
-	{
 		"id": "25 - La Cluse-et-Mijoux - 2023-04-27",
 		"ville": "La Cluse-et-Mijoux",
 		"departement": "25",
@@ -507,9 +473,9 @@
 		"codeInsee": 69102,
 		"actions": ["chahut"],
 		"cibles": ["president-rep"],
-		"statut": "TO CHECK",
+		"statut": "IGNORE",
 		"source": "framaform",
-		"remarques": "",
+		"remarques": "doublon (25 - Château de Joux – 2023-04-27)",
 		"erreurs": ["status not OK"]
 	},
 	{
@@ -662,7 +628,7 @@
 	},
 	{
 		"id": "25 - Pontarlier - 2023-04-27",
-		"ville": "Pontarlier",
+		"ville": "St girons",
 		"departement": "25",
 		"ajout": "2023-04-29",
 		"modif": "2023-04-29",
@@ -671,13 +637,12 @@
 		"liens": [
 			"https://france3-regions.francetvinfo.fr/bourgogne-franche-comte/doubs/pontarlier/direct-visite-d-emmanuel-macron-dans-le-doubs-s"
 		],
-		"codeInsee": 25462,
 		"actions": ["chahut", "manif"],
 		"cibles": ["president-rep"],
 		"statut": "TO CHECK",
 		"source": "framaform",
 		"remarques": "",
-		"erreurs": ["status not OK"]
+		"erreurs": ["pas de code INSEE", "status not OK"]
 	},
 	{
 		"id": "74 - Évian-les-Bains - 2023-04-28",
@@ -715,7 +680,7 @@
 		"statut": "TO CHECK",
 		"source": "framaform",
 		"remarques": "",
-		"erreurs": ["date future", "status not OK"]
+		"erreurs": ["status not OK"]
 	},
 	{
 		"id": "50 - Briançon - 2023-04-27",

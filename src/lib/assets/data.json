@@ -1109,6 +1109,22 @@
 		"remarques": ""
 	},
 	{
+		"id": "76 - Gonfreville-l'Orcher - 2023-04-29",
+		"ville": "Gonfreville-l'Orcher",
+		"departement": "76",
+		"ajout": "2023-04-29",
+		"modif": "2023-04-29",
+		"date": "2023-04-29",
+		"description": "Casserolade pour le ministre de l'industrie Roland Lescure à Goinfreville l'Orcher.",
+		"liens": ["https://twitter.com/RevPermanente/status/1651851077266952192?s=20"],
+		"codeInsee": 76305,
+		"actions": ["chahut"],
+		"cibles": ["ministre"],
+		"statut": "OK",
+		"source": "attac",
+		"remarques": ""
+	},
+	{
 		"id": "13 - Istres - 2023-04-28",
 		"ville": "Istres",
 		"departement": "13",
