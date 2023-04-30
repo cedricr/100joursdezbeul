@@ -6,15 +6,10 @@
  */
 
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined'
-		? factory(exports, "require('chart.js')", "require('chart.js/helpers')")
-		: typeof define === 'function' && define.amd
-		? define(['exports', 'chart.js', 'chart.js/helpers'], factory)
-		: ((global = typeof globalThis !== 'undefined' ? globalThis : global || self),
-		  factory((global.ChartGeo = {}), global.Chart, global.Chart.helpers));
+	factory((window.ChartGeo = {}), window.Chart, window.Chart.helpers);
 })(this, function (exports, chart_js, helpers) {
 	'use strict';
-
+	console.log('chart geo', exports, chart_js, helpers);
 	// https://github.com/python/cpython/blob/a74eea238f5baba15797e2e8b570d153bc8690a7/Modules/mathmodule.c#L1423
 	class Adder {
 		constructor() {
@@ -6097,4 +6092,3 @@
 	exports.geoTransverseMercator = geoTransverseMercator;
 	exports.topojson = index;
 });
-//# sourceMappingURL=index.umd.js.map
