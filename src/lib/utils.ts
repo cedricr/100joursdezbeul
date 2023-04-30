@@ -1,9 +1,11 @@
 import dayjs from 'dayjs';
 import { ACTION_SCORE, DEPARTMENTS, TARGET_MULTIPLIER, startDay } from './constants';
-import type {ActionEvent, DepartmentResult, HumanizedLink} from './types';
+import type { ActionEvent, DepartmentResult, HumanizedLink, MetaData } from './types';
 import rawData from '$lib/assets/data.json?raw';
+import rawMetaData from '$lib/assets/metadata.json?raw';
 
 export const DATA = enrichData(JSON.parse(rawData)) as ActionEvent[];
+export const METADATA = JSON.parse(rawMetaData) as MetaData;
 
 export const LEADERBOARD = generateLeaderboard();
 
