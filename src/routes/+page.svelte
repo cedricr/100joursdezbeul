@@ -1,7 +1,11 @@
 <script lang="ts">
+	import medailleOr from '$lib/assets/icons/medaille-or.svg';
+	import medailleArgent from '$lib/assets/icons/medaille-argent.svg';
+	import medailleBronze from '$lib/assets/icons/medaille-bronze.svg';
+
 	import Thanks from '$lib/thanks.svelte';
 
-	import { LEADERBOARD, getDayNumber, getDepartmentName } from '$lib/utils';
+	import { LEADERBOARD, METADATA, getDayNumber, getDepartmentName } from '$lib/utils';
 
 	const dayNumber = getDayNumber();
 
@@ -18,6 +22,10 @@
 
 	const now = new Date();
 	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
+
+	const lastUpdateDate = new Date(METADATA.lastImport);
+	lastUpdateDate.setDate(lastUpdateDate.getDate() - 1);
+	const formattedLastUpdateDate = lastUpdateDate.toLocaleDateString('fr', { dateStyle: 'medium' });
 </script>
 
 <svelte:head><title>100 jours de zbeul</title></svelte:head>
@@ -31,7 +39,9 @@
 	</p>
 
 	<h2 class="zbeul mb-2">Classement temporaire au {formattedDate}</h2>
-	<p class="mb-2 text-center italic">(tenant compte des données jusqu’au 27 avril inclus)</p>
+	<p class="mb-2 text-center italic">
+		(tenant compte des données jusqu’au {formattedLastUpdateDate} inclus)
+	</p>
 	<p class="mb-6 text-center italic">
 		Cliquez sur le nom du département pour avoir le détail du décompte.
 	</p>
@@ -48,22 +58,26 @@
 				{#each resultLines as { code, score, rank }}
 					<tr class="ranking-line">
 						<th scope="row" class="p-1 sm:p-2">
-							<a href="/departement/{code}" class="ranking-link no-underline hover:underline">
+							<a
+								href="/departement/{code}"
+								class="ranking-link no-underline hover:underline"
+								class:font-bold={rank < 4}
+							>
 								{getDepartmentName(code)}
 							</a>
 						</th>
 						<td class="p-1 text-center sm:p-2">
 							{#if rank === 1}
-								<span role="img" aria-label="1">🥇</span>
+								<img role="img" src={medailleOr} alt="1 (médaille d’or)" class="m-auto" />
 							{:else if rank === 2}
-								<span role="img" aria-label="2">🥈</span>
+								<img role="img" src={medailleArgent} alt="2 (médaille d’argent)" class="m-auto" />
 							{:else if rank === 3}
-								<span role="img" aria-label="3">🥉</span>
+								<img role="img" src={medailleBronze} alt="3 (médaille de bronze)" class="m-auto" />
 							{:else}
 								{rank}
 							{/if}
 						</td>
-						<td class="p-1 text-right sm:p-2">
+						<td class="p-1 text-right sm:p-2" class:font-bold={rank < 4}>
 							{score} pts<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -129,17 +143,6 @@
 
 	.ranking-line th {
 		@apply font-normal;
-	}
-
-	/* Le podium */
-	.ranking .ranking-line:nth-child(-n + 3),
-	.ranking .ranking-line:nth-child(-n + 3) th {
-		@apply font-bold;
-	}
-
-	/* Agrandi les médailles */
-	.ranking .ranking-line:nth-child(-n + 3) > :nth-child(2) {
-		font-size: 125%;
 	}
 
 	/* Étend la zone cliquable du lien à toute la ligne */
