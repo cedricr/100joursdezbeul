@@ -1,13 +1,15 @@
 import dayjs from 'dayjs';
-import { ACTION_SCORE, DEPARTMENTS, TARGET_MULTIPLIER, startDay } from './constants';
+import { ACTION_SCORE, DEPARTMENTS, REGIONS, TARGET_MULTIPLIER, startDay } from './constants';
 import type { ActionEvent, DepartmentResult, HumanizedLink, MetaData } from './types';
 import rawData from '$lib/assets/data.json?raw';
 import rawMetaData from '$lib/assets/metadata.json?raw';
+import regions from "$lib/assets/regions.json?raw";
 
 export const DATA = enrichData(JSON.parse(rawData)) as ActionEvent[];
 export const METADATA = JSON.parse(rawMetaData) as MetaData;
 
 export const LEADERBOARD = generateLeaderboard();
+export const LEADERBOARD_REGION = generateLeaderboardRegion();
 
 export function getDayNumber(): number {
 	const now = dayjs();
@@ -24,6 +26,7 @@ export function enrichData(data: ActionEvent[]) {
 		const score = sum(event.actions.map((action) => ACTION_SCORE[action]));
 		const multiplier = sum(event.cibles.map((target) => TARGET_MULTIPLIER[target]));
 		event.score = score * multiplier;
+		event.region = getDepartementByCode(event.departement).codeRegion
 	});
 	return data;
 }
@@ -39,16 +42,43 @@ export function generateLeaderboard() {
 	});
 }
 
-export function getDepartmentName(code: string): string {
+export function generateLeaderboardRegion() {
+	const regionsResults: DepartmentResult = {};
+	DATA.forEach((event) => {
+		const region = event.region;
+		regionsResults[region] = (regionsResults[region] || 0) + event.score;
+	});
+	return Object.entries(regionsResults).sort((d1, d2) => {
+		return d2[1] - d1[1];
+	});
+}
+
+function getDepartementByCode(code: string) {
 	const dept = DEPARTMENTS.find((elt) => elt.code === code);
 	if (!dept) {
 		throw new Error(`le département ${code} est inconnu`);
 	}
-	return dept ? dept.nom : '(inconnu)';
+	return dept;
+}
+
+export function getDepartmentName(code: string): string {
+	return getDepartementByCode(code).nom;
+}
+
+export function getRegionName(code: string): string {
+	const region = REGIONS.find((elt) => elt.code === code);
+	if (!region) {
+		throw new Error(`la région ${code} est inconnue`);
+	}
+
+	return region.nom
 }
 
 export function getDepartmentScore(code: string): number {
 	return LEADERBOARD.find((line) => line[0] === code)[1];
+}
+export function getRegionScore(code: string): number {
+	return LEADERBOARD_REGION.find((line) => line[0] === code)[1];
 }
 
 export function getPointsDisplay(nPoints: number) {
