@@ -875,6 +875,38 @@
 		"remarques": ""
 	},
 	{
+		"id": "25 - Château de Joux - 2023-04-27",
+		"ville": "La Cluse-et-Mijoux",
+		"departement": "25",
+		"ajout": "2023-04-27",
+		"modif": "2023-04-27",
+		"date": "2023-04-27",
+		"description": "Casseroles pour Emmanuel Macron au château de Joux, dans le Doubs.",
+		"liens": ["https://twitter.com/AnonymeCitoyen/status/1651531489887023105?s=20"],
+		"codeInsee": 25157,
+		"actions": ["chahut"],
+		"cibles": ["president-rep"],
+		"statut": "OK",
+		"source": "attac",
+		"remarques": ""
+	},
+	{
+		"id": "56 - Hennebont et Pluneret - 2023-04-27",
+		"ville": "Hennebont",
+		"departement": "56",
+		"ajout": "2023-04-27",
+		"modif": "2023-04-27",
+		"date": "2023-04-27",
+		"description": "Comité de non accueil devant le haras national d'Hennebont puis à la maison Athos de Pluneret pour Patricia Miralles, la secrétaire d'Etat chargée des anciens combattants",
+		"liens": ["https://twitter.com/CaptainRomulus1/status/1651567298837135361?s=20"],
+		"codeInsee": 56083,
+		"actions": ["chahut", "chahut"],
+		"cibles": ["secretaire-etat"],
+		"statut": "OK",
+		"source": "attac",
+		"remarques": ""
+	},
+	{
 		"id": "83 - La Seyne-sur-Mer - 2023-04-27",
 		"ville": "La Seyne-sur-Mer",
 		"departement": "83",
@@ -1109,6 +1141,22 @@
 		"remarques": ""
 	},
 	{
+		"id": "76 - Gonfreville-l'Orcher - 2023-04-29",
+		"ville": "Gonfreville-l'Orcher",
+		"departement": "76",
+		"ajout": "2023-04-29",
+		"modif": "2023-04-29",
+		"date": "2023-04-29",
+		"description": "Casserolade pour le ministre de l'industrie Roland Lescure à Goinfreville l'Orcher.",
+		"liens": ["https://twitter.com/RevPermanente/status/1651851077266952192?s=20"],
+		"codeInsee": 76305,
+		"actions": ["chahut"],
+		"cibles": ["ministre"],
+		"statut": "OK",
+		"source": "attac",
+		"remarques": ""
+	},
+	{
 		"id": "13 - Istres - 2023-04-28",
 		"ville": "Istres",
 		"departement": "13",
@@ -1202,6 +1250,120 @@
 		"cibles": ["secretaire-etat"],
 		"statut": "OK",
 		"source": "attac",
+		"remarques": ""
+	},
+	{
+		"id": "77 - Collégien - 2023-04-28",
+		"ville": "Collégien",
+		"departement": "77",
+		"ajout": "2023-04-29",
+		"modif": "2023-04-29",
+		"date": "2023-04-28",
+		"description": "SNU tour initialement prévu à Collégien le 29 avril en présence de Sarah el Hairy puis annulé",
+		"liens": [
+			"https://twitter.com/ender779/status/1651980960076906498?t=4AdzPxUgexbug6fXwBwFqQ&s=35"
+		],
+		"codeInsee": 77121,
+		"actions": ["annulation"],
+		"cibles": ["secretaire-etat"],
+		"statut": "OK",
+		"source": "framaform",
+		"remarques": ""
+	},
+	{
+		"id": "74 - Évian-les-Bains - 2023-04-28",
+		"ville": "Évian-les-Bains",
+		"departement": "74",
+		"ajout": "2023-04-29",
+		"modif": "2023-04-29",
+		"date": "2023-04-28",
+		"description": "Annulation de la visite de la Ministre du Droit des Femmes",
+		"liens": [
+			"https://www.ledauphine.com/amp/politique/2023/04/28/la-ministre-deleguee-a-fait-faux-bond"
+		],
+		"codeInsee": 74119,
+		"actions": ["annulation"],
+		"cibles": ["ministre-del"],
+		"statut": "OK",
+		"source": "framaform",
+		"remarques": ""
+	},
+	{
+		"id": "un - St Denis - 2023-04-29",
+		"ville": "Saint Denis",
+		"departement": "93",
+		"ajout": "2023-04-29",
+		"modif": "2023-04-29",
+		"date": "2023-04-29",
+		"description": "A l'occasion de la finale de la Coupe de France au Stade de France, sifflets à la 49.3e minute du match. Le président n'ose pas se montrer sur la pelouse.",
+		"liens": [
+			"https://twitter.com/ClementLanot/status/1652333713064165376?s=20",
+			"https://twitter.com/RemyBuisine/status/1652361786052542464?s=20",
+			"https://twitter.com/caissesdegreve/status/1652377698587508745?t=Hvwc1iIBvNS4qICi8hg1FA&s=19",
+			"https://twitter.com/AdrienAdcaZz/status/1652412967160365057?s=20",
+			"https://twitter.com/realmarcel1/status/1652392082525356033?s=20"
+		],
+		"codeInsee": 93066,
+		"actions": ["chahut", "creatif"],
+		"cibles": ["president-rep"],
+		"statut": "OK",
+		"source": "attac",
+		"remarques": ""
+	},
+	{
+		"id": "13 - Aubagne - 2023-04-30",
+		"ville": "Aubagne",
+		"departement": "13",
+		"ajout": "2023-04-30",
+		"modif": "2023-04-30",
+		"date": "2023-04-30",
+		"description": "Casserolade à Aubagne pour accueillir Sébastien Lecornu.",
+		"liens": [
+			"https://twitter.com/GastonLefranc/status/1652608873721724929?t=UA05K-_niPdAQ_XHVfL4YQ"
+		],
+		"codeInsee": 13005,
+		"actions": ["chahut"],
+		"cibles": ["ministre"],
+		"statut": "OK",
+		"source": "attac",
+		"remarques": ""
+	},
+	{
+		"id": "75 - Paris 15e Arrondissement - 2023-04-30",
+		"ville": "Paris 15e Arrondissement",
+		"departement": "75",
+		"ajout": "2023-04-30",
+		"modif": "2023-04-30",
+		"date": "2023-04-30",
+		"description": "Echec de l'étape de la caravane du SNU dans le parc André Citroën",
+		"liens": [
+			"https://twitter.com/RevPermanente/status/1652606011658649600?s=20",
+			"https://twitter.com/sudeducparis/status/1652631434375356416?s=20",
+			"https://twitter.com/pandapetit5/status/1652613469697454081?s=19"
+		],
+		"codeInsee": 75115,
+		"actions": ["chahut", "annulation"],
+		"cibles": ["secretaire-etat"],
+		"statut": "OK",
+		"source": "attac",
+		"remarques": ""
+	},
+	{
+		"id": "91 - Orsay - 2023-04-18",
+		"ville": "Orsay",
+		"departement": "91",
+		"ajout": "2023-05-02",
+		"modif": "2023-05-02",
+		"date": "2023-04-18",
+		"description": "Sylvie Retailleau renon à l'inauguration du pôle de biologie, pharmacie, chimie à l'université Paris Saclay",
+		"liens": [
+			"https://www.leparisien.fr/essonne-91/luniversite-paris-saclay-inaugure-son-pole-de-biologie-pharmacie-chimie-joyau-de-la-recherche-26-04-2023-YJXHAOXPEJG63CCTL6NOTP4G5M.php"
+		],
+		"codeInsee": 91471,
+		"actions": ["annulation", "chahut", "sobriete"],
+		"cibles": ["ministre"],
+		"statut": "OK",
+		"source": "framaform",
 		"remarques": ""
 	}
 ]
