@@ -44,7 +44,7 @@
 	const formattedLastUpdateDate = lastUpdateDate.toLocaleDateString('fr', { dateStyle: 'medium' });
 </script>
 
-<svelte:head><title>100 jours de zbeul</title></svelte:head>
+<svelte:head><title>Régions | 100 jours de zbeul</title></svelte:head>
 
 <main role="main">
 	<p class="mb-16 mt-24 text-center">
@@ -59,27 +59,27 @@
 		(tenant compte des données jusqu’au {formattedLastUpdateDate} inclus)
 	</p>
 	<p class="mb-6 text-center italic">
-		Cliquez sur le nom du département pour avoir le détail du décompte.
+		Cliquez sur le nom de la région pour avoir le détail du décompte.
 	</p>
 	<div class="mx-auto mb-6 mt-10 flex max-w-5xl flex-wrap items-start justify-between text-xl">
 		<table class="ranking">
 			<thead>
 				<tr>
-					<th scope="col" class="p-1 sm:p-2">Département</th>
+					<th scope="col" class="p-1 sm:p-2">Région</th>
 					<th scope="col" class="p-1 text-center sm:p-2">Rang</th>
 					<th scope="col" class="p-1 text-center sm:p-2">Points</th>
 				</tr>
 			</thead>
 			<tbody>
-				{#each resultLines as { code, score, rank }}
+				{#each resultLinesRegion as { code, score, rank }}
 					<tr class="ranking-line">
 						<th scope="row" class="p-1 sm:p-2">
 							<a
-								href="/departement/{code}"
+								href="/region/{code}"
 								class="ranking-link no-underline hover:underline"
 								class:font-bold={rank < 4}
 							>
-								{getDepartmentName(code)}
+								{getRegionName(code)}
 							</a>
 						</th>
 						<td class="p-1 text-center sm:p-2">
@@ -113,7 +113,7 @@
 	</div>
 
 	<ul class="mb-20 text-center text-lg">
-		<li><a href="/region">Classement par région</a></li>
+		<li><a href="/">Classement par département</a></li>
 		<li><a href="/regles-du-jeu">Règles du jeu</a></li>
 		<li><a href="/comment-participer">Comment participer</a></li>
 		<li><a href="/presse">Revue de presse</a></li>
