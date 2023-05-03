@@ -167,7 +167,7 @@
 		"statut": "PENDING",
 		"source": "attac",
 		"remarques": "pas de gvt",
-		"erreurs": ["date future", "status not OK"]
+		"erreurs": ["status not OK"]
 	},
 	{
 		"id": "57 - Thionville - 2023-03-18",
@@ -717,7 +717,7 @@
 		"statut": "IGNORE",
 		"source": "attac",
 		"remarques": "dupe 76 - Gonfreville-l'Orcher - 2023-04-28  et pas la bonne date",
-		"erreurs": ["date future", "status not OK"]
+		"erreurs": ["status not OK"]
 	},
 	{
 		"id": "54 - Nancy - 2023-05-04",
@@ -898,6 +898,165 @@
 		"statut": "IGNORE",
 		"source": "framaform",
 		"remarques": "duper 92 - Saint-Girons – 2023-04-29",
+		"erreurs": ["status not OK"]
+	},
+	{
+		"id": "76 - Gonfreville-l'Orcher - 2023-05-03",
+		"ville": "Gonfreville-l'Orcher",
+		"departement": "76",
+		"ajout": "2023-05-03",
+		"modif": "2023-05-03",
+		"date": "2023-05-03",
+		"description": "Casserolade pour le ministre de l'industrie Roland Lescure",
+		"liens": ["https://twitter.com/RevPermanente/status/1651851077266952192?s=20"],
+		"codeInsee": 76305,
+		"actions": ["chahut"],
+		"cibles": ["ministre"],
+		"statut": "IGNORE",
+		"source": "attac",
+		"remarques": "dupe 76 - Gonfreville-l'Orcher - 2023-04-28  et pas la bonne date",
+		"erreurs": ["date future", "status not OK"]
+	},
+	{
+		"id": "59 - Valenciennes - 2023-05-03",
+		"ville": "Valenciennes",
+		"departement": "59",
+		"ajout": "2023-05-03",
+		"modif": "2023-05-03",
+		"date": "2023-05-03",
+		"description": "Mobilisation sonore contre le village SNU qui reste vide",
+		"liens": ["https://twitter.com/NPALille/status/1653708978126307330?s=20"],
+		"codeInsee": 59606,
+		"actions": ["manif"],
+		"cibles": [],
+		"statut": "PENDING",
+		"source": "attac",
+		"remarques": "pas de gvt",
+		"erreurs": ["pas de cible", "date future", "status not OK"]
+	},
+	{
+		"id": "un - Paris 15e - 2023-05-03",
+		"ville": "Paris 15e",
+		"departement": "75",
+		"ajout": "2023-05-03",
+		"modif": "2023-05-03",
+		"date": "2023-05-03",
+		"description": "Comité de non-accueil et casserolade pour Olivier Dussopt au 15 square Vergennes, au son de “personne n'a craqué”.",
+		"liens": ["https://twitter.com/Ab7Media/status/1653781629188358149?s=20"],
+		"actions": ["chahut"],
+		"cibles": ["ministre"],
+		"statut": "OK",
+		"source": "attac",
+		"remarques": "",
+		"erreurs": ["date future"]
+	},
+	{
+		"id": "86 - Montmorillon - 2023-05-04",
+		"ville": "Montmorillon",
+		"departement": "86",
+		"ajout": "2023-05-04",
+		"modif": "2023-05-04",
+		"date": "2023-05-04",
+		"description": "Visite du ministre de l'agriculture Marc Fesneau prévue le jeudi 4 mai au Lycée agricole Jean-Marie Bouloux annulée !",
+		"liens": [],
+		"codeInsee": 86165,
+		"actions": ["annulation"],
+		"cibles": ["ministre"],
+		"statut": "OK",
+		"source": "attac",
+		"remarques": "",
+		"erreurs": ["date future"]
+	},
+	{
+		"id": "13 - Aix-en-Provence - 2023-05-04",
+		"ville": "Aix-en-Provence",
+		"departement": "13",
+		"ajout": "2023-05-04",
+		"modif": "2023-05-04",
+		"date": "2023-05-04",
+		"description": "La secrétaire d'Etat auprès du ministre des Armées, chargée des Anciens combattants et de la Mémoire, Patricia Miralles, était attendue à Sciences Po Aix-en-Provence en fin d'après-midi le jeudi 4 mai. La visite a finalement été annulée alors que l'accueil s'organisait.",
+		"liens": [],
+		"codeInsee": 13001,
+		"actions": ["annulation"],
+		"cibles": ["secretaire-etat"],
+		"statut": "OK",
+		"source": "attac",
+		"remarques": "",
+		"erreurs": ["date future"]
+	},
+	{
+		"id": "54 - Nancy - 2023-05-01",
+		"ville": "Nancy",
+		"departement": "54",
+		"ajout": "2023-05-03",
+		"modif": "2023-05-03",
+		"date": "2023-05-01",
+		"description": "Jean-Christophe Combe, ministre des Solidarités, de l'Autonomie et des Personnes handicapées, était attendu à Nancy le 4 mai. Déplacement annulé suite à la diffusion de messages appelants à manifester sur des groupes de discussions.",
+		"liens": [
+			"https://france.attac.org/se-mobiliser/retraites-pour-le-droit-a-une-retraite-digne-et-heureuse/article/on-ne-les-lache-pas-la-carte-des-mobilisations"
+		],
+		"codeInsee": 54395,
+		"actions": ["annulation"],
+		"cibles": ["ministre"],
+		"statut": "IGNORE",
+		"source": "framaform",
+		"remarques": "dupe 54 - Nancy – 2023-05-04",
+		"erreurs": ["status not OK"]
+	},
+	{
+		"id": "un - 35238 - 2023-05-01",
+		"ville": 35238,
+		"departement": "null",
+		"ajout": "2023-05-03",
+		"modif": "2023-05-03",
+		"date": "2023-05-01",
+		"description": "Manifestation du 1er mai avec les camarades.",
+		"liens": [
+			"https://www.msn.com/fr-fr/actualite/france/revivez-la-deuxi%C3%A8me-manifestation-du-1er-mai-%C3%A0-rennes-avec-plus-de-10-000-personnes-et-des-heurts/ar-AA1aAOzc"
+		],
+		"actions": ["manif"],
+		"cibles": ["ministre-del"],
+		"statut": "IGNORE",
+		"source": "framaform",
+		"remarques": "1er mai",
+		"erreurs": ["status not OK"]
+	},
+	{
+		"id": "42 - Chambles - 2023-04-27",
+		"ville": "Chambles",
+		"departement": "42",
+		"ajout": "2023-05-03",
+		"modif": "2023-05-03",
+		"date": "2023-04-27",
+		"description": "Un député macroniste annule sa visite d'une usine électrique au barrage de Grangent grâce à un concert de casseroles",
+		"liens": [
+			"https://www.leprogres.fr/social/2023/04/27/un-depute-de-la-majorite-accueilli-par-un-concert-de-casseroles"
+		],
+		"codeInsee": 42042,
+		"actions": ["chahut", "annulation"],
+		"cibles": [],
+		"statut": "PENDING",
+		"source": "framaform",
+		"remarques": "pas de gvt",
+		"erreurs": ["pas de cible", "status not OK"]
+	},
+	{
+		"id": "69 - Lyon - 2023-05-01",
+		"ville": "Lyon",
+		"departement": "69",
+		"ajout": "2023-05-03",
+		"modif": "2023-05-03",
+		"date": "2023-05-01",
+		"description": "Manifestation 1er Mai + Cassage",
+		"liens": [
+			"https://www.leprogres.fr/faits-divers-justice/2023/05/02/manif-du-1er-mai-a-lyon-une-centaine-de-commerces-et-mobiliers-urbains-vandalises"
+		],
+		"codeInsee": 69123,
+		"actions": ["manif"],
+		"cibles": ["secretaire-etat"],
+		"statut": "IGNORE",
+		"source": "framaform",
+		"remarques": "1er mai + violences",
 		"erreurs": ["status not OK"]
 	}
 ]
