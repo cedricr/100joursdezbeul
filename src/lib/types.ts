@@ -18,6 +18,7 @@ export interface ActionEvent {
 	date: string;
 	ville: string;
 	departement: string;
+	region: string;
 	description: string;
 	actions: ActionCode[];
 	cibles: ActionTarget[];
