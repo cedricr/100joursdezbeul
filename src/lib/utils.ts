@@ -57,20 +57,20 @@ export function getPointsDisplay(nPoints: number) {
 
 export function humanizeLink(link: string): HumanizedLink {
 	const url = new URL(link);
-	let linkText = url.hostname
-	switch (url.hostname){
-		case "twitter.com": {
-			const twitterProfile = url.pathname.split('/')[1]
-			linkText = `Tweet de @${twitterProfile}`
+	let linkText = url.hostname;
+	switch (url.hostname) {
+		case 'twitter.com': {
+			const twitterProfile = url.pathname.split('/')[1];
+			linkText = `Tweet de @${twitterProfile}`;
 			break;
 		}
 		case 'www.youtube.com':
-			linkText = 'Vidéo Youtube'
+			linkText = 'Vidéo Youtube';
 			break;
 	}
 
 	return {
 		url: link,
 		text: linkText
-	}
+	};
 }
