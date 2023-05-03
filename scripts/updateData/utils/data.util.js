@@ -126,9 +126,9 @@ export function checkEventValidity(event) {
 		result.errors.push('date future');
 	}
 
-	if (!event.codeInsee) {
+	if (!event.departement || event.departement === 'un') {
 		result.valid = false;
-		result.errors.push('pas de code INSEE');
+		result.errors.push('pas de departement');
 	}
 
 	if (!event.statut || event.statut.toLowerCase() !== 'ok') {
