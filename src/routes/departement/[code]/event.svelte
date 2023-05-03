@@ -5,7 +5,7 @@
 
 	export let event: ActionEvent;
 
-	const liens = event.liens.map(lien => humanizeLink(lien))
+	const liens = event.liens.map((lien) => humanizeLink(lien));
 
 	function getDateLabel(datestring: string) {
 		return new Date(datestring).toLocaleDateString('fr-FR', { dateStyle: 'short' }).slice(0, 5);

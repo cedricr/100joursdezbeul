@@ -3,7 +3,7 @@ import inseeRemapping from '../data/inseeRemapping.json' assert { type: 'json' }
 
 const isEmpty = (value) => value;
 const normalizeCity = (city) =>
-	city
+	`${city}`
 		.normalize('NFD')
 		.replace(/[\u0300-\u036f]/g, '')
 		.toLowerCase()
