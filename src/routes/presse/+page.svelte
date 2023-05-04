@@ -6,7 +6,6 @@
 		source: string;
 		image: string;
 	}
-
 	const mediaRefs = JSON.parse(rawMediaRefs) as MediaRef[];
 </script>
 
