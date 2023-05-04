@@ -3,32 +3,38 @@
 	import medailleArgent from '$lib/assets/icons/medaille-argent.svg';
 	import medailleBronze from '$lib/assets/icons/medaille-bronze.svg';
 
-	import Thanks from '$lib/thanks.svelte';
+	import Thanks from './thanks.svelte';
 
-	import { LEADERBOARD, METADATA, getDayNumber, getDepartmentName } from '$lib/utils';
-
+	import { getDayNumber, getDepartmentName, getLatestDate } from '$lib/utils';
+	export let data;
 	const dayNumber = getDayNumber();
 
 	const append = (a, x) => a.concat([x]);
 
-	const resultLines = LEADERBOARD.map(([code, score]) => ({ code, score })).reduce(
-		(acc, x, i) =>
-			append(acc, {
-				...x,
-				rank: i > 0 && x.score === acc[i - 1].score ? acc[i - 1].rank : i + 1
-			}),
-		[]
-	);
+	const resultLines = data.leaderboard
+		.map(([code, score]) => ({ code, score }))
+		.reduce(
+			(acc, x, i) =>
+				append(acc, {
+					...x,
+					rank: i > 0 && x.score === acc[i - 1].score ? acc[i - 1].rank : i + 1
+				}),
+			[]
+		);
 
 	const now = new Date();
 	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
-
-	const lastUpdateDate = new Date(METADATA.lastImport);
-	lastUpdateDate.setDate(lastUpdateDate.getDate() - 1);
-	const formattedLastUpdateDate = lastUpdateDate.toLocaleDateString('fr', { dateStyle: 'medium' });
+	const lastUpdateDate = getLatestDate(
+		data.actionEvents.map((event) => {
+			return new Date(event.date);
+		})
+	);
+	const formattedLastUpdateDate = lastUpdateDate?.toLocaleDateString('fr', { dateStyle: 'medium' });
 </script>
 
-<svelte:head><title>100 jours de zbeul</title></svelte:head>
+<svelte:head>
+	<title>100 jours de zbeul</title>
+</svelte:head>
 
 <main role="main">
 	<p class="mb-16 mt-24 text-center">
@@ -38,13 +44,11 @@
 		<span class="mt-0 block text-xl">jours restants</span>
 	</p>
 
-	<h2 class="zbeul mb-2">Classement temporaire au {formattedDate}</h2>
+	<h2 class="zbeul mb-2">Classement au {formattedDate}</h2>
 	<p class="mb-2 text-center italic">
 		(tenant compte des données jusqu’au {formattedLastUpdateDate} inclus)
 	</p>
-	<p class="mb-6 text-center italic">
-		Cliquez sur le nom du département pour avoir le détail du décompte.
-	</p>
+
 	<div class="mx-auto mb-6 mt-10 max-w-md text-xl">
 		<table class="ranking">
 			<thead>
