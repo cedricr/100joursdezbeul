@@ -4,6 +4,7 @@
 	import medailleBronze from '$lib/assets/icons/medaille-bronze.svg';
 
 	import Thanks from '$lib/thanks.svelte';
+	import Heatmap from '$lib/heatmap/Heatmap.svelte';
 
 	import { LEADERBOARD, METADATA, getDayNumber, getDepartmentName } from '$lib/utils';
 
@@ -94,6 +95,11 @@
 				{/each}
 			</tbody>
 		</table>
+	</div>
+
+	<h2 class="zbeul mb-2 mt-10">Niveau d'Apaisement</h2>
+	<div class="mx-auto mb-6 max-w-lg">
+		<Heatmap />
 	</div>
 
 	<ul class="mb-20 text-center text-lg">
