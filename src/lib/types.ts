@@ -1,3 +1,5 @@
+import type { IRecord } from 'grist-api';
+
 export type ActionCode = 'manif' | 'annulation' | 'chahut' | 'sobriete' | 'creatif' | 'fuite';
 
 export type ActionTarget =
@@ -21,7 +23,7 @@ export interface ActionEvent {
 	description: string;
 	actions: ActionCode[];
 	cibles: ActionTarget[];
-	liens: string;
+	liens: string[];
 	score: number;
 }
 
@@ -29,8 +31,12 @@ export interface DepartmentResult {
 	[departmentCode: string]: number;
 }
 
-export interface MetaData {
-	lastImport: string;
-	validEvents: number;
-	invalidEvents: number;
+export interface GristRecord extends IRecord {
+	lieu: string;
+	departement: string;
+	date: number;
+	description: string;
+	liens: string;
+	actions: [string, ...ActionCode[]];
+	cibles: [string, ...ActionTarget[]];
 }

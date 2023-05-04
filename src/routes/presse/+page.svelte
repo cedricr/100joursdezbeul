@@ -13,12 +13,12 @@
 <svelte:head><title>Presse | 100 jours de zbeul</title></svelte:head>
 
 <main role="main">
-	<div class="mx-auto mb-16 mt-16 max-w-xl">
+	<div class="mx-auto mb-16 mt-16 max-w-2xl">
 		<h2 class="zbeul mb-16 mt-16 text-4xl">Revue de presse</h2>
 
 		<ul>
 			{#each mediaRefs as link}
-				<li class="mb-3 flex items-center gap-3 text-xl">
+				<li class="mb-5 flex items-center gap-4 text-xl">
 					<img class="image h-10 w-10 rounded-full" src={link.image} alt="" />
 					<a
 						class="link text-xl no-underline hover:underline"
