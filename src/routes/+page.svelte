@@ -24,11 +24,7 @@
 
 	const now = new Date();
 	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
-	const lastUpdateDate = getLatestDate(
-		data.actionEvents.map((event) => {
-			return new Date(event.date);
-		})
-	);
+	const lastUpdateDate = getLatestDate(data.actionEvents);
 	const formattedLastUpdateDate = lastUpdateDate?.toLocaleDateString('fr', { dateStyle: 'medium' });
 </script>
 
@@ -46,7 +42,7 @@
 
 	<h2 class="zbeul mb-2">Classement au {formattedDate}</h2>
 	<p class="mb-2 text-center italic">
-		(tenant compte des données jusqu’au {formattedLastUpdateDate} inclus)
+		Derniers événements pris en compte&nbsp;: <a href="/nouveautes">{formattedLastUpdateDate}</a>
 	</p>
 
 	<div class="mx-auto mb-6 mt-10 max-w-md text-xl">

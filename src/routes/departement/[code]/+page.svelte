@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { getDepartmentName, getDepartmentScore, getPointsDisplay } from '$lib/utils';
-	import Event from './event.svelte';
+	import Event from '$lib/event.svelte';
 
 	export let data;
 

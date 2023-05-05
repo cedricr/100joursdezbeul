@@ -4,6 +4,7 @@
 	import { getPointsDisplay, humanizeLink } from '$lib/utils';
 
 	export let event: ActionEvent;
+	export let hideDate = false;
 
 	const liens = event.liens.filter((lien) => !!lien).map((lien) => humanizeLink(lien));
 
@@ -14,10 +15,11 @@
 
 <li class="mb-8 flex flex-row">
 	<div class="w-20 shrink-0">
-		<strong>{getDateLabel(event.date)}&nbsp;:</strong>
-		<span class="text-[#dd0220]">{@html getPointsDisplay(event.score)}</span><br />
+		{#if !hideDate}<strong>{getDateLabel(event.date)}</strong>{/if}
+		<span class="font-bold text-[#dd0220]">{@html getPointsDisplay(event.score)}</span><br />
 	</div>
 	<div>
+		<span class="font-bold">{event.ville}&nbsp;:</span>
 		{event.description}
 		<div class="mt-1 flex flex-wrap gap-1">
 			{#each event.actions as action}

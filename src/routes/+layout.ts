@@ -7,16 +7,13 @@ import type {
 	DepartmentResult,
 	GristRecord
 } from '$lib/types';
+import { sum } from '$lib/utils';
 import { GristDocAPI } from 'grist-api';
 
 export const prerender = !dev;
 export const csr = dev;
 
 const DOC_URL = 'https://100joursdezbeul.getgrist.com/62uY9YoxQE56Ma1uRZQZqo/100-jours-de-zbeul';
-
-function sum(array: number[]): number {
-	return array.reduce((a, b) => a + b);
-}
 
 function generateLeaderboard(actionEvents: ActionEvent[]) {
 	const departmentsResults: DepartmentResult = {};
