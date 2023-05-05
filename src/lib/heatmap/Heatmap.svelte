@@ -6,7 +6,7 @@
 	let canvasFrance: HTMLCanvasElement;
 	let canvasIDF: HTMLCanvasElement;
 	let isClickable = false;
-	let pointEvent = true;
+	let topIdf = '40%';
 
 	onMount(async () => {
 		/*
@@ -84,7 +84,7 @@
 		projection.fitWidth = (size: number, object: any) => projection.fitSize([size, 1000], object);
 
 		// Construction des charts
-		new Chart(canvasFrance, {
+		const franceChart = new Chart(canvasFrance, {
 			type: 'choropleth',
 			data: {
 				labels: franceTopology.objects.fra.geometries.map((d, i) => d.properties.name || i),
@@ -109,9 +109,9 @@
 						axis: 'x',
 						quantize: 0,
 						interpolate: 'oranges',
+						display: false,
 						legend: {
-							position: 'bottom',
-							align: 'bottom'
+							display: false
 						},
 						min: 0,
 						max: maxValue
@@ -122,6 +122,13 @@
 				onHover: onHover(franceDataset)
 			}
 		});
+
+		// IDF en dessous de la Réunion
+		const reference = franceChart._metasets[0].data.filter(
+			({ feature }) => feature.id === 'RE.'
+		)[0];
+		const { y2, height } = reference.getBounds();
+		topIdf = `calc(${Math.round(y2 + height)}px)`; // en dessous + hauteur de la Martinique
 
 		new Chart(canvasIDF, {
 			type: 'choropleth',
@@ -201,15 +208,10 @@
 </script>
 
 <div style="width:100%;height:100%;position:relative;">
+	<canvas style="cursor:{isClickable ? 'pointer' : ''};" height="300px" bind:this={canvasFrance} />
 	<canvas
-		style="cursor:{isClickable ? 'pointer' : ''}"
-		width="100%"
-		height="100%"
-		bind:this={canvasFrance}
-	/>
-	<canvas
-		style="cursor:{isClickable ? 'pointer' : ''};position: absolute;top: 40%;left: 40%;"
+		style="cursor:{isClickable ? 'pointer' : ''};position: absolute;top: {topIdf};left: 40%;"
 		bind:this={canvasIDF}
-		height="50px"
+		height="50%"
 	/>
 </div>
