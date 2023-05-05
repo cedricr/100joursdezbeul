@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8c7f9606-eb2f-4ce3-b629-b21e3385e68a/deploy-status)](https://app.netlify.com/sites/100joursdezbeul/deploys)
 <br />
 
 <p align="center">
