@@ -36,7 +36,9 @@ export interface GristRecord extends IRecord {
 	departement: string;
 	date: number;
 	description: string;
-	liens: string;
+	lien1: string;
+	lien2: string;
+	lien3: string;
 	actions: [string, ...ActionCode[]];
 	cibles: [string, ...ActionTarget[]];
 }

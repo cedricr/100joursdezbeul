@@ -30,22 +30,24 @@ function generateLeaderboard(actionEvents: ActionEvent[]) {
 }
 
 function parseRecords(data: GristRecord[]): ActionEvent[] {
-	const result = data.map((record) => {
-		const actions = record.actions.slice(1) as ActionCode[];
-		const cibles = record.cibles.slice(1) as ActionTarget[];
-		return {
-			ville: record.lieu,
-			departement: record.departement,
-			date: new Date(record.date * 1000).toString(),
-			description: record.description,
-			liens: record.liens.split(','),
-			actions,
-			cibles,
-			score:
-				sum(actions.map((action) => ACTION_SCORE[action])) *
-				sum(cibles.map((target) => TARGET_MULTIPLIER[target]))
-		};
-	});
+	const result = data
+		.filter((record) => record.date && record.lieu)
+		.map((record) => {
+			const actions = record.actions.slice(1) as ActionCode[];
+			const cibles = record.cibles.slice(1) as ActionTarget[];
+			return {
+				ville: record.lieu,
+				departement: record.departement,
+				date: new Date(record.date * 1000).toString(),
+				description: record.description,
+				liens: [record.lien1, record.lien2, record.lien3].filter((lien) => !!lien),
+				actions,
+				cibles,
+				score:
+					sum(actions.map((action) => ACTION_SCORE[action])) *
+					sum(cibles.map((target) => TARGET_MULTIPLIER[target]))
+			};
+		});
 	return result;
 }
 
