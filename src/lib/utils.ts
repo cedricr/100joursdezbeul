@@ -1,6 +1,10 @@
 import dayjs from 'dayjs';
 import { DEPARTMENTS, startDay } from './constants';
-import type { HumanizedLink } from './types';
+import type { ActionEvent, HumanizedLink } from './types';
+
+export function sum(array: number[]): number {
+	return array.reduce((a, b) => a + b);
+}
 
 export function getDayNumber(): number {
 	const now = dayjs();
@@ -8,7 +12,8 @@ export function getDayNumber(): number {
 	return elapsedDays;
 }
 
-export function getLatestDate(dates: Date[]): Date | undefined {
+export function getLatestDate(events: ActionEvent[]): Date | undefined {
+	const dates = events.map((event) => new Date(event.date));
 	return dates.sort((a, b) => b - a)[0];
 }
 
