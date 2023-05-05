@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 import { ACTION_SCORE, DEPARTMENTS, TARGET_MULTIPLIER, startDay } from './constants';
-import type { ActionEvent, DepartmentResult } from './types';
+import type {ActionEvent, DepartmentResult, HumanizedLink} from './types';
 import rawData from '$lib/assets/data.json?raw';
 
 export const DATA = enrichData(JSON.parse(rawData)) as ActionEvent[];
@@ -51,4 +51,24 @@ export function getDepartmentScore(code: string): number {
 
 export function getPointsDisplay(nPoints: number) {
 	return nPoints <= 1 ? `${nPoints}&nbsp;pt` : `${nPoints}&nbsp;pts`;
+}
+
+export function humanizeLink(link: string): HumanizedLink {
+	const url = new URL(link);
+	let linkText = url.hostname
+	switch (url.hostname){
+		case "twitter.com": {
+			const twitterProfile = url.pathname.split('/')[1]
+			linkText = `Tweet de @${twitterProfile}`
+			break;
+		}
+		case 'www.youtube.com':
+			linkText = 'Vidéo Youtube'
+			break;
+	}
+
+	return {
+		url: link,
+		text: linkText
+	}
 }
