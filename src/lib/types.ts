@@ -1,6 +1,6 @@
 import type { IRecord } from 'grist-api';
 
-export type ActionCode = 'manif' | 'annulation' | 'chahut' | 'sobriete' | 'creatif' | 'fuite';
+export type ActionCode = 'annulation' | 'chahut' | 'sobriete' | 'creatif' | 'fuite';
 
 export type ActionTarget =
 	| 'secretaire-etat'
