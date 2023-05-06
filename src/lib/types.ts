@@ -3,6 +3,7 @@ import type { IRecord } from 'grist-api';
 export type ActionCode = 'annulation' | 'chahut' | 'sobriete' | 'creatif' | 'fuite';
 
 export type ActionTarget =
+	| 'snu'
 	| 'secretaire-etat'
 	| 'ministre-del'
 	| 'ministre'
