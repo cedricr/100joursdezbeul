@@ -1,5 +1,5 @@
 import { dev } from '$app/environment';
-import { ACTION_SCORE, TARGET_MULTIPLIER } from '$lib/constants';
+import { ACTION_SCORE, DEPARTMENTS, TARGET_MULTIPLIER } from '$lib/constants';
 import type {
 	ActionCode,
 	ActionEvent,
@@ -26,9 +26,25 @@ function generateLeaderboard(actionEvents: ActionEvent[]) {
 	});
 }
 
+function recordIsValid(record: GristRecord) {
+	return (
+		record.date &&
+		record.lieu &&
+		DEPARTMENTS.map((dep) => dep.code).includes(record.departement) &&
+		record.actions.slice(1).every((action) => Object.keys(ACTION_SCORE).includes(action)) &&
+		record.cibles.slice(1).every((cible) => Object.keys(TARGET_MULTIPLIER).includes(cible)) &&
+		record.description
+	);
+}
+
 function parseRecords(data: GristRecord[]): ActionEvent[] {
+	const invalidRecords = data.filter((record) => !recordIsValid(record));
+	if (invalidRecords.length) {
+		console.error('Données invalides, ignorées: ');
+		console.table(invalidRecords);
+	}
 	const result = data
-		.filter((record) => record.date && record.lieu)
+		.filter((record) => recordIsValid(record))
 		.map((record) => {
 			const actions = record.actions.slice(1) as ActionCode[];
 			const cibles = record.cibles.slice(1) as ActionTarget[];
