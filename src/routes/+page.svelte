@@ -45,7 +45,7 @@
 		Derniers événements pris en compte&nbsp;: <a href="/nouveautes">{formattedLastUpdateDate}</a>
 	</p>
 
-	<div class="mx-auto mb-6 mt-10 max-w-md text-xl">
+	<div class="mx-auto mb-6 mt-10 max-w-lg text-xl">
 		<table class="ranking">
 			<thead>
 				<tr>
