@@ -17,10 +17,9 @@
 		<h2>Actions participants au classement</h2>
 
 		<h3 id="chahut">Chahut</h3>
-		<p>Lors d'une visite, organiser casserolades, charivari, cacophonie ou huées.</p>
-
-		<h3 id="manifestation">Manifestation</h3>
-		<p>Tenue d'une manifestation sur le lieu de visite d'une personnalité.</p>
+		<p>
+			Lors d'une visite, organiser manifestations, casserolades, charivaris, cacophonies ou huées.
+		</p>
 
 		<h3 id="action-creative">Action créative</h3>
 		<p>
