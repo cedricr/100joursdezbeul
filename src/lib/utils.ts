@@ -22,7 +22,7 @@ export function getDepartmentName(code: string): string {
 	if (!dept) {
 		throw new Error(`le département ${code} est inconnu`);
 	}
-	return dept ? dept.nom : '(inconnu)';
+	return `${dept.nom} (${code})`;
 }
 
 export function getDepartmentScore(code: string, leaderboard): number {

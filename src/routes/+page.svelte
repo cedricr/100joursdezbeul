@@ -45,7 +45,7 @@
 		Derniers événements pris en compte&nbsp;: <a href="/nouveautes">{formattedLastUpdateDate}</a>
 	</p>
 
-	<div class="mx-auto mb-6 mt-10 max-w-md text-xl">
+	<div class="mx-auto mb-6 mt-10 max-w-lg text-xl">
 		<table class="ranking">
 			<thead>
 				<tr>
@@ -100,6 +100,11 @@
 		<li><a href="/regles-du-jeu">Règles du jeu</a></li>
 		<li><a href="/comment-participer">Comment participer</a></li>
 		<li><a href="/presse">Revue de presse</a></li>
+		<li>
+			<a href="https://100joursdezbeul.getgrist.com/62uY9YoxQE56/100-jours-de-zbeul"
+				>Données brutes</a
+			>
+		</li>
 		<li>
 			<a
 				href="https://framaforms.org/100-jours-de-zbeul-proposer-un-evenement-1682372493"

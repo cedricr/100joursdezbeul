@@ -32,7 +32,7 @@
 	<ul>
 		{#each Object.keys(groupedEvents) as deptCode}
 			<h3 class="zbeul mb-6 mt-10 text-2xl">
-				{getDepartmentName(deptCode)} +{@html getPointsDisplay(getScore(deptCode))}
+				{getDepartmentName(deptCode)}&nbsp;: +{@html getPointsDisplay(getScore(deptCode))}
 			</h3>
 			{#each groupedEvents[deptCode] as event}
 				<Event {event} hideDate />
