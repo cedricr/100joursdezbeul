@@ -56,8 +56,8 @@
 		</p>
 		<p>
 			Pour le moment les actions sur les personnes non membre du gouvernement (députés de la
-			majorité, caravane du SNU…) ne sont pas prises en compte mais le sujet est en cours de
-			discussion.
+			majorité…) ne sont pas prises en compte mais le sujet est en cours de discussion. Les actions
+			sur la caravane du SNU sont bien comptabilisées.
 		</p>
 		<p>
 			Nous mettons à jour les données une fois par jour, le soir. Les actions du jour sont en

@@ -31,6 +31,7 @@ export const ACTION_LABEL = {
 
 // prettier-ignore
 export const TARGET_MULTIPLIER = {
+	'snu': 1,
 	'secretaire-etat': 1,
 	'ministre-del': 2,
 	'ministre': 3,
@@ -42,6 +43,7 @@ export const TARGET_MULTIPLIER = {
 
 // prettier-ignore
 export const TARGET_LABEL = {
+	'snu': 'Village du SNU',
 	'secretaire-etat': 'Secrétaire d’État',
 	'ministre-del': 'Ministre délégué·e',
 	'ministre': 'Ministre',
