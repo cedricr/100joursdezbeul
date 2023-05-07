@@ -7,7 +7,7 @@
 	<h2 class="zbeul mb-16 mt-16 text-4xl">Plan du site</h2>
 	<ul>
 		<li><a href="/">Accueil</a></li>
-		<li><a href="/nouveautes">Nouveautés dans le classement</a></li>
+		<li><a href="/nouveautes">Nouveautés du jour dans le classement</a></li>
 		<li><a href="/regles-du-jeu">Règles du jeu</a></li>
 		<li><a href="/comment-participer">Comment participer</a></li>
 		<li><a href="/presse">Revue de presse</a></li>
