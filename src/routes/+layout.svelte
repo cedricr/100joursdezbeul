@@ -18,7 +18,9 @@
 	<h1 class="zbeul">100 jours de zbeul</h1>
 	<p class="zbeul mb-6 text-center">Quels sont les départements qui zbeulent le plus&nbsp;?</p>
 </header>
-<slot />
+<main role="main">
+	<slot />
+</main>
 <footer class="my-8" role="contentinfo">
 	<hr class="mb-4" />
 
