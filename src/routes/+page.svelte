@@ -60,7 +60,7 @@
 						<th scope="row" class="p-1 sm:p-2">
 							<a
 								href="/departement/{code}"
-								class="ranking-link no-underline hover:underline"
+								class="link-block no-underline hover:underline"
 								class:font-bold={rank < 4}
 							>
 								{getDepartmentName(code)}
@@ -148,15 +148,5 @@
 
 	.ranking-line th {
 		@apply font-normal;
-	}
-
-	/* Étend la zone cliquable du lien à toute la ligne */
-	.ranking-link::before {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		content: '';
 	}
 </style>
