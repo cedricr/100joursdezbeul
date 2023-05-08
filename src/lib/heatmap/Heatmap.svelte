@@ -163,8 +163,7 @@
 			return {
 				coords: svgPath,
 				code,
-				title: `${geof.feature.properties.name} ${score}`,
-				tr: { x: 0, y: 0, s: 1 }
+				title: `${geof.feature.properties.name} ${score}`
 			};
 		}),
 		...idfChart._metasets[0].data.map((geof: any) => {
@@ -175,7 +174,7 @@
 				coords: svgPath,
 				code,
 				title: `${geof.feature.properties.name} ${score}`,
-				tr: { x: x0, y: y0, s: 0.5 }
+				tr: `translate(${x0} ${y0}) scale(0.5 0.5)`
 			};
 		})
 	];
@@ -200,22 +199,12 @@
 			{#each infographics as { coords, title, code, tr }}
 				{#if code > 0}
 					<a href="/departement/{code}" {title} target="_parent">
-						<path
-							d={coords}
-							stroke="none"
-							fill="transparent"
-							transform="translate({tr.x} {tr.y}) scale({tr.s} {tr.s})"
-						>
+						<path d={coords} stroke="none" fill="transparent" transform={tr}>
 							<title>{title}</title>
 						</path>
 					</a>
 				{:else}
-					<path
-						d={coords}
-						stroke="none"
-						fill="transparent"
-						transform="translate({tr.x} {tr.y}) scale({tr.s} {tr.s})"
-					>
+					<path d={coords} stroke="none" fill="transparent" transform={tr}>
 						<title>{title}</title>
 					</path>
 				{/if}
