@@ -1,5 +1,6 @@
 <script lang="ts">
 	import {
+		dateToLabel,
 		filterEventsForDate,
 		filterEventsForDepartment,
 		getDepartmentName,
@@ -11,9 +12,8 @@
 
 	export let data;
 
-	const date = new Date(data.date);
-	const formattedDate = date?.toLocaleDateString('fr', { dateStyle: 'medium' });
-	const events = filterEventsForDate(date, data.actions);
+	const formattedDate = dateToLabel(data.date);
+	const events = filterEventsForDate(data.date, data.actions);
 
 	function getScore(departmentCode: string): number {
 		return getScoreForEvents(filterEventsForDepartment(departmentCode, events));

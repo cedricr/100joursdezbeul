@@ -1,4 +1,10 @@
-import dayjs from 'dayjs';
+import dayjs, { Dayjs } from 'dayjs';
+import AdvancedFormat from 'dayjs/plugin/advancedFormat';
+import 'dayjs/locale/fr';
+
+dayjs.extend(AdvancedFormat);
+dayjs.locale('fr');
+
 import { DEPARTMENTS, startDay } from './constants';
 import type { ActionEvent, HumanizedLink } from './types';
 
@@ -6,8 +12,12 @@ export function sum(array: number[]): number {
 	return array.reduce((a, b) => a + b, 0);
 }
 
-export function dateToString(date: Date): string {
+export function dateToString(date: Date | Dayjs): string {
 	return dayjs(date).format('YYYY-MM-DD');
+}
+
+export function dateToLabel(date: Date | Dayjs): string {
+	return dayjs(date).format('dddd Do MMMM');
 }
 
 export function getDayNumber(): number {
@@ -41,15 +51,15 @@ export function filterEventsForDepartment(
 	});
 }
 
-export function filterEventsForDate(date: Date, events: ActionEvent[]): ActionEvent[] {
+export function filterEventsForDate(dateStr: string, events: ActionEvent[]): ActionEvent[] {
 	return events.filter((event) => {
-		return new Date(event.date).toDateString() === date.toDateString();
+		return event.date === dateStr;
 	});
 }
 
-export function filterEventsUntilDate(date: Date, events: ActionEvent[]): ActionEvent[] {
+export function filterEventsUntilDate(dateStr: string, events: ActionEvent[]): ActionEvent[] {
 	return events.filter((event) => {
-		return new Date(event.date) <= date;
+		return new Date(event.date) <= new Date(dateStr);
 	});
 }
 
@@ -59,21 +69,21 @@ export function getScoreForEvents(events: ActionEvent[]): number {
 
 export function getDepartmentScoreForDate(
 	departmentCode: string,
-	date: Date,
+	dateStr: string,
 	allEvents: ActionEvent[]
 ): number {
 	return getScoreForEvents(
-		filterEventsForDepartment(departmentCode, filterEventsForDate(date, allEvents))
+		filterEventsForDepartment(departmentCode, filterEventsForDate(dateStr, allEvents))
 	);
 }
 
 export function getDepartmentScoreUntilDate(
 	departmentCode: string,
-	date: Date,
+	dateStr: string,
 	allEvents: ActionEvent[]
 ): number {
 	return getScoreForEvents(
-		filterEventsForDepartment(departmentCode, filterEventsUntilDate(date, allEvents))
+		filterEventsForDepartment(departmentCode, filterEventsUntilDate(dateStr, allEvents))
 	);
 }
 
@@ -81,12 +91,12 @@ export function getDepartmentScore(departmentCode: string, allEvents: ActionEven
 	return getScoreForEvents(filterEventsForDepartment(departmentCode, allEvents));
 }
 
-export function getNationalScoreForDate(date: Date, allEvents: ActionEvent[]): number {
-	return getScoreForEvents(filterEventsForDate(date, allEvents));
+export function getNationalScoreForDate(dateStr: string, allEvents: ActionEvent[]): number {
+	return getScoreForEvents(filterEventsForDate(dateStr, allEvents));
 }
 
-export function getNationalScoreUntilDate(date: Date, allEvents: ActionEvent[]): number {
-	return getScoreForEvents(filterEventsUntilDate(date, allEvents));
+export function getNationalScoreUntilDate(dateStr: string, allEvents: ActionEvent[]): number {
+	return getScoreForEvents(filterEventsUntilDate(dateStr, allEvents));
 }
 
 export function getNationalScore(allEvents: ActionEvent[]): number {
