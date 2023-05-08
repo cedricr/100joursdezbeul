@@ -10,6 +10,8 @@
 
 	import carte from '$lib/assets/france.png';
 
+	const IMAGE_SIZE = 512;
+
 	/**
 	 * On génère la carte de France choropleth du Zbeul
 	 * que l'on sauvegarde dans $lib/assets/france.png
@@ -34,7 +36,7 @@
 	const projection = geoConicConformalFrance();
 	projection.fitWidth = (size, object) => projection.fitSize([size, 1000], object);
 
-	const configuration = {
+	const confFrance = {
 		type: 'choropleth',
 		data: {
 			labels: franceTopology.objects.fra.geometries.map((d, i) => d.properties.name || i),
@@ -140,19 +142,21 @@
 	};
 
 	// Rendu
-	const franceChart = renderChart(configuration, 512, 512);
-	const idfChart = renderChart(confIdf, 256, 256);
+	const franceChart = renderChart(confFrance, IMAGE_SIZE, IMAGE_SIZE);
+	const idfChart = renderChart(confIdf, IMAGE_SIZE / 2, IMAGE_SIZE / 2);
 
 	// IDF en dessous de la Réunion
 	const reference = franceChart._metasets[0].data.filter(({ feature }) => feature.id === 'RE.')[0];
 	const { y2, height } = reference.getBounds();
 
-	const topIdf = Math.round(y2 + height); // en dessous + hauteur de la Réunion
+	const idfSize = IMAGE_SIZE / 4;
+	const x0 = IMAGE_SIZE - idfSize;
+	const y0 = Math.round(y2 + height); // en dessous + hauteur de la Réunion
 
-	franceChart.canvas.getContext('2d').drawImage(idfChart.canvas, 512 - 128, topIdf, 128, 128);
+	franceChart.canvas.getContext('2d').drawImage(idfChart.canvas, x0, y0, idfSize, idfSize);
 
 	const infographics = [
-		...franceChart._metasets[0].data.map((geof, index) => {
+		...franceChart._metasets[0].data.map((geof: any) => {
 			const svgPath = geof.projectionScale.geoPath.context(null)(geof.feature);
 			const dptName = geof.feature.properties.name;
 			const { code, score } = zbeulIndex[dptName] ?? { code: -1, score: 0 };
@@ -163,7 +167,7 @@
 				tr: { x: 0, y: 0, s: 1 }
 			};
 		}),
-		...idfChart._metasets[0].data.map((geof, index) => {
+		...idfChart._metasets[0].data.map((geof: any) => {
 			const svgPath = geof.projectionScale.geoPath.context(null)(geof.feature);
 			const dptName = geof.feature.properties.name;
 			const { code, score } = zbeulIndex[dptName] ?? { code: -1, score: 0 };
@@ -171,7 +175,7 @@
 				coords: svgPath,
 				code,
 				title: `${geof.feature.properties.name} ${score}`,
-				tr: { x: 512 - 128, y: topIdf, s: 0.5 }
+				tr: { x: x0, y: y0, s: 0.5 }
 			};
 		})
 	];
