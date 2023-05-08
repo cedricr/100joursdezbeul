@@ -2,6 +2,7 @@
 	import calendrierAujourdhui from '$lib/assets/icons/calendrier-aujourdhui.svg';
 	import calendrierPasse from '$lib/assets/icons/calendrier-passe.svg';
 	import { startDay } from '$lib/constants';
+	import type { ActionEvent } from '$lib/types';
 	import {
 		dateToLabel,
 		dateToString,
@@ -15,7 +16,7 @@
 	export let data;
 	const startDate = dayjs(startDay);
 
-	const pastDates = [];
+	const pastDates: { date: string; label: string }[] = [];
 	for (let i = 0; i <= 100; i++) {
 		const date = startDate.add(i, 'day');
 
@@ -26,7 +27,7 @@
 	}
 	pastDates.reverse();
 
-	function getCalPointsDisplay(date, actions) {
+	function getCalPointsDisplay(date: string, actions: ActionEvent[]) {
 		const numPoints = getNationalScoreForDate(date, actions);
 		let suffix = '!';
 		if (numPoints === 0) {

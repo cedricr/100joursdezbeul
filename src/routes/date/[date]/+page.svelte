@@ -33,7 +33,9 @@
 				{@const deptEvents = filterEventsForDepartment(deptCode, events)}
 				{#if deptEvents.length}
 					<h3 class="zbeul mb-6 mt-10 text-2xl">
-						{getDepartmentName(deptCode)}&nbsp;: +{@html getPointsDisplay(getScore(deptCode))}
+						<a href="/departement/{deptCode}">{getDepartmentName(deptCode)}</a>&nbsp;: +{@html getPointsDisplay(
+							getScore(deptCode)
+						)}
 					</h3>
 					{#each deptEvents as event}
 						<Event {event} hideDate />

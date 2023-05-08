@@ -5,7 +5,13 @@
 
 	import Thanks from './thanks.svelte';
 
-	import { getDayNumber, getDepartmentName, getLatestDate } from '$lib/utils';
+	import {
+		dateToLabel,
+		dateToShortLabel,
+		getDayNumber,
+		getDepartmentName,
+		getLatestDate
+	} from '$lib/utils';
 	import type { ActionEvent, DepartmentResult } from '$lib/types';
 	export let data;
 	const dayNumber = getDayNumber();
@@ -35,9 +41,9 @@
 		);
 
 	const now = new Date();
-	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
+	const formattedDate = dateToShortLabel(now);
 	const lastUpdateDate = getLatestDate(data.actions);
-	const formattedLastUpdateDate = lastUpdateDate?.toLocaleDateString('fr', { dateStyle: 'medium' });
+	const formattedLastUpdateDate = dateToLabel(lastUpdateDate);
 </script>
 
 <svelte:head>

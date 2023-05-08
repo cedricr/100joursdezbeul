@@ -16,8 +16,12 @@ export function dateToString(date: Date | Dayjs): string {
 	return dayjs(date).format('YYYY-MM-DD');
 }
 
-export function dateToLabel(date: Date | Dayjs): string {
+export function dateToLabel(date: Date | Dayjs | string): string {
 	return dayjs(date).format('dddd Do MMMM');
+}
+
+export function dateToShortLabel(date: Date | Dayjs | string): string {
+	return dayjs(date).format('Do MMMM');
 }
 
 export function getDayNumber(): number {
@@ -26,7 +30,7 @@ export function getDayNumber(): number {
 	return elapsedDays;
 }
 
-export function getLatestDate(events: ActionEvent[]): Date | undefined {
+export function getLatestDate(events: ActionEvent[]): Date {
 	const dates = events.map((event) => new Date(event.date));
 	return dates.sort((a, b) => b - a)[0];
 }

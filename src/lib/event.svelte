@@ -1,21 +1,18 @@
 <script lang="ts">
 	import { ACTION_LABEL, ACTION_SCORE, TARGET_MULTIPLIER } from '$lib/constants';
 	import type { ActionEvent } from '$lib/types';
-	import { getPointsDisplay, humanizeLink } from '$lib/utils';
+	import { dateToShortLabel, getPointsDisplay, humanizeLink } from '$lib/utils';
 
 	export let event: ActionEvent;
 	export let hideDate = false;
 
 	const liens = event.liens.filter((lien) => !!lien).map((lien) => humanizeLink(lien));
-
-	function getDateLabel(datestring: string) {
-		return new Date(datestring).toLocaleDateString('fr-FR', { dateStyle: 'short' }).slice(0, 5);
-	}
 </script>
 
 <li class="mb-8 sm:flex sm:flex-row">
 	<div class="w-20 shrink-0">
-		{#if !hideDate}<strong>{getDateLabel(event.date)}</strong>{/if}
+		{#if !hideDate}<strong><a href="/date/{event.date}">{dateToShortLabel(event.date)}</a></strong
+			>{/if}
 		<span class="font-bold text-[#dd0220]">{@html getPointsDisplay(event.score)}</span>
 	</div>
 	<div>
