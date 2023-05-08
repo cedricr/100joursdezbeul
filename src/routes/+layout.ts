@@ -11,13 +11,14 @@ import type {
 	GristTarget
 } from '$lib/types';
 import { dateToString, sum } from '$lib/utils';
-import { GristDocAPI } from 'grist-api';
+
+import ACTIONS from '../../data/actions.json?raw';
+import TARGETS from '../../data/cibles.json?raw';
+import ROLES from '../../data/roles.json?raw';
+import MINISTRIES from '../../data/ministeres.json?raw';
 
 export const prerender = !dev;
 export const csr = dev;
-
-// const DOC_URL = 'https://100joursdezbeul.getgrist.com/62uY9YoxQE56Ma1uRZQZqo/100-jours-de-zbeul';
-const DOC_URL = 'https://100joursdezbeul.getgrist.com/3UFxMh17Rwp6/100-jours-de-zbeul-emergency';
 
 function generateLeaderboard(actionEvents: ActionEvent[]) {
 	const departmentsResults: DepartmentResult = {};
@@ -117,16 +118,14 @@ function parseActions(
 }
 
 export const load = async () => {
-	console.log('Chargement des données Grist');
-	const api = new GristDocAPI(DOC_URL);
-	const actions = (await api.fetchTable('Actions')) as GristAction[];
+	const actions = JSON.parse(ACTIONS) as GristAction[];
 	// console.log(actions);
-	const targets = (await api.fetchTable('Cibles')) as GristTarget[];
-	// console.log(targets);
-	const roles = (await api.fetchTable('Roles')) as GristRole[];
-	// console.log(roles);
-	const ministries = (await api.fetchTable('Ministeres')) as GristMinistry[];
-	// console.log(ministries);
+	const targets = JSON.parse(TARGETS) as GristTarget[];
+	// // console.log(targets);
+	const roles = JSON.parse(ROLES) as GristRole[];
+	// // console.log(roles);
+	const ministries = JSON.parse(MINISTRIES) as GristMinistry[];
+	// // console.log(ministries);
 	const actionEvents = parseActions(actions, targets, roles, ministries);
 	return {
 		actionEvents,
