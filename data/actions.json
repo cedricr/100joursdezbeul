@@ -1668,5 +1668,53 @@
 		"gristHelper_ConditionalRule": null,
 		"gristHelper_ConditionalRule2": false,
 		"gristHelper_Display": ["L", "Marc Fesneau"]
+	},
+	{
+		"id": 110,
+		"manualSort": 108,
+		"date": 1683504000,
+		"lieu": "Lyon",
+		"departement": "69",
+		"description": "Convoi présidentiel accueilli par une casserolade malgré l’interdiction, manifestation très dense, barricades sur le parcours et fuite de Macron après l’annulation de sa visite à la mairie de 3e envahie.",
+		"actions": ["L", "chahut", "annulation", "creatif"],
+		"lien1": "https://twitter.com/LyonInsurrectio/status/1655564819234279425?s=20",
+		"lien2": "https://twitter.com/AnonymeCitoyen/status/1655616417230729229?s=20",
+		"lien3": "",
+		"cibles": ["L", 1],
+		"gristHelper_ConditionalRule": null,
+		"gristHelper_ConditionalRule2": false,
+		"gristHelper_Display": ["L", "Emmanuel Macron"]
+	},
+	{
+		"id": 111,
+		"manualSort": 109,
+		"date": 1683504000,
+		"lieu": "Pessac",
+		"departement": "33",
+		"description": "Un comité de non-accueil était là pour la venue de Bérangère Couillard, Secrétaire d’État auprès du ministre de la Transition écologique et de la Cohésion des territoires chargée de l’Ecologie.",
+		"actions": ["L", "chahut"],
+		"lien1": "https://twitter.com/laurentbigfr/status/1655507719187472384?s=20",
+		"lien2": "",
+		"lien3": "",
+		"cibles": ["L", 42],
+		"gristHelper_ConditionalRule": null,
+		"gristHelper_ConditionalRule2": false,
+		"gristHelper_Display": ["L", "Bérangère Couillard"]
+	},
+	{
+		"id": 112,
+		"manualSort": 110,
+		"date": 1683504000,
+		"lieu": "Paris 18",
+		"departement": "75",
+		"description": "Stanislas Guerini fuit sa casserolade d’accueil à la mairie du 18e.",
+		"actions": ["L", "chahut"],
+		"lien1": "https://twitter.com/leguepardmedia/status/1655531087932583937?s=20",
+		"lien2": "",
+		"lien3": "",
+		"cibles": ["L", 15],
+		"gristHelper_ConditionalRule": null,
+		"gristHelper_ConditionalRule2": false,
+		"gristHelper_Display": ["L", "Stanislas Guerini"]
 	}
 ]
