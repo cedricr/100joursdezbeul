@@ -18,14 +18,31 @@
 	<h1 class="zbeul">100 jours de zbeul</h1>
 	<p class="zbeul mb-6 text-center">Quels sont les départements qui zbeulent le plus&nbsp;?</p>
 </header>
-<slot />
+<main role="main">
+	<slot />
+</main>
 <footer class="my-8" role="contentinfo">
 	<hr class="mb-4" />
 
-	<p class="text-center">
-		<a href="https://github.com/cedricr/100joursdezbeul">Code source</a> ·
-		<a href="mailto:100joursdezbeul@solidairesinformatique.org">Contact</a>
-	</p>
+	<ul class="text-center">
+		<li class="inline">
+			<a href="/plan-site">Plan du site</a><span aria-hidden="true">&nbsp;·</span>
+		</li>
+		<li class="inline">
+			<a href="https://github.com/cedricr/100joursdezbeul">Code source</a><span aria-hidden="true">
+				&nbsp;·</span
+			>
+		</li>
+		<li class="inline">
+			<a href="mailto:100joursdezbeul@solidairesinformatique.org">Contact</a><span
+				aria-hidden="true"
+				>&nbsp;·
+			</span>
+		</li>
+		<li class="inline">
+			<a href="/mentions-legales">Mentions légales</a>
+		</li>
+	</ul>
 
 	<div class="mx-auto mt-8 w-fit">
 		<a href="https://solidairesinformatique.org"

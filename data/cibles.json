@@ -1,0 +1,520 @@
+[
+	{
+		"id": 1,
+		"manualSort": 1,
+		"nom": "Emmanuel Macron",
+		"role": 8,
+		"titre": "Président de la République",
+		"ministeres": ["L"],
+		"gristHelper_Display": "Président de la République",
+		"gristHelper_Display2": ["L"]
+	},
+	{
+		"id": 2,
+		"manualSort": 2,
+		"nom": "Élisabeth Borne",
+		"role": 4,
+		"titre": "Première ministre",
+		"ministeres": ["L", 1],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Première ministre"]
+	},
+	{
+		"id": 3,
+		"manualSort": 3,
+		"nom": "Bruno Le Maire",
+		"role": 4,
+		"titre": "Ministre de l’Économie, des Finances et de la Souveraineté industrielle et numérique",
+		"ministeres": ["L", 2],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère de l'Économie, des Finances et de la Souveraineté industrielle et numérique"
+		]
+	},
+	{
+		"id": 4,
+		"manualSort": 4,
+		"nom": "Gérald Darmanin",
+		"role": 4,
+		"titre": "Ministre de l'Intérieur et des Outre-mer",
+		"ministeres": ["L", 3],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Ministère de l'Intérieur et des Outre-mer"]
+	},
+	{
+		"id": 5,
+		"manualSort": 5,
+		"nom": "Catherine Colonna",
+		"role": 4,
+		"titre": "Ministre de l’Europe et des Affaires étrangères",
+		"ministeres": ["L", 4],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Ministère de l'Europe et des Affaires étrangères"]
+	},
+	{
+		"id": 6,
+		"manualSort": 6,
+		"nom": "Éric Dupond-Moretti",
+		"role": 4,
+		"titre": "Garde des Sceaux, ministre de la Justice",
+		"ministeres": ["L", 5],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Ministère de la Justice"]
+	},
+	{
+		"id": 7,
+		"manualSort": 7,
+		"nom": "Christophe Béchu",
+		"role": 4,
+		"titre": "Ministre de la Transition écologique et de la Cohésion des territoires",
+		"ministeres": ["L", 11],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère de la Transition écologique et de la Cohésion des territoires"
+		]
+	},
+	{
+		"id": 8,
+		"manualSort": 8,
+		"nom": "Pap Ndiaye",
+		"role": 4,
+		"titre": "Ministre de l’Éducation nationale et de la Jeunesse",
+		"ministeres": ["L", 8],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Ministère de l'Éducation nationale et de la Jeunesse"]
+	},
+	{
+		"id": 9,
+		"manualSort": 9,
+		"nom": "Sébastien Lecornu",
+		"role": 4,
+		"titre": "Ministre des Armées",
+		"ministeres": ["L", 6],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Ministère des Armées"]
+	},
+	{
+		"id": 10,
+		"manualSort": 10,
+		"nom": "Brigitte Bourguignon",
+		"role": 4,
+		"titre": "Ministre de la Santé et de la Prévention",
+		"ministeres": ["L", 14],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Ministère de la Santé et de la Prévention"]
+	},
+	{
+		"id": 11,
+		"manualSort": 11,
+		"nom": "Olivier Dussopt",
+		"role": 4,
+		"titre": "Ministre du Travail, du Plein emploi et de l'Insertion",
+		"ministeres": ["L", 7],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Ministère du Travail, du Plein emploi et de l'Insertion"]
+	},
+	{
+		"id": 12,
+		"manualSort": 12,
+		"nom": "Damien Abad",
+		"role": 4,
+		"titre": "Ministre des Solidarités, de l'Autonomie et des Personnes handicapées",
+		"ministeres": ["L", 15],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère des Solidarités, de l'Autonomie et des Personnes handicapées"
+		]
+	},
+	{
+		"id": 13,
+		"manualSort": 13,
+		"nom": "Sylvie Retailleau",
+		"role": 4,
+		"titre": "Ministre de l'Enseignement supérieur et de la Recherche",
+		"ministeres": ["L", 9],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Ministère de l’Enseignement supérieur et de la Recherche"]
+	},
+	{
+		"id": 14,
+		"manualSort": 14,
+		"nom": "Marc Fesneau",
+		"role": 4,
+		"titre": "Ministre de l'Agriculture et de la Souveraineté alimentaire",
+		"ministeres": ["L", 10],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Ministère de l’Agriculture et de la Souveraineté alimentaire"]
+	},
+	{
+		"id": 15,
+		"manualSort": 15,
+		"nom": "Stanislas Guerini",
+		"role": 4,
+		"titre": "Ministre de la Transformation et de la Fonction publique",
+		"ministeres": ["L", 16],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Ministère de la Transformation et de la Fonction publiques"]
+	},
+	{
+		"id": 17,
+		"manualSort": 17,
+		"nom": "Rima Abdul-Malak",
+		"role": 4,
+		"titre": "Ministre de la Culture",
+		"ministeres": ["L", 13],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Ministère de la Culture"]
+	},
+	{
+		"id": 18,
+		"manualSort": 18,
+		"nom": "Agnès Pannier-Runacher",
+		"role": 4,
+		"titre": "Ministre de la Transition énergétique",
+		"ministeres": ["L", 12],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Ministère de la Transition énergétique"]
+	},
+	{
+		"id": 19,
+		"manualSort": 19,
+		"nom": "Amélie Oudéa-Castéra",
+		"role": 4,
+		"titre": "Ministre des Sports et des Jeux olympiques et paralympiques",
+		"ministeres": ["L", 17],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Ministère des Sports et des Jeux olympiques et paralympiques"]
+	},
+	{
+		"id": 20,
+		"manualSort": 20,
+		"nom": "Olivier Véran",
+		"role": 3,
+		"titre": "Ministre délégué chargé du Renouveau démocratique, porte-parole du Gouvernement",
+		"ministeres": ["L", 1],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": ["L", "Première ministre"]
+	},
+	{
+		"id": 21,
+		"manualSort": 21,
+		"nom": "Isabelle Rome",
+		"role": 3,
+		"titre": "Ministre déléguée chargée de l'Égalité entre les femmes et les hommes, de la Diversité et de l'Égalité des chances",
+		"ministeres": ["L", 1],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": ["L", "Première ministre"]
+	},
+	{
+		"id": 22,
+		"manualSort": 22,
+		"nom": "Gabriel Attal",
+		"role": 3,
+		"titre": "Ministre délégué chargé des Comptes publics",
+		"ministeres": ["L", 2],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère de l'Économie, des Finances et de la Souveraineté industrielle et numérique"
+		]
+	},
+	{
+		"id": 23,
+		"manualSort": 23,
+		"nom": "Christophe Béchu",
+		"role": 3,
+		"titre": "Ministre de la Transition écologique et de la Cohésion des territoires",
+		"ministeres": ["L"],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": ["L"]
+	},
+	{
+		"id": 24,
+		"manualSort": 24,
+		"nom": "Franck Riester",
+		"role": 3,
+		"titre": "Ministre chargé des Relations avec le Parlement",
+		"ministeres": ["L", 1],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": ["L", "Première ministre"]
+	},
+	{
+		"id": 25,
+		"manualSort": 25,
+		"nom": "Clément Beaune",
+		"role": 3,
+		"titre": "Ministre délégué chargé des Transports",
+		"ministeres": ["L", 11],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère de la Transition écologique et de la Cohésion des territoires"
+		]
+	},
+	{
+		"id": 26,
+		"manualSort": 26,
+		"nom": "Roland Lescure",
+		"role": 3,
+		"titre": "Ministre délégué chargé de l'Industrie",
+		"ministeres": ["L", 2],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère de l'Économie, des Finances et de la Souveraineté industrielle et numérique"
+		]
+	},
+	{
+		"id": 27,
+		"manualSort": 27,
+		"nom": "Jean-Noël Barrot",
+		"role": 3,
+		"titre": "Ministre délégué chargé de la Transition numérique et des Télécommunications",
+		"ministeres": ["L", 2],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère de l'Économie, des Finances et de la Souveraineté industrielle et numérique"
+		]
+	},
+	{
+		"id": 28,
+		"manualSort": 28,
+		"nom": "Olivia Grégoire",
+		"role": 3,
+		"titre": "Ministre déléguée chargée des Petites et moyennes entreprises, du Commerce, de l'Artisanat et du Tourisme",
+		"ministeres": ["L", 2],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère de l'Économie, des Finances et de la Souveraineté industrielle et numérique"
+		]
+	},
+	{
+		"id": 29,
+		"manualSort": 29,
+		"nom": "Dominique Faure",
+		"role": 3,
+		"titre": "Ministre déléguée chargée de la ruralité et des collectivités territoriales",
+		"ministeres": ["L", 3, 11],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère de l'Intérieur et des Outre-mer",
+			"Ministère de la Transition écologique et de la Cohésion des territoires"
+		]
+	},
+	{
+		"id": 30,
+		"manualSort": 30,
+		"nom": "Charlotte Caubel",
+		"role": 2,
+		"titre": "Secrétaire d’État chargée de l'Enfance",
+		"ministeres": ["L", 1],
+		"gristHelper_Display": "Secrétaire d’État",
+		"gristHelper_Display2": ["L", "Première ministre"]
+	},
+	{
+		"id": 31,
+		"manualSort": 31,
+		"nom": "Hervé Berville",
+		"role": 2,
+		"titre": "Secrétaire d'État chargé de la Mer",
+		"ministeres": ["L", 1],
+		"gristHelper_Display": "Secrétaire d’État",
+		"gristHelper_Display2": ["L", "Première ministre"]
+	},
+	{
+		"id": 32,
+		"manualSort": 32,
+		"nom": "Marlène Schiappa",
+		"role": 2,
+		"titre": "Secrétaire d'État chargée de l'Économie sociale et solidaire et de la Vie associative",
+		"ministeres": ["L", 1],
+		"gristHelper_Display": "Secrétaire d’État",
+		"gristHelper_Display2": ["L", "Première ministre"]
+	},
+	{
+		"id": 33,
+		"manualSort": 33,
+		"nom": "Jean-François Carenco",
+		"role": 3,
+		"titre": "Ministre délégué chargé des Outre-mer",
+		"ministeres": ["L", 3],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": ["L", "Ministère de l'Intérieur et des Outre-mer"]
+	},
+	{
+		"id": 34,
+		"manualSort": 34,
+		"nom": "Sonia Backès",
+		"role": 2,
+		"titre": "Secrétaire d'État chargée de la Citoyenneté",
+		"ministeres": ["L", 3],
+		"gristHelper_Display": "Secrétaire d’État",
+		"gristHelper_Display2": ["L", "Ministère de l'Intérieur et des Outre-mer"]
+	},
+	{
+		"id": 35,
+		"manualSort": 35,
+		"nom": "Olivier Becht",
+		"role": 3,
+		"titre": "Ministre délégué chargé du Commerce extérieur, de l'Attractivité et des Français de l'étranger",
+		"ministeres": ["L", 4],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": ["L", "Ministère de l'Europe et des Affaires étrangères"]
+	},
+	{
+		"id": 36,
+		"manualSort": 36,
+		"nom": "Laurence Boone",
+		"role": 2,
+		"titre": "Secrétaire d'État chargée de l'Europe",
+		"ministeres": ["L", 4],
+		"gristHelper_Display": "Secrétaire d’État",
+		"gristHelper_Display2": ["L", "Ministère de l'Europe et des Affaires étrangères"]
+	},
+	{
+		"id": 37,
+		"manualSort": 37,
+		"nom": "Chrysoula Zacharopoulou",
+		"role": 2,
+		"titre": "Secrétaire d'État chargée du Développement, de la Francophonie et des Partenariats internationaux",
+		"ministeres": ["L", 4],
+		"gristHelper_Display": "Secrétaire d’État",
+		"gristHelper_Display2": ["L", "Ministère de l'Europe et des Affaires étrangères"]
+	},
+	{
+		"id": 38,
+		"manualSort": 38,
+		"nom": "Sarah El Haïry",
+		"role": 2,
+		"titre": "Secrétaire d'État chargée de la Jeunesse et du Service national universel",
+		"ministeres": ["L", 6, 8],
+		"gristHelper_Display": "Secrétaire d’État",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère des Armées",
+			"Ministère de l'Éducation nationale et de la Jeunesse"
+		]
+	},
+	{
+		"id": 39,
+		"manualSort": 39,
+		"nom": "Patricia Mirallès",
+		"role": 2,
+		"titre": "Secrétaire d'État chargée des Anciens combattants et de la Mémoire",
+		"ministeres": ["L", 6],
+		"gristHelper_Display": "Secrétaire d’État",
+		"gristHelper_Display2": ["L", "Ministère des Armées"]
+	},
+	{
+		"id": 40,
+		"manualSort": 40,
+		"nom": "Carole Grandjean",
+		"role": 3,
+		"titre": "Ministre déléguée chargée de l'Enseignement et de la Formation professionnels",
+		"ministeres": ["L", 7, 8],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère du Travail, du Plein emploi et de l'Insertion",
+			"Ministère de l'Éducation nationale et de la Jeunesse"
+		]
+	},
+	{
+		"id": 41,
+		"manualSort": 41,
+		"nom": "Olivier Klein",
+		"role": 3,
+		"titre": "Ministre délégué chargé de la Ville et du Logement",
+		"ministeres": ["L", 11],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère de la Transition écologique et de la Cohésion des territoires"
+		]
+	},
+	{
+		"id": 42,
+		"manualSort": 42,
+		"nom": "Bérangère Couillard",
+		"role": 2,
+		"titre": "Secrétaire d'État chargée de l'Écologie",
+		"ministeres": ["L", 11],
+		"gristHelper_Display": "Secrétaire d’État",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère de la Transition écologique et de la Cohésion des territoires"
+		]
+	},
+	{
+		"id": 43,
+		"manualSort": 43,
+		"nom": "Agnès Firmin Le Bodo",
+		"role": 3,
+		"titre": "Ministre déléguée chargée de l'Organisation territoriale et des Professions de santé",
+		"ministeres": ["L", 14],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": ["L", "Ministère de la Santé et de la Prévention"]
+	},
+	{
+		"id": 44,
+		"manualSort": 44,
+		"nom": "Jean-Christophe Combe",
+		"role": 4,
+		"titre": "Ministre des Solidarités, de l'Autonomie et des Personnes handicapées",
+		"ministeres": ["L", 15],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère des Solidarités, de l'Autonomie et des Personnes handicapées"
+		]
+	},
+	{
+		"id": 45,
+		"manualSort": 45,
+		"nom": "Geneviève Darrieussecq",
+		"role": 3,
+		"titre": "Ministre déléguée chargée des Personnes handicapées",
+		"ministeres": ["L", 15],
+		"gristHelper_Display": "Ministre délégué·e",
+		"gristHelper_Display2": [
+			"L",
+			"Ministère des Solidarités, de l'Autonomie et des Personnes handicapées"
+		]
+	},
+	{
+		"id": 46,
+		"manualSort": 46,
+		"nom": "François Braun",
+		"role": 4,
+		"titre": "Ministre de la Santé et de la Prévention",
+		"ministeres": ["L", 14],
+		"gristHelper_Display": "Ministre",
+		"gristHelper_Display2": ["L", "Ministère de la Santé et de la Prévention"]
+	},
+	{
+		"id": 47,
+		"manualSort": 47,
+		"nom": "Village du SNU",
+		"role": 1,
+		"titre": "",
+		"ministeres": null,
+		"gristHelper_Display": "Village du SNU",
+		"gristHelper_Display2": ["L"]
+	},
+	{
+		"id": 48,
+		"manualSort": 48,
+		"nom": "Yaël Braun-Pivet",
+		"role": 6,
+		"titre": "Présidente de l'Assemblée nationale",
+		"ministeres": null,
+		"gristHelper_Display": "Présidente de l’Assemblée nationale",
+		"gristHelper_Display2": ["L"]
+	}
+]

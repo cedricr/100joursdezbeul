@@ -32,89 +32,86 @@
 	<title>100 jours de zbeul</title>
 </svelte:head>
 
-<main role="main">
-	<p class="mb-16 mt-24 text-center">
-		<span class="zbeul olympic-red mb-0 block text-8xl leading-[5rem]">
-			{100 - dayNumber}
-		</span>
-		<span class="mt-0 block text-xl">jours restants</span>
-	</p>
+<p class="mb-16 mt-24 text-center">
+	<span class="zbeul olympic-red mb-0 block text-8xl leading-[5rem]">
+		{100 - dayNumber}
+	</span>
+	<span class="mt-0 block text-xl">jours restants</span>
+</p>
 
-	<h2 class="zbeul mb-2">Classement au {formattedDate}</h2>
-	<p class="mb-2 text-center italic">
-		Derniers événements pris en compte&nbsp;: <a href="/nouveautes">{formattedLastUpdateDate}</a>
-	</p>
+<h2 class="zbeul mb-2">Classement au {formattedDate}</h2>
+<p class="mb-2 text-center italic">
+	Derniers événements pris en compte&nbsp;: <a href="/nouveautes">{formattedLastUpdateDate}</a>
+</p>
 
-	<div class="mx-auto mb-6 mt-10 max-w-lg text-xl">
-		<table class="ranking">
-			<thead>
-				<tr>
-					<th scope="col" class="p-1 sm:p-2">Département</th>
-					<th scope="col" class="p-1 text-center sm:p-2">Rang</th>
-					<th scope="col" class="p-1 text-center sm:p-2">Points</th>
+<div class="mx-auto mb-6 mt-10 max-w-lg text-xl">
+	<table class="ranking">
+		<thead>
+			<tr>
+				<th scope="col" class="p-1 sm:p-2">Département</th>
+				<th scope="col" class="p-1 text-center sm:p-2">Rang</th>
+				<th scope="col" class="p-1 text-center sm:p-2">Points</th>
+			</tr>
+		</thead>
+		<tbody>
+			{#each resultLines as { code, score, rank }}
+				<tr class="ranking-line">
+					<th scope="row" class="p-1 sm:p-2">
+						<a
+							href="/departement/{code}"
+							class="ranking-link no-underline hover:underline"
+							class:font-bold={rank < 4}
+						>
+							{getDepartmentName(code)}
+						</a>
+					</th>
+					<td class="p-1 text-center sm:p-2">
+						{#if rank === 1}
+							<img role="img" src={medailleOr} alt="1 (médaille d’or)" class="m-auto" />
+						{:else if rank === 2}
+							<img role="img" src={medailleArgent} alt="2 (médaille d’argent)" class="m-auto" />
+						{:else if rank === 3}
+							<img role="img" src={medailleBronze} alt="3 (médaille de bronze)" class="m-auto" />
+						{:else}
+							{rank}
+						{/if}
+					</td>
+					<td class="p-1 text-right sm:p-2" class:font-bold={rank < 4}>
+						{score} pts<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							class="icon-link"
+							aria-hidden="true"
+							><path
+								d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"
+							/></svg
+						>
+					</td>
 				</tr>
-			</thead>
-			<tbody>
-				{#each resultLines as { code, score, rank }}
-					<tr class="ranking-line">
-						<th scope="row" class="p-1 sm:p-2">
-							<a
-								href="/departement/{code}"
-								class="link-block no-underline hover:underline"
-								class:font-bold={rank < 4}
-							>
-								{getDepartmentName(code)}
-							</a>
-						</th>
-						<td class="p-1 text-center sm:p-2">
-							{#if rank === 1}
-								<img role="img" src={medailleOr} alt="1 (médaille d’or)" class="m-auto" />
-							{:else if rank === 2}
-								<img role="img" src={medailleArgent} alt="2 (médaille d’argent)" class="m-auto" />
-							{:else if rank === 3}
-								<img role="img" src={medailleBronze} alt="3 (médaille de bronze)" class="m-auto" />
-							{:else}
-								{rank}
-							{/if}
-						</td>
-						<td class="p-1 text-right sm:p-2" class:font-bold={rank < 4}>
-							{score} pts<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								class="icon-link"
-								aria-hidden="true"
-								><path
-									d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"
-								/></svg
-							>
-						</td>
-					</tr>
-				{/each}
-			</tbody>
-		</table>
-	</div>
+			{/each}
+		</tbody>
+	</table>
+</div>
 
-	<ul class="mb-20 text-center text-lg">
-		<li><a href="/regles-du-jeu">Règles du jeu</a></li>
-		<li><a href="/comment-participer">Comment participer</a></li>
-		<li><a href="/presse">Revue de presse</a></li>
-		<li>
-			<a href="https://100joursdezbeul.getgrist.com/62uY9YoxQE56/100-jours-de-zbeul"
-				>Données brutes</a
-			>
-		</li>
-		<li>
-			<a
-				href="https://framaforms.org/100-jours-de-zbeul-proposer-un-evenement-1682372493"
-				class="font-bold">Signaler une action</a
-			>
-		</li>
-	</ul>
+<ul class="mb-20 text-center text-lg">
+	<li><a href="/regles-du-jeu">Règles du jeu</a></li>
+	<li><a href="/comment-participer">Comment participer</a></li>
+	<li><a href="/presse">Revue de presse</a></li>
+	<li>
+		<a href="https://100joursdezbeul.getgrist.com/62uY9YoxQE56/100-jours-de-zbeul">Données brutes</a
+		>
+	</li>
+	<li>
+		<a
+			href="https://framaforms.org/100-jours-de-zbeul-proposer-un-evenement-1682372493"
+			class="font-bold">Signaler une action</a
+		>
+	</li>
+</ul>
 
-	<Thanks />
-</main>
+<Thanks />
 
 <style lang="postcss">
 	.olympic-red {
