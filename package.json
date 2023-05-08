@@ -6,7 +6,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --compiler-warnings 'a11y-no-redundant-roles:ignore'",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",

@@ -37,7 +37,7 @@
 	"svelte.plugin.css.globals": "src/app.postcss",
 	"svelte.enable-ts-plugin": true,
 	"svelte.plugin.svelte.compilerWarnings": {
-		"security-anchor-rel-noreferrer": "ignore"
+		"a11y-no-redundant-roles": "ignore"
 	},
 	"svelte.plugin.svelte.defaultScriptLanguage": "ts",
 	"tailwindCSS.validate": true

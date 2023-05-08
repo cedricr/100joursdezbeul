@@ -1,4 +1,4 @@
-import dayjs, { Dayjs } from 'dayjs';
+import dayjs, { type Dayjs } from 'dayjs';
 import AdvancedFormat from 'dayjs/plugin/advancedFormat';
 import 'dayjs/locale/fr';
 

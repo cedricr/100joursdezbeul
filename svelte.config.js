@@ -19,6 +19,13 @@ const config = {
 			precompress: false,
 			strict: true
 		})
+	},
+	onwarn(warning, defaultHandler) {
+		if (warning.code === 'a11y-no-redundant-roles') {
+			return;
+		}
+
+		defaultHandler(warning);
 	}
 };
 

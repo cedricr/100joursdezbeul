@@ -74,10 +74,4 @@
 	p {
 		@apply mb-3 text-lg;
 	}
-	ul {
-		@apply mx-auto mb-6 max-w-lg list-none;
-	}
-	li {
-		@apply mb-3 text-lg;
-	}
 </style>

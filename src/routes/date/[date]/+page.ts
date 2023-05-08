@@ -3,7 +3,6 @@ import dayjs from 'dayjs';
 
 export const load = async ({ parent, params }) => {
 	const { actions } = await parent();
-	console.log(params);
 	return {
 		actions,
 		date: params.date

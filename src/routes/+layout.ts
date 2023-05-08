@@ -2,7 +2,6 @@ import { dev } from '$app/environment';
 import { ACTION_SCORE, DEPARTMENTS, TARGET_MULTIPLIER } from '$lib/constants';
 import type {
 	ActionCode,
-	ActionEvent,
 	ActionTarget,
 	GristAction,
 	GristMinistry,

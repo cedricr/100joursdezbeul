@@ -1,5 +1,5 @@
 <script lang="ts">
-	import calendrierAujourdhui from '$lib/assets/icons/calendrier-aujourdhui.svg';
+	// import calendrierAujourdhui from '$lib/assets/icons/calendrier-aujourdhui.svg';
 	import calendrierPasse from '$lib/assets/icons/calendrier-passe.svg';
 	import { startDay } from '$lib/constants';
 	import type { ActionEvent } from '$lib/types';
