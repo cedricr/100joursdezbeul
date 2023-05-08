@@ -66,8 +66,9 @@ function parseRecords(data: GristRecord[]): ActionEvent[] {
 
 export const load = async () => {
 	const api = new GristDocAPI(DOC_URL);
-	const records = (await api.fetchTable('Zbeul')) as GristRecord[];
+	const records = (await api.fetchTable('Actions')) as GristRecord[];
 	const actionEvents = parseRecords(records);
+	console.log(records);
 	return {
 		actionEvents,
 		leaderboard: generateLeaderboard(actionEvents)
