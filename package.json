@@ -12,7 +12,7 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"prepare": "husky install",
 		"test": "vitest",
-		"update-data": "ts-node --esm scripts/update-data/index.ts "
+		"update-data": "ts-node --esm scripts/update-data/index.ts ; prettier --write data"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^2.0.2",
