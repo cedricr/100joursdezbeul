@@ -16,9 +16,9 @@
 
 	<h3>Hébergement du site</h3>
 	<p>
-		Google Cloud France SARL<br />
-		8 Rue de Londres<br />
-		75009 Paris
+		Netlify HQ<br />
+		44 Montgomery St, Suite 300,<br />
+		San Francisco, California 94104, US
 	</p>
 
 	<h3>Cookies</h3>
