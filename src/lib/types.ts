@@ -23,7 +23,15 @@ export interface ActionEvent {
 	departement: string;
 	description: string;
 	actions: ActionCode[];
-	cibles: ActionTarget[];
+	cibles: {
+		nom: string;
+		titre: string;
+		role: {
+			code: ActionTarget;
+			intitule: string;
+		};
+		ministeres: { nom: string }[];
+	}[];
 	liens: string[];
 	score: number;
 }
@@ -32,7 +40,8 @@ export interface DepartmentResult {
 	[departmentCode: string]: number;
 }
 
-export interface GristRecord extends IRecord {
+export interface GristAction extends IRecord {
+	id: number;
 	lieu: string;
 	departement: string;
 	date: number;
@@ -40,6 +49,25 @@ export interface GristRecord extends IRecord {
 	lien1: string;
 	lien2: string;
 	lien3: string;
-	actions: [string, ...ActionCode[]];
-	cibles: [string, ...ActionTarget[]];
+	actions: ['L', ...ActionCode[]];
+	cibles: ['L', ...number[]];
+}
+
+export interface GristTarget extends IRecord {
+	id: number;
+	nom: string;
+	role: number;
+	titre: string;
+	ministeres: ['L', ...number[]];
+}
+
+export interface GristRole extends IRecord {
+	id: number;
+	code: ActionTarget;
+	intitule: string;
+}
+
+export interface GristMinistry extends IRecord {
+	id: number;
+	nom: string;
 }

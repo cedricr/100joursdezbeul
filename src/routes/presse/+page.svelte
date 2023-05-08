@@ -18,12 +18,7 @@
 		{#each mediaRefs as link}
 			<li class="mb-5 flex items-center gap-4 text-xl">
 				<img class="image h-10 w-10 rounded-full" src={link.image} alt="" />
-				<a
-					class="link text-xl no-underline hover:underline"
-					target="_blank"
-					href={link.source}
-					rel="noreferrer"
-				>
+				<a class="link text-xl no-underline hover:underline" href={link.source}>
 					{link.content}<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width="24"

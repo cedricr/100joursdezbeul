@@ -18,7 +18,7 @@ export const ACTION_SCORE = {
 	'sobriete': 3,
 	'fuite': 4,
 	'annulation': 5,
-};
+} as const;
 
 // prettier-ignore
 export const ACTION_LABEL = {
@@ -27,7 +27,7 @@ export const ACTION_LABEL = {
 	'sobriete': 'Mise en sobriété énergétique',
 	'creatif': 'Action créative',
 	'chahut': 'Chahut (manifestation, casserolade, huée…)'
-};
+} as const;
 
 // prettier-ignore
 export const TARGET_MULTIPLIER = {
@@ -39,7 +39,7 @@ export const TARGET_MULTIPLIER = {
 	'presidente-an': 4,
 	'premiere-min': 5,
 	'president-rep': 6
-};
+} as const;
 
 // prettier-ignore
 export const TARGET_LABEL = {
@@ -51,4 +51,4 @@ export const TARGET_LABEL = {
 	'presidente-an': 'Présidente de l’Assemblée Nationale',
 	'premiere-min': 'Première ministre',
 	'president-rep': 'Président de la République'
-};
+} as const;
