@@ -13,11 +13,7 @@ export function renderChart(configuration, width = 400, height = 400) {
 }
 
 export async function saveToFile(canvas, fileName) {
-	return renderToBuffer(canvas).then((image) =>
-		fs.promises
-			.writeFile(fileName, image, 'base64')
-			.then(() => console.log('chart saved in', fileName))
-	);
+	return renderToBuffer(canvas).then((image) => fs.promises.writeFile(fileName, image, 'base64'));
 }
 
 function renderToBuffer(canvas, mimeType = 'image/png') {

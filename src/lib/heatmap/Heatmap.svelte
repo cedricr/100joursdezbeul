@@ -140,19 +140,25 @@
 	};
 
 	// Rendu
-	const franceChart = renderChart(configuration, 800, 800);
-	const idfChart = renderChart(confIdf, 400, 400);
+	const franceChart = renderChart(configuration, 512, 512);
+	const idfChart = renderChart(confIdf, 256, 256);
 
 	// IDF en dessous de la Réunion
 	const reference = franceChart._metasets[0].data.filter(({ feature }) => feature.id === 'RE.')[0];
 	const { y2, height } = reference.getBounds();
+
 	const topIdf = Math.round(y2 + height); // en dessous + hauteur de la Réunion
 
-	franceChart.canvas.getContext('2d').drawImage(idfChart.canvas, 600, topIdf, 200, 200);
+	franceChart.canvas.getContext('2d').drawImage(idfChart.canvas, 512 - 128, topIdf, 128, 128);
 
-	saveToFile(franceChart.canvas, 'src/lib/assets/france.png').catch((e) =>
-		console.error('Fail to generate France Map', e)
-	);
+	const infographics = franceChart._metasets[0].data.map((geof, index) => {
+		const svgPath = geof.projectionScale.geoPath.context(null)(geof.feature);
+		const dptName = geof.feature.properties.name;
+		const { code, score } = zbeulIndex[dptName] ?? { code: -1, score: 0 };
+		return { coords: svgPath, code, title: `${geof.feature.properties.name} ${score}` };
+	});
+
+	saveToFile(franceChart.canvas, 'src/lib/assets/france.png');
 
 	function toData(department: any) {
 		const name = department.properties.name;
@@ -167,4 +173,21 @@
 
 <div style="width:100%;height:100%;position:relative;">
 	<img src={carte} alt="100 jours de zbeul - En France" />
+	<div style="width:100%;height:100%;top:0px;bottom:0px;position: absolute;">
+		<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+			{#each infographics as { coords, title, code }}
+				{#if code > 0}
+					<a href="/departement/{code}" {title} target="_parent">
+						<path d={coords} stroke="none" fill="transparent">
+							<title>{title}</title>
+						</path>
+					</a>
+				{:else}
+					<path d={coords} stroke="none" fill="transparent">
+						<title>{title}</title>
+					</path>
+					${/if}
+			{/each}
+		</svg>
+	</div>
 </div>
