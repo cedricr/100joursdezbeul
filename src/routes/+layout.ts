@@ -4,7 +4,6 @@ import type {
 	ActionCode,
 	ActionEvent,
 	ActionTarget,
-	DepartmentResult,
 	GristAction,
 	GristMinistry,
 	GristRole,
@@ -19,17 +18,6 @@ import MINISTRIES from '../../data/ministeres.json?raw';
 
 export const prerender = !dev;
 export const csr = dev;
-
-function generateLeaderboard(actionEvents: ActionEvent[]) {
-	const departmentsResults: DepartmentResult = {};
-	actionEvents.forEach((event) => {
-		const dept = event.departement;
-		departmentsResults[dept] = (departmentsResults[dept] || 0) + event.score;
-	});
-	return Object.entries(departmentsResults).sort((d1, d2) => {
-		return d2[1] - d1[1];
-	});
-}
 
 function recordIsValid(record: GristAction) {
 	return (
@@ -128,7 +116,6 @@ export const load = async () => {
 	// // console.log(ministries);
 	const actionEvents = parseActions(actions, targets, roles, ministries);
 	return {
-		actionEvents,
-		leaderboard: generateLeaderboard(actionEvents)
+		actionEvents
 	};
 };
