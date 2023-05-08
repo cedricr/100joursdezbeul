@@ -26,20 +26,11 @@
 </div>
 
 <style lang="postcss">
-	h2 {
-		@apply mb-6 mt-12;
-	}
 	h3 {
 		@apply mb-8 mt-12 text-2xl font-bold;
 	}
 
 	p {
-		@apply mb-3 text-lg;
-	}
-	ul {
-		@apply mx-auto mb-6 max-w-lg list-disc pl-4;
-	}
-	li {
 		@apply mb-3 text-lg;
 	}
 </style>
