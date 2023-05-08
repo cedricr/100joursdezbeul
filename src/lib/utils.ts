@@ -21,6 +21,9 @@ export function getLatestDate(events: ActionEvent[]): Date | undefined {
 	return dates.sort((a, b) => b - a)[0];
 }
 
+export function sortEventsByDescendingDate(events: ActionEvent[]) {
+	return events.sort((evt1, evt2) => Date.parse(evt2.date) - Date.parse(evt1.date));
+}
 export function getDepartmentName(code: string): string {
 	const dept = DEPARTMENTS.find((elt) => elt.code === code);
 	if (!dept) {
