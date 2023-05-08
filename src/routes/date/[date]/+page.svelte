@@ -13,7 +13,7 @@
 
 	const date = new Date(data.date);
 	const formattedDate = date?.toLocaleDateString('fr', { dateStyle: 'medium' });
-	const events = filterEventsForDate(date, data.actionEvents);
+	const events = filterEventsForDate(date, data.actions);
 
 	function getScore(departmentCode: string): number {
 		return getScoreForEvents(filterEventsForDepartment(departmentCode, events));

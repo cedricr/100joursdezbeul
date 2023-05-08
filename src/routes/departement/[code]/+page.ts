@@ -1,7 +1,7 @@
 export const load = async ({ params, parent }) => {
-	const { actionEvents } = await parent();
+	const { actions } = await parent();
 	return {
 		department: params.code,
-		actionEvents
+		actions
 	};
 };

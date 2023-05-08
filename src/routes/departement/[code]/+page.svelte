@@ -11,7 +11,7 @@
 	export let data;
 
 	const events = sortEventsByDescendingDate(
-		filterEventsForDepartment(data.department, data.actionEvents)
+		filterEventsForDepartment(data.department, data.actions)
 	);
 </script>
 

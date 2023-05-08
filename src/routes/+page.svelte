@@ -23,7 +23,7 @@
 		});
 	}
 
-	const resultLines = generateLeaderboard(data.actionEvents)
+	const resultLines = generateLeaderboard(data.actions)
 		.map(([code, score]) => ({ code, score }))
 		.reduce(
 			(acc, x, i) =>
@@ -36,7 +36,7 @@
 
 	const now = new Date();
 	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
-	const lastUpdateDate = getLatestDate(data.actionEvents);
+	const lastUpdateDate = getLatestDate(data.actions);
 	const formattedLastUpdateDate = lastUpdateDate?.toLocaleDateString('fr', { dateStyle: 'medium' });
 </script>
 
