@@ -31,7 +31,7 @@
 		<div class="mt-1 flex flex-wrap gap-1">
 			{#each event.cibles as target}
 				<div class="tag target">
-					{TARGET_LABEL[target]}&nbsp;: x{TARGET_MULTIPLIER[target]}
+					{TARGET_LABEL[target.role.code]}&nbsp;: x{TARGET_MULTIPLIER[target.role.code]}
 				</div>
 			{/each}
 		</div>
