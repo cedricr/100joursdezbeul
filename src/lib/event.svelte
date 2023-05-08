@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ACTION_LABEL, ACTION_SCORE, TARGET_LABEL, TARGET_MULTIPLIER } from '$lib/constants';
+	import { ACTION_LABEL, ACTION_SCORE, TARGET_MULTIPLIER } from '$lib/constants';
 	import type { ActionEvent } from '$lib/types';
 	import { getPointsDisplay, humanizeLink } from '$lib/utils';
 
@@ -31,7 +31,7 @@
 		<div class="mt-1 flex-wrap gap-1 sm:flex">
 			{#each event.cibles as target}
 				<div class="tag target">
-					{TARGET_LABEL[target.role.code]}&nbsp;: x{TARGET_MULTIPLIER[target.role.code]}
+					{target.role.intitule}&nbsp;: x{TARGET_MULTIPLIER[target.role.code]}
 				</div>
 			{/each}
 		</div>

@@ -2,10 +2,10 @@ import { startDay } from '$lib/constants';
 import dayjs from 'dayjs';
 
 export const load = async ({ parent, params }) => {
-	const { actionEvents } = await parent();
+	const { actions } = await parent();
 	console.log(params);
 	return {
-		actionEvents,
+		actions,
 		date: params.date
 	};
 };

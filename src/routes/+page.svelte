@@ -6,12 +6,24 @@
 	import Thanks from './thanks.svelte';
 
 	import { getDayNumber, getDepartmentName, getLatestDate } from '$lib/utils';
+	import type { ActionEvent, DepartmentResult } from '$lib/types';
 	export let data;
 	const dayNumber = getDayNumber();
 
 	const append = (a, x) => a.concat([x]);
 
-	const resultLines = data.leaderboard
+	function generateLeaderboard(actionEvents: ActionEvent[]) {
+		const departmentsResults: DepartmentResult = {};
+		actionEvents.forEach((event) => {
+			const dept = event.departement;
+			departmentsResults[dept] = (departmentsResults[dept] || 0) + event.score;
+		});
+		return Object.entries(departmentsResults).sort((d1, d2) => {
+			return d2[1] - d1[1];
+		});
+	}
+
+	const resultLines = generateLeaderboard(data.actions)
 		.map(([code, score]) => ({ code, score }))
 		.reduce(
 			(acc, x, i) =>
@@ -24,7 +36,7 @@
 
 	const now = new Date();
 	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
-	const lastUpdateDate = getLatestDate(data.actionEvents);
+	const lastUpdateDate = getLatestDate(data.actions);
 	const formattedLastUpdateDate = lastUpdateDate?.toLocaleDateString('fr', { dateStyle: 'medium' });
 </script>
 

@@ -40,15 +40,3 @@ export const TARGET_MULTIPLIER = {
 	'premiere-min': 5,
 	'president-rep': 6
 } as const;
-
-// prettier-ignore
-export const TARGET_LABEL = {
-	'snu': 'Village du SNU',
-	'secretaire-etat': 'Secrétaire d’État',
-	'ministre-del': 'Ministre délégué·e',
-	'ministre': 'Ministre',
-	'ministre-int': 'Ministre de l’intérieur',
-	'presidente-an': 'Présidente de l’Assemblée Nationale',
-	'premiere-min': 'Première ministre',
-	'president-rep': 'Président de la République'
-} as const;

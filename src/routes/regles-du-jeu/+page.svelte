@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { ACTION_LABEL, ACTION_SCORE, TARGET_LABEL, TARGET_MULTIPLIER } from '$lib/constants';
+	import { ACTION_LABEL, ACTION_SCORE, TARGET_MULTIPLIER } from '$lib/constants';
 	import { getPointsDisplay } from '$lib/utils';
+
+	export let data;
 </script>
 
 <svelte:head><title>Règles du jeu | 100 jours de zbeul</title></svelte:head>
@@ -37,10 +39,10 @@
 	</ul>
 	<h3>Personnalités</h3>
 	<ul>
-		{#each Object.keys(TARGET_MULTIPLIER) as target}
+		{#each Object.values(data.roles) as role}
 			<li>
-				<span id={target}>{TARGET_LABEL[target]}</span>
-				— x{TARGET_MULTIPLIER[target]}
+				<span id={role.code}>{role.intitule}</span>
+				— x{TARGET_MULTIPLIER[role.code]}
 			</li>
 		{/each}
 	</ul>

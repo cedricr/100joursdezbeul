@@ -4,7 +4,6 @@ import type {
 	ActionCode,
 	ActionEvent,
 	ActionTarget,
-	DepartmentResult,
 	GristAction,
 	GristMinistry,
 	GristRole,
@@ -20,17 +19,6 @@ import MINISTRIES from '../../data/ministeres.json?raw';
 export const prerender = !dev;
 export const csr = dev;
 
-function generateLeaderboard(actionEvents: ActionEvent[]) {
-	const departmentsResults: DepartmentResult = {};
-	actionEvents.forEach((event) => {
-		const dept = event.departement;
-		departmentsResults[dept] = (departmentsResults[dept] || 0) + event.score;
-	});
-	return Object.entries(departmentsResults).sort((d1, d2) => {
-		return d2[1] - d1[1];
-	});
-}
-
 function recordIsValid(record: GristAction) {
 	return (
 		record.date &&
@@ -45,7 +33,7 @@ function parseActions(
 	targets: GristTarget[],
 	roles: GristRole[],
 	ministries: GristMinistry[]
-): ActionEvent[] {
+) {
 	const invalidRecords = actions.filter((record) => !recordIsValid(record));
 	if (invalidRecords.length) {
 		console.error('Données invalides, ignorées: ');
@@ -114,7 +102,12 @@ function parseActions(
 			};
 		});
 	// console.dir(result, { depth: null });
-	return result;
+	return {
+		actions: result,
+		roles: rolesDict,
+		targets: targetsDict,
+		ministries: ministriesDict
+	};
 }
 
 export const load = async () => {
@@ -126,9 +119,5 @@ export const load = async () => {
 	// // console.log(roles);
 	const ministries = JSON.parse(MINISTRIES) as GristMinistry[];
 	// // console.log(ministries);
-	const actionEvents = parseActions(actions, targets, roles, ministries);
-	return {
-		actionEvents,
-		leaderboard: generateLeaderboard(actionEvents)
-	};
+	return parseActions(actions, targets, roles, ministries);
 };
