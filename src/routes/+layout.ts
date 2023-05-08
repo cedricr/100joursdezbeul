@@ -16,7 +16,8 @@ import { GristDocAPI } from 'grist-api';
 export const prerender = !dev;
 export const csr = dev;
 
-const DOC_URL = 'https://100joursdezbeul.getgrist.com/62uY9YoxQE56Ma1uRZQZqo/100-jours-de-zbeul';
+// const DOC_URL = 'https://100joursdezbeul.getgrist.com/62uY9YoxQE56Ma1uRZQZqo/100-jours-de-zbeul';
+const DOC_URL = 'https://100joursdezbeul.getgrist.com/3UFxMh17Rwp6/100-jours-de-zbeul-emergency';
 
 function generateLeaderboard(actionEvents: ActionEvent[]) {
 	const departmentsResults: DepartmentResult = {};
