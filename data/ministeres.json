@@ -1,0 +1,87 @@
+[
+	{
+		"id": 1,
+		"manualSort": 1,
+		"nom": "Première ministre"
+	},
+	{
+		"id": 2,
+		"manualSort": 2,
+		"nom": "Ministère de l'Économie, des Finances et de la Souveraineté industrielle et numérique"
+	},
+	{
+		"id": 3,
+		"manualSort": 3,
+		"nom": "Ministère de l'Intérieur et des Outre-mer"
+	},
+	{
+		"id": 4,
+		"manualSort": 4,
+		"nom": "Ministère de l'Europe et des Affaires étrangères"
+	},
+	{
+		"id": 5,
+		"manualSort": 5,
+		"nom": "Ministère de la Justice"
+	},
+	{
+		"id": 6,
+		"manualSort": 6,
+		"nom": "Ministère des Armées"
+	},
+	{
+		"id": 7,
+		"manualSort": 7,
+		"nom": "Ministère du Travail, du Plein emploi et de l'Insertion"
+	},
+	{
+		"id": 8,
+		"manualSort": 8,
+		"nom": "Ministère de l'Éducation nationale et de la Jeunesse"
+	},
+	{
+		"id": 9,
+		"manualSort": 9,
+		"nom": "Ministère de l’Enseignement supérieur et de la Recherche"
+	},
+	{
+		"id": 10,
+		"manualSort": 10,
+		"nom": "Ministère de l’Agriculture et de la Souveraineté alimentaire"
+	},
+	{
+		"id": 11,
+		"manualSort": 11,
+		"nom": "Ministère de la Transition écologique et de la Cohésion des territoires"
+	},
+	{
+		"id": 12,
+		"manualSort": 12,
+		"nom": "Ministère de la Transition énergétique"
+	},
+	{
+		"id": 13,
+		"manualSort": 13,
+		"nom": "Ministère de la Culture"
+	},
+	{
+		"id": 14,
+		"manualSort": 14,
+		"nom": "Ministère de la Santé et de la Prévention"
+	},
+	{
+		"id": 15,
+		"manualSort": 15,
+		"nom": "Ministère des Solidarités, de l'Autonomie et des Personnes handicapées"
+	},
+	{
+		"id": 16,
+		"manualSort": 16,
+		"nom": "Ministère de la Transformation et de la Fonction publiques"
+	},
+	{
+		"id": 17,
+		"manualSort": 17,
+		"nom": "Ministère des Sports et des Jeux olympiques et paralympiques"
+	}
+]

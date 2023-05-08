@@ -6,6 +6,10 @@ export function sum(array: number[]): number {
 	return array.reduce((a, b) => a + b, 0);
 }
 
+export function dateToString(date: Date): string {
+	return dayjs(date).format('YYYY-MM-DD');
+}
+
 export function getDayNumber(): number {
 	const now = dayjs();
 	const elapsedDays = now.diff(startDay, 'day') + 1;
@@ -17,6 +21,9 @@ export function getLatestDate(events: ActionEvent[]): Date | undefined {
 	return dates.sort((a, b) => b - a)[0];
 }
 
+export function sortEventsByDescendingDate(events: ActionEvent[]) {
+	return events.sort((evt1, evt2) => Date.parse(evt2.date) - Date.parse(evt1.date));
+}
 export function getDepartmentName(code: string): string {
 	const dept = DEPARTMENTS.find((elt) => elt.code === code);
 	if (!dept) {

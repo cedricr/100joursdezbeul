@@ -28,6 +28,12 @@ npm run prepare
 npm run dev -- --open
 ```
 
+## Mettre à jour les données
+
+```
+npm run update-data
+```
+
 Pour contribuer anonymement:
 
 1. faites un checkout du projet
