@@ -4,8 +4,7 @@ import { GristDocAPI } from 'grist-api';
 
 const __dirname = new URL('.', import.meta.url).pathname;
 
-// const DOC_URL = 'https://100joursdezbeul.getgrist.com/62uY9YoxQE56Ma1uRZQZqo/100-jours-de-zbeul';
-const DOC_URL = 'https://100joursdezbeul.getgrist.com/3UFxMh17Rwp6/100-jours-de-zbeul-emergency';
+const DOC_URL = 'https://100joursdezbeul.getgrist.com/62uY9YoxQE56Ma1uRZQZqo/100-jours-de-zbeul';
 
 function write(data: object, filename: string) {
 	fs.writeFile(path.join(__dirname, '../..', filename), JSON.stringify(data, null, 2), (err) => {
