@@ -11,6 +11,7 @@
 		<li><a href="/regles-du-jeu">Règles du jeu</a></li>
 		<li><a href="/comment-participer">Comment participer</a></li>
 		<li><a href="/presse">Revue de presse</a></li>
+		<li><a href="/mentions-legales">Mentions légales</a></li>
 	</ul>
 </div>
 

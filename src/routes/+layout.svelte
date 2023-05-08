@@ -33,7 +33,15 @@
 				&nbsp;·</span
 			>
 		</li>
-		<li class="inline"><a href="mailto:100joursdezbeul@solidairesinformatique.org">Contact</a></li>
+		<li class="inline">
+			<a href="mailto:100joursdezbeul@solidairesinformatique.org">Contact</a><span
+				aria-hidden="true"
+				>&nbsp;·
+			</span>
+		</li>
+		<li class="inline">
+			<a href="/mentions-legales">Mentions légales</a>
+		</li>
 	</ul>
 
 	<div class="mx-auto mt-8 w-fit">
