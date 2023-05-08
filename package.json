@@ -42,9 +42,11 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"canvas": "^2.11.2",
 		"chart.js": "^4.3.0",
-		"chartjs-chart-geo": "^4.1.2",
+		"chartjs-chart-geo": "^4.2.0",
 		"csv": "^6.2.10",
+		"d3-composite-projections": "^1.4.0",
 		"nextcloud-node-client": "^1.8.1",
 		"node-fetch": "^3.3.1",
 		"vitest": "^0.30.1",

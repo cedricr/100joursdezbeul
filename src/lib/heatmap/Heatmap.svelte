@@ -1,217 +1,170 @@
 <script lang="ts">
 	import { LEADERBOARD, getDepartmentName } from '$lib/utils';
-	import { onMount } from 'svelte';
+
 	import { franceTopology } from './france';
 
-	let canvasFrance: HTMLCanvasElement;
-	let canvasIDF: HTMLCanvasElement;
-	let isClickable = false;
-	let topIdf = '40%';
+	import { topojson } from './chart-geo.js';
+	import { geoConicConformalFrance } from 'd3-composite-projections';
 
-	onMount(async () => {
-		/*
-			Note to maintainers:
-		  	TLDR : chart must be visible both in real site and in netlify preview
-			Initialy chartjs and chartgeo plugin were imported from node_modules in svelte:head tags,
-			but it did not work in netlify (imports failed, and imported code was inlined in html).
-			Then, I had to import as below using await and from cdn ... but chartgeo is not in cdn.
-			So I copied chartgeo localy (index.umd.js), but it failed again in netlify, now with "require" being unknown.
-			So I modified, index.umd.js and removed all references to module loading.
-			There might be a better way, but I did not find it.
-		*/
+	import { saveToFile, renderChart } from './render.js';
 
-		await import('https://cdn.jsdelivr.net/npm/d3@v6');
-		await import('https://cdn.jsdelivr.net/npm/d3-composite-projections');
-		await import('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.umd.js');
-		await import('./index.umd.js'); // Chart geo plugin
-		draw();
-	});
+	import carte from '$lib/assets/france.png';
 
-	function draw() {
-		// Indexe le zbeul par département : {nomDuDepartement:{code,score}}
-		const zbeulIndex = Object.fromEntries(
-			LEADERBOARD.map(([code, score]) => [getDepartmentName(code), { score, code }])
-		);
-		const maxValue = LEADERBOARD.reduce((max, [, score]) => Math.max(max, score), 0);
+	/**
+	 * On génère la carte de France choropleth du Zbeul
+	 * que l'on sauvegarde dans $lib/assets/france.png
+	 * Que l'on référence dans une <img>
+	 */
 
-		// Construction des données pour le chart
-		const departments = ChartGeo.topojson.feature(
-			franceTopology,
-			franceTopology.objects.fra
-		).features;
-		// On veut afficher l'Ile de France à la manière des DOMs pour des raisons de visibilité
-		// Impossible de trouver des données topojson avec l'ile de France séparée
-		// Donc on extrait les départements d'ile de France et on construit un nouveau topojson ...
-		// ... qu'on affichera dans un autre chart (qu'on ne peut pas afficher dans le même à cause de la projection)
-		const idfTopology = {
-			...franceTopology,
-			objects: {
-				fra: {
-					...franceTopology.objects.fra,
-					geometries: franceTopology.objects.fra.geometries.filter((geo) =>
-						[
-							'Yvelines',
-							'Paris',
-							'Hauts-de-Seine',
-							"Val-d'Oise",
-							'Val-de-Marne',
-							'Seine-Saint-Denis',
-							'Seine-et-Marne',
-							'Essonne'
-						].includes(geo.properties.name)
-					)
+	// Indexe le zbeul par département : {nomDuDepartement:{code,score}}
+	const zbeulIndex = Object.fromEntries(
+		LEADERBOARD.map(([code, score]) => [getDepartmentName(code), { score, code }])
+	);
+	const maxZbeul = LEADERBOARD.reduce((max, [, score]) => Math.max(max, score), 0);
+
+	// Génération des choropleth
+	const departments = topojson.feature(franceTopology, franceTopology.objects.fra).features;
+
+	const franceDataset = {
+		label: 'Départements',
+		outline: departments,
+		data: departments.map(toData)
+	};
+
+	const projection = geoConicConformalFrance();
+	projection.fitWidth = (size, object) => projection.fitSize([size, 1000], object);
+
+	const configuration = {
+		type: 'choropleth',
+		data: {
+			labels: franceTopology.objects.fra.geometries.map((d, i) => d.properties.name || i),
+			datasets: [franceDataset]
+		},
+		options: {
+			plugins: {
+				legend: {
+					display: false
 				}
-			}
-		};
-
-		const idf = ChartGeo.topojson.feature(idfTopology, idfTopology.objects.fra).features;
-
-		// Construction des datasets
-		const franceDataset = {
-			label: 'Départements',
-			outline: departments,
-			data: departments.map(toData)
-		};
-
-		const idfDataset = {
-			label: 'IDF',
-			outline: idf,
-			data: idf.map(toData)
-		};
-
-		// La projection
-		const projection = window.d3.geoConicConformalFrance();
-		projection.fitWidth = (size: number, object: any) => projection.fitSize([size, 1000], object);
-
-		// Construction des charts
-		const franceChart = new Chart(canvasFrance, {
-			type: 'choropleth',
-			data: {
-				labels: franceTopology.objects.fra.geometries.map((d, i) => d.properties.name || i),
-				datasets: [franceDataset]
 			},
-			options: {
-				plugins: {
+			showOutline: true,
+
+			responsive: true,
+			scales: {
+				projection: {
+					axis: 'x',
+					projection: projection,
+					projectionOffset: [0, -100]
+				},
+				color: {
+					axis: 'x',
+					quantize: 0,
+					interpolate: 'oranges',
+					display: false,
 					legend: {
 						display: false
-					}
-				},
-				showOutline: true,
-
-				responsive: true,
-				scales: {
-					projection: {
-						axis: 'x',
-						projection: projection,
-						projectionOffset: [0, -100]
 					},
-					color: {
-						axis: 'x',
-						quantize: 0,
-						interpolate: 'oranges',
-						display: false,
-						legend: {
-							display: false
-						},
-						min: 0,
-						max: maxValue
-					}
-				},
-
-				onClick: onClick(franceDataset),
-				onHover: onHover(franceDataset)
+					min: 0,
+					max: maxZbeul
+				}
 			}
-		});
+		}
+	};
 
-		// IDF en dessous de la Réunion
-		const reference = franceChart._metasets[0].data.filter(
-			({ feature }) => feature.id === 'RE.'
-		)[0];
-		const { y2, height } = reference.getBounds();
-		topIdf = `calc(${Math.round(y2 + height)}px)`; // en dessous + hauteur de la Martinique
+	///
+	// On veut afficher l'Ile de France à la manière des DOMs pour des raisons de visibilité
+	// Impossible de trouver des données topojson avec l'ile de France séparée
+	// Donc on extrait les départements d'ile de France et on construit un nouveau topojson ...
+	// ... qu'on affichera dans un autre chart (qu'on ne peut pas afficher dans le même à cause de la projection)
+	const idfTopology = {
+		...franceTopology,
+		objects: {
+			fra: {
+				...franceTopology.objects.fra,
+				geometries: franceTopology.objects.fra.geometries.filter((geo) =>
+					[
+						'Yvelines',
+						'Paris',
+						'Hauts-de-Seine',
+						"Val-d'Oise",
+						'Val-de-Marne',
+						'Seine-Saint-Denis',
+						'Seine-et-Marne',
+						'Essonne'
+					].includes(geo.properties.name)
+				)
+			}
+		}
+	};
 
-		new Chart(canvasIDF, {
-			type: 'choropleth',
-			data: {
-				labels: idfTopology.objects.fra.geometries.map((d, i) => d.properties.name || i),
-				datasets: [idfDataset]
+	const idf = topojson.feature(idfTopology, idfTopology.objects.fra).features;
+
+	const idfDataset = {
+		label: 'IDF',
+		outline: idf,
+		data: idf.map(toData)
+	};
+
+	const confIdf = {
+		type: 'choropleth',
+		data: {
+			labels: idfTopology.objects.fra.geometries.map((d, i) => d.properties.name || i),
+			datasets: [idfDataset]
+		},
+		options: {
+			plugins: {
+				legend: {
+					display: false
+				}
 			},
-			options: {
-				plugins: {
+			showOutline: true,
+
+			responsive: true,
+			scales: {
+				projection: {
+					axis: 'x',
+					projection: 'equalEarth'
+				},
+				color: {
+					axis: 'x',
+					quantize: 0,
+					interpolate: 'oranges',
+					display: false,
 					legend: {
 						display: false
-					}
-				},
-				showOutline: true,
-
-				responsive: true,
-				scales: {
-					projection: {
-						axis: 'x',
-						projection: 'equalEarth'
 					},
-					color: {
-						axis: 'x',
-						quantize: 0,
-						interpolate: 'oranges',
-						display: false,
-						legend: {
-							display: false
-						},
-						min: 0,
-						max: maxValue
-					}
-				},
-				onClick: onClick(idfDataset),
-				onHover: onHover(idfDataset)
-			}
-		});
-
-		function onClick(dataset: any) {
-			return (e: Event, clickedDepartments: any) => {
-				const code = getCLickableDepartment(dataset, clickedDepartments);
-				if (code > 0) {
-					window.open(encodeURI(`departement/${code}`), '_self');
+					min: 0,
+					max: maxZbeul
 				}
-			};
-		}
-		function onHover(dataset: any) {
-			return (e: any, clickedDepartments: any) => {
-				if (dataset === idfDataset && clickedDepartments.length === 0) {
-					// Propage l'événement à l'autre Canvas qui peut être recourvert
-					canvasFrance.dispatchEvent(e.native);
-				}
-				const code = getCLickableDepartment(dataset, clickedDepartments);
-				isClickable = code > 0;
-			};
-		}
-
-		function getCLickableDepartment(dataset: any, clickedDepartments: any) {
-			if (clickedDepartments.length === 0) {
-				return -1;
 			}
-			const { index } = clickedDepartments[0];
-			const code = dataset.data[index].code;
-			return code > 0 ? code : -1;
 		}
+	};
 
-		function toData(department: any) {
-			const name = department.properties.name;
-			const zbeul = zbeulIndex[name];
-			return {
-				feature: department,
-				value: zbeul ? zbeul.score : 0,
-				code: zbeul ? zbeul.code : -1
-			};
-		}
+	// Rendu
+	const franceChart = renderChart(configuration, 800, 800);
+	const idfChart = renderChart(confIdf, 400, 400);
+
+	// IDF en dessous de la Réunion
+	const reference = franceChart._metasets[0].data.filter(({ feature }) => feature.id === 'RE.')[0];
+	const { y2, height } = reference.getBounds();
+	const topIdf = Math.round(y2 + height); // en dessous + hauteur de la Réunion
+
+	franceChart.canvas.getContext('2d').drawImage(idfChart.canvas, 600, topIdf, 200, 200);
+
+	saveToFile(franceChart.canvas, 'src/lib/assets/france.png').catch((e) =>
+		console.error('Fail to generate France Map', e)
+	);
+
+	function toData(department: any) {
+		const name = department.properties.name;
+		const zbeul = zbeulIndex[name];
+		return {
+			feature: department,
+			value: zbeul ? zbeul.score : 0,
+			code: zbeul ? zbeul.code : -1
+		};
 	}
 </script>
 
 <div style="width:100%;height:100%;position:relative;">
-	<canvas style="cursor:{isClickable ? 'pointer' : ''};" height="300px" bind:this={canvasFrance} />
-	<canvas
-		style="cursor:{isClickable ? 'pointer' : ''};position: absolute;top: {topIdf};left: 40%;"
-		bind:this={canvasIDF}
-		height="50%"
-	/>
+	<img src={carte} alt="100 jours de zbeul - En France" />
 </div>
