@@ -157,6 +157,7 @@
 
 	const infographics = [
 		...franceChart._metasets[0].data.map((geof: any) => {
+			geof.projectionScale.geoPath.digits(0); // réduit la taille du svg
 			const svgPath = geof.projectionScale.geoPath.context(null)(geof.feature);
 			const dptName = geof.feature.properties.name;
 			const { code, score } = zbeulIndex[dptName] ?? { code: -1, score: 0 };
@@ -167,6 +168,7 @@
 			};
 		}),
 		...idfChart._metasets[0].data.map((geof: any) => {
+			geof.projectionScale.geoPath.digits(0); // réduit la taille du svg
 			const svgPath = geof.projectionScale.geoPath.context(null)(geof.feature);
 			const dptName = geof.feature.properties.name;
 			const { code, score } = zbeulIndex[dptName] ?? { code: -1, score: 0 };
