@@ -26,6 +26,9 @@
 
 	<ul class="text-center">
 		<li class="inline">
+			<a href="/plan-site">Plan du site</a><span aria-hidden="true">&nbsp;·</span>
+		</li>
+		<li class="inline">
 			<a href="https://github.com/cedricr/100joursdezbeul">Code source</a><span aria-hidden="true">
 				&nbsp;·</span
 			>
