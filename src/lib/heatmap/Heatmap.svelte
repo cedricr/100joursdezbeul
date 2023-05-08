@@ -151,12 +151,30 @@
 
 	franceChart.canvas.getContext('2d').drawImage(idfChart.canvas, 512 - 128, topIdf, 128, 128);
 
-	const infographics = franceChart._metasets[0].data.map((geof, index) => {
-		const svgPath = geof.projectionScale.geoPath.context(null)(geof.feature);
-		const dptName = geof.feature.properties.name;
-		const { code, score } = zbeulIndex[dptName] ?? { code: -1, score: 0 };
-		return { coords: svgPath, code, title: `${geof.feature.properties.name} ${score}` };
-	});
+	const infographics = [
+		...franceChart._metasets[0].data.map((geof, index) => {
+			const svgPath = geof.projectionScale.geoPath.context(null)(geof.feature);
+			const dptName = geof.feature.properties.name;
+			const { code, score } = zbeulIndex[dptName] ?? { code: -1, score: 0 };
+			return {
+				coords: svgPath,
+				code,
+				title: `${geof.feature.properties.name} ${score}`,
+				tr: { x: 0, y: 0, s: 1 }
+			};
+		}),
+		...idfChart._metasets[0].data.map((geof, index) => {
+			const svgPath = geof.projectionScale.geoPath.context(null)(geof.feature);
+			const dptName = geof.feature.properties.name;
+			const { code, score } = zbeulIndex[dptName] ?? { code: -1, score: 0 };
+			return {
+				coords: svgPath,
+				code,
+				title: `${geof.feature.properties.name} ${score}`,
+				tr: { x: 512 - 128, y: topIdf, s: 0.5 }
+			};
+		})
+	];
 
 	saveToFile(franceChart.canvas, 'src/lib/assets/france.png');
 
@@ -175,18 +193,28 @@
 	<img src={carte} alt="100 jours de zbeul - En France" />
 	<div style="width:100%;height:100%;top:0px;bottom:0px;position: absolute;">
 		<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-			{#each infographics as { coords, title, code }}
+			{#each infographics as { coords, title, code, tr }}
 				{#if code > 0}
 					<a href="/departement/{code}" {title} target="_parent">
-						<path d={coords} stroke="none" fill="transparent">
+						<path
+							d={coords}
+							stroke="none"
+							fill="transparent"
+							transform="translate({tr.x} {tr.y}) scale({tr.s} {tr.s})"
+						>
 							<title>{title}</title>
 						</path>
 					</a>
 				{:else}
-					<path d={coords} stroke="none" fill="transparent">
+					<path
+						d={coords}
+						stroke="none"
+						fill="transparent"
+						transform="translate({tr.x} {tr.y}) scale({tr.s} {tr.s})"
+					>
 						<title>{title}</title>
 					</path>
-					${/if}
+				{/if}
 			{/each}
 		</svg>
 	</div>
