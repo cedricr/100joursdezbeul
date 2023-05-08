@@ -13,7 +13,7 @@
 	export let data;
 
 	const formattedDate = dateToLabel(data.date);
-	const events = filterEventsForDate(data.date, data.actionEvents);
+	const events = filterEventsForDate(data.date, data.actions);
 
 	function getScore(departmentCode: string): number {
 		return getScoreForEvents(filterEventsForDepartment(departmentCode, events));

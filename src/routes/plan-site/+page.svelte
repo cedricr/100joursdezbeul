@@ -8,6 +8,7 @@
 	<ul class="mx-auto mb-6 max-w-lg list-disc pl-4">
 		<li><a href="/">Accueil</a></li>
 		<li><a href="/nouveautes">Nouveautés du jour dans le classement</a></li>
+		<li><a href="/calendrier">Calendrier</a></li>
 		<li><a href="/regles-du-jeu">Règles du jeu</a></li>
 		<li><a href="/comment-participer">Comment participer</a></li>
 		<li><a href="/presse">Revue de presse</a></li>

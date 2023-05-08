@@ -20,11 +20,23 @@
 		const date = startDate.add(i, 'day');
 
 		pastDates.push({ date: dateToString(date), label: dateToLabel(date) });
-		if (dateToString(date) === dateToString(getLatestDate(data.actionEvents))) {
+		if (dateToString(date) === dateToString(getLatestDate(data.actions))) {
 			break;
 		}
 	}
 	pastDates.reverse();
+
+	function getCalPointsDisplay(date, actions) {
+		const numPoints = getNationalScoreForDate(date, actions);
+		let suffix = '!';
+		if (numPoints === 0) {
+			suffix = '😔';
+		} else if (numPoints >= 100) {
+			suffix = '🎉';
+		}
+
+		return `${getPointsDisplay(numPoints)}&nbsp;${suffix}`;
+	}
 </script>
 
 <svelte:head>
@@ -83,7 +95,7 @@
 				</div>
 				<div class="p-4 text-base">
 					<p class="text-center">
-						{@html getPointsDisplay(getNationalScoreForDate(date.date, data.actionEvents))}&nbsp;!
+						{@html getCalPointsDisplay(date.date, data.actions)}
 					</p>
 				</div>
 			</div>
