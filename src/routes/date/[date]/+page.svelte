@@ -28,21 +28,21 @@
 
 <div class="mx-auto mb-24 mt-10 max-w-2xl text-xl">
 	{#if events.length}
-		<ul>
-			{#each DEPARTMENTS.map((d) => d.code) as deptCode}
-				{@const deptEvents = filterEventsForDepartment(deptCode, events)}
-				{#if deptEvents.length}
-					<h3 class="zbeul mb-6 mt-10 text-2xl">
-						<a href="/departement/{deptCode}">{getDepartmentName(deptCode)}</a>&nbsp;: +{@html getPointsDisplay(
-							getScore(deptCode)
-						)}
-					</h3>
+		{#each DEPARTMENTS.map((d) => d.code) as deptCode}
+			{@const deptEvents = filterEventsForDepartment(deptCode, events)}
+			{#if deptEvents.length}
+				<h3 class="zbeul mb-6 mt-10 text-2xl">
+					<a href="/departement/{deptCode}">{getDepartmentName(deptCode)}</a>&nbsp;: +{@html getPointsDisplay(
+						getScore(deptCode)
+					)}
+				</h3>
+				<ul>
 					{#each deptEvents as event}
 						<Event {event} hideDate />
 					{/each}
-				{/if}
-			{/each}
-		</ul>
+				</ul>
+			{/if}
+		{/each}
 	{:else}
 		Aucun événement pris en compte ce jour-là.
 	{/if}
