@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1,
+		"manualSort": 1,
+		"intitule": "Village du SNU",
+		"code": "snu"
+	},
+	{
+		"id": 2,
+		"manualSort": 2,
+		"intitule": "Secrétaire d’État",
+		"code": "secretaire-etat"
+	},
+	{
+		"id": 3,
+		"manualSort": 3,
+		"intitule": "Ministre délégué·e",
+		"code": "ministre-del"
+	},
+	{
+		"id": 4,
+		"manualSort": 4,
+		"intitule": "Ministre",
+		"code": "ministre"
+	},
+	{
+		"id": 5,
+		"manualSort": 5,
+		"intitule": "Ministre de l’intérieur",
+		"code": "ministre-int"
+	},
+	{
+		"id": 6,
+		"manualSort": 6,
+		"intitule": "Présidente de l’Assemblée nationale",
+		"code": "presidente-an"
+	},
+	{
+		"id": 7,
+		"manualSort": 7,
+		"intitule": "Première ministre",
+		"code": "premiere-min"
+	},
+	{
+		"id": 8,
+		"manualSort": 8,
+		"intitule": "Président de la République",
+		"code": "president-rep"
+	}
+]

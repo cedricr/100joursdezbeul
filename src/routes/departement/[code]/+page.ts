@@ -1,5 +1,7 @@
-export const load = async ({ params }) => {
+export const load = async ({ params, parent }) => {
+	const { actions } = await parent();
 	return {
-		department: params.code
+		department: params.code,
+		actions
 	};
 };

@@ -14,12 +14,11 @@ export const DEPARTMENTS = JSON.parse(departements) as {
 // prettier-ignore
 export const ACTION_SCORE = {
 	'chahut': 1,
-	'manif': 1,
 	'creatif': 2,
 	'sobriete': 3,
 	'fuite': 4,
 	'annulation': 5,
-};
+} as const;
 
 // prettier-ignore
 export const ACTION_LABEL = {
@@ -27,12 +26,12 @@ export const ACTION_LABEL = {
 	'fuite': 'Action conduisant au départ précipité d’une personnalité',
 	'sobriete': 'Mise en sobriété énergétique',
 	'creatif': 'Action créative',
-	'manif': 'Manifestation',
-	'chahut': 'Chahut (casserolade, huée…)'
-};
+	'chahut': 'Chahut (manifestation, casserolade, huée…)'
+} as const;
 
 // prettier-ignore
 export const TARGET_MULTIPLIER = {
+	'snu': 1,
 	'secretaire-etat': 1,
 	'ministre-del': 2,
 	'ministre': 3,
@@ -40,15 +39,4 @@ export const TARGET_MULTIPLIER = {
 	'presidente-an': 4,
 	'premiere-min': 5,
 	'president-rep': 6
-};
-
-// prettier-ignore
-export const TARGET_LABEL = {
-	'secretaire-etat': 'Secrétaire d’État',
-	'ministre-del': 'Ministre délégué·e',
-	'ministre': 'Ministre',
-	'ministre-int': 'Ministre de l’intérieur',
-	'presidente-an': 'Présidente de l’Assemblée Nationale',
-	'premiere-min': 'Première ministre',
-	'president-rep': 'Président de la République'
-};
+} as const;

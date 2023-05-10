@@ -1,0 +1,47 @@
+[
+	{
+		"content": "Article dans le média actu.fr",
+		"source": "https://actu.fr/societe/100-jours-de-zbeul-la-seine-saint-denis-gagnera-t-elle-la-competition-anti-gouvernement_59197483.html",
+		"image": "/media/actu.fr.png"
+	},
+	{
+		"content": "Article dans le média regards.fr",
+		"source": "http://www.regards.fr/actu/article/100-jours-de-zbeul-un-intervilles-des-casserolades-pour-contrer-l-apaisement",
+		"image": "/media/regards.png"
+	},
+	{
+		"content": "Article dans le média France Bleu",
+		"source": "https://www.francebleu.fr/infos/politique/l-herault-en-tete-d-une-competition-anti-gouvernement-qui-recense-les-casserolades-et-manifestations-6412137",
+		"image": "/media/francebleu.png"
+	},
+	{
+		"content": "Carte Blanche vidéo de Lisa Lap, journaliste chez Le Média",
+		"source": "https://www.youtube.com/watch?v=BOQCN89XQbk",
+		"image": "/media/lemedia.jpg"
+	},
+	{
+		"content": "Reportage de BFMTV",
+		"source": "https://www.bfmtv.com/paris/replay-emissions/bonsoir-paris/casserolades-les-departements-classes-pendant-les-100-jours-de-zbeul_VN-202304260758.html",
+		"image": "/media/bfmtv.png"
+	},
+	{
+		"content": "Article par Radio Scoop",
+		"source": "https://www.radioscoop.com/infos/les-100-jours-de-zbeul-comment-fonctionne-l-intervilles-de-la-contestation_273098",
+		"image": "/media/radioscoop.ico"
+	},
+	{
+		"content": "Article par Mediapart",
+		"source": "https://www.mediapart.fr/journal/politique/270423/casserolades-le-mouvement-social-joue-intervilles-l-executif-perd-l-epreuve-de-l-apaisement",
+		"image": "/media/mediapart.png"
+	},
+	{
+		"content": "Article de l'Humanité",
+		"source": "https://www.humanite.fr/social-eco/1er-mai/un-1er-mai-deja-historique-793108",
+		"image": "/media/humanite.jpg"
+	},
+	{
+		"content": "Tweet de Nathalie Oziol, députée de Montpellier",
+		"source": "https://nitter.net/NathalieOziol/status/1651105199958683648",
+		"image": "/media/oziol.jpg"
+	}
+]

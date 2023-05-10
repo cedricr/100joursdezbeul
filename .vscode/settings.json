@@ -1,44 +1,44 @@
 {
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[markdown]": {
-    "files.trimTrailingWhitespace": false
-  },
-  "[svelte]": {
-    "editor.defaultFormatter": "svelte.svelte-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": false
-  },
-  "editor.formatOnSave": true,
-  "editor.quickSuggestions": {
-    "strings": true
-  },
-  "eslint.probe": ["javascript", "svelte", "typescript"],
-  "eslint.validate": ["javascript", "svelte", "typescript"],
-  "files.exclude": {
-    ".svelte-kit": true,
-    "build": true,
-  },
-  "search.exclude": {
-    "static/**": true
-  },
-  "files.trimTrailingWhitespace": true,
-  "svelte.plugin.css.globals": "src/app.postcss",
-  "svelte.enable-ts-plugin": true,
-  "svelte.plugin.svelte.compilerWarnings": {
-    "security-anchor-rel-noreferrer": "ignore"
-  },
-  "svelte.plugin.svelte.defaultScriptLanguage": "ts",
-  "tailwindCSS.validate": true,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[markdown]": {
+		"files.trimTrailingWhitespace": false
+	},
+	"[svelte]": {
+		"editor.defaultFormatter": "svelte.svelte-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": false
+	},
+	"editor.formatOnSave": true,
+	"editor.quickSuggestions": {
+		"strings": true
+	},
+	"eslint.probe": ["javascript", "svelte", "typescript"],
+	"eslint.validate": ["javascript", "svelte", "typescript"],
+	"files.exclude": {
+		".svelte-kit": true,
+		"build": true
+	},
+	"search.exclude": {
+		"static/**": true
+	},
+	"files.trimTrailingWhitespace": true,
+	"svelte.plugin.css.globals": "src/app.postcss",
+	"svelte.enable-ts-plugin": true,
+	"svelte.plugin.svelte.compilerWarnings": {
+		"a11y-no-redundant-roles": "ignore"
+	},
+	"svelte.plugin.svelte.defaultScriptLanguage": "ts",
+	"tailwindCSS.validate": true
 }

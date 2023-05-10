@@ -1,34 +1,121 @@
 <script lang="ts">
-	import Thanks from '$lib/thanks.svelte';
+	import medailleOr from '$lib/assets/icons/medaille-or.svg';
+	import medailleArgent from '$lib/assets/icons/medaille-argent.svg';
+	import medailleBronze from '$lib/assets/icons/medaille-bronze.svg';
 
 	import { LEADERBOARD, getDayNumber, getDepartmentName, getNationalStats } from '$lib/utils';
 
+	import Thanks from './thanks.svelte';
+
+
+	import {
+		dateToLabel,
+		dateToShortLabel,
+		getDayNumber,
+		getDepartmentName,
+		getLatestDate
+	} from '$lib/utils';
+	import type { ActionEvent, DepartmentResult } from '$lib/types';
+	export let data;
 	const dayNumber = getDayNumber();
 
 	const append = (a, x) => a.concat([x]);
 
-	const resultLines = LEADERBOARD
-		.map(([code, score]) => ({code, score}))
-		.reduce((acc, x, i) => append(acc,
-		{
-			...x,
-			rank: i > 0 && x.score === acc[i - 1].score ? acc[i - 1].rank : i + 1
-		}), []);
+	function generateLeaderboard(actionEvents: ActionEvent[]) {
+		const departmentsResults: DepartmentResult = {};
+		actionEvents.forEach((event) => {
+			const dept = event.departement;
+			departmentsResults[dept] = (departmentsResults[dept] || 0) + event.score;
+		});
+		return Object.entries(departmentsResults).sort((d1, d2) => {
+			return d2[1] - d1[1];
+		});
+	}
+
+	const resultLines = generateLeaderboard(data.actions)
+		.map(([code, score]) => ({ code, score }))
+		.reduce(
+			(acc, x, i) =>
+				append(acc, {
+					...x,
+					rank: i > 0 && x.score === acc[i - 1].score ? acc[i - 1].rank : i + 1
+				}),
+			[]
+		);
 
 	const now = new Date();
-	const formattedDate = now.toLocaleDateString('fr', { dateStyle: 'medium' });
+	const formattedDate = dateToShortLabel(now);
+	const lastUpdateDate = getLatestDate(data.actions);
+	const formattedLastUpdateDate = dateToLabel(lastUpdateDate);
 	const nationalStats = getNationalStats();
 </script>
 
-<svelte:head><title>100 jours de zbeul</title></svelte:head>
+<svelte:head>
+	<title>100 jours de zbeul</title>
+</svelte:head>
 
-<main role="main">
-	<p class="mb-16 mt-24 text-center">
-		<span class="zbeul olympic-red mb-0 block text-8xl leading-[5rem]">
-			{100 - dayNumber}
-		</span>
-		<span class="mt-0 block text-xl">jours restants</span>
-	</p>
+<p class="mb-16 mt-24 text-center">
+	<span class="zbeul olympic-red mb-0 block text-8xl leading-[5rem]">
+		{100 - dayNumber}
+	</span>
+	<span class="mt-0 block text-xl">jours restants</span>
+</p>
+
+<h2 class="zbeul mb-2">Classement au {formattedDate}</h2>
+<p class="mb-2 text-center italic">
+	Derniers événements pris en compte&nbsp;: <a href="/nouveautes">{formattedLastUpdateDate}</a>
+</p>
+
+<div class="mx-auto mb-6 mt-10 max-w-lg text-xl">
+	<table class="ranking">
+		<thead>
+			<tr>
+				<th scope="col" class="p-1 sm:p-2">Département</th>
+				<th scope="col" class="p-1 text-center sm:p-2">Rang</th>
+				<th scope="col" class="p-1 text-center sm:p-2">Points</th>
+			</tr>
+		</thead>
+		<tbody>
+			{#each resultLines as { code, score, rank }}
+				<tr class="ranking-line">
+					<th scope="row" class="p-1 sm:p-2">
+						<a
+							href="/departement/{code}"
+							class="link-block no-underline hover:underline"
+							class:font-bold={rank < 4}
+						>
+							{getDepartmentName(code)}
+						</a>
+					</th>
+					<td class="p-1 text-center sm:p-2">
+						{#if rank === 1}
+							<img role="img" src={medailleOr} alt="1 (médaille d’or)" class="m-auto" />
+						{:else if rank === 2}
+							<img role="img" src={medailleArgent} alt="2 (médaille d’argent)" class="m-auto" />
+						{:else if rank === 3}
+							<img role="img" src={medailleBronze} alt="3 (médaille de bronze)" class="m-auto" />
+						{:else}
+							{rank}
+						{/if}
+					</td>
+					<td class="p-1 text-right sm:p-2" class:font-bold={rank < 4}>
+						{score} pts<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							class="icon-link"
+							aria-hidden="true"
+							><path
+								d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"
+							/></svg
+						>
+					</td>
+				</tr>
+			{/each}
+		</tbody>
+	</table>
+</div>
 
 	<!-- TODO
 		<p>
@@ -43,58 +130,59 @@
 		</p>
 	-->
 
-
-	<h2 class="zbeul mb-2">Classement temporaire au {formattedDate}</h2>
-	<p class="mb-2 text-center italic">(tenant compte des données jusqu’au 27 avril inclus)</p>
-	<p class="mb-6 text-center italic">
-		Cliquez sur le nom du département pour avoir le détail du décompte.
-	</p>
-	<div class="mx-auto mb-6 mt-10 max-w-sm text-xl">
-		<div class="ranking grid-auto-1-auto grid gap-x-2 gap-y-3">
-			{#each resultLines as {code, score, rank}}
-				<div class="text-right">
-					{#if rank === 1}
-						<span role="img" aria-label="1">🥇</span>
-					{:else if rank === 2}
-						<span role="img" aria-label="2">🥈</span>
-					{:else if rank === 3}
-						<span role="img" aria-label="3">🥉</span>
-					{:else}
-						{rank}
-					{/if}
-				</div>
-				<a href="/departement/{code}" class="no-underline hover:underline">
-					{getDepartmentName(code)}
-				</a>
-				<div class="text-right">{score} pts</div>
-			{/each}
-		</div>
-	</div>
-
-	<p class="mb-20 text-center text-lg">
-		<a href="/regles-du-jeu">Règles du jeu</a>
-		<br />
-		<a href="/comment-participer">Comment participer</a>
-		<br />
+<ul class="mb-20 text-center text-lg">
+	<li><a href="/regles-du-jeu">Règles du jeu</a></li>
+	<li><a href="/comment-participer">Comment participer</a></li>
+	<li><a href="/presse">Revue de presse</a></li>
+	<li>
+		<a href="https://100joursdezbeul.getgrist.com/62uY9YoxQE56/100-jours-de-zbeul">Données brutes</a
+		>
+	</li>
+	<li>
 		<a
 			href="https://framaforms.org/100-jours-de-zbeul-proposer-un-evenement-1682372493"
 			class="font-bold">Signaler une action</a
 		>
-	</p>
+	</li>
+</ul>
 
-	<Thanks />
-</main>
+<Thanks />
 
 <style lang="postcss">
 	.olympic-red {
 		@apply text-[#dd0220];
 	}
 
-	.grid-auto-1-auto {
-		grid-template-columns: auto 1fr auto;
+	.ranking {
+		width: 100%;
+		text-align: left;
+	}
+
+	.ranking thead {
+		background-color: #e5e7eb;
+	}
+
+	.ranking tr {
+		position: relative;
+	}
+
+	.ranking th,
+	.ranking td {
+		border-width: 1px 0;
+		border-style: solid;
+		border-color: #e5e7eb;
+	}
+
+	.ranking th:last-child,
+	.ranking td:last-child {
+		min-width: 7rem;
 	}
   
 	.ranking > :nth-child(-n+9) {
 		@apply font-bold;
+  }
+
+	.ranking-line th {
+		@apply font-normal;
 	}
 </style>
