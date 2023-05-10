@@ -3,17 +3,15 @@
 	import medailleArgent from '$lib/assets/icons/medaille-argent.svg';
 	import medailleBronze from '$lib/assets/icons/medaille-bronze.svg';
 
-	import { LEADERBOARD, getDayNumber, getDepartmentName, getNationalStats } from '$lib/utils';
-
 	import Thanks from './thanks.svelte';
-
-
+	
 	import {
 		dateToLabel,
 		dateToShortLabel,
 		getDayNumber,
 		getDepartmentName,
-		getLatestDate
+		getLatestDate,
+		getNationalStats
 	} from '$lib/utils';
 	import type { ActionEvent, DepartmentResult } from '$lib/types';
 	export let data;
