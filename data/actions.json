@@ -1716,5 +1716,37 @@
 		"gristHelper_ConditionalRule": null,
 		"gristHelper_ConditionalRule2": false,
 		"gristHelper_Display": ["L", "Stanislas Guerini"]
+	},
+	{
+		"id": 113,
+		"manualSort": 111,
+		"date": 1683590400,
+		"lieu": "Paris 3",
+		"departement": "75",
+		"description": "Casserolade pour accueillir Clément Beaune, Ministre délégué chargé des transports, qui devait participer à un débat sur l’extrême droite en Europe, mardi 9 mai 2023 au 153 rue Saint Martin - Paris 3e mais qui n’est jamais venu.",
+		"actions": ["L", "annulation", "chahut"],
+		"lien1": "https://twitter.com/CivicioY/status/1656002776386748416?t=6L73N4-Ol0AY6pb5tIkKQg&s=35",
+		"lien2": "https://twitter.com/canard_media/status/1654460946239180800",
+		"lien3": "https://twitter.com/thomas_luquet/status/1656015746160369665?s=46&t=-Ca5lstyFl2kCvilGvgqVg",
+		"cibles": ["L", 25],
+		"gristHelper_ConditionalRule": null,
+		"gristHelper_ConditionalRule2": false,
+		"gristHelper_Display": ["L", "Clément Beaune"]
+	},
+	{
+		"id": 114,
+		"manualSort": 112,
+		"date": 1683590400,
+		"lieu": "Vincennes",
+		"departement": "92",
+		"description": "Annulation de la réunion publique sur l’égalité des droits en Europe à laquelle devait participer Chrysoula Zacharopoulou, Secrétaire d’État chargée du développement, de la francophonie et des partenariats internationaux, à l’Atelier législatif.",
+		"actions": ["L", "annulation"],
+		"lien1": "https://twitter.com/NnoMan1/status/1656001977053003776?t=yTyHN6QFxgbRWInH-dxYwQ&s=35",
+		"lien2": "",
+		"lien3": "",
+		"cibles": ["L", 37],
+		"gristHelper_ConditionalRule": null,
+		"gristHelper_ConditionalRule2": false,
+		"gristHelper_Display": ["L", "Chrysoula Zacharopoulou"]
 	}
 ]
