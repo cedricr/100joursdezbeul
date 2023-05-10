@@ -175,10 +175,6 @@
 	.ranking td:last-child {
 		min-width: 7rem;
 	}
-  
-	.ranking > :nth-child(-n+9) {
-		@apply font-bold;
-  }
 
 	.ranking-line th {
 		@apply font-normal;
