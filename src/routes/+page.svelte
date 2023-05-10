@@ -73,7 +73,7 @@
 		</thead>
 		<tbody>
 			{#each resultLines as { code, score, rank }}
-				<tr class="ranking-line">
+				<tr class="ranking-line hover:bg-blue-200">
 					<th scope="row" class="p-1 sm:p-2">
 						<a
 							href="/departement/{code}"
