@@ -111,9 +111,9 @@ export function getPointsDisplay(nPoints: number) {
 	return nPoints <= 1 ? `${nPoints}&nbsp;pt` : `${nPoints}&nbsp;pts`;
 }
 
-export function getNationalStats() {
+export function getNationalStats(allEvents: ActionEvent[]) {
 	const stats: { [id: string]: number; } = {};
-	DATA.forEach((event) => {
+	allEvents.forEach((event) => {
 		event.actions.forEach((action) => {
 			stats[action] = (stats[action] || 0) + 1;
 		});
