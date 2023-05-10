@@ -1334,4 +1334,3 @@ export {
 	SizeLogarithmicScale,
 	SizeScale
 };
-//# sourceMappingURL=index.js.map
