@@ -79,14 +79,14 @@
 				...franceTopology.objects.fra,
 				geometries: franceTopology.objects.fra.geometries.filter((geo) =>
 					[
-						'Yvelines',
+						//'Yvelines',
 						'Paris',
 						'Hauts-de-Seine',
-						"Val-d'Oise",
+						//"Val-d'Oise",
 						'Val-de-Marne',
-						'Seine-Saint-Denis',
-						'Seine-et-Marne',
-						'Essonne'
+						'Seine-Saint-Denis'
+						//'Seine-et-Marne',
+						//'Essonne'
 					].includes(geo.properties.name)
 				)
 			}
@@ -138,7 +138,7 @@
 
 	// Rendu
 	const FRANCE_SIZE = 512;
-	const IDF_SIZE = FRANCE_SIZE / 4;
+	const IDF_SIZE = FRANCE_SIZE / 6;
 	const franceChart = renderChart(confFrance, FRANCE_SIZE, FRANCE_SIZE);
 	const idfChart = renderChart(confIdf, IDF_SIZE, IDF_SIZE);
 
