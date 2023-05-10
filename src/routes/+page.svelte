@@ -45,7 +45,7 @@
 	const formattedDate = dateToShortLabel(now);
 	const lastUpdateDate = getLatestDate(data.actions);
 	const formattedLastUpdateDate = dateToLabel(lastUpdateDate);
-	const nationalStats = getNationalStats();
+	const nationalStats = getNationalStats(data.actions);
 </script>
 
 <svelte:head>
