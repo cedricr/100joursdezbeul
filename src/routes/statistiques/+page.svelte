@@ -1,12 +1,14 @@
-<script>
+<script lang="ts">
 	import { getNationalStats } from '$lib/utils';
-	export let actions;
-	const nationalStats = getNationalStats(actions);
+	export let data;
+	const nationalStats = getNationalStats(data.actions);
 </script>
 
-<div class="flex flex-col justify-center mb-20">
-	<h2 class="zbeul mb-4 text-xl">Informations d'ordre général</h2>
-	<ul class="mx-auto text-lg">
+<svelte:head><title>Statistiques nationale | 100 jours de zbeul</title></svelte:head>
+
+<div class="mx-auto mt-16 max-w-2xl">
+	<h2 class="zbeul mb-16 mt-16 text-4xl">Statistiques nationale</h2>
+	<ul class="mx-auto">
 		<li>
 			🔥 <span class="font-bold">{nationalStats.total}</span> points totaux comptabilisés
 		</li>
@@ -36,6 +38,6 @@
 
 <style lang="postcss">
 	li {
-		@apply mb-3 text-base;
+		@apply mb-5 text-xl;
 	}
 </style>
