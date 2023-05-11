@@ -32,6 +32,9 @@
 		l'environnement par une transition énergétique accélérée et locale des membres du gouvernement.
 	</p>
 
+	<h3 id="securite">Débauche sécuritaire</h3>
+	<p>Le gouvernement triche, et ne laisse pas les camarades venir l'acclamer.</p>
+
 	<h3 id="fuite">Action conduisant au départ précipité d’une personnalité</h3>
 	<p>
 		Lors de la visite d'une personnalité, celle-ci décide d'accélérer le pas et de rentrer plus tôt
