@@ -4,15 +4,13 @@
 	import medailleBronze from '$lib/assets/icons/medaille-bronze.svg';
 
 	import Thanks from './thanks.svelte';
-	import Stats from './stats.svelte';
 
 	import {
 		dateToLabel,
 		dateToShortLabel,
 		getDayNumber,
 		getDepartmentName,
-		getLatestDate,
-		getNationalStats
+		getLatestDate
 	} from '$lib/utils';
 	import type { ActionEvent, DepartmentResult } from '$lib/types';
 	export let data;
@@ -46,7 +44,6 @@
 	const formattedDate = dateToShortLabel(now);
 	const lastUpdateDate = getLatestDate(data.actions);
 	const formattedLastUpdateDate = dateToLabel(lastUpdateDate);
-	const nationalStats = getNationalStats(data.actions);
 </script>
 
 <svelte:head>
