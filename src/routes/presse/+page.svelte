@@ -24,7 +24,7 @@
 						width="24"
 						height="24"
 						viewBox="0 0 24 24"
-						class="icon-link"
+						class="icon-link ml-1.5 inline-block w-3.5 fill-blue-600 duration-200 ease-out"
 						aria-hidden="true"
 						><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" /></svg
 					>
@@ -33,3 +33,10 @@
 		{/each}
 	</ul>
 </div>
+
+
+<style lang="postcss">
+	li:hover svg {
+		transform: translate(0.2rem);
+	}
+</style>

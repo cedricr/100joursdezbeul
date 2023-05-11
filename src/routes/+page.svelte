@@ -63,7 +63,7 @@
 </p>
 
 <div class="mx-auto mb-6 mt-10 max-w-lg text-xl">
-	<table class="ranking">
+	<table class="ranking w-full text-left">
 		<thead>
 			<tr>
 				<th scope="col" class="p-1 sm:p-2">Département</th>
@@ -73,7 +73,17 @@
 		</thead>
 		<tbody>
 			{#each resultLines as { code, score, rank }}
-				<tr class="ranking-line hover:bg-blue-200">
+				<tr
+					class="ranking-line relative border-l-4 border-transparent relative"
+					class:hover:border-yellow-600={rank === 1}
+					class:hover:bg-yellow-200={rank === 1}
+					class:hover:border-slate-600={rank === 2}
+					class:hover:bg-slate-200={rank === 2}
+					class:hover:border-orange-600={rank === 3}
+					class:hover:bg-orange-200={rank === 3}
+					class:hover:border-blue-600={rank > 3}
+					class:hover:bg-blue-200={rank > 3}
+				>
 					<th scope="row" class="p-1 sm:p-2">
 						<a
 							href="/departement/{code}"
@@ -100,8 +110,12 @@
 							width="24"
 							height="24"
 							viewBox="0 0 24 24"
-							class="icon-link"
+							class="icon-link ml-1.5 inline-block w-3.5 duration-200 ease-out"
 							aria-hidden="true"
+							class:fill-yellow-600={rank === 1}
+							class:fill-slate-600={rank === 2}
+							class:fill-orange-600={rank === 3}
+							class:fill-blue-600={rank > 3}
 							><path
 								d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"
 							/></svg
@@ -136,17 +150,13 @@
 		@apply text-[#dd0220];
 	}
 
-	.ranking {
-		width: 100%;
-		text-align: left;
-	}
-
 	.ranking thead {
 		background-color: #e5e7eb;
 	}
 
-	.ranking tr {
-		position: relative;
+
+	.ranking tr:hover svg {
+		transform: translate(0.2rem);
 	}
 
 	.ranking th,
