@@ -87,7 +87,7 @@
 					<th scope="row" class="p-1 sm:p-2">
 						<a
 							href="/departement/{code}"
-							class="link-block no-underline hover:underline"
+							class="link-block no-underline"
 							class:font-bold={rank < 4}
 						>
 							{getDepartmentName(code)}
