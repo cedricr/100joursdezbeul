@@ -112,13 +112,21 @@ export function getPointsDisplay(nPoints: number) {
 }
 
 export function getNationalStats(allEvents: ActionEvent[]) {
-	const stats: { [id: string]: number; } = {};
+	const stats: { [id: string]: number } = {};
+	const sites: string[] = [];
+	const cibles: string[][] = [];
+
 	allEvents.forEach((event) => {
 		event.actions.forEach((action) => {
 			stats[action] = (stats[action] || 0) + 1;
 		});
+		sites.push(event.departement + event.ville);
+		cibles.push(event.cibles.map((x) => x.nom));
 		stats["total"] = (stats["total"] || 0) + event.score;
 	});
+
+	stats["sites"] = new Set(sites).size;
+	stats["cibles"] = new Set(cibles.flat()).size;
 	return stats;
 }
 

@@ -4,7 +4,7 @@
 	import medailleBronze from '$lib/assets/icons/medaille-bronze.svg';
 
 	import Thanks from './thanks.svelte';
-	
+
 	import {
 		dateToLabel,
 		dateToShortLabel,
@@ -115,19 +115,6 @@
 	</table>
 </div>
 
-	<!-- TODO
-		<p>
-			Toustes ensembles, nous sommes fort-es de {nationalStats.total} points.
-			Nous comptabilisons :
-			{nationalStats.manif} manifs
-			{nationalStats.annulation} annulations de venues
-			{nationalStats.chahut} chahuts
-			{nationalStats.sobriete} mises en sobriété
-			{nationalStats.creatif} actions créatives
-			{nationalStats.fuite} fuites
-		</p>
-	-->
-
 <ul class="mb-20 text-center text-lg">
 	<li><a href="/regles-du-jeu">Règles du jeu</a></li>
 	<li><a href="/comment-participer">Comment participer</a></li>
@@ -143,6 +130,8 @@
 		>
 	</li>
 </ul>
+
+<Stats actions={data.actions} />
 
 <Thanks />
 
