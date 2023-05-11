@@ -44,7 +44,7 @@
 
 <style lang="postcss">
 	.tag {
-		@apply py-0.5 pr-2 text-xs font-bold;
+		@apply py-0.5 pr-2 text-sm font-bold;
 	}
 
 	.action {
