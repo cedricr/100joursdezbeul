@@ -4,6 +4,7 @@
 	import medailleBronze from '$lib/assets/icons/medaille-bronze.svg';
 
 	import Thanks from './thanks.svelte';
+	import Stats from './stats.svelte';
 
 	import {
 		dateToLabel,
