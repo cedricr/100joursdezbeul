@@ -1675,15 +1675,21 @@
 		"date": 1683504000,
 		"lieu": "Lyon",
 		"departement": "69",
-		"description": "Convoi présidentiel accueilli par une casserolade malgré l’interdiction, manifestation très dense, barricades sur le parcours et fuite de Macron après l’annulation de sa visite à la mairie de 3e envahie.",
-		"actions": ["L", "chahut", "annulation", "creatif"],
+		"description": "Convoi présidentiel accueilli par une casserolade malgré l’interdiction, manifestation très dense, barricades sur le parcours.",
+		"actions": ["L", "chahut", "creatif"],
 		"lien1": "https://twitter.com/LyonInsurrectio/status/1655564819234279425?s=20",
-		"lien2": "https://twitter.com/AnonymeCitoyen/status/1655616417230729229?s=20",
+		"lien2": "",
 		"lien3": "",
-		"cibles": ["L", 1],
+		"cibles": ["L", 1, 6, 39, 8],
 		"gristHelper_ConditionalRule": null,
 		"gristHelper_ConditionalRule2": false,
-		"gristHelper_Display": ["L", "Emmanuel Macron"]
+		"gristHelper_Display": [
+			"L",
+			"Emmanuel Macron",
+			"Éric Dupond-Moretti",
+			"Patricia Mirallès",
+			"Pap Ndiaye"
+		]
 	},
 	{
 		"id": 111,
@@ -1748,5 +1754,21 @@
 		"gristHelper_ConditionalRule": null,
 		"gristHelper_ConditionalRule2": false,
 		"gristHelper_Display": ["L", "Chrysoula Zacharopoulou"]
+	},
+	{
+		"id": 115,
+		"manualSort": 109.5,
+		"date": 1683504000,
+		"lieu": "Lyon",
+		"departement": "69",
+		"description": "Annulation de la visite d'Emmanuel Macron à la mairie de 3e arrondissement.",
+		"actions": ["L", "annulation"],
+		"lien1": "https://twitter.com/AnonymeCitoyen/status/1655616417230729229?s=20",
+		"lien2": "",
+		"lien3": "",
+		"cibles": ["L", 1],
+		"gristHelper_ConditionalRule": null,
+		"gristHelper_ConditionalRule2": false,
+		"gristHelper_Display": ["L", "Emmanuel Macron"]
 	}
 ]
