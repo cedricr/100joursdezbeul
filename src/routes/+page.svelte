@@ -75,14 +75,14 @@
 			{#each resultLines as { code, score, rank }}
 				<tr
 					class="ranking-line relative border-l-4 border-transparent relative"
-					class:hover:border-yellow-600={rank === 1}
-					class:hover:bg-yellow-200={rank === 1}
-					class:hover:border-slate-600={rank === 2}
-					class:hover:bg-slate-200={rank === 2}
-					class:hover:border-orange-600={rank === 3}
-					class:hover:bg-orange-200={rank === 3}
-					class:hover:border-blue-600={rank > 3}
-					class:hover:bg-blue-200={rank > 3}
+					class:hover:border-yellow-100={rank === 1}
+					class:hover:bg-yellow-100={rank === 1}
+					class:hover:border-slate-800={rank === 2}
+					class:hover:bg-slate-100={rank === 2}
+					class:hover:border-orange-800={rank === 3}
+					class:hover:bg-orange-100={rank === 3}
+					class:hover:border-blue-800={rank > 3}
+					class:hover:bg-blue-100={rank > 3}
 				>
 					<th scope="row" class="p-1 sm:p-2">
 						<a
@@ -112,10 +112,10 @@
 							viewBox="0 0 24 24"
 							class="icon-link ml-1.5 inline-block w-3.5 duration-200 ease-out"
 							aria-hidden="true"
-							class:fill-yellow-600={rank === 1}
-							class:fill-slate-600={rank === 2}
-							class:fill-orange-600={rank === 3}
-							class:fill-blue-600={rank > 3}
+							class:fill-yellow-800={rank === 1}
+							class:fill-slate-800={rank === 2}
+							class:fill-orange-800={rank === 3}
+							class:fill-blue-800={rank > 3}
 							><path
 								d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"
 							/></svg

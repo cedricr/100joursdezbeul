@@ -70,6 +70,6 @@
 	}
 
 	.main-nav a {
-		@apply decoration-blue-600 decoration-1 hover:decoration-2;
+		@apply decoration-blue-800 decoration-1 hover:decoration-2;
 	}
 </style>
