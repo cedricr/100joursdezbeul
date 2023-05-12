@@ -28,7 +28,8 @@
 		<div class="mt-1 flex-wrap gap-1 sm:flex">
 			{#each event.cibles as target}
 				<div class="tag target">
-					{target.role.intitule}&nbsp;: x{TARGET_MULTIPLIER[target.role.code]}
+					<a href="/personnalite/{target.nom}">{target.nom}</a>&nbsp;({target.role.intitule})&nbsp;:
+					x{TARGET_MULTIPLIER[target.role.code]}
 				</div>
 			{/each}
 		</div>
