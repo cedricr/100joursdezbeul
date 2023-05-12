@@ -16,6 +16,7 @@ export const ACTION_SCORE = {
 	'chahut': 1,
 	'creatif': 2,
 	'sobriete': 3,
+	'securite': 3,
 	'fuite': 4,
 	'annulation': 5,
 } as const;
@@ -25,6 +26,7 @@ export const ACTION_LABEL = {
 	'annulation': 'Annulation d’une visite 🎉',
 	'fuite': 'Action conduisant au départ précipité d’une personnalité',
 	'sobriete': 'Mise en sobriété énergétique',
+	'securite': 'Débauche sécuritaire',
 	'creatif': 'Action créative',
 	'chahut': 'Chahut (manifestation, casserolade, huée…)'
 } as const;
