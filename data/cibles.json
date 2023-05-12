@@ -13,10 +13,10 @@
 		"id": 2,
 		"manualSort": 2,
 		"nom": "Élisabeth Borne",
-		"role": 4,
+		"role": 7,
 		"titre": "Première ministre",
 		"ministeres": ["L", 1],
-		"gristHelper_Display": "Ministre",
+		"gristHelper_Display": "Première ministre",
 		"gristHelper_Display2": ["L", "Première ministre"]
 	},
 	{
