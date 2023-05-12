@@ -12,7 +12,7 @@
 
 <svelte:head><title>{data.nom} | 100 jours de zbeul</title></svelte:head>
 
-<div class="mb-12 mt-16 flex flex-col items-center gap-6">
+<div class="mx-auto mb-12 mt-16 flex max-w-2xl flex-col items-center gap-6">
 	<img
 		src={target?.image}
 		alt={`Photo de ${data.nom}`}
@@ -24,11 +24,9 @@
 		{data.nom}
 	</h2>
 
-	<p class="zbeul text-xl">{target?.titre}</p>
-</div>
+	<h3 class="text-xl">{target?.titre}</h3>
 
-<div class="mx-auto mb-24 mt-10 max-w-2xl text-xl">
-	<ul>
+	<ul class="mb-24 mt-10 text-xl">
 		{#each events as event}
 			<Event {event} />
 		{/each}
