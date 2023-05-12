@@ -1889,15 +1889,22 @@
 		"date": 1683763200,
 		"lieu": "La Réunion",
 		"departement": "974",
-		"description": "La Première ministre, Elisabeth Borne, accueillie par des casseroles à son arrivée à La Réunion",
+		"description": "La Première ministre, Elisabeth Borne, accueillie par des casseroles à son arrivée à La Réunion, malgré un important dispositif sécuritaire",
 		"actions": ["L", "chahut"],
 		"lien1": "https://twitter.com/a_chaussalet/status/1656518353085669376?s=20",
-		"lien2": "",
-		"lien3": "",
-		"cibles": ["L", 2],
+		"lien2": "https://www.challenges.fr/politique/arrivee-a-la-reunion-borne-espere-voir-des-habitants-sans-casseroles_854903",
+		"lien3": "https://www.youtube.com/watch?v=HwIiXpKEL8I&feature=youtu.be",
+		"cibles": ["L", 2, 7, 14, 41, 33],
 		"gristHelper_ConditionalRule": null,
 		"gristHelper_ConditionalRule2": false,
-		"gristHelper_Display": ["L", "Élisabeth Borne"]
+		"gristHelper_Display": [
+			"L",
+			"Élisabeth Borne",
+			"Christophe Béchu",
+			"Marc Fesneau",
+			"Olivier Klein",
+			"Jean-François Carenco"
+		]
 	},
 	{
 		"id": 124,
