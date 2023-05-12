@@ -1,9 +1,15 @@
 [
 	{
 		"nom": "Emmanuel Macron",
-		"url": "https://www.gouvernement.fr/personnalite/elisabeth-borne?mission=premiere-ministre",
+		"url": "https://www.elysee.fr/emmanuel-macron",
 		"titre": "Président de la République",
-		"image": "https://www.gouvernement.fr/upload/media/personality/0001/05/35766bdeb9258377b3beeef43251cadba530605b.jpeg"
+		"image": "https://www.elysee.fr/cdn-cgi/image/width=760%2Cheight=1145/images/default/0001/13/22e85bb25185f2f19748178a2f46713c11a32913.jpg"
+	},
+	{
+		"nom": "Yaël Braun-Pivet",
+		"url": "https://en.wikipedia.org/wiki/Ya%C3%ABl_Braun-Pivet",
+		"titre": "Présidente de l'Assemblée nationale",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/5/56/Ya%C3%ABl_Braun-Pivet%2C_AN%2C_mai_2023.jpg"
 	},
 	{
 		"nom": "Élisabeth Borne",
