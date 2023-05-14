@@ -128,18 +128,10 @@
 </div>
 
 <ul class="mb-20 text-center text-lg">
-	<li><a href="/regles-du-jeu">Règles du jeu</a></li>
-	<li><a href="/comment-participer">Comment participer</a></li>
 	<li><a href="/statistiques">Statistiques nationales</a></li>
 	<li><a href="/presse">Revue de presse</a></li>
 	<li>
 		<a href="https://100joursdezbeul.getgrist.com/62uY9YoxQE56/100-jours-de-zbeul">Données brutes</a
-		>
-	</li>
-	<li>
-		<a
-			href="https://framaforms.org/100-jours-de-zbeul-proposer-un-evenement-1682372493"
-			class="font-bold">Signaler une action</a
 		>
 	</li>
 </ul>
