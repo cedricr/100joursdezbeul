@@ -44,6 +44,6 @@
 	}
 
 	.main-nav a {
-		@apply decoration-[#0084c7] decoration-2 hover:decoration-1;
+		@apply decoration-blue-800 decoration-1 hover:decoration-2;
 	}
 </style>
