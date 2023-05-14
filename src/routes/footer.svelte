@@ -113,7 +113,7 @@
 			</span>
 		</li>
 		<li class="inline">
-			<a href="/mentions-legales">Mentions légales & crédits</a>
+			<a href="/mentions-legales">Mentions légales &amp; crédits</a>
 		</li>
 	</ul>
 
