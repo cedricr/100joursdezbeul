@@ -1744,7 +1744,7 @@
 		"manualSort": 112,
 		"date": 1683590400,
 		"lieu": "Vincennes",
-		"departement": "92",
+		"departement": "94",
 		"description": "Annulation de la réunion publique sur l’égalité des droits en Europe à laquelle devait participer Chrysoula Zacharopoulou, Secrétaire d’État chargée du développement, de la francophonie et des partenariats internationaux, à l’Atelier législatif.",
 		"actions": ["L", "annulation"],
 		"lien1": "https://twitter.com/NnoMan1/status/1656001977053003776?t=yTyHN6QFxgbRWInH-dxYwQ&s=35",
@@ -1889,15 +1889,22 @@
 		"date": 1683763200,
 		"lieu": "La Réunion",
 		"departement": "974",
-		"description": "La Première ministre, Elisabeth Borne, accueillie par des casseroles à son arrivée à La Réunion",
-		"actions": ["L", "chahut"],
+		"description": "À son arrivée à La Réunion, Elisabeth Borne est accueillie par des casseroles tenues à distance par un  important dispositif sécuritaire.",
+		"actions": ["L", "securite"],
 		"lien1": "https://twitter.com/a_chaussalet/status/1656518353085669376?s=20",
-		"lien2": "",
-		"lien3": "",
-		"cibles": ["L", 2],
+		"lien2": "https://www.lemonde.fr/politique/article/2023/05/12/a-la-reunion-elisabeth-borne-effectue-plusieurs-annonces-et-evite-les-casseroles_6173064_823448.html",
+		"lien3": "https://www.youtube.com/watch?v=HwIiXpKEL8I&feature=youtu.be",
+		"cibles": ["L", 2, 7, 14, 41, 33],
 		"gristHelper_ConditionalRule": null,
 		"gristHelper_ConditionalRule2": false,
-		"gristHelper_Display": ["L", "Élisabeth Borne"]
+		"gristHelper_Display": [
+			"L",
+			"Élisabeth Borne",
+			"Christophe Béchu",
+			"Marc Fesneau",
+			"Olivier Klein",
+			"Jean-François Carenco"
+		]
 	},
 	{
 		"id": 124,
