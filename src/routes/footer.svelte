@@ -101,9 +101,10 @@
 			<a href="/plan-site">Plan du site</a><span aria-hidden="true">&nbsp;·</span>
 		</li>
 		<li class="inline">
-			<a href="https://github.com/cedricr/100joursdezbeul">Code source</a><span aria-hidden="true">
-				&nbsp;·</span
-			>
+			<a href="/statistiques">Statistiques nationales</a><span aria-hidden="true">&nbsp;·</span>
+		</li>
+		<li class="inline">
+			<a href="/presse">Revue de presse</a><span aria-hidden="true">&nbsp;·</span>
 		</li>
 		<li class="inline">
 			<a href="mailto:100joursdezbeul@solidairesinformatique.org">Contact</a><span
@@ -112,15 +113,29 @@
 			</span>
 		</li>
 		<li class="inline">
-			<a href="/mentions-legales">Mentions légales</a>
+			<a href="/mentions-legales">Mentions légales & crédits</a>
 		</li>
 	</ul>
 
-	<div class="mx-auto mt-4 w-fit">
+	<ul class="text-center">
+		<li class="inline">
+			<a href="https://github.com/cedricr/100joursdezbeul">Code source</a><span aria-hidden="true">
+				&nbsp;·</span
+			>
+		</li>
+		<li class="inline">
+			<a href="https://100joursdezbeul.getgrist.com/62uY9YoxQE56/100-jours-de-zbeul"
+				>Données brutes</a
+			>
+		</li>
+	</ul>
+
+	<p class="mx-auto mt-4 w-fit text-center">
 		<a href="https://solidairesinformatique.org">
 			<img alt="Solidaires Informatique" src={logoSI} width="200" height="73" />
+			<span class="mt-2 block">Syndiquez-vous&nbsp;!</span>
 		</a>
-	</div>
+	</p>
 </footer>
 
 <style lang="postcss">
