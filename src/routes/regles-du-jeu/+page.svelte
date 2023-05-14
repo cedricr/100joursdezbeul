@@ -14,10 +14,13 @@
 			>données</a
 		>
 		compilées par Attac, on assigne manuellement à chaque événement un type de personne ciblée et un
-		type d’action. Les données finales sont accessibles dans le
-		<a href="https://github.com/cedricr/100joursdezbeul/blob/main/src/lib/assets/data.json"
-			>code source</a
-		>. Les vérifications sont les bienvenues&nbsp;!
+		type d’action. Les données finales sont accessibles dans
+		<a href="https://100joursdezbeul.getgrist.com/62uY9YoxQE56/100-jours-de-zbeul"
+			>notre base de donnée Grist</a
+		>
+		ou dans le
+		<a href="https://github.com/cedricr/100joursdezbeul/blob/main/data/">code source</a>. Les
+		vérifications sont les bienvenues&nbsp;!
 	</p>
 
 	<p>

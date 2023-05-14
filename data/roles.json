@@ -2,49 +2,49 @@
 	{
 		"id": 1,
 		"manualSort": 1,
-		"intitule": "Village du SNU",
-		"code": "snu"
+		"code": "snu",
+		"intitule": "Village du SNU"
 	},
 	{
 		"id": 2,
 		"manualSort": 2,
-		"intitule": "Secrétaire d’État",
-		"code": "secretaire-etat"
+		"code": "secretaire-etat",
+		"intitule": "Secrétaire d’État"
 	},
 	{
 		"id": 3,
 		"manualSort": 3,
-		"intitule": "Ministre délégué·e",
-		"code": "ministre-del"
+		"code": "ministre-del",
+		"intitule": "Ministre délégué·e"
 	},
 	{
 		"id": 4,
 		"manualSort": 4,
-		"intitule": "Ministre",
-		"code": "ministre"
+		"code": "ministre",
+		"intitule": "Ministre"
 	},
 	{
 		"id": 5,
 		"manualSort": 5,
-		"intitule": "Ministre de l’intérieur",
-		"code": "ministre-int"
+		"code": "ministre-int",
+		"intitule": "Ministre de l’intérieur"
 	},
 	{
 		"id": 6,
 		"manualSort": 6,
-		"intitule": "Présidente de l’Assemblée nationale",
-		"code": "presidente-an"
+		"code": "presidente-an",
+		"intitule": "Présidente de l’Assemblée nationale"
 	},
 	{
 		"id": 7,
 		"manualSort": 7,
-		"intitule": "Première ministre",
-		"code": "premiere-min"
+		"code": "premiere-min",
+		"intitule": "Première ministre"
 	},
 	{
 		"id": 8,
 		"manualSort": 8,
-		"intitule": "Président de la République",
-		"code": "president-rep"
+		"code": "president-rep",
+		"intitule": "Président de la République"
 	}
 ]
