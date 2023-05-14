@@ -4,7 +4,7 @@
 <svelte:head><title>Mentions légales | 100 jours de zbeul</title></svelte:head>
 
 <div class="mx-auto mt-16 max-w-2xl">
-	<h2 class="zbeul mb-16 mt-16 text-4xl">Mentions légales & crédits</h2>
+	<h2 class="zbeul mb-16 mt-16 text-4xl">Mentions légales &amp; crédits</h2>
 
 	<h3>Gestion du site</h3>
 	<p>
