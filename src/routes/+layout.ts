@@ -1,5 +1,10 @@
 import { dev } from '$app/environment';
-import { ACTION_SCORE, DEPARTMENTS, TARGET_MULTIPLIER } from '$lib/constants';
+import {
+	ACTION_SCORE,
+	DEPARTMENTS,
+	MAY_FIRST_PARTICIPANTS,
+	TARGET_MULTIPLIER
+} from '$lib/constants';
 import type {
 	ActionCode,
 	ActionTarget,
@@ -100,6 +105,23 @@ function parseActions(
 					sum(cibles.map((target) => TARGET_MULTIPLIER[target.role.code]))
 			};
 		});
+
+	// Ajout du bonus 1er mai
+	MAY_FIRST_PARTICIPANTS.forEach((dept) => {
+		result.push({
+			ville: 'BONUS 1er MAI',
+			departement: dept,
+			date: '2023-05-01',
+			description: '10 points par million de manifestant·es au national.',
+			liens: [
+				'https://www.francetvinfo.fr/economie/retraite/reforme-des-retraites/manifestations-du-1er-mai-visualisez-les-chiffres-de-la-mobilisation-par-rapport-aux-precedentes-annees_5796812.html',
+				'https://www.lemonde.fr/politique/live/2023/05/01/1-mai-en-direct-les-manifestations-ont-reuni-sept-a-dix-fois-plus-de-monde-qu-en-2022-sur-fond-de-contestation-de-la-reforme-des-retraites_6171635_823448.html?#id-941100'
+			],
+			actions: ['chahut'],
+			cibles: [],
+			score: 23
+		});
+	});
 	// console.dir(result, { depth: null });
 	return {
 		actions: result,
