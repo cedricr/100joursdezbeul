@@ -24,7 +24,7 @@
 	<h3>Cookies</h3>
 	<p>Ce site web n’utilise pas de cookies.</p>
 
-	<h3>Crédits & remerciements</h3>
+	<h3>Crédits &amp; remerciements</h3>
 	<ul class="list-disc pl-4">
 		<li>
 			Attac pour les
