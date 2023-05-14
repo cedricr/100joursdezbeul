@@ -74,8 +74,8 @@
 		<tbody>
 			{#each resultLines as { code, score, rank }}
 				<tr
-					class="ranking-line relative border-l-4 border-transparent relative"
-					class:hover:border-yellow-100={rank === 1}
+					class="ranking-line relative relative border-l-4 border-transparent"
+					class:hover:border-yellow-800={rank === 1}
 					class:hover:bg-yellow-100={rank === 1}
 					class:hover:border-slate-800={rank === 2}
 					class:hover:bg-slate-100={rank === 2}
@@ -153,7 +153,6 @@
 	.ranking thead {
 		background-color: #e5e7eb;
 	}
-
 
 	.ranking tr:hover svg {
 		transform: translate(0.2rem);
