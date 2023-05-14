@@ -76,24 +76,28 @@
 	Derniers événements pris en compte&nbsp;: <a href="/nouveautes">{formattedLastUpdateDate}</a>
 </p>
 
-<div class="switch-field mt-4">
-	<input
-		type="radio"
-		bind:group={scoreType}
-		name="scoreType"
-		value={ScoreType.RAW}
-		id={ScoreType.RAW}
-	/>
-	<label for="raw">Score</label>
-
-	<input
-		type="radio"
-		bind:group={scoreType}
-		name="scoreType"
-		value={ScoreType.PER_POPULATION}
-		id={ScoreType.PER_POPULATION}
-	/>
-	<label for="perPopulation">Score / Habitants</label>
+<div class="switch-field-wrapper mt-4 flex justify-center">
+	<fieldset class="switch-field flex w-full flex-col items-center justify-center text-center">
+		<legend class="mb-2 contents">Type de score</legend>
+		<div class="flex">
+			<input
+				type="radio"
+				bind:group={scoreType}
+				name="scoreType"
+				value={ScoreType.RAW}
+				id={ScoreType.RAW}
+			/>
+			<label for="raw">Score</label>
+			<input
+				type="radio"
+				bind:group={scoreType}
+				name="scoreType"
+				value={ScoreType.PER_POPULATION}
+				id={ScoreType.PER_POPULATION}
+			/>
+			<label for="perPopulation">Score / Habitant·es</label>
+		</div>
+	</fieldset>
 </div>
 
 <div class="mx-auto mb-6 mt-10 max-w-lg text-xl">
