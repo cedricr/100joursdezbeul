@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.postcss';
 	import logoJO from '$lib/assets/logo-jo.svg';
-	import logoSI from '$lib/assets/logo-si.png';
+	import Footer from './footer.svelte';
 </script>
 
 <header role="banner">
@@ -39,38 +39,12 @@
 		</ul>
 	</nav>
 </header>
+
 <main role="main" id="main">
 	<slot />
 </main>
-<footer class="my-8" role="contentinfo">
-	<hr class="mb-4" />
 
-	<ul class="text-center">
-		<li class="inline">
-			<a href="/plan-site">Plan du site</a><span aria-hidden="true">&nbsp;·</span>
-		</li>
-		<li class="inline">
-			<a href="https://github.com/cedricr/100joursdezbeul">Code source</a><span aria-hidden="true">
-				&nbsp;·</span
-			>
-		</li>
-		<li class="inline">
-			<a href="mailto:100joursdezbeul@solidairesinformatique.org">Contact</a><span
-				aria-hidden="true"
-				>&nbsp;·
-			</span>
-		</li>
-		<li class="inline">
-			<a href="/mentions-legales">Mentions légales</a>
-		</li>
-	</ul>
-
-	<div class="mx-auto mt-8 w-fit">
-		<a href="https://solidairesinformatique.org">
-			<img alt="Solidaires Informatique" src={logoSI} width="200" height="73" />
-		</a>
-	</div>
-</footer>
+<Footer />
 
 <style lang="postcss">
 	.main-nav li {
@@ -78,6 +52,6 @@
 	}
 
 	.main-nav a {
-		@apply decoration-[#0084c7] decoration-2 hover:decoration-1;
+		@apply decoration-blue-800 decoration-1 hover:decoration-2;
 	}
 </style>
