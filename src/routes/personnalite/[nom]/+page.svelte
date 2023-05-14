@@ -15,7 +15,7 @@
 <div class="mx-auto mb-12 mt-16 flex max-w-2xl flex-col items-center gap-6">
 	<img
 		src={target?.image}
-		alt={`Photo de ${data.nom}`}
+		alt=""
 		class="rounded-full object-cover"
 		style="height: 100px; width: 100px"
 	/>

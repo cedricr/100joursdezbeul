@@ -15,7 +15,7 @@
 				<img
 					class="image h-10 w-10 rounded-full object-cover"
 					src={target.image}
-					alt={`Photo de ${target.nom}`}
+					alt=""
 				/>
 				<a class="link no-underline hover:underline" href="/personnalite/{target.nom}">
 					<div class="text-xl">
