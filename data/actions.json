@@ -1979,7 +1979,7 @@
 		"description": "Elisabeth Borne chahutée par une casserolade annule sa déambulation sur le marché de St-Pierre.",
 		"actions": ["L", "chahut", "fuite"],
 		"lien1": "https://twitter.com/a_chaussalet/status/1656911503092580354?s=20",
-		"lien2": "",
+		"lien2": "https://www.ouest-france.fr/politique/elisabeth-borne/elisabeth-borne-accueillie-par-des-manifestants-sur-le-marche-de-saint-pierre-a-la-reunion-d61f3e92-f09a-11ed-a712-6e3ad690fa08",
 		"lien3": "",
 		"cibles": ["L", 2],
 		"gristHelper_ConditionalRule": null,
@@ -2105,5 +2105,21 @@
 		"gristHelper_ConditionalRule": null,
 		"gristHelper_ConditionalRule2": false,
 		"gristHelper_Display": ["L", "Hervé Berville"]
+	},
+	{
+		"id": 139,
+		"manualSort": 136,
+		"date": 1681948800,
+		"lieu": "Châteauroux",
+		"departement": "36",
+		"description": "Casserolade pour la ministre des Sports en visite à Châteauroux, les chahuteurs ont été maintenus à distance par les forces de l'ordre.",
+		"actions": ["L", "chahut"],
+		"lien1": "https://www.lanouvellerepublique.fr/chateauroux/visite-ministerielle-a-chateauroux-les-manifestants-decides-a-pourrir-la-vie-des-ministres",
+		"lien2": "",
+		"lien3": "",
+		"cibles": ["L", 19],
+		"gristHelper_ConditionalRule": null,
+		"gristHelper_ConditionalRule2": false,
+		"gristHelper_Display": ["L", "Amélie Oudéa-Castéra"]
 	}
 ]

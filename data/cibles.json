@@ -36,10 +36,10 @@
 		"id": 4,
 		"manualSort": 4,
 		"nom": "Gérald Darmanin",
-		"role": 4,
+		"role": 5,
 		"titre": "Ministre de l'Intérieur et des Outre-mer",
 		"ministeres": ["L", 3],
-		"gristHelper_Display": "Ministre",
+		"gristHelper_Display": "Ministre de l’intérieur",
 		"gristHelper_Display2": ["L", "Ministère de l'Intérieur et des Outre-mer"]
 	},
 	{
