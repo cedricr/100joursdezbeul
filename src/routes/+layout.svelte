@@ -24,7 +24,7 @@
 		class="main-nav border-y border-solid border-gray-200 py-2"
 	>
 		<ul class="mx-auto text-center text-lg">
-			<li><a href="/">Accueil</a></li>
+			<li><a href="/" title="Scores - Page d’accueil">Scores</a></li>
 			<li><a href="/calendrier">Calendrier</a></li>
 			<li><a href="/regles-du-jeu">Règles du jeu</a></li>
 			<li><a href="/comment-participer">Participer</a></li>
