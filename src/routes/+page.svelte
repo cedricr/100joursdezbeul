@@ -93,7 +93,7 @@
 				value={ScoreType.PER_POPULATION}
 				id={ScoreType.PER_POPULATION}
 			/>
-			<label for="perPopulation">Score / Habitant·es</label>
+			<label for="perPopulation">Score/Population</label>
 		</div>
 	</fieldset>
 </div>
