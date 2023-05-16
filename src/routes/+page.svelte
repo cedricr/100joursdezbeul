@@ -1,7 +1,7 @@
 <script lang="ts">
-	import medailleOr from '$lib/assets/icons/medaille-or.svg';
-	import medailleArgent from '$lib/assets/icons/medaille-argent.svg';
-	import medailleBronze from '$lib/assets/icons/medaille-bronze.svg';
+	import casseroleOr from '$lib/assets/icons/casserole-or.svg';
+	import casseroleArgent from '$lib/assets/icons/casserole-argent.svg';
+	import casseroleBronze from '$lib/assets/icons/casserole-bronze.svg';
 
 	import {
 		dateToLabel,
@@ -93,11 +93,32 @@
 					</th>
 					<td class="p-1 text-center sm:p-2">
 						{#if rank === 1}
-							<img role="img" src={medailleOr} alt="1 (médaille d’or)" class="m-auto" />
+							<img
+								role="img"
+								src={casseroleOr}
+								alt="1 (casserole d’or)"
+								width="30"
+								height="30"
+								class="m-auto"
+							/>
 						{:else if rank === 2}
-							<img role="img" src={medailleArgent} alt="2 (médaille d’argent)" class="m-auto" />
+							<img
+								role="img"
+								src={casseroleArgent}
+								alt="2 (casserole d’argent)"
+								width="30"
+								height="30"
+								class="m-auto"
+							/>
 						{:else if rank === 3}
-							<img role="img" src={medailleBronze} alt="3 (médaille de bronze)" class="m-auto" />
+							<img
+								role="img"
+								src={casseroleBronze}
+								alt="3 (casserole de bronze)"
+								width="30"
+								height="30"
+								class="m-auto"
+							/>
 						{:else}
 							{rank}
 						{/if}
