@@ -23,17 +23,17 @@
 		aria-label="Menu principal"
 		class="main-nav border-y border-solid border-gray-200 py-2"
 	>
-		<ul class="mx-auto text-center text-lg">
+		<ul class="mx-auto max-w-2xl text-center text-lg">
 			<li><a href="/" title="Scores - Page d’accueil">Scores</a></li>
 			<li><a href="/calendrier">Calendrier</a></li>
 			<li><a href="/regles-du-jeu">Règles du jeu</a></li>
 			<li><a href="/comment-participer">Participer</a></li>
 			<li>
 				<a
-					href="https://framaforms.org/100-jours-de-zbeul-proposer-un-evenement-1682372493"
+					href="https://france.attac.org/se-mobiliser/retraites-pour-le-droit-a-une-retraite-digne-et-heureuse/article/on-ne-les-lache-pas-la-carte-des-mobilisations"
 					class="bg-blue-800 p-2 font-bold text-white no-underline hover:bg-blue-950 focus:bg-blue-950"
 				>
-					Signaler une action
+					Signaler une action / Participer à une action
 				</a>
 			</li>
 		</ul>
