@@ -6,9 +6,9 @@
 </p>
 
 <p align="center">
-    <img src="https://img.shields.io/badge/license-MIT-green" alt="license" />
-    <img alt="flat" src="https://img.shields.io/badge/mastodon-@SolInfoNat-lightgrey?logo=mastodon&style=social">
-    <img alt="flat" src="https://img.shields.io/badge/twitter-@SolInfoNat-lightgrey?logo=twitter&style=social">
+    <a href="https://github.com/cedricr/100joursdezbeul/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="License MIT" /></a>
+    <a href="https://syndicat.solidaires.org/@100joursdezbeul"><img alt="Compte Mastodon" src="https://img.shields.io/badge/mastodon-@100joursdezbeul-lightgrey?logo=mastodon&style=social"></a>
+    <a href="https://twitter.com/100joursdezbeul"><img alt="Compte Twitter" src="https://img.shields.io/badge/twitter-@100joursdezbeul-lightgrey?logo=twitter&style=social"></a>
 </p>
 
 <br />
