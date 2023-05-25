@@ -50,23 +50,20 @@ export function filterEventsForDepartment(
 	departmentCode: string,
 	events: ActionEvent[]
 ): ActionEvent[] {
-	return events.filter((event) => {
-		return event.departement === departmentCode;
-	});
+	return events.filter((event) => event.departement === departmentCode);
+}
+
+export function filterEventsForName(name: string, events: ActionEvent[]): ActionEvent[] {
+	return events.filter((event) => event.cibles.some((cible) => cible.nom === name));
 }
 
 export function filterEventsForDate(dateStr: string, events: ActionEvent[]): ActionEvent[] {
-	return events.filter((event) => {
-		return event.date === dateStr;
-	});
+	return events.filter((event) => event.date === dateStr);
 }
 
 export function filterEventsUntilDate(dateStr: string, events: ActionEvent[]): ActionEvent[] {
-	return events.filter((event) => {
-		return new Date(event.date) <= new Date(dateStr);
-	});
+	return events.filter((event) => new Date(event.date) <= new Date(dateStr));
 }
-
 export function getScoreForEvents(events: ActionEvent[]): number {
 	return sum(events.map((evt) => evt.score));
 }

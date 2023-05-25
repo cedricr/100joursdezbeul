@@ -2,6 +2,7 @@
 // https://geo.api.gouv.fr/decoupage-administratif
 
 import departements from '$lib/assets/departements.json?raw';
+import targets from '$lib/assets/targets.json?raw';
 
 export const startDay = '2023-04-18';
 
@@ -9,6 +10,13 @@ export const DEPARTMENTS = JSON.parse(departements) as {
 	nom: string;
 	code: string;
 	codeRegion: string;
+}[];
+
+export const TARGETS = JSON.parse(targets) as {
+	nom: string;
+	url: string;
+	titre: string;
+	image: string;
 }[];
 
 // prettier-ignore
