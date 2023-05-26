@@ -47,7 +47,7 @@
 		</li>
 	</ul>
 
-	<h3>Types d’action qui attribuent des points</h3>
+	<h3>Types d’actions qui attribuent des points</h3>
 	<ul>
 		{#each Object.keys(ACTION_SCORE) as action}
 			<li>
