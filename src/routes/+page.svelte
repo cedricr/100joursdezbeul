@@ -97,8 +97,8 @@
 								role="img"
 								src={casseroleOr}
 								alt="1 (casserole d’or)"
-								width="30"
-								height="30"
+								width="40"
+								height="40"
 								class="m-auto"
 							/>
 						{:else if rank === 2}
@@ -106,8 +106,8 @@
 								role="img"
 								src={casseroleArgent}
 								alt="2 (casserole d’argent)"
-								width="30"
-								height="30"
+								width="40"
+								height="40"
 								class="m-auto"
 							/>
 						{:else if rank === 3}
@@ -115,16 +115,20 @@
 								role="img"
 								src={casseroleBronze}
 								alt="3 (casserole de bronze)"
-								width="30"
-								height="30"
+								width="40"
+								height="40"
 								class="m-auto"
 							/>
 						{:else}
-							{rank}
+							<span
+								class="inline-block min-w-[2rem] rounded-full border-2 border-gray-400 px-1 font-bold"
+								>{rank}</span
+							>
 						{/if}
 					</td>
 					<td class="p-1 text-right sm:p-2" class:font-bold={rank < 4}>
-						{score} pts<svg
+						{score}
+						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
 							height="24"
