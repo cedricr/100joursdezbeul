@@ -120,7 +120,8 @@
 								class="m-auto"
 							/>
 						{:else}
-							{rank}<sup>ème</sup>
+							<span aria-hidden="true">{rank}<sup>e</sup></span>
+							<span class="sr-only">{rank}<sup>ème</sup></span>
 						{/if}
 					</td>
 					<td class="p-1 text-right sm:p-2" class:font-bold={rank < 4}>
