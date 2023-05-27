@@ -14,9 +14,19 @@
 	<p>
 		L’équipe de 100 jours de zbeul met <strong
 			>un point d’honneur à respecter l’accessibilité</strong
-		>. Ainsi, nous n’acceptons que des contributions au code qui respectent les règles
-		d’accessibilité. Le code est relu sous ce prisme et des modifications peuvent être demandées ou
-		apportées en conséquence.
+		>, en lien avec
+		<a
+			href="https://solidaires.org/se-syndiquer/nos-positions/#discriminations-liees-aux-handicaps-a-la-sante-et-a-lage"
+			>la position antivalidiste de l’Union Syndicale Solidaires</a
+		>. Pour approfondir ce sujet, vous pouvez également lire cet article&nbsp;: «&nbsp;<a
+			href="https://www.lalutineduweb.fr/inaccessibilite-politique/"
+			>L’(in)accessibilité est politique</a
+		>&nbsp;».
+	</p>
+	<p>
+		Ainsi, nous n’acceptons que des contributions au code qui respectent les règles d’accessibilité.
+		Le code est relu sous ce prisme et des modifications peuvent être demandées ou apportées en
+		conséquence.
 	</p>
 
 	<h3>Lien d’accès rapide</h3>
