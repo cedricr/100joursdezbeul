@@ -56,6 +56,9 @@
 			</span>
 		</li>
 		<li class="inline">
+			<a href="/accessibilite">Accessibilité</a><span aria-hidden="true">&nbsp;· </span>
+		</li>
+		<li class="inline">
 			<a href="/mentions-legales">Mentions légales &amp; crédits</a>
 		</li>
 	</ul>
