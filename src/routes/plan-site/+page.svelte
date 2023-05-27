@@ -12,6 +12,7 @@
 		<li><a href="/statistiques">Statistiques nationales</a></li>
 		<li><a href="/regles-du-jeu">Règles du jeu</a></li>
 		<li><a href="/presse">Revue de presse</a></li>
+		<li><a href="/accessibilite">Accessibilité</a></li>
 		<li><a href="/mentions-legales">Mentions légales &amp; crédits</a></li>
 	</ul>
 </div>

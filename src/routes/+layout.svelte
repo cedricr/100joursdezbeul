@@ -5,8 +5,13 @@
 </script>
 
 <header role="banner">
-	<nav role="navigation" aria-label="Accès rapide" class="mb-2 text-sm text-gray-600">
-		<a href="#main">Contenu principal</a>
+	<nav role="navigation" aria-label="Accès rapide" class="mb-3 text-sm text-gray-600">
+		<ul>
+			<li class="inline">
+				<a href="#main">Contenu principal</a><span aria-hidden="true"> &nbsp;·</span>
+			</li>
+			<li class="inline"><a href="/accessibilite">Accessibilité</a></li>
+		</ul>
 	</nav>
 
 	<div>

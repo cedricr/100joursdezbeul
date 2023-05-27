@@ -66,7 +66,7 @@
 			<tr>
 				<th scope="col" class="p-1 sm:p-2">Département</th>
 				<th scope="col" class="p-1 text-center sm:p-2">Classement</th>
-				<th scope="col" class="p-1 text-center sm:p-2">Score</th>
+				<th scope="col" class="p-1 text-right sm:p-2">Score</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -85,10 +85,24 @@
 					<th scope="row" class="p-1 sm:p-2">
 						<a
 							href="/departement/{code}"
-							class="link-block no-underline"
+							class="relative block pr-4 no-underline"
 							class:font-bold={rank < 4}
 						>
-							{getDepartmentName(code)}
+							{getDepartmentName(code)}<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								class="icon-link absolute right-0 top-0.5 ml-1.5 w-3.5 duration-200 ease-out"
+								aria-hidden="true"
+								class:fill-yellow-800={rank === 1}
+								class:fill-slate-800={rank === 2}
+								class:fill-orange-800={rank === 3}
+								class:fill-blue-800={rank > 3}
+								><path
+									d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"
+								/></svg
+							>
 						</a>
 					</th>
 					<td class="p-1 text-center sm:p-2">
@@ -127,21 +141,6 @@
 					<td class="p-1 text-right sm:p-2" class:font-bold={rank < 4}>
 						{score} <span class="text-sm" aria-hidden="true">pts</span><span class="sr-only"
 							>points</span
-						>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							class="icon-link ml-0.5 inline-block w-3.5 duration-200 ease-out sm:ml-1.5"
-							aria-hidden="true"
-							class:fill-yellow-800={rank === 1}
-							class:fill-slate-800={rank === 2}
-							class:fill-orange-800={rank === 3}
-							class:fill-blue-800={rank > 3}
-							><path
-								d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"
-							/></svg
 						>
 					</td>
 				</tr>
