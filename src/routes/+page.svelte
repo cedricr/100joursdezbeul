@@ -83,13 +83,15 @@
 					class:hover:bg-blue-100={rank > 3}
 				>
 					<th scope="row" class="p-1 sm:p-2">
-						<a
-							href="/departement/{code}"
-							class="link-block no-underline"
-							class:font-bold={rank < 4}
-						>
-							{getDepartmentName(code)}
-						</a>
+						<div class="ranking-link-container">
+							<a
+								href="/departement/{code}"
+								class="link-block no-underline"
+								class:font-bold={rank < 4}
+							>
+								{getDepartmentName(code)}
+							</a>
+						</div>
 					</th>
 					<td class="p-1 text-center sm:p-2">
 						{#if rank === 1}
@@ -167,7 +169,7 @@
 	 */
 	@media not all and (min-resolution: 0.001dpcm) {
 		@supports (-webkit-appearance: none) and (stroke-color: transparent) {
-			.ranking th {
+			.ranking-link-container {
 				position: relative;
 			}
 		}
