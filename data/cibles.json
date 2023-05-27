@@ -222,16 +222,6 @@
 		]
 	},
 	{
-		"id": 23,
-		"manualSort": 23,
-		"nom": "Christophe Béchu",
-		"role": 3,
-		"titre": "Ministre de la Transition écologique et de la Cohésion des territoires",
-		"ministeres": ["L"],
-		"gristHelper_Display": "Ministre délégué·e",
-		"gristHelper_Display2": ["L"]
-	},
-	{
 		"id": 24,
 		"manualSort": 24,
 		"nom": "Franck Riester",

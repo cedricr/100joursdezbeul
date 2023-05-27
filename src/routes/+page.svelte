@@ -147,10 +147,6 @@
 </div>
 
 <style lang="postcss">
-	.olympic-red {
-		@apply text-[#dd0220];
-	}
-
 	.ranking thead {
 		background-color: #e5e7eb;
 	}
