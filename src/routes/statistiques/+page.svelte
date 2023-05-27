@@ -11,28 +11,35 @@
 	<div class="flex justify-center">
 		<ul>
 			<li>
-				🔥 <span class="font-bold">{nationalStats.total}</span> points totaux comptabilisés
+				<span aria-hidden="true">🔥</span> <span class="font-bold">{nationalStats.total}</span> points
+				totaux comptabilisés
 			</li>
 			<li>
-				🏟️ <span class="font-bold">{nationalStats.sites}</span> sites de compétition
+				<span aria-hidden="true">🏟️</span> <span class="font-bold">{nationalStats.sites}</span> sites
+				de compétition
 			</li>
 			<li>
-				🥳 <span class="font-bold">{nationalStats.cibles}</span> personalités participantes
+				<span aria-hidden="true">🥳</span> <span class="font-bold">{nationalStats.cibles}</span> personalités
+				participantes
 			</li>
 			<li>
-				🔊 <span class="font-bold">{nationalStats.chahut}</span> chahuts
+				<span aria-hidden="true">🔊</span> <span class="font-bold">{nationalStats.chahut}</span> chahuts
 			</li>
 			<li>
-				🎨 <span class="font-bold">{nationalStats.creatif}</span> actions créatives
+				<span aria-hidden="true">🎨</span> <span class="font-bold">{nationalStats.creatif}</span> actions
+				créatives
 			</li>
 			<li>
-				🕯️ <span class="font-bold">{nationalStats.sobriete}</span> mises en sobriété énergétique
+				<span aria-hidden="true">🕯️</span> <span class="font-bold">{nationalStats.sobriete}</span> mises
+				en sobriété énergétique
 			</li>
 			<li>
-				🚁 <span class="font-bold">{nationalStats.fuite}</span> fuites précipitées d’une personnalité
+				<span aria-hidden="true">🚁</span> <span class="font-bold">{nationalStats.fuite}</span> fuites
+				précipitées d’une personnalité
 			</li>
 			<li>
-				❌ <span class="font-bold">{nationalStats.annulation}</span> annulations de venues
+				<span aria-hidden="true">❌</span> <span class="font-bold">{nationalStats.annulation}</span>
+				annulations de venues
 			</li>
 		</ul>
 	</div>

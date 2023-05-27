@@ -108,7 +108,7 @@ export function getNationalScore(allEvents: ActionEvent[]): number {
 }
 
 export function getPointsDisplay(nPoints: number) {
-	return nPoints <= 1 ? `${nPoints}&nbsp;pt` : `${nPoints}&nbsp;pts`;
+	return nPoints <= 1 ? `${nPoints}&nbsp;point` : `${nPoints}&nbsp;points`;
 }
 
 export function getNationalStats(allEvents: ActionEvent[]) {
@@ -122,11 +122,11 @@ export function getNationalStats(allEvents: ActionEvent[]) {
 		});
 		sites.push(event.departement + event.ville);
 		cibles.push(event.cibles.map((x) => x.nom));
-		stats["total"] = (stats["total"] || 0) + event.score;
+		stats['total'] = (stats['total'] || 0) + event.score;
 	});
 
-	stats["sites"] = new Set(sites).size;
-	stats["cibles"] = new Set(cibles.flat()).size;
+	stats['sites'] = new Set(sites).size;
+	stats['cibles'] = new Set(cibles.flat()).size;
 	return stats;
 }
 

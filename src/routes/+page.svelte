@@ -48,7 +48,7 @@
 	<title>100 jours de zbeul</title>
 </svelte:head>
 
-<p class="mb-16 mt-24 text-center">
+<p class="my-10 text-center sm:mt-16">
 	<span class="zbeul olympic-red mb-0 block text-8xl leading-[5rem]">
 		{100 - dayNumber}
 	</span>
@@ -151,10 +151,6 @@
 </div>
 
 <style lang="postcss">
-	.olympic-red {
-		@apply text-[#dd0220];
-	}
-
 	.ranking thead {
 		background-color: #e5e7eb;
 	}
