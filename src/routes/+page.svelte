@@ -165,7 +165,7 @@
 	}
 
 	/** Fix Safari bug : lien bloc dans le tableau qui ne fonctionne pas avec le tr en position relative
-	 * Ciblage Safari 11+ https://www.browserstack.com/guide/create-browser-specific-css
+	 * Ciblage Safari 11+ > 15.6 https://www.browserstack.com/guide/create-browser-specific-css
 	 */
 	@media not all and (min-resolution: 0.001dpcm) {
 		@supports (-webkit-appearance: none) and (stroke-color: transparent) {
