@@ -96,7 +96,7 @@
 							<img
 								role="img"
 								src={casseroleOr}
-								alt="1 (casserole d’or)"
+								alt="Premier (casserole d’or)"
 								width="35"
 								height="35"
 								class="m-auto"
@@ -105,7 +105,7 @@
 							<img
 								role="img"
 								src={casseroleArgent}
-								alt="2 (casserole d’argent)"
+								alt="Deuxième (casserole d’argent)"
 								width="35"
 								height="35"
 								class="m-auto"
@@ -114,13 +114,13 @@
 							<img
 								role="img"
 								src={casseroleBronze}
-								alt="3 (casserole de bronze)"
+								alt="Troisième (casserole de bronze)"
 								width="35"
 								height="35"
 								class="m-auto"
 							/>
 						{:else}
-							{rank}<sup>e</sup>
+							{rank}<sup>ème</sup>
 						{/if}
 					</td>
 					<td class="p-1 text-right sm:p-2" class:font-bold={rank < 4}>
