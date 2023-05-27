@@ -60,13 +60,13 @@
 	Derniers événements pris en compte&nbsp;: <a href="/nouveautes">{formattedLastUpdateDate}</a>
 </p>
 
-<div class="mx-auto mb-6 mt-10 max-w-lg text-xl">
+<div class="mx-auto mb-6 mt-10 max-w-lg text-base sm:text-xl">
 	<table class="ranking w-full text-left">
-		<thead>
+		<thead class="text-base">
 			<tr>
 				<th scope="col" class="p-1 sm:p-2">Département</th>
-				<th scope="col" class="p-1 text-center sm:p-2">Rang</th>
-				<th scope="col" class="p-1 text-center sm:p-2">Points</th>
+				<th scope="col" class="p-1 text-center sm:p-2">Classement</th>
+				<th scope="col" class="p-1 text-center sm:p-2">Score</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -97,8 +97,8 @@
 								role="img"
 								src={casseroleOr}
 								alt="1 (casserole d’or)"
-								width="40"
-								height="40"
+								width="35"
+								height="35"
 								class="m-auto"
 							/>
 						{:else if rank === 2}
@@ -106,8 +106,8 @@
 								role="img"
 								src={casseroleArgent}
 								alt="2 (casserole d’argent)"
-								width="40"
-								height="40"
+								width="35"
+								height="35"
 								class="m-auto"
 							/>
 						{:else if rank === 3}
@@ -115,25 +115,24 @@
 								role="img"
 								src={casseroleBronze}
 								alt="3 (casserole de bronze)"
-								width="40"
-								height="40"
+								width="35"
+								height="35"
 								class="m-auto"
 							/>
 						{:else}
-							<span
-								class="inline-block min-w-[2rem] rounded-full border-2 border-gray-400 px-1 font-bold"
-								>{rank}</span
-							>
+							{rank}<sup>e</sup>
 						{/if}
 					</td>
 					<td class="p-1 text-right sm:p-2" class:font-bold={rank < 4}>
-						{score}
+						{score} <span class="text-sm" aria-hidden="true">pts</span><span class="sr-only"
+							>points</span
+						>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
 							height="24"
 							viewBox="0 0 24 24"
-							class="icon-link ml-1.5 inline-block w-3.5 duration-200 ease-out"
+							class="icon-link ml-0.5 inline-block w-3.5 duration-200 ease-out sm:ml-1.5"
 							aria-hidden="true"
 							class:fill-yellow-800={rank === 1}
 							class:fill-slate-800={rank === 2}
