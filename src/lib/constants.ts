@@ -9,6 +9,7 @@ export const DEPARTMENTS = JSON.parse(departements) as {
 	nom: string;
 	code: string;
 	codeRegion: string;
+	population: number;
 }[];
 
 // prettier-ignore
@@ -52,6 +53,11 @@ export const TARGET_MULTIPLIER = {
 	'premiere-min': 5,
 	'president-rep': 6,
 } as const;
+
+export enum ScoreType {
+	RAW = 'raw',
+	PER_POPULATION = 'perPopulation'
+}
 
 export const MAY_FIRST_PARTICIPANTS = [
 	'01',

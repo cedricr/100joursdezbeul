@@ -8,11 +8,14 @@
 		dateToShortLabel,
 		getDayNumber,
 		getDepartmentName,
-		getLatestDate
+		getLatestDate,
+		getPopulationWeightedScore
 	} from '$lib/utils';
-	import type { ActionEvent, DepartmentResult } from '$lib/types';
+	import type { ActionEvent, DepartmentResult, Score } from '$lib/types';
+	import { ScoreType } from '$lib/constants';
 	export let data;
 	const dayNumber = getDayNumber();
+	let scoreType: ScoreType = ScoreType.RAW;
 
 	const append = (a, x) => a.concat([x]);
 
@@ -20,20 +23,30 @@
 		const departmentsResults: DepartmentResult = {};
 		actionEvents.forEach((event) => {
 			const dept = event.departement;
-			departmentsResults[dept] = (departmentsResults[dept] || 0) + event.score;
+			departmentsResults[dept] = {
+				raw: (departmentsResults[dept]?.raw || 0) + event.score,
+				perPopulation: 0
+			};
 		});
-		return Object.entries(departmentsResults).sort((d1, d2) => {
-			return d2[1] - d1[1];
+
+		Object.entries(departmentsResults).forEach((departmentResult) => {
+			departmentsResults[departmentResult[0]] = {
+				raw: departmentResult[1].raw,
+				perPopulation: getPopulationWeightedScore(departmentResult[0], departmentResult[1].raw)
+			};
 		});
+
+		return Object.entries(departmentsResults).sort((d1, d2) => d2[1][scoreType] - d1[1][scoreType]);
 	}
 
-	const resultLines = generateLeaderboard(data.actions)
+	$: resultLines = generateLeaderboard(data.actions)
 		.map(([code, score]) => ({ code, score }))
-		.reduce(
+		.reduce<{ code: string; score: Score; rank: number }[]>(
 			(acc, x, i) =>
 				append(acc, {
 					...x,
-					rank: i > 0 && x.score === acc[i - 1].score ? acc[i - 1].rank : i + 1
+					rank:
+						i > 0 && x.score[scoreType] === acc[i - 1].score[scoreType] ? acc[i - 1].rank : i + 1
 				}),
 			[]
 		);
@@ -56,9 +69,34 @@
 </p>
 
 <h2 class="zbeul mb-2">Classement au {formattedDate}</h2>
+
 <p class="mb-2 text-center italic">
 	Derniers événements pris en compte&nbsp;: <a href="/nouveautes">{formattedLastUpdateDate}</a>
 </p>
+
+<div class="switch-field-wrapper mt-4 flex justify-center">
+	<fieldset class="switch-field flex w-full flex-col items-center justify-center text-center">
+		<legend class="mb-2 contents">Type de score</legend>
+		<div class="flex">
+			<input
+				type="radio"
+				bind:group={scoreType}
+				name="scoreType"
+				value={ScoreType.RAW}
+				id={ScoreType.RAW}
+			/>
+			<label for="raw">Score</label>
+			<input
+				type="radio"
+				bind:group={scoreType}
+				name="scoreType"
+				value={ScoreType.PER_POPULATION}
+				id={ScoreType.PER_POPULATION}
+			/>
+			<label for="perPopulation">Score/Population</label>
+		</div>
+	</fieldset>
+</div>
 
 <div class="mx-auto mb-6 mt-10 max-w-lg text-xl">
 	<table class="ranking w-full text-left">
@@ -124,7 +162,8 @@
 						{/if}
 					</td>
 					<td class="p-1 text-right sm:p-2" class:font-bold={rank < 4}>
-						{score} pts<svg
+						{score[scoreType]}
+						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="24"
 							height="24"

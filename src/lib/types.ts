@@ -36,8 +36,13 @@ export interface ActionEvent {
 	score: number;
 }
 
+export interface Score {
+	raw: number;
+	perPopulation: number;
+}
+
 export interface DepartmentResult {
-	[departmentCode: string]: number;
+	[departmentCode: string]: Score;
 }
 
 export interface GristAction extends IRecord {

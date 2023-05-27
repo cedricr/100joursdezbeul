@@ -38,12 +38,17 @@ export function getLatestDate(events: ActionEvent[]): Date {
 export function sortEventsByDescendingDate(events: ActionEvent[]) {
 	return events.sort((evt1, evt2) => Date.parse(evt2.date) - Date.parse(evt1.date));
 }
+
 export function getDepartmentName(code: string): string {
 	const dept = DEPARTMENTS.find((elt) => elt.code === code);
 	if (!dept) {
 		throw new Error(`le département ${code} est inconnu`);
 	}
 	return `${dept.nom} (${code})`;
+}
+
+export function getDepartmentPopulation(departmentCode: string) {
+	return DEPARTMENTS.find((departement) => departement.code === departmentCode)?.population || 0;
 }
 
 export function filterEventsForDepartment(
@@ -69,6 +74,13 @@ export function filterEventsUntilDate(dateStr: string, events: ActionEvent[]): A
 
 export function getScoreForEvents(events: ActionEvent[]): number {
 	return sum(events.map((evt) => evt.score));
+}
+
+export function getPopulationWeightedScore(department: string, rawScore: number) {
+	return Math.max(
+		Math.trunc(rawScore * (getDepartmentPopulation('75') / getDepartmentPopulation(department))),
+		rawScore
+	);
 }
 
 export function getDepartmentScoreForDate(
