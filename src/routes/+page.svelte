@@ -60,13 +60,13 @@
 	Derniers événements pris en compte&nbsp;: <a href="/nouveautes">{formattedLastUpdateDate}</a>
 </p>
 
-<div class="mx-auto mb-6 mt-10 max-w-lg text-xl">
+<div class="mx-auto mb-6 mt-10 max-w-lg text-base sm:text-xl">
 	<table class="ranking w-full text-left">
-		<thead>
+		<thead class="text-base">
 			<tr>
 				<th scope="col" class="p-1 sm:p-2">Département</th>
-				<th scope="col" class="p-1 text-center sm:p-2">Rang</th>
-				<th scope="col" class="p-1 text-right sm:p-2">Points</th>
+				<th scope="col" class="p-1 text-center sm:p-2">Classement</th>
+				<th scope="col" class="p-1 text-right sm:p-2">Score</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -110,35 +110,38 @@
 							<img
 								role="img"
 								src={casseroleOr}
-								alt="1 (casserole d’or)"
-								width="30"
-								height="30"
+								alt="Premier (casserole d’or)"
+								width="35"
+								height="35"
 								class="m-auto"
 							/>
 						{:else if rank === 2}
 							<img
 								role="img"
 								src={casseroleArgent}
-								alt="2 (casserole d’argent)"
-								width="30"
-								height="30"
+								alt="Deuxième (casserole d’argent)"
+								width="35"
+								height="35"
 								class="m-auto"
 							/>
 						{:else if rank === 3}
 							<img
 								role="img"
 								src={casseroleBronze}
-								alt="3 (casserole de bronze)"
-								width="30"
-								height="30"
+								alt="Troisième (casserole de bronze)"
+								width="35"
+								height="35"
 								class="m-auto"
 							/>
 						{:else}
-							{rank}
+							<span aria-hidden="true">{rank}<sup>e</sup></span>
+							<span class="sr-only">{rank}<sup>ème</sup></span>
 						{/if}
 					</td>
 					<td class="p-1 text-right sm:p-2" class:font-bold={rank < 4}>
-						{score} pts
+						{score} <span class="text-sm" aria-hidden="true">pts</span><span class="sr-only"
+							>points</span
+						>
 					</td>
 				</tr>
 			{/each}
