@@ -22,9 +22,7 @@
 </h2>
 
 <div class="mx-auto mb-24 mt-10 max-w-2xl text-xl">
-	<ul>
-		{#each events as event}
-			<Event {event} />
-		{/each}
-	</ul>
+	{#each events as event}
+		<Event {event} />
+	{/each}
 </div>
