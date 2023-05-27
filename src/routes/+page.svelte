@@ -85,7 +85,7 @@
 					<th scope="row" class="p-1 sm:p-2">
 						<a
 							href="/departement/{code}"
-							class="relative block no-underline"
+							class="relative block pr-4 no-underline"
 							class:font-bold={rank < 4}
 						>
 							{getDepartmentName(code)}<svg
@@ -93,7 +93,7 @@
 								width="24"
 								height="24"
 								viewBox="0 0 24 24"
-								class="icon-link absolute bottom-0 right-0 top-0 ml-1.5 w-3.5 duration-200 ease-out"
+								class="icon-link absolute right-0 top-0.5 ml-1.5 w-3.5 duration-200 ease-out"
 								aria-hidden="true"
 								class:fill-yellow-800={rank === 1}
 								class:fill-slate-800={rank === 2}
