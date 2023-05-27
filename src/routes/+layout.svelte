@@ -27,7 +27,6 @@
 			<li><a href="/" title="Scores - Page d’accueil">Scores</a></li>
 			<li><a href="/calendrier">Calendrier</a></li>
 			<li><a href="/regles-du-jeu">Règles du jeu</a></li>
-			<li><a href="/comment-participer">Participer</a></li>
 			<li>
 				<a
 					href="https://framaforms.org/100-jours-de-zbeul-proposer-un-evenement-1682372493"
