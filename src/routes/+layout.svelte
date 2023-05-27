@@ -5,18 +5,22 @@
 </script>
 
 <header role="banner">
-	<nav role="navigation" aria-label="Accès rapide" class="mb-2 text-sm">
+	<nav role="navigation" aria-label="Accès rapide" class="mb-2 text-sm text-gray-600">
 		<a href="#main">Contenu principal</a>
 	</nav>
 
-	<p class="text-center">
-		<a href="/" class="inline-block">
-			<img src={logoJO} alt="100 jours de zbeul - Accueil" width="300" height="168" />
-		</a>
-	</p>
+	<div>
+		<div class="flex items-center md:block">
+			<p class="mr-2 w-[25%] text-center sm:mr-6 md:mr-0 md:w-auto">
+				<a href="/" class="inline-block">
+					<img src={logoJO} alt="100 jours de zbeul - Accueil" width="300" height="168" />
+				</a>
+			</p>
 
-	<h1 class="zbeul">100 jours de zbeul</h1>
-	<p class="zbeul mb-6 text-center">Quels sont les départements qui zbeulent le plus&nbsp;?</p>
+			<h1 class="zbeul">100 jours de zbeul</h1>
+		</div>
+		<p class="zbeul mb-6 text-center">Quels sont les départements qui zbeulent le plus&nbsp;?</p>
+	</div>
 
 	<nav
 		role="navigation"
@@ -25,7 +29,6 @@
 	>
 		<ul class="mx-auto text-center text-lg">
 			<li><a href="/" title="Scores - Page d’accueil">Scores</a></li>
-			<li><a href="/calendrier">Calendrier</a></li>
 			<li><a href="/regles-du-jeu">Règles du jeu</a></li>
 			<li>
 				<a
@@ -35,6 +38,13 @@
 					Signaler une action
 				</a>
 			</li>
+		</ul>
+	</nav>
+
+	<nav role="navigation" aria-label="Vues secondaires des résultats" class="main-nav bg-gray-200">
+		<ul class="mx-auto text-center">
+			<li><a href="/calendrier">Calendrier</a></li>
+			<li><a href="/statistiques">Statistiques</a></li>
 		</ul>
 	</nav>
 </header>
@@ -47,7 +57,7 @@
 
 <style lang="postcss">
 	.main-nav li {
-		@apply inline-block p-2;
+		@apply inline-block p-1 sm:p-2;
 	}
 
 	.main-nav a {

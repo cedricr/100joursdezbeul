@@ -44,13 +44,10 @@
 
 	<ul class="text-center">
 		<li class="inline">
-			<a href="/plan-site">Plan du site</a><span aria-hidden="true">&nbsp;·</span>
-		</li>
-		<li class="inline">
-			<a href="/statistiques">Statistiques nationales</a><span aria-hidden="true">&nbsp;·</span>
-		</li>
-		<li class="inline">
 			<a href="/presse">Revue de presse</a><span aria-hidden="true">&nbsp;·</span>
+		</li>
+		<li class="inline">
+			<a href="/plan-site">Plan du site</a><span aria-hidden="true">&nbsp;·</span>
 		</li>
 		<li class="inline">
 			<a href="mailto:100joursdezbeul@solidairesinformatique.org">Contact</a><span
