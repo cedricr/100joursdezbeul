@@ -66,7 +66,7 @@
 			<tr>
 				<th scope="col" class="p-1 sm:p-2">Département</th>
 				<th scope="col" class="p-1 text-center sm:p-2">Rang</th>
-				<th scope="col" class="p-1 text-center sm:p-2">Points</th>
+				<th scope="col" class="p-1 text-right sm:p-2">Points</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -83,15 +83,27 @@
 					class:hover:bg-blue-100={rank > 3}
 				>
 					<th scope="row" class="p-1 sm:p-2">
-						<div class="ranking-link-container">
-							<a
-								href="/departement/{code}"
-								class="link-block no-underline"
-								class:font-bold={rank < 4}
+						<a
+							href="/departement/{code}"
+							class="relative block no-underline"
+							class:font-bold={rank < 4}
+						>
+							{getDepartmentName(code)}<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								class="icon-link absolute bottom-0 right-0 top-0 ml-1.5 w-3.5 duration-200 ease-out"
+								aria-hidden="true"
+								class:fill-yellow-800={rank === 1}
+								class:fill-slate-800={rank === 2}
+								class:fill-orange-800={rank === 3}
+								class:fill-blue-800={rank > 3}
+								><path
+									d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"
+								/></svg
 							>
-								{getDepartmentName(code)}
-							</a>
-						</div>
+						</a>
 					</th>
 					<td class="p-1 text-center sm:p-2">
 						{#if rank === 1}
@@ -126,21 +138,7 @@
 						{/if}
 					</td>
 					<td class="p-1 text-right sm:p-2" class:font-bold={rank < 4}>
-						{score} pts<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							class="icon-link ml-1.5 inline-block w-3.5 duration-200 ease-out"
-							aria-hidden="true"
-							class:fill-yellow-800={rank === 1}
-							class:fill-slate-800={rank === 2}
-							class:fill-orange-800={rank === 3}
-							class:fill-blue-800={rank > 3}
-							><path
-								d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z"
-							/></svg
-						>
+						{score} pts
 					</td>
 				</tr>
 			{/each}
@@ -162,17 +160,6 @@
 		border-width: 1px 0;
 		border-style: solid;
 		border-color: #e5e7eb;
-	}
-
-	/** Fix Safari bug : lien bloc dans le tableau qui ne fonctionne pas avec le tr en position relative
-	 * Ciblage Safari 11+ > 15.6 https://www.browserstack.com/guide/create-browser-specific-css
-	 */
-	@media not all and (min-resolution: 0.001dpcm) {
-		@supports (-webkit-appearance: none) and (stroke-color: transparent) {
-			.ranking-link-container {
-				position: relative;
-			}
-		}
 	}
 
 	.ranking th:last-child,
