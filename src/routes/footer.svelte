@@ -91,19 +91,4 @@
 	a:focus .twitter {
 		fill: #1da1f2;
 	}
-
-	a:hover .youtube,
-	a:focus .youtube {
-		fill: #ff0000;
-	}
-
-	a:hover .twitch,
-	a:focus .twitch {
-		fill: #9146ff;
-	}
-
-	a:hover .facebook,
-	a:focus .facebook {
-		fill: #1877f2;
-	}
 </style>
