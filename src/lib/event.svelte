@@ -5,21 +5,25 @@
 
 	export let event: ActionEvent;
 	export let hideDate = false;
+	export let titleLevel = 3;
 
 	const liens = event.liens.filter((lien) => !!lien).map((lien) => humanizeLink(lien));
+
+	$: titleElt = `h${titleLevel}`;
+	$: subTitleElt = `h${titleLevel + 1}`;
 </script>
 
-<h3>
+<svelte:element this={titleElt} class="mainTitle">
 	{#if !hideDate}<span><a href="/date/{event.date}">{dateToShortLabel(event.date)}</a></span>,{/if}
 	{event.ville} —
 	<span class="text-[#dd0220]">{@html getPointsDisplay(event.score)}</span>
-</h3>
+</svelte:element>
 <p>
 	{event.description}
 </p>
 <div class="flex-wrap sm:flex">
 	<div class="sm:w-1/2">
-		<h4>Types d'action&nbsp;:</h4>
+		<svelte:element this={subTitleElt} class="subTitle">Types d'action&nbsp;:</svelte:element>
 		<ul>
 			{#each event.actions as action}
 				<li class="tag action">
@@ -30,7 +34,7 @@
 	</div>
 	{#if event.cibles.length}
 		<div class="sm:w-1/2">
-			<h4>Personnalités&nbsp;:</h4>
+			<svelte:element this={subTitleElt} class="subTitle">Personnalités&nbsp;:</svelte:element>
 			<ul>
 				{#each event.cibles as target}
 					<li class="tag target">
@@ -42,7 +46,7 @@
 	{/if}
 </div>
 
-<h4>Sources&nbsp;:</h4>
+<svelte:element this={subTitleElt} class="subTitle">Sources&nbsp;:</svelte:element>
 <ul>
 	{#each liens as link}
 		<li class="tag target inline">
@@ -52,11 +56,11 @@
 </ul>
 
 <style lang="postcss">
-	h3 {
+	.mainTitle {
 		@apply mb-8 mt-12 text-center text-2xl font-bold;
 	}
 
-	h4 {
+	.subTitle {
 		@apply mb-1 mt-4 text-base font-bold;
 	}
 
