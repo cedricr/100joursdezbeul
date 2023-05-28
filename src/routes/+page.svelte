@@ -138,8 +138,8 @@
 							<span class="sr-only">{rank}<sup>ème</sup></span>
 						{/if}
 					</td>
-					<td class="p-1 text-right sm:p-2" class:font-bold={rank < 4}>
-						{score} <span class="text-sm" aria-hidden="true">pts</span><span class="sr-only"
+					<td class="whitespace-nowrap p-1 text-right sm:p-2" class:font-bold={rank < 4}>
+						{score}&thinsp;<span class="text-sm" aria-hidden="true">pts</span><span class="sr-only"
 							>points</span
 						>
 					</td>
