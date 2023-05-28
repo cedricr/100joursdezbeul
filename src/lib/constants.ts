@@ -32,6 +32,16 @@ export const ACTION_LABEL = {
 } as const;
 
 // prettier-ignore
+export const ACTION_DESCRIPTION = {
+	'annulation': 'Lorsqu’une personnalité renonce à une partie ou la totalité de la visite prévue.',
+	'fuite': 'Lors de la visite d’une personnalité, celle-ci décide d’accélérer le pas et de rentrer plus tôt que prévu.',
+	'sobriete': 'Intervention de camarades afin de limiter la consommation énergétique et préserver	l’environnement par une transition énergétique accélérée et locale des membres du gouvernement.',
+	'securite': 'Le gouvernement triche, et ne laisse pas les camarades venir l’acclamer.',
+	'creatif': 'Faire preuve d’originalité dans l’expression des revendications. Par exemple les opérations escargot, banderoles originales citées dans des articles, venir déguisé, etc.',
+	'chahut': 'Lors d’une visite, organiser manifestations, casserolades, charivaris, cacophonies ou huées.',
+} as const;
+
+// prettier-ignore
 export const TARGET_MULTIPLIER = {
 	'snu': 1,
 	'secretaire-etat': 1,
@@ -134,5 +144,15 @@ export const MAY_FIRST_PARTICIPANTS = [
 	'973',
 	'974',
 	'2A',
-	'2B'
+	'2B',
+	'28',
+	'32',
+	'52',
+	'55',
+	'58',
+	'70',
+	'80',
+	'971',
+	'972',
+	'976'
 ];

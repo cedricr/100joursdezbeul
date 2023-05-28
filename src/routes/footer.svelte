@@ -44,13 +44,10 @@
 
 	<ul class="text-center">
 		<li class="inline">
-			<a href="/plan-site">Plan du site</a><span aria-hidden="true">&nbsp;·</span>
-		</li>
-		<li class="inline">
-			<a href="/statistiques">Statistiques nationales</a><span aria-hidden="true">&nbsp;·</span>
-		</li>
-		<li class="inline">
 			<a href="/presse">Revue de presse</a><span aria-hidden="true">&nbsp;·</span>
+		</li>
+		<li class="inline">
+			<a href="/plan-site">Plan du site</a><span aria-hidden="true">&nbsp;·</span>
 		</li>
 		<li class="inline">
 			<a href="mailto:100joursdezbeul@solidairesinformatique.org">Contact</a><span
@@ -93,20 +90,5 @@
 	a:hover .twitter,
 	a:focus .twitter {
 		fill: #1da1f2;
-	}
-
-	a:hover .youtube,
-	a:focus .youtube {
-		fill: #ff0000;
-	}
-
-	a:hover .twitch,
-	a:focus .twitch {
-		fill: #9146ff;
-	}
-
-	a:hover .facebook,
-	a:focus .facebook {
-		fill: #1877f2;
 	}
 </style>

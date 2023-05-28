@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-	<title>Zbeul du jour | 100 jours de zbeul</title>
+	<title>Le zbeul du {formattedDate} | 100 jours de zbeul</title>
 </svelte:head>
 
 <h2 class="zbeul mb-16 mt-16 text-4xl">Le zbeul du {formattedDate}</h2>
@@ -38,7 +38,7 @@
 				</h3>
 				<ul>
 					{#each deptEvents as event}
-						<Event {event} hideDate />
+						<Event {event} titleLevel={4} hideDate />
 					{/each}
 				</ul>
 			{/if}

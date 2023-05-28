@@ -5,46 +5,67 @@
 
 	export let event: ActionEvent;
 	export let hideDate = false;
+	export let titleLevel = 3;
 
 	const liens = event.liens.filter((lien) => !!lien).map((lien) => humanizeLink(lien));
+
+	$: titleElt = `h${titleLevel}`;
+	$: subTitleElt = `h${titleLevel + 1}`;
 </script>
 
-<li class="mb-8 sm:flex sm:flex-row">
-	<div class="w-20 shrink-0">
-		{#if !hideDate}<strong><a href="/date/{event.date}">{dateToShortLabel(event.date)}</a></strong
-			>{/if}
-		<span class="font-bold text-[#dd0220]">{@html getPointsDisplay(event.score)}</span>
-	</div>
-	<div>
-		<span class="font-bold">{event.ville}&nbsp;:</span>
-		{event.description}
-		<div class="mt-1 flex-wrap gap-1 sm:flex">
+<svelte:element this={titleElt} class="mainTitle">
+	{#if !hideDate}<span><a href="/date/{event.date}">{dateToShortLabel(event.date)}</a></span>,{/if}
+	{event.ville} —
+	<span class="text-[#dd0220]">{@html getPointsDisplay(event.score)}</span>
+</svelte:element>
+<p>
+	{event.description}
+</p>
+<div class="flex-wrap sm:flex">
+	<div class="sm:w-1/2">
+		<svelte:element this={subTitleElt} class="subTitle">Types d'action&nbsp;:</svelte:element>
+		<ul>
 			{#each event.actions as action}
-				<div class="tag action">
+				<li class="tag action">
 					{ACTION_LABEL[action]}&nbsp;: {@html getPointsDisplay(ACTION_SCORE[action])}
-				</div>
+				</li>
 			{/each}
-		</div>
-		<div class="mt-1 flex-wrap gap-1 sm:flex">
-			{#each event.cibles as target}
-				<div class="tag target">
-					{target.role.intitule}&nbsp;: x{TARGET_MULTIPLIER[target.role.code]}
-				</div>
-			{/each}
-		</div>
-		<div class="mt-1 flex-wrap gap-1 sm:flex">
-			{#each liens as link}
-				<div class="tag target">
-					<a href={link.url}>{link.text}</a>
-				</div>
-			{/each}
-		</div>
+		</ul>
 	</div>
-</li>
+	{#if event.cibles.length}
+		<div class="sm:w-1/2">
+			<svelte:element this={subTitleElt} class="subTitle">Personnalités&nbsp;:</svelte:element>
+			<ul>
+				{#each event.cibles as target}
+					<li class="tag target">
+						{target.role.intitule}&nbsp;: ×{TARGET_MULTIPLIER[target.role.code]}
+					</li>
+				{/each}
+			</ul>
+		</div>
+	{/if}
+</div>
+
+<svelte:element this={subTitleElt} class="subTitle">Sources&nbsp;:</svelte:element>
+<ul>
+	{#each liens as link}
+		<li class="tag target inline">
+			<a href={link.url}>{link.text}</a>
+		</li>
+	{/each}
+</ul>
 
 <style lang="postcss">
+	.mainTitle {
+		@apply mb-8 mt-12 text-center text-2xl font-bold;
+	}
+
+	.subTitle {
+		@apply mb-1 mt-4 text-base font-bold;
+	}
+
 	.tag {
-		@apply py-0.5 pr-2 text-sm font-bold;
+		@apply py-1 pr-2 text-sm font-bold;
 	}
 
 	.action {
