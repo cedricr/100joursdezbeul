@@ -38,7 +38,7 @@
 				</h3>
 				<ul>
 					{#each deptEvents as event}
-						<Event {event} hideDate />
+						<Event {event} titleLevel={4} hideDate />
 					{/each}
 				</ul>
 			{/if}
