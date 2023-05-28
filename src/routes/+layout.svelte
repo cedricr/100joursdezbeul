@@ -38,9 +38,16 @@
 			<li>
 				<a
 					href="https://france.attac.org/se-mobiliser/retraites-pour-le-droit-a-une-retraite-digne-et-heureuse/article/on-ne-les-lache-pas-la-carte-des-mobilisations"
+				>
+					Signaler un zbeul
+				</a>
+			</li>
+			<li>
+				<a
+					href="https://france.attac.org/se-mobiliser/retraites-pour-le-droit-a-une-retraite-digne-et-heureuse/article/on-ne-les-lache-pas-la-carte-des-mobilisations"
 					class="bg-blue-800 p-2 font-bold text-white no-underline hover:bg-blue-950 focus:bg-blue-950"
 				>
-					Signaler une action / Participer à une action
+					Où zbeuler&nbsp;?
 				</a>
 			</li>
 		</ul>
