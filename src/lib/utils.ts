@@ -32,12 +32,13 @@ export function getDayNumber(): number {
 
 export function getLatestDate(events: ActionEvent[]): Date {
 	const dates = events.map((event) => new Date(event.date));
-	return dates.sort((a, b) => b - a)[0];
+	return dates.sort((a, b) => b.getTime() - a.getTime())[0];
 }
 
 export function sortEventsByDescendingDate(events: ActionEvent[]) {
 	return events.sort((evt1, evt2) => Date.parse(evt2.date) - Date.parse(evt1.date));
 }
+
 export function getDepartmentName(code: string): string {
 	const dept = DEPARTMENTS.find((elt) => elt.code === code);
 	if (!dept) {
