@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Leaderboard from '$lib/leaderboard.svelte';
-	import { dateToLabel } from '$lib/utils';
+	import { dateToLabel, dateToString } from '$lib/utils';
 
 	export let data;
 

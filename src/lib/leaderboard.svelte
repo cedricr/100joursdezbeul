@@ -4,7 +4,8 @@
 	import casseroleOr from '$lib/assets/icons/casserole-or.svg';
 	import casseroleArgent from '$lib/assets/icons/casserole-argent.svg';
 	import casseroleBronze from '$lib/assets/icons/casserole-bronze.svg';
-	// import evolHaut from '$lib/assets/icons/evol-haut.svg';
+	import evolHaut from '$lib/assets/icons/evol-haut.svg';
+	import evolHautDouble from '$lib/assets/icons/evol-haut-double.svg';
 	import {
 		dateToShortLabel,
 		dateToString,
@@ -12,37 +13,57 @@
 		getDepartmentName,
 		getLatestDate
 	} from '$lib/utils';
-	import type { ActionEvent, DepartmentResult } from '$lib/types';
+	import type { ActionEvent } from '$lib/types';
 	import { startDay } from './constants';
 
-	export let actions: ActionEvent[];
-	export let date: Date;
+	interface DepartmentResult {
+		[departmentCode: string]: { score: number; rank?: number };
+	}
 
-	$: validActions = filterEventsUntilDate(dateToString(date), actions);
-	const append = (a, x) => a.concat([x]);
+	export let actions: ActionEvent[];
+	export let date: string;
+
+	$: validActions = filterEventsUntilDate(date, actions);
 
 	function generateLeaderboard(actionEvents: ActionEvent[]) {
 		const departmentsResults: DepartmentResult = {};
 		actionEvents.forEach((event) => {
 			const dept = event.departement;
-			departmentsResults[dept] = (departmentsResults[dept] || 0) + event.score;
+			if (departmentsResults[dept]) {
+				departmentsResults[dept].score += event.score;
+			} else {
+				departmentsResults[dept] = { score: event.score };
+			}
+			departmentsResults[dept].score = departmentsResults[dept]?.score || 0;
 		});
-		return Object.entries(departmentsResults).sort((d1, d2) => {
-			return d2[1] - d1[1];
+		const sortedResults = Object.entries(departmentsResults).sort((d1, d2) => {
+			return d2[1].score - d1[1].score;
 		});
+		let currentRank = 1;
+		let currentOrder = 1;
+		let previousScore: number | undefined;
+		sortedResults.forEach((result) => {
+			if (result[1].score !== previousScore) {
+				previousScore = result[1].score;
+				currentRank = currentOrder;
+			}
+			result[1].rank = currentRank;
+			currentOrder += 1;
+		});
+
+		return sortedResults.map((result) => [result[0], result[1].score, result[1].rank]);
 	}
 
-	$: resultLines = generateLeaderboard(validActions)
-		.map(([code, score]) => ({ code, score }))
-		.reduce(
-			(acc, x, i) =>
-				append(acc, {
-					...x,
-					rank: i > 0 && x.score === acc[i - 1].score ? acc[i - 1].rank : i + 1
-				}),
-			[]
-		);
+	function getProgression(departmentCode: string) {
+		const currentLine = leaderboard.find((line) => line[0] === departmentCode);
+		const previousLine = previousLeaderboard.find((line) => line[0] === departmentCode);
+		return previousLine != null ? previousLine[2] - currentLine[2] : null;
+	}
 
+	$: leaderboard = generateLeaderboard(validActions);
+	$: previousLeaderboard = generateLeaderboard(
+		filterEventsUntilDate(dateToString(dayjs(date).subtract(1, 'day')), validActions)
+	);
 	$: formattedDate = dateToShortLabel(date);
 	$: previousDay = dayjs(date).subtract(1, 'day');
 	$: nextDay = dayjs(date).add(1, 'day');
@@ -80,7 +101,8 @@
 			</tr>
 		</thead>
 		<tbody>
-			{#each resultLines as { code, score, rank }}
+			{#each leaderboard as [departmentCode, score, rank]}
+				{@const progression = getProgression(departmentCode)}
 				<tr
 					class="ranking-line relative border-l-4 border-transparent"
 					class:hover:border-yellow-800={rank === 1}
@@ -94,11 +116,11 @@
 				>
 					<th scope="row" class="p-1 sm:p-2">
 						<a
-							href="/departement/{code}"
+							href="/departement/{departmentCode}"
 							class="relative block pr-4 no-underline"
 							class:font-bold={rank < 4}
 						>
-							{getDepartmentName(code)}<svg
+							{getDepartmentName(departmentCode)}<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
 								height="24"
@@ -116,45 +138,65 @@
 						</a>
 					</th>
 					<td class="p-1 text-center sm:p-2">
-						{#if rank === 1}
-							<img
-								role="img"
-								src={casseroleOr}
-								alt="Premier (casserole d’or)"
-								width="35"
-								height="35"
-								class="m-auto inline"
-							/>
-						{:else if rank === 2}
-							<img
-								role="img"
-								src={casseroleArgent}
-								alt="Deuxième (casserole d’argent)"
-								width="35"
-								height="35"
-								class="m-auto inline"
-							/>
-						{:else if rank === 3}
-							<img
-								role="img"
-								src={casseroleBronze}
-								alt="Troisième (casserole de bronze)"
-								width="35"
-								height="35"
-								class="m-auto inline"
-							/>
-						{:else}
-							<span aria-hidden="true">{rank}<sup>e</sup></span>
-							<span class="sr-only">{rank}<sup>ème</sup></span>
-						{/if}
-						<!-- <img
-							role="img"
-							src={evolHaut}
-							alt="en progression"
-							width="35"
-							height="35"
-							class="inline"
-						/> -->
+						<div class="m-auto flex flex-row justify-end gap-2">
+							<div class="flex-none">
+								{#if rank === 1}
+									<img
+										role="img"
+										src={casseroleOr}
+										alt="Premier (casserole d’or)"
+										width="35"
+										height="35"
+									/>
+								{:else if rank === 2}
+									<img
+										role="img"
+										src={casseroleArgent}
+										alt="Deuxième (casserole d’argent)"
+										width="35"
+										height="35"
+									/>
+								{:else if rank === 3}
+									<img
+										role="img"
+										src={casseroleBronze}
+										alt="Troisième (casserole de bronze)"
+										width="35"
+										height="35"
+									/>
+								{:else}
+									<div class="relative right-2">
+										<span aria-hidden="true">{rank}<sup>e</sup></span>
+										<span class="sr-only">{rank}<sup>ème</sup></span>
+									</div>
+								{/if}
+							</div>
+							<div class="flex-none">
+								{#if progression == null || progression >= 5}
+									<img
+										role="img"
+										src={evolHautDouble}
+										alt="en forte progression"
+										title={progression != null
+											? `gagne ${progression} rangs`
+											: 'Entrée au classement'}
+										width="35"
+										height="35"
+									/>
+								{:else if progression > 0}
+									<img
+										role="img"
+										src={evolHaut}
+										alt="en progression"
+										title="gagne {progression} rang{progression === 1 ? '' : 's'}"
+										width="35"
+										height="35"
+									/>
+								{:else}
+									<div class="w-[35px]" />
+								{/if}
+							</div>
+						</div>
 					</td>
 					<td class="whitespace-nowrap p-1 text-right sm:p-2" class:font-bold={rank < 4}>
 						{score}&thinsp;<span class="text-sm" aria-hidden="true">pts</span><span class="sr-only"

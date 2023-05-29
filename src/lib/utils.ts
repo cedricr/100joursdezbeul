@@ -30,9 +30,9 @@ export function getDayNumber(): number {
 	return elapsedDays;
 }
 
-export function getLatestDate(events: ActionEvent[]): Date {
+export function getLatestDate(events: ActionEvent[]): string {
 	const dates = events.map((event) => new Date(event.date));
-	return dates.sort((a, b) => b.getTime() - a.getTime())[0];
+	return dateToString(dates.sort((a, b) => b.getTime() - a.getTime())[0]);
 }
 
 export function sortEventsByDescendingDate(events: ActionEvent[]) {
