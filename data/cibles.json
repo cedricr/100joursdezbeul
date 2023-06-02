@@ -96,16 +96,6 @@
 		"gristHelper_Display2": ["L", "Ministère des Armées"]
 	},
 	{
-		"id": 10,
-		"manualSort": 10,
-		"nom": "Brigitte Bourguignon",
-		"role": 4,
-		"titre": "Ministre de la Santé et de la Prévention",
-		"ministeres": ["L", 14],
-		"gristHelper_Display": "Ministre",
-		"gristHelper_Display2": ["L", "Ministère de la Santé et de la Prévention"]
-	},
-	{
 		"id": 11,
 		"manualSort": 11,
 		"nom": "Olivier Dussopt",
@@ -114,19 +104,6 @@
 		"ministeres": ["L", 7],
 		"gristHelper_Display": "Ministre",
 		"gristHelper_Display2": ["L", "Ministère du Travail, du Plein emploi et de l'Insertion"]
-	},
-	{
-		"id": 12,
-		"manualSort": 12,
-		"nom": "Damien Abad",
-		"role": 4,
-		"titre": "Ministre des Solidarités, de l'Autonomie et des Personnes handicapées",
-		"ministeres": ["L", 15],
-		"gristHelper_Display": "Ministre",
-		"gristHelper_Display2": [
-			"L",
-			"Ministère des Solidarités, de l'Autonomie et des Personnes handicapées"
-		]
 	},
 	{
 		"id": 13,
