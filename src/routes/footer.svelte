@@ -1,5 +1,6 @@
 <script lang="ts">
 	import logoSI from '$lib/assets/logo-si.png';
+	import logoSolidaires from '$lib/assets/logo_solidaires.png';
 </script>
 
 <footer class="my-8 flex flex-col gap-4" role="contentinfo">
@@ -73,12 +74,18 @@
 		</li>
 	</ul>
 
-	<p class="mx-auto mt-4 w-fit text-center">
-		<a href="https://solidairesinformatique.org">
-			<img alt="Solidaires Informatique" src={logoSI} width="200" height="73" />
-			<span class="mt-2 block">Syndiquez-vous&nbsp;!</span>
-		</a>
-	</p>
+	<div class="items-top mt-4 flex flex-row justify-center gap-8">
+		<div>
+			<a href="https://solidairesinformatique.org">
+				<img alt="Solidaires Informatique" src={logoSI} width="200" height="72" />
+			</a>
+		</div>
+		<div>
+			<a href="https://solidaires.org/">
+				<img alt="Union syndicale Solidaires" src={logoSolidaires} width="200" height="70" />
+			</a>
+		</div>
+	</div>
 </footer>
 
 <style lang="postcss">
