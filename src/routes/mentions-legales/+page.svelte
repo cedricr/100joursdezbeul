@@ -27,21 +27,14 @@
 	<h3>Crédits &amp; remerciements</h3>
 	<ul class="list-disc pl-4">
 		<li>
-			Attac pour les
-			<a
-				href="https://france.attac.org/se-mobiliser/retraites-pour-le-droit-a-une-retraite-digne-et-heureuse/article/on-ne-les-lache-pas-la-carte-des-mobilisations"
-				>données</a
-			>
-		</li>
-		<li>
 			<a href="https://nitter.net/Teddyruptif/">@Teddyruptif</a> pour son superbe
 			<a href="https://nitter.net/Teddyruptif/status/1649460414676172803">logo</a>, une parodie du
 			logo des Jeux Olympiques (cinq anneaux bleu, jaune, noir, vert, et rouge entrecroisés) dont
 			les anneaux ont un manche qui en fait des casseroles.
 		</li>
 		<li>
-			Toustes les camarades de Solidaires Informatique et d'ailleurs qui ont contribué ou encouragé
-			ce projet&nbsp;!
+			Toustes les camarades de Solidaires Informatique, de l’Union syndicale Solidaires, d’Attac et
+			d'ailleurs qui ont contribué ou encouragé ce projet&nbsp;!
 		</li>
 	</ul>
 </div>
