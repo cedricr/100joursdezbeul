@@ -75,23 +75,23 @@
 		</li>
 	</ul>
 
-	<div class="items-top mt-4 flex flex-row justify-center gap-9">
-		<div>
+	<ul class="items-top mt-4 flex flex-row justify-center gap-9">
+		<li>
 			<a href="https://solidairesinformatique.org">
 				<img alt="Solidaires Informatique" src={logoSI} width="200" height="72" />
 			</a>
-		</div>
-		<div>
+		</li>
+		<li>
 			<a href="https://solidaires.org">
 				<img alt="Union syndicale Solidaires" src={logoSolidaires} width="200" height="70" />
 			</a>
-		</div>
-		<div class="relative bottom-2">
+		</li>
+		<li class="relative bottom-2">
 			<a href="https://france.attac.org">
 				<img alt="Attac" src={logoAttac} width="60" height="70" />
 			</a>
-		</div>
-	</div>
+		</li>
+	</ul>
 </footer>
 
 <style lang="postcss">
