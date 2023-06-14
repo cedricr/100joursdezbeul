@@ -2,7 +2,7 @@
 <br />
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/cedricr/100joursdezbeul/main/static/ogimg-v2.png" alt="100joursdezbeul logo" height="280">
+    <img src="https://raw.githubusercontent.com/cedricr/100joursdezbeul/main/static/ogimg-v4.png" alt="100joursdezbeul logo" height="280">
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
 
 ## Proposer un événement
 
-Utiliser le framaforms: https://framaforms.org/100-jours-de-zbeul-proposer-un-evenement-1682372493
+Sur le site d'Attac: https://france.attac.org/se-mobiliser/retraites-pour-le-droit-a-une-retraite-digne-et-heureuse/article/on-ne-les-lache-pas-la-carte-des-mobilisations
 
 ## Contribuer au code
 
@@ -34,22 +34,9 @@ npm run dev -- --open
 npm run update-data
 ```
 
-Pour contribuer anonymement:
-
-1. faites un checkout du projet
-2. allez dans le repertoire du projet
-3. lancez `git config --local user.name "anonymous"` pour changer vos noms dans tous les commits
-4. lancez `git config --local user.email "anonymous@anonymous.com"` pour changer votre emain dans tous les commits
-5. lancez `git config --local commit.gpgsign false` pour ne pas envoyer votre clef gpg si vous en avez une
-6. créez une branche comme habituellement
-7. faites vos modifications
-8. créez un patch avec `git format-patch origin/main`
-9. envoyez le à un contributeur public du projet via leur page de profile > contact
-
 ## Remerciements
 
 Immenses remerciements à :
 
-- Attac pour les [données](https://france.attac.org/se-mobiliser/retraites-pour-le-droit-a-une-retraite-digne-et-heureuse/article/on-ne-les-lache-pas-la-carte-des-mobilisations)
 - [@Teddyruptif](https://nitter.net/Teddyruptif/) pour le [logo](https://nitter.net/Teddyruptif/status/1649460414676172803)
-- Toustes les camarades de Solidaires Informatique qui ont contribué ou encouragé ce projet !
+- Toustes les camarades de Solidaires Informatique, de l’Union syndicale Solidaires, d’Attac et d'ailleurs qui ont contribué ou encouragé ce projet !

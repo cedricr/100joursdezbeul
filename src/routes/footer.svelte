@@ -1,5 +1,7 @@
 <script lang="ts">
 	import logoSI from '$lib/assets/logo-si.png';
+	import logoSolidaires from '$lib/assets/logo-solidaires.png';
+	import logoAttac from '$lib/assets/logo-attac.png';
 </script>
 
 <footer class="my-8 flex flex-col gap-4" role="contentinfo">
@@ -73,12 +75,23 @@
 		</li>
 	</ul>
 
-	<p class="mx-auto mt-4 w-fit text-center">
-		<a href="https://solidairesinformatique.org">
-			<img alt="Solidaires Informatique" src={logoSI} width="200" height="73" />
-			<span class="mt-2 block">Syndiquez-vous&nbsp;!</span>
-		</a>
-	</p>
+	<ul class="items-top mt-4 flex flex-row justify-center gap-9">
+		<li>
+			<a href="https://solidairesinformatique.org">
+				<img alt="Solidaires Informatique" src={logoSI} width="200" height="72" />
+			</a>
+		</li>
+		<li>
+			<a href="https://solidaires.org">
+				<img alt="Union syndicale Solidaires" src={logoSolidaires} width="200" height="70" />
+			</a>
+		</li>
+		<li class="relative bottom-2">
+			<a href="https://france.attac.org">
+				<img alt="Attac" src={logoAttac} width="60" height="70" />
+			</a>
+		</li>
+	</ul>
 </footer>
 
 <style lang="postcss">

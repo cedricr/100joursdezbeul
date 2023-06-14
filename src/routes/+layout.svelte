@@ -36,11 +36,10 @@
 			<li><a href="/" title="Scores - Page d’accueil">Scores</a></li>
 			<li><a href="/regles-du-jeu">Règles du jeu</a></li>
 			<li>
-				<a
-					href="https://france.attac.org/se-mobiliser/retraites-pour-le-droit-a-une-retraite-digne-et-heureuse/article/on-ne-les-lache-pas-la-carte-des-mobilisations"
-				>
-					Signaler un zbeul
-				</a>
+				<a href="https://casserolades.gogocarto.fr/elements/add">Signaler un zbeul</a>
+			</li>
+			<li>
+				<a href="mailto:100joursdezbeul@solidairesinformatique.org">Réclamation</a>
 			</li>
 			<li>
 				<a
