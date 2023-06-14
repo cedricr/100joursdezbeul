@@ -3207,21 +3207,15 @@
 		"date": 1686614400,
 		"lieu": "Paris 12e",
 		"departement": "75",
-		"description": "Casserolade et nasse devant le Musée national de l’immigration pour accueillir les ministres Rima Abdul Malak, Pap Ndiaye, Sylvie Retailleau et Gérald Darmanin au vernissage de la nouvelle exposition permanente.",
+		"description": "Casserolade et nasse devant le Musée national de l’immigration pour accueillir les ministres Rima Abdul Malak, Pap Ndiaye, Sylvie Retailleau au vernissage de la nouvelle exposition permanente.",
 		"actions": ["L", "chahut"],
 		"lien1": "https://twitter.com/LibreQg/status/1668654689666183176?s=20",
 		"lien2": "",
 		"lien3": "",
-		"cibles": ["L", 17, 8, 13, 4],
+		"cibles": ["L", 17, 8, 13],
 		"gristHelper_ConditionalRule": null,
 		"gristHelper_ConditionalRule2": false,
-		"gristHelper_Display": [
-			"L",
-			"Rima Abdul-Malak",
-			"Pap Ndiaye",
-			"Sylvie Retailleau",
-			"Gérald Darmanin"
-		]
+		"gristHelper_Display": ["L", "Rima Abdul-Malak", "Pap Ndiaye", "Sylvie Retailleau"]
 	},
 	{
 		"id": 214,
@@ -3238,5 +3232,21 @@
 		"gristHelper_ConditionalRule": null,
 		"gristHelper_ConditionalRule2": false,
 		"gristHelper_Display": ["L", "Emmanuel Macron"]
+	},
+	{
+		"id": 215,
+		"manualSort": 211,
+		"date": 1686614400,
+		"lieu": "Paris 12e",
+		"departement": "75",
+		"description": "Gerald Darmanin annule sa venue à l'inauguration du Musée national de l’immigration",
+		"actions": ["L", "annulation"],
+		"lien1": "https://www.nouvelobs.com/histoire/20230613.OBS74478/le-musee-de-l-histoire-de-l-immigration-rouvre-ses-portes-et-veut-faire-evoluer-les-mentalites.html",
+		"lien2": "",
+		"lien3": "",
+		"cibles": ["L", 4],
+		"gristHelper_ConditionalRule": null,
+		"gristHelper_ConditionalRule2": false,
+		"gristHelper_Display": ["L", "Gérald Darmanin"]
 	}
 ]
