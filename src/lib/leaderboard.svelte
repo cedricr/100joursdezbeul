@@ -73,19 +73,29 @@
 	$: hasPreviousDate = dayjs(startDay).isBefore(dayjs(date), 'day');
 </script>
 
-<div class="text-center">
-	{#if hasPreviousDate}
-		<a href="/classement/{dateToString(previousDay)}" class="zbeul text-4xl no-underline">
-			<span aria-hidden="true">&lt;&nbsp;</span><span class="sr-only">jour précédent</span>
-		</a>
-	{:else}
-		<span aria-hidden="true" class="zbeul text-4xl text-gray-300">&lt;&nbsp;</span>
-	{/if}
+<div class="flex justify-center text-center">
+	<div class="flex flex-row-reverse">
+		<h2 class="zbeul mb-2 ml-2 mr-2">Classement au {formattedDate}</h2>
 
-	<h2 class="zbeul mb-2 inline">Classement au {formattedDate}</h2>
+		{#if hasPreviousDate}
+			<a
+				href="/classement/{dateToString(previousDay)}"
+				class="zbeul text-4xl text-blue-800 no-underline"
+			>
+				<span aria-hidden="true" title="Jour précédent">&lt;&nbsp;</span><span class="sr-only"
+					>Jour précédent</span
+				>
+			</a>
+		{:else}
+			<span aria-hidden="true" class="zbeul text-4xl text-gray-300">&lt;&nbsp;</span>
+		{/if}
+	</div>
+
 	{#if hasNextDate}
-		<a href="/classement/{dateToString(nextDay)}" class="zbeul text-4xl no-underline">
-			<span aria-hidden="true">&nbsp;&gt;</span><span class="sr-only">jour suivant</span>
+		<a href="/classement/{dateToString(nextDay)}" class="zbeul text-4xl text-blue-800 no-underline">
+			<span aria-hidden="true" title="Jour suivant">&nbsp;&gt;</span><span class="sr-only"
+				>Jour suivant</span
+			>
 		</a>
 	{:else}
 		<span aria-hidden="true" class="zbeul text-4xl text-gray-300">&nbsp;&gt;</span>
