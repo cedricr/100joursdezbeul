@@ -186,7 +186,9 @@
 									<img
 										role="img"
 										src={evolHautDouble}
-										alt="en forte progression"
+										alt="en forte progression - {progression != null
+											? `gagne ${progression} rangs`
+											: 'Entrée au classement'}"
 										title={progression != null
 											? `gagne ${progression} rangs`
 											: 'Entrée au classement'}
@@ -197,7 +199,7 @@
 									<img
 										role="img"
 										src={evolHaut}
-										alt="en progression"
+										alt="en progression - gagne {progression} rang{progression === 1 ? '' : 's'}"
 										title="gagne {progression} rang{progression === 1 ? '' : 's'}"
 										width="35"
 										height="35"
