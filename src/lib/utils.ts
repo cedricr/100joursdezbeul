@@ -30,14 +30,15 @@ export function getDayNumber(): number {
 	return elapsedDays;
 }
 
-export function getLatestDate(events: ActionEvent[]): Date {
+export function getLatestDate(events: ActionEvent[]): string {
 	const dates = events.map((event) => new Date(event.date));
-	return dates.sort((a, b) => b - a)[0];
+	return dateToString(dates.sort((a, b) => b.getTime() - a.getTime())[0]);
 }
 
 export function sortEventsByDescendingDate(events: ActionEvent[]) {
 	return events.sort((evt1, evt2) => Date.parse(evt2.date) - Date.parse(evt1.date));
 }
+
 export function getDepartmentName(code: string): string {
 	const dept = DEPARTMENTS.find((elt) => elt.code === code);
 	if (!dept) {

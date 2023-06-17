@@ -36,10 +36,6 @@ export interface ActionEvent {
 	score: number;
 }
 
-export interface DepartmentResult {
-	[departmentCode: string]: number;
-}
-
 export interface GristAction extends IRecord {
 	id: number;
 	lieu: string;

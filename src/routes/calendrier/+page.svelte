@@ -21,7 +21,7 @@
 		const date = startDate.add(i, 'day');
 
 		pastDates.push({ date: dateToString(date), label: dateToLabel(date) });
-		if (dateToString(date) === dateToString(getLatestDate(data.actions))) {
+		if (dateToString(date) === getLatestDate(data.actions)) {
 			break;
 		}
 	}
