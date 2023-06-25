@@ -3392,5 +3392,53 @@
 		"gristHelper_ConditionalRule": null,
 		"gristHelper_ConditionalRule2": false,
 		"gristHelper_Display": ["L", "Jean-Christophe Combe", "Agnès Firmin Le Bodo"]
+	},
+	{
+		"id": 225,
+		"manualSort": 221,
+		"date": 1687305600,
+		"lieu": "Nancy",
+		"departement": "54",
+		"description": "Plusieurs centaines de personnes étaient présentes avec leurs casseroles pour accueillir Gérald Darmanin, en déplacement à Nancy pour le congrès d'un syndicat de police.",
+		"actions": ["L", "chahut"],
+		"lien1": "https://www.francebleu.fr/infos/environnement/concert-de-casseroles-a-nancy-a-l-occasion-du-passage-de-gerald-darmanin-8592808",
+		"lien2": "https://twitter.com/bleusudlorraine/status/1671548763557560322?ref_src=twsrc%5Etfw",
+		"lien3": "https://nitter.lacontrevoie.fr/Callystor/status/1671891647846817793#m",
+		"cibles": ["L", 4],
+		"gristHelper_ConditionalRule": null,
+		"gristHelper_ConditionalRule2": false,
+		"gristHelper_Display": ["L", "Gérald Darmanin"]
+	},
+	{
+		"id": 226,
+		"manualSort": 222,
+		"date": 1687564800,
+		"lieu": "St Orens",
+		"departement": "31",
+		"description": "Dominique Faure et Sonia Backès ont été accueillies par une belle casserolade lors de leur Matinée citoyenne organisée à l’espace Marcaisonne de Saint-Orens de Gameville",
+		"actions": ["L", "chahut"],
+		"lien1": "https://www.tiktok.com/@yayatolosa/video/7248171227351665946?_op=1&_r=1&_t=8dQqxCltsWA&social_sharing=v4",
+		"lien2": "https://app.panneaupocket.com/pdf/92369320763ef81cc86e736.30577866-1676640716.pdf",
+		"lien3": "",
+		"cibles": ["L", 29, 34],
+		"gristHelper_ConditionalRule": null,
+		"gristHelper_ConditionalRule2": false,
+		"gristHelper_Display": ["L", "Dominique Faure", "Sonia Backès"]
+	},
+	{
+		"id": 227,
+		"manualSort": 223,
+		"date": 1687392000,
+		"lieu": "Paris",
+		"departement": "75",
+		"description": "« Macron démission » en mondiovision au concert Global Citizen",
+		"actions": ["L", "chahut", "creatif"],
+		"lien1": "https://nitter.net/TrioMarina/status/1672220027536154626",
+		"lien2": "https://www.leparisien.fr/paris-75/macron-demission-le-president-hue-au-concert-global-citizen-a-paris-ou-jouait-billie-eilish-23-06-2023-F6HFRNIWUJCONPOJOGTAKXYGCE.php",
+		"lien3": "",
+		"cibles": ["L", 1],
+		"gristHelper_ConditionalRule": null,
+		"gristHelper_ConditionalRule2": false,
+		"gristHelper_Display": ["L", "Emmanuel Macron"]
 	}
 ]
