@@ -4,11 +4,9 @@
 	import Footer from './footer.svelte';
 </script>
 
-<div class="bg-black p-4 text-center text-xl text-white">Justice pour Nahel</div>
-
-<div class="m-2 sm:m-4">
-	<header role="banner">
-		<nav role="navigation" aria-label="Accès rapide" class="mb-3 text-sm text-gray-600">
+<header role="banner">
+	<div class="flex flex-col-reverse">
+		<nav role="navigation" aria-label="Accès rapide" class="m-2 mb-3 text-sm text-gray-600 sm:m-4">
 			<ul>
 				<li class="inline">
 					<a href="#main">Contenu principal</a><span aria-hidden="true"> &nbsp;·</span>
@@ -17,58 +15,66 @@
 			</ul>
 		</nav>
 
-		<div>
-			<div class="flex items-center md:block">
-				<p class="mr-2 w-[25%] text-center sm:mr-6 md:mr-0 md:w-auto">
-					<a href="/" class="inline-block">
-						<img src={logoJO} alt="100 jours de zbeul - Accueil" width="300" height="168" />
-					</a>
-				</p>
-
-				<h1 class="zbeul">100 jours de zbeul</h1>
-			</div>
-			<p class="zbeul mb-6 text-center">Quels sont les départements qui zbeulent le plus&nbsp;?</p>
+		<div class="bg-black text-center">
+			<p class="p-4 text-xl font-bold uppercase text-white md:text-2xl">
+				<a
+					href="https://solidairesinformatique.org/2023/06/30/violences-policieres-protegeons-nos-vies-et-notre-futur/"
+					>Justice pour Nahel. Non aux violences policières.</a
+				>
+			</p>
 		</div>
+	</div>
+	<div class="m-2 sm:m-4">
+		<div class="flex items-center md:block">
+			<p class="mr-2 w-[25%] text-center sm:mr-6 md:mr-0 md:w-auto">
+				<a href="/" class="inline-block">
+					<img src={logoJO} alt="100 jours de zbeul - Accueil" width="300" height="168" />
+				</a>
+			</p>
 
-		<nav
-			role="navigation"
-			aria-label="Menu principal"
-			class="main-nav border-y border-solid border-gray-200 py-2"
-		>
-			<ul class="mx-auto max-w-2xl text-center text-lg">
-				<li><a href="/" title="Scores - Page d’accueil">Scores</a></li>
-				<li><a href="/regles-du-jeu">Règles du jeu</a></li>
-				<li>
-					<a href="https://casserolades.gogocarto.fr/elements/add">Signaler un zbeul</a>
-				</li>
-				<li>
-					<a href="mailto:100joursdezbeul@solidairesinformatique.org">Réclamation</a>
-				</li>
-				<li>
-					<a
-						href="https://france.attac.org/se-mobiliser/retraites-pour-le-droit-a-une-retraite-digne-et-heureuse/article/on-ne-les-lache-pas-la-carte-des-mobilisations"
-						class="bg-blue-800 p-2 font-bold text-white no-underline hover:bg-blue-950 focus:bg-blue-950"
-					>
-						Où zbeuler&nbsp;?
-					</a>
-				</li>
-			</ul>
-		</nav>
+			<h1 class="zbeul">100 jours de zbeul</h1>
+		</div>
+		<p class="zbeul mb-6 text-center">Quels sont les départements qui zbeulent le plus&nbsp;?</p>
+	</div>
 
-		<nav role="navigation" aria-label="Vues secondaires des résultats" class="main-nav bg-gray-200">
-			<ul class="mx-auto text-center">
-				<li><a href="/calendrier">Calendrier</a></li>
-				<li><a href="/statistiques">Statistiques</a></li>
-			</ul>
-		</nav>
-	</header>
+	<nav
+		role="navigation"
+		aria-label="Menu principal"
+		class="main-nav border-y border-solid border-gray-200 py-2"
+	>
+		<ul class="mx-auto max-w-2xl text-center text-lg">
+			<li><a href="/" title="Scores - Page d’accueil">Scores</a></li>
+			<li><a href="/regles-du-jeu">Règles du jeu</a></li>
+			<li>
+				<a href="https://casserolades.gogocarto.fr/elements/add">Signaler un zbeul</a>
+			</li>
+			<li>
+				<a href="mailto:100joursdezbeul@solidairesinformatique.org">Réclamation</a>
+			</li>
+			<li>
+				<a
+					href="https://france.attac.org/se-mobiliser/retraites-pour-le-droit-a-une-retraite-digne-et-heureuse/article/on-ne-les-lache-pas-la-carte-des-mobilisations"
+					class="bg-blue-800 p-2 font-bold text-white no-underline hover:bg-blue-950 focus:bg-blue-950"
+				>
+					Où zbeuler&nbsp;?
+				</a>
+			</li>
+		</ul>
+	</nav>
 
-	<main role="main" id="main">
-		<slot />
-	</main>
+	<nav role="navigation" aria-label="Vues secondaires des résultats" class="main-nav bg-gray-200">
+		<ul class="mx-auto text-center">
+			<li><a href="/calendrier">Calendrier</a></li>
+			<li><a href="/statistiques">Statistiques</a></li>
+		</ul>
+	</nav>
+</header>
 
-	<Footer />
-</div>
+<main role="main" id="main" class="m-2 sm:m-4">
+	<slot />
+</main>
+
+<Footer />
 
 <style lang="postcss">
 	.main-nav li {
