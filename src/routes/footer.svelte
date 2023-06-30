@@ -4,7 +4,7 @@
 	import logoAttac from '$lib/assets/logo-attac.png';
 </script>
 
-<footer class="my-8 flex flex-col gap-4" role="contentinfo">
+<footer class="mx-2 my-8 flex flex-col gap-4 sm:mx-4" role="contentinfo">
 	<hr class="mb-4" />
 
 	<div class="text-center">

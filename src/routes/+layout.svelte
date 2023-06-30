@@ -5,16 +5,26 @@
 </script>
 
 <header role="banner">
-	<nav role="navigation" aria-label="Accès rapide" class="mb-3 text-sm text-gray-600">
-		<ul>
-			<li class="inline">
-				<a href="#main">Contenu principal</a><span aria-hidden="true"> &nbsp;·</span>
-			</li>
-			<li class="inline"><a href="/accessibilite">Accessibilité</a></li>
-		</ul>
-	</nav>
+	<div class="flex flex-col-reverse">
+		<nav role="navigation" aria-label="Accès rapide" class="m-2 mb-3 text-sm text-gray-600 sm:m-4">
+			<ul>
+				<li class="inline">
+					<a href="#main">Contenu principal</a><span aria-hidden="true"> &nbsp;·</span>
+				</li>
+				<li class="inline"><a href="/accessibilite">Accessibilité</a></li>
+			</ul>
+		</nav>
 
-	<div>
+		<div class="bg-black text-center">
+			<p class="p-4 text-xl font-bold uppercase text-white md:text-2xl">
+				<a
+					href="https://solidairesinformatique.org/2023/06/30/violences-policieres-protegeons-nos-vies-et-notre-futur/"
+					>Justice pour Nahel. Non aux violences policières.</a
+				>
+			</p>
+		</div>
+	</div>
+	<div class="m-2 sm:m-4">
 		<div class="flex items-center md:block">
 			<p class="mr-2 w-[25%] text-center sm:mr-6 md:mr-0 md:w-auto">
 				<a href="/" class="inline-block">
@@ -60,7 +70,7 @@
 	</nav>
 </header>
 
-<main role="main" id="main">
+<main role="main" id="main" class="m-2 sm:m-4">
 	<slot />
 </main>
 
