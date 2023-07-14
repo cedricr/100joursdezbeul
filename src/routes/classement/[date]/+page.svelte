@@ -11,6 +11,6 @@
 	<title>Classement du {formattedDate} | 100 jours de zbeul</title>
 </svelte:head>
 
-<p class="my-10" />
+<p class="my-14" />
 
 <Leaderboard date={data.date} actions={data.actions} />

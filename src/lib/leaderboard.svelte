@@ -22,6 +22,7 @@
 
 	export let actions: ActionEvent[];
 	export let date: string;
+	export let ended = false;
 
 	$: validActions = filterEventsUntilDate(date, actions);
 
@@ -75,7 +76,9 @@
 
 <div class="flex justify-center text-center">
 	<div class="flex flex-row-reverse">
-		<h2 class="zbeul mb-2 ml-2 mr-2">Classement au {formattedDate}</h2>
+		<h2 class="zbeul mb-2 ml-2 mr-2">
+			{#if ended}Classement final{:else}Classement au {formattedDate}{/if}
+		</h2>
 
 		{#if hasPreviousDate}
 			<a

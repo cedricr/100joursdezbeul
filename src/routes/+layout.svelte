@@ -18,7 +18,7 @@
 		<div class="bg-black text-center">
 			<p class="p-4 text-xl font-bold uppercase text-white md:text-2xl">
 				<a
-					href="https://solidairesinformatique.org/2023/06/30/violences-policieres-protegeons-nos-vies-et-notre-futur/"
+					href="https://solidaires.org/sinformer-et-agir/actualites-et-mobilisations/communiques/notre-pays-est-en-deuil-et-en-colere/"
 					>Justice pour Nahel. Non aux violences policières.</a
 				>
 			</p>
@@ -46,17 +46,10 @@
 			<li><a href="/" title="Scores - Page d’accueil">Scores</a></li>
 			<li><a href="/regles-du-jeu">Règles du jeu</a></li>
 			<li>
-				<a href="https://casserolades.gogocarto.fr/elements/add">Signaler un zbeul</a>
-			</li>
-			<li>
-				<a href="mailto:100joursdezbeul@solidairesinformatique.org">Réclamation</a>
-			</li>
-			<li>
 				<a
 					href="https://france.attac.org/se-mobiliser/retraites-pour-le-droit-a-une-retraite-digne-et-heureuse/article/on-ne-les-lache-pas-la-carte-des-mobilisations"
-					class="bg-blue-800 p-2 font-bold text-white no-underline hover:bg-blue-950 focus:bg-blue-950"
 				>
-					Où zbeuler&nbsp;?
+					La carte du zbeul
 				</a>
 			</li>
 		</ul>
