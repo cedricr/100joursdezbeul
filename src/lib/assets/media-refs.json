@@ -1,52 +1,86 @@
 [
 	{
-		"content": "Article dans le média actu.fr",
-		"source": "https://actu.fr/societe/100-jours-de-zbeul-la-seine-saint-denis-gagnera-t-elle-la-competition-anti-gouvernement_59197483.html",
-		"image": "/media/actu.fr.png"
+		"source": "actu.fr",
+		"link": "https://actu.fr/societe/100-jours-de-zbeul-la-seine-saint-denis-gagnera-t-elle-la-competition-anti-gouvernement_59197483.html",
+		"image": "/media/actu.fr.png",
+		"title": "\"100 jours de zbeul\" : la Seine-Saint-Denis gagnera-t-elle la compétition anti-gouvernement ?",
+		"date": "2023-04-25"
 	},
 	{
-		"content": "Article dans le média regards.fr",
-		"source": "http://www.regards.fr/actu/article/100-jours-de-zbeul-un-intervilles-des-casserolades-pour-contrer-l-apaisement",
-		"image": "/media/regards.png"
+		"source": "regards.fr",
+		"link": "https://regards.fr/publish-165/",
+		"image": "/media/regards.png",
+		"title": "« 100 jours de zbeul » : un Intervilles des casserolades pour contrer l’apaisement macronien",
+		"date": "2023-04-25"
 	},
 	{
-		"content": "Article dans le média France Bleu",
-		"source": "https://www.francebleu.fr/infos/politique/l-herault-en-tete-d-une-competition-anti-gouvernement-qui-recense-les-casserolades-et-manifestations-6412137",
-		"image": "/media/francebleu.png"
+		"source": "France Bleu",
+		"link": "https://www.francebleu.fr/infos/politique/l-herault-en-tete-d-une-competition-anti-gouvernement-qui-recense-les-casserolades-et-manifestations-6412137",
+		"image": "/media/francebleu.png",
+		"title": "L'Hérault en tête d'une compétition anti-gouvernement qui recense les \"casserolades\" et manifestations",
+		"date": "2023-04-26"
 	},
 	{
-		"content": "Carte Blanche vidéo de Lisa Lap, journaliste chez Le Média",
-		"source": "https://www.youtube.com/watch?v=BOQCN89XQbk",
-		"image": "/media/lemedia.jpg"
+		"source": "Le Média",
+		"link": "https://www.youtube.com/watch?v=BOQCN89XQbk",
+		"image": "/media/lemedia.jpg",
+		"title": "Macron face aux Intervilles du Zbeul / Darmanin et sa loi immigration : la grande diversion ?",
+		"date": "2023-04-26"
 	},
 	{
-		"content": "Reportage de BFMTV",
-		"source": "https://www.bfmtv.com/paris/replay-emissions/bonsoir-paris/casserolades-les-departements-classes-pendant-les-100-jours-de-zbeul_VN-202304260758.html",
-		"image": "/media/bfmtv.png"
+		"source": "BFMTV",
+		"link": "https://www.bfmtv.com/paris/replay-emissions/bonsoir-paris/casserolades-les-departements-classes-pendant-les-100-jours-de-zbeul_VN-202304260758.html",
+		"image": "/media/bfmtv.png",
+		"title": "Casserolades: les départements classés pendant les \"100 jours de zbeul\"",
+		"date": "2023-04-26"
 	},
 	{
-		"content": "Article par Radio Scoop",
-		"source": "https://www.radioscoop.com/infos/les-100-jours-de-zbeul-comment-fonctionne-l-intervilles-de-la-contestation_273098",
-		"image": "/media/radioscoop.ico"
+		"source": "Nathalie Oziol, députée de Montpellier",
+		"link": "https://nitter.net/NathalieOziol/status/1651105199958683648",
+		"image": "/media/oziol.jpg",
+		"title": "🏆 L’Hérault est en tête du classement des #100joursDeZbeul",
+		"date": "2023-04-26"
 	},
 	{
-		"content": "Article par Mediapart",
-		"source": "https://www.mediapart.fr/journal/politique/270423/casserolades-le-mouvement-social-joue-intervilles-l-executif-perd-l-epreuve-de-l-apaisement",
-		"image": "/media/mediapart.png"
+		"source": "Radio Scoop",
+		"link": "https://www.radioscoop.com/infos/les-100-jours-de-zbeul-comment-fonctionne-l-intervilles-de-la-contestation_273098",
+		"image": "/media/radioscoop.ico",
+		"title": "Les 100 jours de zbeul : comment fonctionne l'intervilles de la contestation ?",
+		"date": "2023-04-27"
 	},
 	{
-		"content": "Article de l'Humanité",
-		"source": "https://www.humanite.fr/social-eco/1er-mai/un-1er-mai-deja-historique-793108",
-		"image": "/media/humanite.jpg"
+		"source": "Mediapart",
+		"link": "https://www.mediapart.fr/journal/politique/270423/casserolades-le-mouvement-social-joue-intervilles-l-executif-perd-l-epreuve-de-l-apaisement",
+		"image": "/media/mediapart.png",
+		"title": "Casserolades : le mouvement social joue à « Intervilles », l’exécutif perd l’épreuve de l’apaisement",
+		"date": "2023-04-27"
 	},
 	{
-		"content": "Interview vidéo par David Dufresne (hélas non sous-titrée)",
-		"source": "https://www.blast-info.fr/emissions/2023/intervilles-du-zbeul-la-fronde-sorganise-face-a-macron-Qz0zPGTRQcy6JupO0gJwUA",
-		"image": "/media/aupost.png"
+		"source": "L'Humanité",
+		"link": "https://www.humanite.fr/social-eco/1er-mai/un-1er-mai-deja-historique-793108",
+		"image": "/media/humanite.jpg",
+		"title": "2,3 millions de manifestants dans toute la France, un 1er Mai historique",
+		"date": "2023-05-01"
 	},
 	{
-		"content": "Tweet de Nathalie Oziol, députée de Montpellier",
-		"source": "https://nitter.net/NathalieOziol/status/1651105199958683648",
-		"image": "/media/oziol.jpg"
+		"source": "Blast",
+		"link": "https://www.blast-info.fr/emissions/2023/intervilles-du-zbeul-la-fronde-sorganise-face-a-macron-Qz0zPGTRQcy6JupO0gJwUA",
+		"image": "/media/aupost.png",
+		"title": "Intervilles du « Zbeul » : la fronde s’organise face à macron",
+		"date": "2023-05-06"
+	},
+	{
+		"source": "The New York Times",
+		"link": "https://www.nytimes.com/2023/05/22/world/europe/france-pension-protest-saucepans.html",
+		"image": "/media/nytimes.png",
+		"title": "The Sound of France’s Pension Fury? The Saucepan.",
+		"date": "2023-05-22"
+	},
+	{
+		"source": "Le Figaro",
+		"link": "https://www.lefigaro.fr/actualite-france/reforme-des-retraites-entre-400-000-et-600-000-manifestants-attendus-dans-les-rues-mardi-6-juin-20230603",
+		"image": "/media/figaro.png",
+		"title": "Réforme des retraites : entre 400.000 et 600.000 manifestants attendus dans les rues mardi 6 juin",
+		"date": "2023-06-03"
 	}
 ]

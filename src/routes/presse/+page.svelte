@@ -1,10 +1,12 @@
 <script lang="ts">
 	import rawMediaRefs from '$lib/assets/media-refs?raw';
-
+	import { dateToShortLabel } from '$lib/utils';
 	interface MediaRef {
-		content: string;
 		source: string;
+		link: string;
 		image: string;
+		title: string;
+		date: string;
 	}
 	const mediaRefs = JSON.parse(rawMediaRefs) as MediaRef[];
 </script>
@@ -15,28 +17,24 @@
 	<h2 class="zbeul mb-16 mt-16 text-4xl">Revue de presse</h2>
 
 	<ul>
-		{#each mediaRefs as link}
-			<li class="mb-5 flex items-center gap-4 text-xl">
-				<img class="image h-10 w-10 rounded-full" src={link.image} alt="" />
-				<a class="link text-xl no-underline hover:underline" href={link.source}>
-					{link.content}<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						class="icon-link ml-1.5 inline-block w-3.5 fill-blue-800 duration-200 ease-out"
-						aria-hidden="true"
-						><path d="M7.33 24l-2.83-2.829 9.339-9.175-9.339-9.167 2.83-2.829 12.17 11.996z" /></svg
+		{#each mediaRefs as ref}
+			<li class="mb-7 flex items-start gap-6 text-xl">
+				<img class="image h-8 w-8 rounded-full" src={ref.image} alt="" />
+				<p class="text-lg">
+					<span class="italic">{ref.title}</span>
+					<br /><span class="text-sm">
+						<a class="py-1 font-bold underline" href={ref.link}>{ref.source}</a>, le {dateToShortLabel(
+							ref.date
+						)}.</span
 					>
-				</a>
+				</p>
 			</li>
 		{/each}
 	</ul>
 </div>
 
-
 <style lang="postcss">
-	li:hover svg {
-		transform: translate(0.2rem);
+	.tag {
+		@apply py-1 pr-2 text-sm font-bold;
 	}
 </style>
