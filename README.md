@@ -1,5 +1,6 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/8c7f9606-eb2f-4ce3-b629-b21e3385e68a/deploy-status)](https://app.netlify.com/sites/100joursdezbeul/deploys)
-<br />
+Dépôt déplacé vers https://codeberg.org/cedricr/100joursdezbeul
+
+---
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/cedricr/100joursdezbeul/main/static/ogimg-v4.png" alt="100joursdezbeul logo" height="280">
